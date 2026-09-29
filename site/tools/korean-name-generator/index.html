@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korean Name Generator — a Korean name with a meaning that fits you</title>
+<meta name="description" content="Get a Korean name that actually means something. Pick a feeling, tell us your name, and we suggest real Korean given names with hanja meanings, a matching surname and how to say it.">
+<link rel="canonical" href="https://hellonunchi.com/tools/korean-name-generator/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korean-name-generator/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korean Name Generator"><meta property="og:description" content="A Korean name with a meaning that fits you."><meta property="og:image" content="https://hellonunchi.com/img/korean-name.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Korean Name Generator","applicationCategory":"EntertainmentApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Suggests real Korean given names with meanings and a matching surname."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How are Korean names structured?","acceptedAnswer":{"@type":"Answer","text":"Surname first, then a given name, usually one plus two syllables: Kim Seo-yeon. Most given names are two syllables, each chosen for its hanja meaning, though pure-Korean names like Haneul (sky) are common too."}},{"@type":"Question","name":"Is it strange for a foreigner to use a Korean name?","acceptedAnswer":{"@type":"Answer","text":"No. Many long-term residents use one with friends and colleagues, and Koreans usually find it warm rather than odd. Use your passport name on documents and the Korean name socially."}}]}</script>
+</head>
+<body data-root="/" data-room="love">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/love/">Love</a> › Korean Name Generator</div>
+  <section class="tool-head">
+    <div class="eyebrow">Love · Generator</div>
+    <h1>Korean Name Generator <span class="hangul">한국 이름</span></h1>
+    <p>Not a random syllable mash. These are names Korean parents actually give, each with a meaning, matched to the feeling you pick and, if you like, to the first sound of your own name.</p>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label for="yourname">Your name <small>(optional, for a matching surname)</small></label><input type="text" id="yourname" placeholder="e.g. Kevin" autocomplete="off"></div>
+      <div class="field"><label>Name style</label><div class="chips" id="gender"><button class="chip" data-v="f">Feminine</button><button class="chip" data-v="m">Masculine</button><button class="chip" data-v="u" aria-pressed="true">Either</button></div></div>
+    </div>
+    <div class="field"><label>Pick the feeling you want <small>(one or two)</small></label>
+      <div class="chips" id="vibe">
+        <button class="chip" data-v="bright">Bright &amp; warm</button><button class="chip" data-v="calm">Calm &amp; gentle</button><button class="chip" data-v="strong">Strong &amp; steady</button>
+        <button class="chip" data-v="wise">Wise &amp; thoughtful</button><button class="chip" data-v="nature">Nature</button><button class="chip" data-v="modern">Modern, pure Korean</button>
+      </div>
+    </div>
+    <button class="btn" id="go">Find my Korean name</button>
+    <div class="result" id="res">
+      <div id="cards" class="result-grid" style="margin-top:18px"></div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="again">Show three more</button><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+
+  <h2>How Korean names work</h2>
+  <p>Surname first, given name second: Kim Seo-yeon, Park Do-yun. The surname is inherited and there are not many of them; Kim, Lee and Park alone cover almost half the country. The given name is where the meaning lives. Most are two syllables, and each syllable is picked for its hanja (Chinese character): 서 can mean "auspicious", 연 "lotus" or "graceful", so 서연 reads as something like "graceful and blessed".</p>
+  <p>Since the 1990s, pure-Korean names with no hanja have become popular too: 하늘 (sky), 이슬 (dew), 다온 (all good things come), 라온 (joyful). They sound soft and modern and are easy for foreigners to say.</p>
+
+  <h2>Using a Korean name as a foreigner</h2>
+  <p>Perfectly normal. Teachers, exchange students and long-term residents often pick one, and colleagues use it happily. Two habits make it work. First, keep your passport name on anything official; the Korean name is social. Second, pick a surname that starts with the same sound as your real name (Kevin → 김, Sophie → 서 or 송) so it feels like yours and not a costume. Koreans will ask what it means. Have the answer ready; it is the best small talk you will ever do.</p>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>How are Korean names structured?</summary><p>Surname, then given name. Usually one plus two syllables. Written together in Hangul (김서연), romanised with a hyphen or space in the given name (Kim Seo-yeon).</p></details>
+    <details><summary>Can I just transliterate my real name instead?</summary><p>Yes, and for documents you should. Try <a href="/tools/my-name-in-hangul/">My Name in Hangul</a>. A Korean name is for the social side.</p></details>
+    <details><summary>Do Korean names have a gender?</summary><p>Softly. Some names lean feminine (서연, 하은), some masculine (도윤, 민준), and many are used for both (지우, 하람, 유진). We label the lean but nothing is a rule.</p></details>
+    <details><summary>Is it strange for a foreigner to use a Korean name?</summary><p>No. It is usually taken as a sign you care. The only misstep is choosing a celebrity's full name; that reads like a joke.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2>
+    <div class="grid">
+      <a class="card" href="/tools/my-name-in-hangul/"><span class="tag">Love</span><b>My Name in Hangul</b><span>Your real name, written in Korean.</span></a>
+      <a class="card" data-room="live" href="/tools/korean-age-calculator/"><span class="tag">Live</span><b>Korean Age Calculator</b><span>Who is the 오빠 here.</span></a>
+    </div>
+  </section>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  // given names: [hangul, romanization, meaning, lean(f/m/u), tags]
+  const NAMES=[
+    ["서연","Seo-yeon","auspicious (瑞) and graceful (娟)","f",["bright","calm"]],["지우","Ji-woo","wisdom (智) and rain (雨), gentle and clever","u",["wise","calm","nature"]],["하윤","Ha-yun","summer (夏) and abundance (潤)","f",["bright","nature"]],
+    ["민준","Min-jun","quick-minded (敏) and outstanding (俊)","m",["wise","strong"]],["도윤","Do-yun","the way (道) and generosity (潤)","m",["calm","wise"]],["서준","Seo-jun","auspicious (瑞) and talented (俊)","m",["bright","strong"]],
+    ["하은","Ha-eun","great (河) kindness (恩)","f",["calm","bright"]],["지호","Ji-ho","wisdom (智) and vastness (浩)","m",["wise","strong"]],["수아","Su-a","beautiful (秀) and elegant (雅)","f",["bright","calm"]],
+    ["지안","Ji-an","wisdom (智) and peace (安)","u",["calm","wise"]],["유진","Yu-jin","abundant (裕) and precious (珍)","u",["bright","calm"]],["하람","Ha-ram","'a person of the sky' in pure Korean","u",["modern","nature"]],
+    ["다온","Da-on","'all good things arrive' in pure Korean","u",["modern","bright"]],["시온","Si-on","warm (時) and gentle (溫)","u",["calm","bright"]],["아린","A-rin","'lovely' in old Korean","f",["modern","bright"]],
+    ["은우","Eun-woo","kindness (恩) and excellence (優)","m",["calm","wise"]],["태양","Tae-yang","'the sun' in pure Korean","m",["strong","bright","nature"]],["라온","Ra-on","'joyful' in old Korean","u",["modern","bright"]],
+    ["로운","Ro-un","'blessed, kind' in pure Korean","u",["modern","calm"]],["나래","Na-rae","'wings' in pure Korean","f",["modern","nature"]],["슬기","Seul-gi","'wisdom' in pure Korean","f",["modern","wise"]],
+    ["지혜","Ji-hye","wisdom (智) and intelligence (慧)","f",["wise"]],["현우","Hyun-woo","virtuous (賢) and excellent (優)","m",["wise","strong"]],["승우","Seung-woo","victory (勝) and excellence (優)","m",["strong"]],
+    ["준서","Jun-seo","talented (俊) and auspicious (瑞)","m",["strong","bright"]],["예은","Ye-eun","art (藝) and grace (恩)","f",["calm","bright"]],["채원","Chae-won","colourful (彩) garden (園)","f",["bright","nature"]],
+    ["소율","So-yul","'small melody', soft and musical","f",["calm","modern"]],["유나","Yu-na","abundant (裕) and graceful (娜)","f",["bright","calm"]],["하린","Ha-rin","summer (夏) and clear jade (潾)","f",["nature","calm"]],
+    ["시우","Si-woo","timely (時) rain (雨)","m",["calm","nature"]],["주원","Ju-won","pillar (柱) and source (源), steady","m",["strong","calm"]],["건우","Geon-woo","strong (健) and excellent (優)","m",["strong"]],
+    ["우진","Woo-jin","excellent (優) and true (眞)","m",["strong","wise"]],["선우","Seon-woo","good (善) and excellent (優)","m",["calm","wise"]],["연우","Yeon-woo","lotus (蓮) and excellence (優)","u",["nature","calm"]],
+    ["도현","Do-hyun","the way (道) and virtue (賢)","m",["wise","strong"]],["지민","Ji-min","wisdom (智) and quickness (敏)","u",["wise","bright"]],["서윤","Seo-yun","auspicious (瑞) and abundance (潤)","f",["bright","calm"]],
+    ["가은","Ga-eun","beautiful (佳) kindness (恩)","f",["bright","calm"]],["하늘","Ha-neul","'sky' in pure Korean","u",["modern","nature"]],["보라","Bo-ra","'purple' in pure Korean","f",["modern","bright"]],
+    ["이슬","I-seul","'morning dew' in pure Korean","f",["modern","nature","calm"]],["아름","A-reum","'beautiful' in pure Korean","f",["modern","bright"]],["한결","Han-gyeol","'steady, unchanging' in pure Korean","m",["modern","strong","calm"]],
+    ["바다","Ba-da","'the sea' in pure Korean","u",["modern","nature"]],["누리","Nu-ri","'the world' in pure Korean","u",["modern","bright"]],["세영","Se-yeong","world (世) and glory (榮)","u",["strong","bright"]],
+    ["태윤","Tae-yun","great (泰) generosity (潤)","m",["strong","calm"]],["윤아","Yun-a","abundant (潤) and elegant (雅)","f",["calm","bright"]],["재원","Jae-won","talent (才) and source (源)","m",["wise","strong"]],
+    ["소민","So-min","bright (昭) and quick (敏)","f",["bright","wise"]],["온유","On-yu","warm (溫) and gentle (柔)","f",["calm"]],["강민","Kang-min","strong (剛) and quick (敏)","m",["strong"]]
+  ];
+  const SUR=[["김","Kim",["k","c","g","q"]],["이","Lee",["l","e","i","y"]],["박","Park",["p","b"]],["최","Choi",["ch","c"]],["정","Jung",["j","g"]],["강","Kang",["k","c","g"]],["조","Cho",["j","ch","z"]],["윤","Yoon",["y","w"]],["장","Jang",["j","z","g"]],["임","Lim",["l","i"]],["한","Han",["h"]],["오","Oh",["o","a"]],["서","Seo",["s","c"]],["신","Shin",["s","sh"]],["권","Kwon",["k","q","g"]],["황","Hwang",["h","w"]],["안","Ahn",["a","e"]],["송","Song",["s"]],["류","Ryu",["r","l"]],["전","Jeon",["j","d"]],["홍","Hong",["h"]],["문","Moon",["m"]],["양","Yang",["y"]],["배","Bae",["b","p"]],["백","Baek",["b","p","v"]],["나","Na",["n"]],["도","Do",["d","t"]],["마","Ma",["m"]],["유","Yoo",["u","y","e"]],["표","Pyo",["p","f"]],["방","Bang",["b","v"]],["태","Tae",["t"]],["소","So",["s","z"]],["하","Ha",["h"]],["구","Koo",["k","g","q"]],["민","Min",["m"]],["진","Jin",["j","g"]],["채","Chae",["ch","c"]],["함","Ham",["h","f"]],["우","Woo",["w","u"]]];
+  let gender="u", vibes=new Set(), lastPick=[];
+  document.querySelectorAll("#gender .chip").forEach(b=>b.onclick=()=>{document.querySelectorAll("#gender .chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");gender=b.dataset.v;});
+  document.querySelectorAll("#vibe .chip").forEach(b=>b.onclick=()=>{const v=b.dataset.v; if(vibes.has(v)){vibes.delete(v);b.setAttribute("aria-pressed","false");} else { if(vibes.size>=2){const first=[...vibes][0]; vibes.delete(first); document.querySelector(`#vibe [data-v="${first}"]`).setAttribute("aria-pressed","false");} vibes.add(v);b.setAttribute("aria-pressed","true");}});
+  function surname(){ const n=$("yourname").value.trim().toLowerCase(); if(!n) return SUR[Math.floor(Math.random()*8)]; const two=n.slice(0,2), one=n[0]; const hit=SUR.filter(s=>s[2].includes(two))[0]||SUR.filter(s=>s[2].includes(one)); const arr=Array.isArray(hit[0])?hit:[hit]; return arr[Math.floor(Math.random()*arr.length)]||SUR[0]; }
+  function run(){
+    let pool=NAMES.filter(n=>gender==="u"||n[3]===gender||n[3]==="u");
+    if(vibes.size) { const scored=pool.map(n=>[n,[...vibes].filter(v=>n[4].includes(v)).length]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]); if(scored.length>=3) pool=scored.map(x=>x[0]); }
+    pool=pool.filter(n=>!lastPick.includes(n[0])); if(pool.length<3) pool=NAMES.filter(n=>gender==="u"||n[3]===gender||n[3]==="u");
+    const pick=[]; while(pick.length<3&&pool.length){ const i=Math.floor(Math.random()*Math.min(pool.length, Math.max(6,pool.length))); pick.push(pool.splice(i,1)[0]); }
+    lastPick=pick.map(p=>p[0]);
+    const sur=surname();
+    $("cards").innerHTML=pick.map((p,i)=>`<div class="stat${i===0?" big":""}"><div class="k">${i===0?"Best match":"Also good"} · ${p[3]==="f"?"leans feminine":p[3]==="m"?"leans masculine":"used for anyone"}</div><div class="v hangul-big" style="font-size:${i===0?52:34}px">${sur[0]}${p[0]}</div><div class="d"><b>${sur[1]} ${p[1]}</b> · ${p[2]}</div></div>`).join("");
+    const tips=["Introduce it as 저는 ○○이에요 (jeoneun ○○-ieyo), \"I'm ○○\". Then wait one second: someone will ask what it means.","Colleagues will add 씨 after your given name (서연씨). It is polite, not distant. When they drop it, you have been promoted to friend.","Do not put the Korean name on your bank account or phone contract. Passport name there, Korean name everywhere that has a coffee.","If a Korean friend suggests a name for you, take it. A name given by someone who knows you beats any generator, including this one."];
+    $("tip").textContent=tips[Math.floor(Math.random()*tips.length)];
+    $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:"My Korean name",big:sur[0]+pick[0][0],sub:`${sur[1]} ${pick[0][1]} · ${pick[0][2]}`,tip:$("tip").textContent,file:"my-korean-name.png"});
+  }
+  $("go").onclick=run; $("again").onclick=run; $("yourname").addEventListener("keydown",e=>{if(e.key==="Enter")run();});
+})();
+</script>
+</body>
+</html>

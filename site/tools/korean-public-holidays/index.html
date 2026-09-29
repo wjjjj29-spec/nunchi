@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korean Public Holidays 2026 and 2027 — dates, long weekends, what closes</title>
+<meta name="description" content="Every public holiday in Korea for 2026 and 2027 with weekdays, substitute holidays and long weekends, plus a countdown to the next one and what actually closes.">
+<link rel="canonical" href="https://hellonunchi.com/tools/korean-public-holidays/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korean-public-holidays/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korean Public Holidays 2026 · 2027"><meta property="og:description" content="Dates, long weekends and what closes."><meta property="og:image" content="https://hellonunchi.com/img/holidays.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a substitute holiday in Korea?","acceptedAnswer":{"@type":"Answer","text":"When certain public holidays fall on a weekend, the next weekday becomes a holiday instead. It applies to most national holidays including Independence Movement Day, Liberation Day, National Foundation Day, Hangul Day, Children's Day, Buddha's Birthday and Christmas, and to Seollal and Chuseok when they overlap a Sunday. Memorial Day and New Year's Day do not get a substitute."}},{"@type":"Question","name":"Is everything closed on Korean public holidays?","acceptedAnswer":{"@type":"Answer","text":"Government offices, banks, schools and post offices close. Most shops, restaurants, cafés, convenience stores and tourist sites stay open, except on Seollal and Chuseok when many family-run businesses and markets close for two or three days."}}]}</script>
+</head>
+<body data-root="/" data-room="live">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/live/">Live</a> › Korean Public Holidays</div>
+  <section class="tool-head">
+    <div class="eyebrow">Live · Calendar</div>
+    <h1>Korean Public Holidays <span class="hangul">공휴일</span></h1>
+    <p>All of them for this year and next, with the substitute days that trip people up, which ones make a long weekend, and what actually closes.</p>
+  </section>
+
+  <div class="panel">
+    <div class="result show">
+      <div class="result-grid">
+        <div class="stat big"><div class="k">Next public holiday</div><div class="v" id="nextname" style="font-size:30px">—</div><div class="d" id="nextd"></div></div>
+      </div>
+      <div class="chips" id="yr" style="margin-top:14px"><button class="chip" data-v="2026" aria-pressed="true">2026</button><button class="chip" data-v="2027">2027</button></div>
+      <table id="tbl"><thead><tr><th>Date</th><th>Holiday</th><th>Note</th></tr></thead><tbody></tbody></table>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip">Seollal and Chuseok are the two holidays that change your week. Trains sell out weeks ahead, the highways are a car park, and the small restaurant you love will be shut. Book early or stay put and enjoy a quiet, empty Seoul.</p></div></div>
+      <div class="actions"><button class="btn ghost" id="ics">Download calendar (.ics)</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+
+  <h2>What closes, what does not</h2>
+  <p>Government offices, immigration, banks, post offices and schools close on every public holiday. Hospitals keep emergency rooms open and many pharmacies open on rotation (look for 휴일지킴이약국). Shops, cafés, cinemas, convenience stores and palaces are open on ordinary holidays and usually busier than usual.</p>
+  <p>Seollal (Lunar New Year) and Chuseok (harvest festival) are different. They are family holidays and for two or three days many small restaurants, markets and family businesses close. Large chains, department stores on some days, and tourist districts stay open. Public transport runs, but intercity trains and buses sell out well ahead.</p>
+
+  <h2>Substitute holidays</h2>
+  <p>When a holiday lands on a weekend, Korea usually gives you the next weekday off instead. This applies to Independence Movement Day, Children's Day, Buddha's Birthday, Liberation Day, National Foundation Day, Hangul Day and Christmas, and to Seollal and Chuseok when one of their three days is a Sunday. New Year's Day and Memorial Day get no substitute; if they fall on a Saturday, that is that.</p>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Is Christmas a public holiday in Korea?</summary><p>Yes, 25 December is a national holiday. Christmas Eve is a normal working day, and so is 26 December.</p></details>
+    <details><summary>Do I get paid for public holidays?</summary><p>If you are an employee at a company with five or more staff, public holidays are paid days off by law. Working on one means holiday pay at 150 percent or a day off in lieu. Working-holiday and part-time workers should check their contract.</p></details>
+    <details><summary>Are election days holidays?</summary><p>Yes. National election days are public holidays so people can vote. The 2026 local elections on 3 June are a holiday. There is no national election scheduled in 2027.</p></details>
+    <details><summary>Where do these dates come from?</summary><p>The Ministry of the Interior and Safety publishes the official list each year. Lunar holidays follow the Korean lunar calendar and we check them against the official announcement.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2>
+    <div class="grid">
+      <a class="card" href="/tools/visa-stay-days-counter/"><span class="tag">Live</span><b>Visa Stay Days Counter</b><span>Immigration is closed on these days.</span></a>
+      <a class="card" data-room="visit" href="/tools/korea-trip-budget-calculator/"><span class="tag">Visit</span><b>Korea Trip Budget</b><span>Hotels cost more on these dates.</span></a>
+    </div>
+  </section>
+  <p class="note">Last checked: September 2026. 2027 lunar dates are provisional until the official announcement (usually published in June the year before).</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const H={2026:[["2026-01-01","New Year's Day","신정",""],["2026-02-16","Seollal holiday","설날 연휴","Lunar New Year, day before"],["2026-02-17","Seollal","설날","Lunar New Year"],["2026-02-18","Seollal holiday","설날 연휴","day after"],["2026-03-01","Independence Movement Day","삼일절","falls on Sunday"],["2026-03-02","Substitute holiday","대체공휴일","for 1 March"],["2026-05-05","Children's Day","어린이날",""],["2026-05-24","Buddha's Birthday","부처님오신날","falls on Sunday"],["2026-05-25","Substitute holiday","대체공휴일","for Buddha's Birthday"],["2026-06-03","Local Election Day","지방선거일","one-off"],["2026-06-06","Memorial Day","현충일","Saturday, no substitute"],["2026-08-15","Liberation Day","광복절","falls on Saturday"],["2026-08-17","Substitute holiday","대체공휴일","for 15 August"],["2026-09-24","Chuseok holiday","추석 연휴","day before"],["2026-09-25","Chuseok","추석","harvest festival"],["2026-09-26","Chuseok holiday","추석 연휴","Saturday"],["2026-10-03","National Foundation Day","개천절","falls on Saturday"],["2026-10-05","Substitute holiday","대체공휴일","for 3 October"],["2026-10-09","Hangul Day","한글날",""],["2026-12-25","Christmas Day","성탄절",""]],
+  2027:[["2027-01-01","New Year's Day","신정",""],["2027-02-05","Seollal holiday","설날 연휴","day before"],["2027-02-06","Seollal","설날","Lunar New Year, Saturday"],["2027-02-07","Seollal holiday","설날 연휴","Sunday"],["2027-02-08","Substitute holiday","대체공휴일","for Seollal Sunday"],["2027-03-01","Independence Movement Day","삼일절",""],["2027-05-05","Children's Day","어린이날",""],["2027-05-13","Buddha's Birthday","부처님오신날","provisional"],["2027-06-06","Memorial Day","현충일","Sunday, no substitute"],["2027-08-15","Liberation Day","광복절","falls on Sunday"],["2027-08-16","Substitute holiday","대체공휴일","for 15 August"],["2027-09-14","Chuseok holiday","추석 연휴","day before, provisional"],["2027-09-15","Chuseok","추석","provisional"],["2027-09-16","Chuseok holiday","추석 연휴","day after"],["2027-10-03","National Foundation Day","개천절","falls on Sunday"],["2027-10-04","Substitute holiday","대체공휴일","for 3 October"],["2027-10-09","Hangul Day","한글날","falls on Saturday"],["2027-10-11","Substitute holiday","대체공휴일","for 9 October"],["2027-12-25","Christmas Day","성탄절","falls on Saturday"],["2027-12-27","Substitute holiday","대체공휴일","for 25 December"]]};
+  const today=new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Seoul"})); today.setHours(0,0,0,0);
+  const wd=d=>["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getDay()];
+  function render(y){ const rows=H[y].map(h=>{const d=new Date(h[0]+"T00:00:00"); const past=d<today; const day=d.getDay(); const long=(day===1||day===5)?" · long weekend":""; return `<tr style="${past?"opacity:.5":""}"><td><b>${d.toLocaleDateString("en-GB",{day:"numeric",month:"short"})}</b> ${wd(d)}</td><td>${h[1]} <span class="hangul">${h[2]}</span></td><td>${h[3]}${long}</td></tr>`;}); $("tbl").querySelector("tbody").innerHTML=rows.join(""); }
+  const all=[...H[2026],...H[2027]].map(h=>[new Date(h[0]+"T00:00:00"),h]).filter(x=>x[0]>=today); const nx=all[0];
+  if(nx){ const days=Math.round((nx[0]-today)/864e5); $("nextname").textContent=nx[1][1]+" · "+nx[1][2]; $("nextd").textContent=(days===0?"Today":days===1?"Tomorrow":`In ${days} days`)+", "+nx[0].toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"})+(nx[1][3]?" ("+nx[1][3]+")":""); }
+  render(today.getFullYear()>=2027?2027:2026); if(today.getFullYear()>=2027){document.querySelector('#yr [data-v="2027"]').setAttribute("aria-pressed","true");document.querySelector('#yr [data-v="2026"]').setAttribute("aria-pressed","false");}
+  document.querySelectorAll("#yr .chip").forEach(b=>b.onclick=()=>{document.querySelectorAll("#yr .chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");render(+b.dataset.v);});
+  $("ics").onclick=()=>{ const ev=[...H[2026],...H[2027]].map(h=>{const d=h[0].replace(/-/g,""); const n=new Date(h[0]+"T00:00:00"); n.setDate(n.getDate()+1); const e=n.toISOString().slice(0,10).replace(/-/g,""); return `BEGIN:VEVENT\r\nUID:${d}-${h[2]}@hellonunchi.com\r\nDTSTART;VALUE=DATE:${d}\r\nDTEND;VALUE=DATE:${e}\r\nSUMMARY:${h[1]} (${h[2]})\r\nDESCRIPTION:Korean public holiday. ${h[3]}\r\nEND:VEVENT`;}).join("\r\n"); const ics=`BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Nunchi//Korean Public Holidays//EN\r\nX-WR-CALNAME:Korean Public Holidays\r\n${ev}\r\nEND:VCALENDAR`; const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([ics],{type:"text/calendar"})); a.download="korean-public-holidays.ics"; a.click(); };
+})();
+</script>
+</body>
+</html>

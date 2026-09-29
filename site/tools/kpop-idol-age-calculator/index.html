@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-pop Idol Age Calculator — Korean age, international age, debut years</title>
+<meta name="description" content="How old is your bias today, in Korean age and international age, plus years since debut and who is oldest and youngest in the group. BTS, BLACKPINK, NewJeans, Stray Kids, aespa, SEVENTEEN, TWICE, IVE and more.">
+<link rel="canonical" href="https://hellonunchi.com/tools/kpop-idol-age-calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/kpop-idol-age-calculator/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="K-pop Idol Age Calculator"><meta property="og:description" content="Korean age, international age and debut years for your bias."><meta property="og:image" content="https://hellonunchi.com/img/idol-age.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"K-pop Idol Age Calculator","applicationCategory":"EntertainmentApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Calculates Korean and international age and years since debut for K-pop idols."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do K-pop profiles show two different ages?","acceptedAnswer":{"@type":"Answer","text":"Korean fan sites often list Korean age, which is one or two years higher than international age, because Koreans are counted as one at birth and gain a year every 1 January. Since 2023 official documents use international age, but fandom habits are slower."}},{"@type":"Question","name":"What does maknae mean?","acceptedAnswer":{"@type":"Answer","text":"Maknae (막내) is the youngest member of a group. The oldest member looks after the others and often pays; the roles come with real expectations in Korean group culture."}}]}</script>
+</head>
+<body data-root="/" data-room="love">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/love/">Love</a> › K-pop Idol Age Calculator</div>
+  <section class="tool-head">
+    <div class="eyebrow">Love · Calculator</div>
+    <h1>K-pop Idol Age Calculator <span class="hangul">아이돌 나이</span></h1>
+    <p>Settle the argument. Type an idol's name and get their international age, Korean age and years since debut, plus where they sit in the group's age line.</p>
+  </section>
+  <div class="panel">
+    <div class="field"><label for="q">Idol or group</label><input type="text" id="q" placeholder="e.g. Jungkook, Wonyoung, NewJeans" autocomplete="off"><small>Covers the big groups. Missing someone? <a href="/contact/">Tell us</a>.</small></div>
+    <div id="sugg" class="chips"></div>
+    <div class="result" id="res">
+      <div class="result-grid" style="margin-top:18px" id="cards"></div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+  <h2>Why fandom ages never match</h2>
+  <p>Korean fan cafés and older profile sites list Korean age: you are one at birth and everyone ages together on 1 January. So a member born in December 2005 is "twenty-two" in Korea in 2026 while their passport says twenty. Since June 2023 the law uses international age and agencies mostly follow, but a decade of wiki edits does not update itself. When two sources disagree by one or two years, this is why.</p>
+  <p>Debut years count from the group's debut date, not the member's birthday, which is how Korean media counts anniversaries.</p>
+  <h2>The age line matters</h2>
+  <p>In a Korean group the oldest member (맏형 or 맏언니) and the youngest (막내, maknae) are real roles. The oldest looks after everyone and usually pays. The maknae gets babied on camera and does the pouring off camera. Members born in the same year speak casually to each other; one year apart and the honorifics come out. Watch a variety show with this in mind and half the jokes make sense.</p>
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Why do K-pop profiles show two different ages?</summary><p>One is Korean age, one is international age. Korean age is one to two years higher. This tool shows both so you can tell which a source is using.</p></details>
+    <details><summary>Is the data up to date?</summary><p>Birthdays and debut dates were checked against official agency profiles in September 2026. If something is wrong, use the contact page and we will fix it the same week.</p></details>
+    <details><summary>Can I check someone who is not listed?</summary><p>Yes. Use the <a href="/tools/korean-age-calculator/">Korean Age Calculator</a> with their birthday.</p></details>
+  </section>
+  <section class="related"><h2>Related tools</h2><div class="grid">
+    <a class="card" data-room="live" href="/tools/korean-age-calculator/"><span class="tag">Live</span><b>Korean Age Calculator</b><span>Your own three ages.</span></a>
+    <a class="card" href="/tools/korean-name-generator/"><span class="tag">Love</span><b>Korean Name Generator</b><span>A stage name for you.</span></a>
+  </div></section>
+  <p class="note">Data checked: September 2026. Ages update automatically every day.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const G={"BTS":["2013-06-13",[["RM","1994-09-12"],["Jin","1992-12-04"],["Suga","1993-03-09"],["J-Hope","1994-02-18"],["Jimin","1995-10-13"],["V","1995-12-30"],["Jungkook","1997-09-01"]]],
+    "BLACKPINK":["2016-08-08",[["Jisoo","1995-01-03"],["Jennie","1996-01-16"],["Rosé","1997-02-11"],["Lisa","1997-03-27"]]],
+    "NewJeans":["2022-07-22",[["Minji","2004-05-07"],["Hanni","2004-10-06"],["Danielle","2005-04-11"],["Haerin","2006-05-15"],["Hyein","2008-04-21"]]],
+    "aespa":["2020-11-17",[["Karina","2000-04-11"],["Giselle","2000-10-30"],["Winter","2001-01-01"],["Ningning","2002-10-23"]]],
+    "Stray Kids":["2018-03-25",[["Bang Chan","1997-10-03"],["Lee Know","1998-10-25"],["Changbin","1999-08-11"],["Hyunjin","2000-03-20"],["Han","2000-09-14"],["Felix","2000-09-15"],["Seungmin","2000-09-22"],["I.N","2001-02-08"]]],
+    "TWICE":["2015-10-20",[["Nayeon","1995-09-22"],["Jeongyeon","1996-11-01"],["Momo","1996-11-09"],["Sana","1996-12-29"],["Jihyo","1997-02-01"],["Mina","1997-03-24"],["Dahyun","1998-05-28"],["Chaeyoung","1999-04-23"],["Tzuyu","1999-06-14"]]],
+    "IVE":["2021-12-01",[["Gaeul","2002-09-24"],["Yujin","2003-09-01"],["Rei","2004-02-03"],["Wonyoung","2004-08-31"],["Liz","2004-11-21"],["Leeseo","2007-02-21"]]],
+    "LE SSERAFIM":["2022-05-02",[["Sakura","1998-03-19"],["Chaewon","2000-08-01"],["Yunjin","2001-10-08"],["Kazuha","2003-08-09"],["Eunchae","2006-11-10"]]],
+    "ENHYPEN":["2020-11-30",[["Heeseung","2001-10-15"],["Jay","2002-04-20"],["Jake","2002-11-15"],["Sunghoon","2002-12-08"],["Sunoo","2003-06-24"],["Jungwon","2004-02-09"],["Ni-ki","2005-12-09"]]],
+    "TXT":["2019-03-04",[["Yeonjun","1999-09-13"],["Soobin","2000-12-05"],["Beomgyu","2001-03-13"],["Taehyun","2002-02-05"],["Huening Kai","2002-08-14"]]],
+    "(G)I-DLE":["2018-05-02",[["Miyeon","1997-01-31"],["Minnie","1997-10-23"],["Soyeon","1998-08-26"],["Yuqi","1999-09-23"],["Shuhua","2000-01-06"]]],
+    "SEVENTEEN":["2015-05-26",[["S.Coups","1995-08-08"],["Jeonghan","1995-10-04"],["Joshua","1995-12-30"],["Jun","1996-06-10"],["Hoshi","1996-06-15"],["Wonwoo","1996-07-17"],["Woozi","1996-11-22"],["DK","1997-02-18"],["Mingyu","1997-04-06"],["The8","1997-11-07"],["Seungkwan","1998-01-16"],["Vernon","1998-02-18"],["Dino","1999-02-11"]]],
+    "ITZY":["2019-02-12",[["Yeji","2000-05-26"],["Lia","2000-07-21"],["Ryujin","2001-04-17"],["Chaeryeong","2001-06-05"],["Yuna","2003-12-09"]]],
+    "ILLIT":["2024-03-25",[["Yunah","2004-03-03"],["Minju","2004-05-11"],["Moka","2004-10-08"],["Wonhee","2007-06-26"],["Iroha","2008-02-04"]]],
+    "BABYMONSTER":["2023-11-27",[["Ruka","2002-03-20"],["Pharita","2005-08-26"],["Asa","2006-04-18"],["Ahyeon","2007-04-11"],["Rami","2007-10-17"],["Rora","2008-08-14"],["Chiquita","2009-02-17"]]],
+    "Solo":["",[["IU","1993-05-16","2008-09-18"],["G-Dragon","1988-08-18","2006-08-19"],["Taeyeon","1989-03-09","2007-08-05"],["Sunmi","1992-05-02","2007-02-10"],["Zico","1992-09-14","2011-04-15"]]]};
+  const ALL=[]; for(const g in G){ for(const m of G[g][1]) ALL.push({name:m[0],dob:m[1],group:g,debut:m[2]||G[g][0]}); }
+  const today=new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Seoul"})); today.setHours(0,0,0,0);
+  function ages(s){ const d=new Date(s); let i=today.getFullYear()-d.getFullYear(); if(today.getMonth()<d.getMonth()||(today.getMonth()===d.getMonth()&&today.getDate()<d.getDate())) i--; return {intl:i,kor:today.getFullYear()-d.getFullYear()+1,yr:today.getFullYear()-d.getFullYear()}; }
+  function years(s){ const d=new Date(s); let y=today.getFullYear()-d.getFullYear(); if(today<new Date(today.getFullYear(),d.getMonth(),d.getDate())) y--; return y; }
+  const norm=s=>s.toLowerCase().replace(/[^a-z0-9]/g,""); const fmt=s=>new Date(s).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+  function show(m){
+    const a=ages(m.dob), grp=G[m.group][1], sorted=[...grp].sort((x,y)=>new Date(x[1])-new Date(y[1])), idx=sorted.findIndex(x=>x[0]===m.name);
+    const role=m.group==="Solo"?"solo artist":idx===0?"oldest in "+m.group+" (맏형/맏언니)":idx===sorted.length-1?"maknae of "+m.group+" (막내)":`#${idx+1} of ${sorted.length} in ${m.group} by age`;
+    const d=new Date(m.dob); let nb=new Date(today.getFullYear(),d.getMonth(),d.getDate()); if(nb<today) nb.setFullYear(nb.getFullYear()+1); const dtb=Math.round((nb-today)/864e5);
+    let h=`<div class="stat big"><div class="k">${m.name} · ${m.group}</div><div class="v">${a.intl} <small>international</small> · ${a.kor} <small>Korean age</small></div><div class="d">Born ${fmt(m.dob)} · ${role}</div></div>
+      <div class="stat"><div class="k">Years since debut</div><div class="v">${years(m.debut)}</div><div class="d">Debuted ${fmt(m.debut)}</div></div>
+      <div class="stat"><div class="k">Next birthday</div><div class="v">${dtb===0?"Today":dtb}</div><div class="d">${dtb===0?"Happy birthday":"days away"}</div></div>
+      <div class="stat"><div class="k">Year age <span class="hangul">연 나이</span></div><div class="v">${a.yr}</div><div class="d">Legal drinking age is 19 by this count.</div></div>`;
+    if(m.group!=="Solo") h+=`<div class="stat big"><div class="k">${m.group} age line, oldest to youngest</div><div class="d" style="font-size:15px;margin-top:6px">${sorted.map((x,i)=>`${i===idx?"<b>":""}${x[0]} (${ages(x[1]).intl})${i===idx?"</b>":""}`).join(" · ")}</div></div>`;
+    $("cards").innerHTML=h;
+    const tips=[`${m.name} is ${a.kor-a.intl} year${a.kor-a.intl>1?"s":""} older in Korean age. If a fan site says ${a.kor}, it is not wrong, just Korean.`,`Members born in the same year as ${m.name} speak banmal (casual) to each other. One year older and it is 형/오빠 or 누나/언니 time.`,`Korean birthday tradition: seaweed soup in the morning. Watch the birthday live and someone will mention 미역국.`];
+    $("tip").textContent=tips[a.intl%tips.length]; $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:`${m.name} (${m.group}) today`,big:`${a.intl} · ${a.kor}`,sub:`international · Korean age · ${years(m.debut)} years since debut`,tip:$("tip").textContent,file:"idol-age.png"});
+    history.replaceState(null,"","?q="+encodeURIComponent(m.name));
+  }
+  function chips(list){ $("sugg").innerHTML=list.map(m=>`<button class="chip" data-i="${ALL.indexOf(m)}">${m.name}${list.length>6?` <span class="hangul">${m.group}</span>`:""}</button>`).join(""); $("sugg").querySelectorAll(".chip").forEach(b=>b.onclick=()=>{const m=ALL[+b.dataset.i];$("q").value=m.name;show(m);}); }
+  function suggest(){ const q=norm($("q").value); if(!q){chips(["Jungkook","Wonyoung","Karina","Hyunjin","Minji","Lisa"].map(n=>ALL.find(m=>m.name===n)));return;} const hits=ALL.filter(m=>norm(m.name).includes(q)||norm(m.group).includes(q)).slice(0,12); chips(hits); if(hits.length===1) show(hits[0]); }
+  $("q").addEventListener("input",suggest); $("q").addEventListener("keydown",e=>{if(e.key==="Enter"){const q=norm($("q").value);const h=ALL.find(m=>norm(m.name)===q)||ALL.find(m=>norm(m.name).includes(q));if(h)show(h);}});
+  const q=new URLSearchParams(location.search).get("q"); if(q){$("q").value=q;} suggest();
+})();
+</script>
+</body>
+</html>

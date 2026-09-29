@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hangul Typing Test — measure your Korean typing speed (타/분)</title>
+<meta name="description" content="Test your Korean typing speed and accuracy with real sentences. Results in 타/분 (strokes per minute), the standard Koreans use, plus words per minute and accuracy.">
+<link rel="canonical" href="https://hellonunchi.com/tools/hangul-typing-test/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/hangul-typing-test/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Hangul Typing Test"><meta property="og:description" content="Your Korean typing speed in 타/분."><meta property="og:image" content="https://hellonunchi.com/img/typing.jpg">
+<style>.target{font-family:"Noto Sans KR",var(--sans);font-size:26px;line-height:1.7;background:var(--hanji);border:1.5px solid var(--line);border-radius:12px;padding:16px 18px;min-height:96px}.target .ok{color:var(--nok)}.target .bad{color:var(--jeok);text-decoration:underline}.target .cur{border-left:2px solid var(--accent)}.en{color:var(--ink-3);font-size:14px;margin:6px 0 12px}textarea.typ{font-family:"Noto Sans KR",var(--sans);font-size:22px;width:100%;min-height:90px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);resize:vertical}textarea.typ:focus{outline:none;border-color:var(--accent)}.timer{font-family:var(--serif);font-size:28px}</style>
+</head>
+<body data-root="/" data-room="learn">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/learn/">Learn</a> › Hangul Typing Test</div>
+  <section class="tool-head">
+    <div class="eyebrow">Learn · Practice</div>
+    <h1>Hangul Typing Test <span class="hangul">한글 타자</span></h1>
+    <p>Sixty seconds, real Korean sentences, and a score in 타/분, the unit every Korean office and PC bang uses. Switch your keyboard to Korean (2-set / 두벌식) and start typing.</p>
+  </section>
+  <div class="panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div class="timer" id="timer">60</div><div class="chips"><button class="chip" id="restart">Restart</button></div></div>
+    <div class="target" id="target"></div><div class="en" id="en"></div>
+    <textarea class="typ" id="typ" placeholder="Type the Korean sentence here… the timer starts on your first key" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+    <div class="result" id="res">
+      <div class="result-grid" style="margin-top:18px">
+        <div class="stat big"><div class="k">Speed <span class="hangul">타/분</span></div><div class="v" id="cpm">—</div><div class="d" id="cpmd"></div></div>
+        <div class="stat"><div class="k">Accuracy</div><div class="v" id="acc">—</div><div class="d">Correct syllables ÷ typed</div></div>
+        <div class="stat"><div class="k">Words per minute</div><div class="v" id="wpm">—</div><div class="d">Korean words, space-separated</div></div>
+      </div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+  <h2>What the numbers mean</h2>
+  <table><thead><tr><th>타/분</th><th>Roughly</th></tr></thead><tbody>
+    <tr><td class="num">100–200</td><td>Learner. You are finding the keys.</td></tr>
+    <tr><td class="num">200–350</td><td>Comfortable. Chatting on KakaoTalk without pain.</td></tr>
+    <tr><td class="num">350–500</td><td>Korean office worker. Typical adult speed.</td></tr>
+    <tr><td class="num">500–700</td><td>Fast. PC-bang veteran or someone who grew up on MSN.</td></tr>
+    <tr><td class="num">700+</td><td>Show-off. Koreans will ask you to type in front of them.</td></tr>
+  </tbody></table>
+  <p>타 (ta) counts keystrokes, not letters. A syllable like 한 is three strokes (ㅎ, ㅏ, ㄴ), which is why Korean speeds look higher than English words-per-minute. We count strokes the way Korean typing programs do: one per jamo, with double consonants and compound vowels counting as two.</p>
+  <h2>Getting faster</h2>
+  <p>Consonants sit on the left of the keyboard, vowels on the right; your left hand does most of the work. Learn ㅐ (o) and ㅔ (p) positions early, they are the most common mistakes. Do not fight autocorrect on your phone: this test is for a real keyboard. Ten minutes a day on this page for two weeks moves most learners from the first row of the table to the second.</p>
+  <section class="related"><h2>Related tools</h2><div class="grid">
+    <a class="card" href="/tools/korean-number-converter/"><span class="tag">Learn</span><b>Korean Number Converter</b><span>Now type the numbers.</span></a>
+    <a class="card" data-room="love" href="/tools/my-name-in-hangul/"><span class="tag">Love</span><b>My Name in Hangul</b><span>Type your own name first.</span></a>
+  </div></section>
+  <section class="tip"><span class="eye" aria-hidden="true"></span><div><b>Want to say it, not just type it?</b><p><a href="https://juseyo.app">Juseyo</a> teaches the sentences you need in a Korean café, clinic or phone shop.</p></div></section>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const S=[["오늘 저녁에 뭐 먹을까요?","What shall we eat tonight?"],["지하철역이 어디예요?","Where is the subway station?"],["이거 얼마예요? 카드 돼요?","How much is this? Do you take cards?"],["내일 아침 아홉 시에 만나요.","Let's meet at nine tomorrow morning."],["한국에 온 지 삼 개월 됐어요.","It has been three months since I came to Korea."],["커피 한 잔 주세요. 아이스로요.","One coffee please. Iced."],["주말에 한강에서 자전거를 탔어요.","I rode a bike by the Han River at the weekend."],["비가 와서 우산을 가져왔어요.","It is raining so I brought an umbrella."],["김치찌개는 조금 매워요.","Kimchi stew is a little spicy."],["이번 주 금요일에 시간 있어요?","Do you have time this Friday?"],["버스가 늦어서 죄송합니다.","Sorry, the bus was late."],["한국어 공부는 재미있지만 어려워요.","Studying Korean is fun but hard."],["여기서 사진 찍어도 돼요?","May I take a photo here?"],["다음 역에서 내리세요.","Get off at the next station."],["친구랑 같이 노래방에 갔어요.","I went to karaoke with a friend."],["따뜻한 물 한 잔 주시겠어요?","Could I have a glass of warm water?"]];
+  const CHO=["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"],JUNG=["ㅏ","ㅐ","ㅑ","ㅒ","ㅓ","ㅔ","ㅕ","ㅖ","ㅗ","ㅘ","ㅙ","ㅚ","ㅛ","ㅜ","ㅝ","ㅞ","ㅟ","ㅠ","ㅡ","ㅢ","ㅣ"],JONG=["","ㄱ","ㄲ","ㄳ","ㄴ","ㄵ","ㄶ","ㄷ","ㄹ","ㄺ","ㄻ","ㄼ","ㄽ","ㄾ","ㄿ","ㅀ","ㅁ","ㅂ","ㅄ","ㅅ","ㅆ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
+  const dbl=new Set(["ㄲ","ㄸ","ㅃ","ㅆ","ㅉ","ㅒ","ㅖ","ㅘ","ㅙ","ㅚ","ㅝ","ㅞ","ㅟ","ㅢ","ㄳ","ㄵ","ㄶ","ㄺ","ㄻ","ㄼ","ㄽ","ㄾ","ㄿ","ㅀ","ㅄ"]);
+  const strokes=ch=>{const c=ch.charCodeAt(0)-0xAC00; if(c<0||c>11171) return ch.trim()?1:1; const j=[CHO[Math.floor(c/588)],JUNG[Math.floor((c%588)/28)],JONG[c%28]].filter(Boolean); return j.reduce((s,x)=>s+(dbl.has(x)?2:1),0);};
+  let order=[],idx=0,typedTotal="",correct=0,typed=0,strokeOk=0,started=false,t=60,timer=null,done=false;
+  function shuffle(){ order=[...S].sort(()=>Math.random()-.5); idx=0; }
+  function render(){ const s=order[idx][0], v=$("typ").value; let h=""; for(let i=0;i<s.length;i++){ const cls=i<v.length?(v[i]===s[i]?"ok":"bad"):(i===v.length?"cur":""); h+=`<span class="${cls}">${s[i]}</span>`; } $("target").innerHTML=h; $("en").textContent=order[idx][1]; }
+  function next(){ const s=order[idx][0], v=$("typ").value; for(let i=0;i<s.length;i++){ typed++; if(v[i]===s[i]){correct++; strokeOk+=strokes(s[i]);} } idx=(idx+1)%order.length; $("typ").value=""; render(); }
+  function finish(){ done=true; clearInterval(timer); const s=order[idx][0], v=$("typ").value; for(let i=0;i<v.length;i++){ typed++; if(v[i]===s[i]){correct++; strokeOk+=strokes(s[i]);} }
+    const cpm=strokeOk, acc=typed?Math.round(correct/typed*100):0, wpm=Math.round(correct/2.5);
+    $("cpm").textContent=cpm; $("cpmd").textContent=cpm<200?"Learner. Keys first, speed later.":cpm<350?"Comfortable. KakaoTalk-ready.":cpm<500?"Office-worker speed. Solid.":cpm<700?"Fast. PC-bang tier.":"Show-off tier. Type in front of Koreans.";
+    $("acc").textContent=acc+"%"; $("wpm").textContent=wpm; $("typ").disabled=true;
+    const tips=["ㅐ and ㅔ live on o and p. Most wrong syllables in this test are one of those two.","Shift is only for the doubles (ㄲ ㄸ ㅃ ㅆ ㅉ) and ㅒ ㅖ. If your pinky hurts you are shifting too much.","Space is a word boundary in Korean too. Learners forget it after particles like 에서 and 을."];
+    $("tip").textContent=tips[cpm%tips.length]; $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:"My Hangul typing speed",big:cpm+" 타/분",sub:`${acc}% accuracy · ${wpm} wpm`,tip:$("tip").textContent,file:"hangul-typing.png"}); }
+  function start(){ if(started) return; started=true; timer=setInterval(()=>{t--; $("timer").textContent=t; if(t<=0) finish();},1000); }
+  function reset(){ clearInterval(timer); shuffle(); typed=correct=strokeOk=0; started=false; done=false; t=60; $("timer").textContent="60"; $("typ").disabled=false; $("typ").value=""; $("res").classList.remove("show"); render(); $("typ").focus(); }
+  $("typ").addEventListener("input",()=>{ if(done) return; start(); const s=order[idx][0], v=$("typ").value; if(v.length>=s.length && v.slice(-1)===s.slice(-1)) { next(); return; } render(); });
+  $("typ").addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); if(!done&&$("typ").value.length) next(); } });
+  $("restart").onclick=reset; reset();
+})();
+</script>
+</body>
+</html>

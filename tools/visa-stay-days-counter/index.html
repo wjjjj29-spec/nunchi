@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korea Visa Stay Days Counter — days left, extension deadline, overstay check</title>
+<meta name="description" content="Count how many days you have left in Korea on a visa-free stay, K-ETA, working holiday or ARC. See your last legal day, when you can apply to extend, and what an overstay costs.">
+<link rel="canonical" href="https://hellonunchi.com/tools/visa-stay-days-counter/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/visa-stay-days-counter/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korea Visa Stay Days Counter"><meta property="og:description" content="Days left in Korea and the deadline you must not miss."><meta property="og:image" content="https://hellonunchi.com/img/visa-days.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Korea Visa Stay Days Counter","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Calculate remaining days of stay in Korea and the visa extension window."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the day I arrive count as day one?","acceptedAnswer":{"@type":"Answer","text":"Yes. Korean immigration counts the arrival date as the first day of stay. A 90-day stay that starts on 1 March ends on 29 May, not 30 May."}},{"@type":"Question","name":"Can I extend a visa-free stay in Korea?","acceptedAnswer":{"@type":"Answer","text":"Normally no. Visa-free and K-ETA stays cannot be extended except for documented emergencies such as illness or flight cancellation. Registered residents with an ARC can apply to extend from four months before the expiry date."}},{"@type":"Question","name":"What happens if I overstay in Korea?","acceptedAnswer":{"@type":"Answer","text":"Overstaying brings a fine that grows with the length of the overstay, up to 30 million won, and can lead to an entry ban. Voluntary departure and reporting to immigration before leaving reduces the penalty."}}]}</script>
+</head>
+<body data-root="/" data-room="live">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/live/">Live</a> › Visa Stay Days Counter</div>
+  <section class="tool-head">
+    <div class="eyebrow">Live · Counter</div>
+    <h1>Visa Stay Days Counter <span class="hangul">체류 기간</span></h1>
+    <p>How many days do you have left in Korea, and when is the last day you can legally do something about it? Arrival day counts as day one. Most people get that wrong.</p>
+  </section>
+
+  <div class="panel">
+    <div class="field"><label>How are you staying?</label>
+      <div class="chips" id="kind">
+        <button class="chip" data-v="90" aria-pressed="true">Visa-free / K-ETA 90 days</button>
+        <button class="chip" data-v="30">Visa-free 30 days</button>
+        <button class="chip" data-v="60">Visa-free 60 days</button>
+        <button class="chip" data-v="180">Visa-free 180 days</button>
+        <button class="chip" data-v="wh">Working holiday (12 months)</button>
+        <button class="chip" data-v="arc">I have an ARC (enter expiry date)</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field"><label for="entry" id="entrylabel">Date you entered Korea</label><input type="date" id="entry"></div>
+      <div class="field" id="expwrap" style="display:none"><label for="expiry">Expiry date on your ARC <span class="hangul">체류기간 만료일</span></label><input type="date" id="expiry"></div>
+    </div>
+    <button class="btn" id="go">Count my days</button>
+    <div class="result" id="res">
+      <div class="result-grid" style="margin-top:18px">
+        <div class="stat big"><div class="k" id="leftk">Days left</div><div class="v" id="left">—</div><div class="d" id="leftd"></div></div>
+        <div class="stat"><div class="k">Last legal day</div><div class="v" id="last" style="font-size:24px">—</div><div class="d">Leave on or before this date.</div></div>
+        <div class="stat"><div class="k">Days stayed so far</div><div class="v" id="stayed">—</div><div class="d">Arrival day counted.</div></div>
+        <div class="stat"><div class="k" id="extk">Extension window</div><div class="v" id="ext" style="font-size:22px">—</div><div class="d" id="extd"></div></div>
+      </div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+
+  <h2>How Korea counts your stay</h2>
+  <p>The day you land is day one, even if you land at 11:50 pm. So a 90-day visa-free stay that begins on 1 March ends on 29 May. Immigration officers count exactly this way and the airline check-in desk on your way out will too. If your maths gives you one extra day, that extra day is an overstay.</p>
+  <p>Visa-free and K-ETA visitors get the number of days printed on their entry record. Registered residents (students, workers, working-holiday makers, spouses) get an expiry date printed on the Alien Registration Card. That date is the one that matters, not the visa sticker in your passport.</p>
+
+  <h2>Extending your stay</h2>
+  <p>If you hold an ARC you can apply to extend from <b>four months before</b> the expiry date until the expiry date itself. Book an appointment on HiKorea, bring your ARC, passport, the application form, a fee stamp and proof of why you are staying (enrolment letter, employment contract, bank balance for some visas). Apply early: appointment slots in Seoul run out weeks ahead in February, August and December.</p>
+  <p>Visa-free stays generally cannot be extended. The exceptions are documented emergencies: hospitalisation, a cancelled flight with no alternative, a natural disaster. Wanting more time with your friends is not an emergency, however sincere.</p>
+
+  <h2>If you overstay</h2>
+  <p>Fines start in the hundreds of thousands of won for a few days and rise with the length of the overstay, up to 30 million won for long periods. An overstay can also mean an entry ban of one to ten years. If it has already happened, go to an immigration office and report it before you fly. Voluntary reporting is treated far more leniently than being caught at the airport.</p>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Does the day I arrive count as day one?</summary><p>Yes. Arrival date is day one. Plan your departure using the last legal day shown above, not a day later.</p></details>
+    <details><summary>Can I leave and come back to reset the 90 days?</summary><p>Sometimes, but not reliably. There is no written rule, and immigration can refuse entry if it looks like you are living in Korea on tourist stays. Two long visa-free stays back to back is a common reason for questions at the desk.</p></details>
+    <details><summary>Where do I find my expiry date?</summary><p>On the back of your ARC, the line "체류기간 만료일". It is also on HiKorea under "My page" if you have an account.</p></details>
+    <details><summary>Is the K-ETA still required?</summary><p>K-ETA has been waived for many countries since 2023 and the waiver has been extended several times. Check the official K-ETA site for your nationality before you fly; the rule changes with little notice.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2>
+    <div class="grid">
+      <a class="card" href="/tools/korean-age-calculator/"><span class="tag">Live</span><b>Korean Age Calculator</b><span>Your three ages in Korea.</span></a>
+      <a class="card" data-room="learn" href="/tools/korean-number-converter/"><span class="tag">Learn</span><b>Korean Number Converter</b><span>Read dates and prices out loud.</span></a>
+    </div>
+  </section>
+  <p class="note">Last checked: September 2026, against Korea Immigration Service guidance. Rules change; confirm on HiKorea (hikorea.go.kr) or call 1345.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id); let kind="90";
+  const today=new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Seoul"})); today.setHours(0,0,0,0);
+  const fmt=d=>d.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+  document.querySelectorAll("#kind .chip").forEach(b=>b.onclick=()=>{document.querySelectorAll("#kind .chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");kind=b.dataset.v;$("expwrap").style.display=kind==="arc"?"":"none";$("entrylabel").textContent=kind==="arc"?"Date you entered (optional)":"Date you entered Korea";});
+  function run(){
+    const entry=new Date($("entry").value); let last;
+    if(kind==="arc"){ last=new Date($("expiry").value); if(isNaN(last)){$("expiry").focus();return;} }
+    else { if(isNaN(entry)){$("entry").focus();return;} const days=kind==="wh"?null:+kind; last=new Date(entry); if(days){ last.setDate(last.getDate()+days-1);} else { last.setFullYear(last.getFullYear()+1); last.setDate(last.getDate()-1);} }
+    last.setHours(0,0,0,0);
+    const left=Math.round((last-today)/864e5);
+    const stayed=isNaN(entry)?null:Math.round((today-entry)/864e5)+1;
+    $("last").textContent=fmt(last);
+    $("stayed").textContent=stayed===null?"—":stayed<1?"not yet":stayed;
+    if(left<0){ $("leftk").textContent="Overstay"; $("left").textContent=(-left)+" day"+(left===-1?"":"s"); $("leftd").textContent="You are past your last legal day. Go to an immigration office and report before you travel."; }
+    else { $("leftk").textContent="Days left"; $("left").textContent=left; $("leftd").textContent=left===0?"Today is your last legal day.":`Including today. Your last legal day is ${fmt(last)}.`; }
+    const canExtend=kind==="arc"||kind==="wh";
+    if(canExtend){ const from=new Date(last); from.setMonth(from.getMonth()-4); $("extk").textContent="Extension window"; $("ext").textContent=`${fmt(from)} → ${fmt(last)}`; $("extd").textContent=today<from?`Opens in ${Math.round((from-today)/864e5)} days. Book a HiKorea appointment when it opens.`:today<=last?"Open now. Book a HiKorea appointment and apply before the expiry date.":"Closed. Contact immigration (1345) immediately."; }
+    else { $("extk").textContent="Extension"; $("ext").textContent="Not available"; $("extd").textContent="Visa-free stays cannot be extended except for documented emergencies."; }
+    const tips=[
+      "Immigration offices are calm on Tuesday and Wednesday mornings and chaos on Mondays and the last week of any month.",
+      "Print your flight booking before you go to immigration for anything. \"It is on my phone\" gets a sigh and a pointed finger at the printer in the corner.",
+      "The 1345 helpline has an English option and real humans. Press 2 for English and be patient; it is the most useful number in Korea for foreigners.",
+      "Set a phone alarm for the day your extension window opens. Seoul appointment slots vanish within days in February and August."
+    ];
+    $("tip").textContent=tips[(left%tips.length+tips.length)%tips.length];
+    $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:"My days left in Korea",big:(left<0?"-":"")+Math.abs(left)+" days",sub:"Last legal day: "+fmt(last),tip:$("tip").textContent,file:"korea-visa-days.png"});
+  }
+  $("go").onclick=run;
+})();
+</script>
+</body>
+</html>

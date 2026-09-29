@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korea eSIM Data Calculator — how many GB do you need for your trip?</title>
+<meta name="description" content="Work out how much mobile data you actually need in Korea. Pick your trip length and habits and get a GB estimate, the plan size to buy, and where free Wi-Fi saves you money.">
+<link rel="canonical" href="https://hellonunchi.com/tools/korea-esim-data-calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korea-esim-data-calculator/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korea eSIM Data Calculator"><meta property="og:description" content="How many GB you really need for Korea."><meta property="og:image" content="https://hellonunchi.com/img/esim.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Korea eSIM Data Calculator","applicationCategory":"TravelApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Estimate mobile data needs for a trip to Korea and pick an eSIM plan size."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does my phone support eSIM?","acceptedAnswer":{"@type":"Answer","text":"Most phones sold since 2019 do: iPhone XS and later, Google Pixel 3 and later, Samsung Galaxy S20 and later, and many others. Phones bought in mainland China and some carrier-locked phones do not. Check Settings for an 'Add eSIM' or 'Add cellular plan' option before you buy."}},{"@type":"Question","name":"Is a Korean SIM better than an international eSIM?","acceptedAnswer":{"@type":"Answer","text":"A local SIM from SK Telecom, KT or LG U+ gives you a Korean phone number, which you need for restaurant waitlists and some apps. International eSIMs are cheaper and set up before you land but usually have no number. For a holiday under two weeks, an eSIM is enough; for longer stays or if you need to receive calls, get a local SIM."}}]}</script>
+</head>
+<body data-root="/" data-room="visit">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/visit/">Visit</a> › eSIM Data Calculator</div>
+  <section class="tool-head">
+    <div class="eyebrow">Visit · Calculator</div>
+    <h1>Korea eSIM Data Calculator <span class="hangul">데이터</span></h1>
+    <p>Most people buy either far too much data or a plan that dies on day five. Tell us how you use your phone and we will give you a number, not a guess.</p>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label for="days">Days in Korea</label><input type="number" id="days" min="1" max="90" value="7"></div>
+      <div class="field"><label>Where you sleep has Wi-Fi?</label><div class="chips" id="wifi"><button class="chip" data-v="1" aria-pressed="true">Yes, decent</button><button class="chip" data-v="0">No / unreliable</button></div></div>
+    </div>
+    <div class="field"><label>How you use your phone out and about</label>
+      <div class="chips" id="use">
+        <button class="chip" data-v="light">Maps, messaging, a few photos</button>
+        <button class="chip" data-v="normal" aria-pressed="true">Plus social media and some video</button>
+        <button class="chip" data-v="heavy">Streaming, video calls, hotspot for a laptop</button>
+      </div>
+    </div>
+    <button class="btn" id="go">How much data do I need?</button>
+    <div class="result" id="res">
+      <div class="result-grid" style="margin-top:18px">
+        <div class="stat big"><div class="k">Buy at least</div><div class="v" id="plan">—</div><div class="d" id="pland"></div></div>
+        <div class="stat"><div class="k">Estimated use</div><div class="v" id="est">—</div><div class="d" id="estd"></div></div>
+        <div class="stat"><div class="k">Per day</div><div class="v" id="pd">—</div><div class="d">Average, with some heavy days.</div></div>
+      </div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="partner"><div><b>Set it up before you land</b><span>An eSIM bought online installs in two minutes and works the moment you leave airplane mode at Incheon. No queue at the airport counter.</span></div><a class="btn" href="#" rel="sponsored nofollow noopener" target="_blank" data-partner="esim">Compare Korea eSIM plans</a><p class="disc">Partner link. We may earn a commission at no cost to you.</p></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+
+  <h2>What things cost in data</h2>
+  <table>
+    <thead><tr><th>Activity</th><th class="num">Roughly</th></tr></thead>
+    <tbody>
+      <tr><td>Naver Map or Kakao Map, one hour of navigating</td><td class="num">20–40 MB</td></tr>
+      <tr><td>KakaoTalk messaging all day</td><td class="num">10–30 MB</td></tr>
+      <tr><td>Instagram or TikTok, 30 minutes of scrolling</td><td class="num">300–500 MB</td></tr>
+      <tr><td>YouTube, one hour at normal quality</td><td class="num">500 MB–1 GB</td></tr>
+      <tr><td>Video call, 30 minutes</td><td class="num">300–500 MB</td></tr>
+      <tr><td>Uploading 50 photos to the cloud</td><td class="num">200–400 MB</td></tr>
+      <tr><td>Hotspot for a laptop, a working afternoon</td><td class="num">1–3 GB</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Korea has a lot of free Wi-Fi</h2>
+  <p>Seoul's subway, buses, most cafés, convenience stores and public buildings have free Wi-Fi, and it is fast. Many travellers use half the data they expect because their phone is on Wi-Fi every time they sit down. The catch: some networks need a Korean phone number to log in. Cafés and hotels almost never do; some city networks do.</p>
+
+  <h2>eSIM or Korean SIM?</h2>
+  <p>An international eSIM (bought from an app before you fly) is cheap, installs in minutes, and is all a holiday needs. It usually has no Korean phone number. A local SIM from SK Telecom, KT or LG U+ costs more but gives you a Korean number, which unlocks restaurant waitlist apps, some deliveries and bank verification. Under two weeks: eSIM. Longer, or if you need to be called: local SIM, bought at the airport or a city branch with your passport.</p>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Does my phone support eSIM?</summary><p>Most phones from 2019 onward do. Check Settings for "Add eSIM" or "Add mobile plan". Phones bought in mainland China and some carrier-locked phones cannot use eSIM.</p></details>
+    <details><summary>Can I top up if I run out?</summary><p>Most eSIM apps let you buy more data in the app instantly. It is cheaper to buy the right size once than to top up twice, which is why this calculator exists.</p></details>
+    <details><summary>Is there unlimited data in Korea?</summary><p>Yes, Korean carriers and some eSIM providers sell unlimited daily plans. They cost more per day but make sense for heavy users or trips over two weeks. Fair-use limits may slow speeds after a large daily amount.</p></details>
+    <details><summary>Will Google Maps work in Korea?</summary><p>Only partly. Driving and walking directions are limited by Korean mapping law. Use Naver Map or Kakao Map; both have English interfaces and use very little data.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2>
+    <div class="grid">
+      <a class="card" href="/tools/korea-trip-budget-calculator/"><span class="tag">Visit</span><b>Korea Trip Budget</b><span>Data is the cheap part.</span></a>
+      <a class="card" data-room="learn" href="/tools/korean-number-converter/"><span class="tag">Learn</span><b>Korean Number Converter</b><span>Read your data balance in Korean.</span></a>
+    </div>
+  </section>
+  <p class="note">Estimates last checked: September 2026. Your use will vary; the buffer is built in.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id); let use="normal", wifi=1;
+  const PD={light:0.45,normal:1.3,heavy:3.2};
+  const SIZES=[1,2,3,5,10,15,20,30,50];
+  document.querySelectorAll("#use .chip").forEach(b=>b.onclick=()=>{document.querySelectorAll("#use .chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");use=b.dataset.v;});
+  document.querySelectorAll("#wifi .chip").forEach(b=>b.onclick=()=>{document.querySelectorAll("#wifi .chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");wifi=+b.dataset.v;});
+  function run(){
+    const d=Math.max(1,Math.min(90,+$("days").value||7)); const perDay=PD[use]*(wifi?0.7:1.0); const est=perDay*d; const need=est*1.3;
+    const size=SIZES.find(s=>s>=need); const plan=size?size+" GB":"Unlimited";
+    $("plan").textContent=plan; $("pland").textContent=size?`${d} day${d>1?"s":""}, ${use} use, ${wifi?"with":"without"} Wi-Fi where you sleep. Includes a 30% buffer.`:"Over 50 GB: an unlimited daily plan is cheaper and simpler.";
+    $("est").textContent=est.toFixed(1)+" GB"; $("estd").textContent="Realistic total for the trip."; $("pd").textContent=perDay.toFixed(1)+" GB";
+    const tips={light:"Download the Naver Map area for Seoul offline before you fly. Then even your light plan will feel infinite.",normal:"Turn off auto-play video in Instagram and background app refresh for the trip. Those two settings alone cut most people's use by a third.",heavy:"If you are hotspotting a laptop, an unlimited Korean carrier plan or a pocket Wi-Fi rental beats stacking eSIM top-ups. Rent at the airport with your passport."};
+    $("tip").textContent=tips[use]; $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:`Data for ${d} days in Korea`,big:plan,sub:`about ${est.toFixed(1)} GB of real use, ${use} habits`,tip:tips[use],file:"korea-esim-data.png"});
+  }
+  $("go").onclick=run;
+  fetch("/assets/partners.json").then(r=>r.json()).then(p=>{document.querySelectorAll("[data-partner]").forEach(a=>{const k=a.dataset.partner;if(p[k]&&p[k].url)a.href=p[k].url;else a.closest(".partner").style.display="none";});}).catch(()=>{document.querySelectorAll(".partner").forEach(x=>x.style.display="none");});
+})();
+</script>
+</body>
+</html>

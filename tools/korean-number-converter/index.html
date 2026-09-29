@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korean Number Converter — read any number in Sino-Korean and native Korean</title>
+<meta name="description" content="Type a number and hear how Koreans say it: the Sino-Korean way for money, dates and phone numbers, and the native Korean way for counting and age. With romanization and rules for which to use.">
+<link rel="canonical" href="https://hellonunchi.com/tools/korean-number-converter/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korean-number-converter/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korean Number Converter"><meta property="og:description" content="Any number, read the Sino-Korean and native Korean way."><meta property="og:image" content="https://hellonunchi.com/img/numbers.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Korean Number Converter","applicationCategory":"EducationalApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Convert numbers to Sino-Korean and native Korean words with romanization."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Korean have two number systems?","acceptedAnswer":{"@type":"Answer","text":"Native Korean numbers are the original counting words, used for counting things, people and hours and for age. Sino-Korean numbers came from Chinese and are used for money, dates, minutes, phone numbers and anything mathematical. Native numbers stop at 99, so everything larger is Sino-Korean."}},{"@type":"Question","name":"How do you say 10,000 in Korean?","acceptedAnswer":{"@type":"Answer","text":"만 (man). Korean groups large numbers by ten thousands, not thousands: 100,000 is 십만 (sip-man, ten ten-thousands) and 1,000,000 is 백만 (baek-man, a hundred ten-thousands)."}}]}</script>
+</head>
+<body data-root="/" data-room="learn">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/learn/">Learn</a> › Korean Number Converter</div>
+  <section class="tool-head">
+    <div class="eyebrow">Learn · Converter</div>
+    <h1>Korean Number Converter <span class="hangul">숫자 읽기</span></h1>
+    <p>Korean has two sets of numbers and uses them for different things. Type a number and see both, with a note on which one you need for money, time, age or counting.</p>
+  </section>
+
+  <div class="panel">
+    <div class="field"><label for="num">Number</label><input type="text" inputmode="numeric" id="num" placeholder="e.g. 4500 or 1,250,000" autocomplete="off"><small>Up to 999,999,999,999. Commas are fine.</small></div>
+    <div class="chips" id="quick"><button class="chip" data-v="7">7</button><button class="chip" data-v="24">24</button><button class="chip" data-v="4500">4,500</button><button class="chip" data-v="38000">38,000</button><button class="chip" data-v="1250000">1,250,000</button><button class="chip" data-v="2026">2026</button></div>
+    <button class="btn" id="go" style="margin-top:14px">Read it in Korean</button>
+    <div class="result" id="res">
+      <div class="result-grid" style="margin-top:18px">
+        <div class="stat big"><div class="k">Sino-Korean <span class="hangul">한자어 수</span> · money, dates, minutes, phone numbers</div><div class="v hangul-big" id="sino" style="font-size:40px">—</div><div class="d" id="sinor"></div></div>
+        <div class="stat big" id="natwrap"><div class="k">Native Korean <span class="hangul">고유어 수</span> · counting things, people, hours, age</div><div class="v hangul-big" id="nat" style="font-size:40px">—</div><div class="d" id="natr"></div></div>
+        <div class="stat"><div class="k">As money</div><div class="v hangul-big" id="won" style="font-size:24px">—</div><div class="d" id="wonr"></div></div>
+        <div class="stat"><div class="k">As age</div><div class="v hangul-big" id="age" style="font-size:24px">—</div><div class="d" id="ager"></div></div>
+      </div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+
+  <h2>Which system when</h2>
+  <table>
+    <thead><tr><th>Use</th><th>System</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>Money</td><td>Sino-Korean + 원</td><td>4,500원 → 사천오백 원 (sa-cheon-o-baek won)</td></tr>
+      <tr><td>Dates, years, months</td><td>Sino-Korean</td><td>3월 15일 → 삼월 십오일</td></tr>
+      <tr><td>Minutes and seconds</td><td>Sino-Korean</td><td>30분 → 삼십 분</td></tr>
+      <tr><td>Hours on the clock</td><td>Native Korean + 시</td><td>3시 → 세 시 (se si)</td></tr>
+      <tr><td>Counting things, people, animals</td><td>Native Korean + counter</td><td>커피 두 잔 (two coffees), 세 명 (three people)</td></tr>
+      <tr><td>Age in conversation</td><td>Native Korean + 살</td><td>스물다섯 살 (25)</td></tr>
+      <tr><td>Age on forms, phone numbers, floors, bus numbers</td><td>Sino-Korean</td><td>25세, 010-1234-5678, 7층, 273번 버스</td></tr>
+    </tbody>
+  </table>
+  <p>The clock is the famous trap: <b>3:30</b> is 세 시 삼십 분, native for the hour and Sino for the minutes, in the same breath. Every learner says 삼 시 at least once. Everyone will understand you. Nobody will correct you, which is why you should get it right yourself.</p>
+
+  <h2>Why Korean counts in ten-thousands</h2>
+  <p>English groups digits in threes: thousand, million, billion. Korean groups them in fours: 만 (10,000), 억 (100,000,000), 조 (a trillion). So 1,000,000 is not "a thousand thousands" but 백만, a hundred ten-thousands. When you look at a Korean price tag, read it from the 만: 350,000원 is 삼십오만 원, "thirty-five man won". Once that clicks, rent and salary conversations get much easier.</p>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Why does Korean have two number systems?</summary><p>Native Korean numbers are the original counting words. Sino-Korean numbers arrived with Chinese characters and took over anything written or mathematical. Native numbers stop at 99, so big numbers are always Sino-Korean.</p></details>
+    <details><summary>How do you say 10,000 in Korean?</summary><p>만 (man). Not 십천. Korean has no word for "ten thousand" built from thousand; 만 is its own unit and the base for everything larger.</p></details>
+    <details><summary>Do the native numbers change before a counter?</summary><p>Yes, four of them shorten: 하나→한, 둘→두, 셋→세, 넷→네 when a counter follows. One coffee is 커피 한 잔, not 하나 잔. Twenty also shortens: 스물→스무 (스무 살, twenty years old).</p></details>
+    <details><summary>What is 영 vs 공 for zero?</summary><p>영 is zero in maths and amounts. 공 is zero when reading digits one by one, like phone numbers: 010 is 공일공.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2>
+    <div class="grid">
+      <a class="card" data-room="live" href="/tools/korean-age-calculator/"><span class="tag">Live</span><b>Korean Age Calculator</b><span>Then say it in Korean.</span></a>
+      <a class="card" data-room="visit" href="/tools/korea-trip-budget-calculator/"><span class="tag">Visit</span><b>Korea Trip Budget</b><span>Numbers you will actually spend.</span></a>
+    </div>
+  </section>
+  <section class="tip"><span class="eye" aria-hidden="true"></span><div><b>Want the sentences, not just the numbers?</b><p><a href="https://juseyo.app">Juseyo</a> teaches survival Korean by place: the café, the pharmacy, the phone shop.</p></div></section>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const SD=["","일","이","삼","사","오","육","칠","팔","구"], SDR=["","il","i","sam","sa","o","yuk","chil","pal","gu"];
+  const SU=["","십","백","천"], SUR=["","sip","baek","cheon"]; const BIG=["","만","억","조"], BIGR=["","man","eok","jo"];
+  function sino4(n,rom){ let s="",r=[]; for(let i=3;i>=0;i--){const d=Math.floor(n/10**i)%10; if(!d)continue; if(!(d===1&&i>0)){s+=SD[d];r.push(SDR[d]);} s+=SU[i]; if(SU[i])r.push(SUR[i]); if(d===1&&i>0&&r.length&&r[r.length-1]===SUR[i]){} } return [s,r.join("-")]; }
+  function sino(n){ if(n===0)return["영","yeong"]; let s="",r=[]; for(let g=3;g>=0;g--){const part=Math.floor(n/10**(4*g))%10000; if(!part)continue; let [ps,pr]=sino4(part); if(part===1&&g>0&&g<3){ps="";pr="";} s+=ps+BIG[g]; r.push((pr?pr+(BIG[g]?"-":""):"")+BIGR[g]); } return [s,r.join(" ")]; }
+  const N1=["","하나","둘","셋","넷","다섯","여섯","일곱","여덟","아홉"], N1R=["","hana","dul","set","net","daseot","yeoseot","ilgop","yeodeol","ahop"];
+  const N10=["","열","스물","서른","마흔","쉰","예순","일흔","여든","아흔"], N10R=["","yeol","seumul","seoreun","maheun","swin","yesun","ilheun","yeodeun","aheun"];
+  const NC1=["","한","두","세","네"], NC1R=["","han","du","se","ne"];
+  function native(n,counter){ const t=Math.floor(n/10),o=n%10; let s=N10[t],r=[N10R[t]]; if(counter&&o>=1&&o<=4){s+=NC1[o];r.push(NC1R[o]);} else if(counter&&o===0&&t===2){s="스무";r=["seumu"];} else {s+=N1[o];r.push(N1R[o]);} return [s,r.filter(Boolean).join("-")]; }
+  function run(v){ const raw=(v??$("num").value).replace(/[^\d]/g,""); if(!raw){$("num").focus();return;} const n=Number(raw); if(n>999999999999){$("num").value="999999999999";return run("999999999999");}
+    const [ss,sr]=sino(n); $("sino").textContent=ss; $("sinor").textContent=sr;
+    if(n>=1&&n<=99){ const [ns,nr]=native(n,false); $("nat").textContent=ns; $("natr").textContent=nr+(n<=4||n===20?"  ·  before a counter: "+native(n,true)[0]+" ("+native(n,true)[1]+")":""); $("natwrap").style.display=""; }
+    else { $("nat").textContent="—"; $("natr").textContent=n===0?"Zero is 영 (yeong) in amounts, 공 (gong) when reading digits.":"Native Korean numbers stop at 99. Above that, everyone uses Sino-Korean."; }
+    $("won").textContent=(n===0?"영":ss)+" 원"; $("wonr").textContent=(n===0?"yeong":sr)+" won · ₩"+n.toLocaleString("en-US");
+    if(n>=1&&n<=99){ const [as,ar]=native(n,true); $("age").textContent=as+" 살"; $("ager").textContent=ar+" sal (spoken) · "+ss+" 세 on forms"; } else { $("age").textContent="—"; $("ager").textContent="Not an age most people admit to."; }
+    const tips=[ "When a cashier says the price, listen for the 만. Everything before it is ten-thousands, everything after is the change.",
+      "Koreans read phone numbers digit by digit with 공 for zero: 010 is gong-il-gong. Say it that way and people will type it right first time.",
+      "Ordering: hold up fingers Korean style if you must, but say 두 개 주세요 (du gae juseyo) and you sound like you have been here a while.",
+      "Prices ending in 900 are common. 4,900원 is 사천구백 원. Round up in your head to 5,000 and you will never be surprised at the till." ];
+    $("tip").textContent=tips[n%tips.length];
+    $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:n.toLocaleString("en-US")+" in Korean",big:ss,sub:sr+(n>=1&&n<=99?"  ·  native: "+native(n,false)[0]:""),tip:$("tip").textContent,file:"korean-number.png"});
+  }
+  $("go").onclick=()=>run(); $("num").addEventListener("keydown",e=>{if(e.key==="Enter")run();});
+  document.querySelectorAll("#quick .chip").forEach(b=>b.onclick=()=>{$("num").value=Number(b.dataset.v).toLocaleString("en-US");run();});
+  const q=new URLSearchParams(location.search).get("n"); if(q){$("num").value=q;run();}
+})();
+</script>
+</body>
+</html>

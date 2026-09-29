@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Name in Hangul — write your name in Korean letters</title>
+<meta name="description" content="Type your name and see how Koreans write it in Hangul, with a pronunciation guide. Uses the standard Korean spelling for common names and the official loanword rules for the rest.">
+<link rel="canonical" href="https://hellonunchi.com/tools/my-name-in-hangul/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/my-name-in-hangul/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="My Name in Hangul"><meta property="og:description" content="See how Koreans write and say your name."><meta property="og:image" content="https://hellonunchi.com/img/name-hangul.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"My Name in Hangul","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Convert an English or Western name into Korean Hangul spelling."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is there one correct way to write my name in Korean?","acceptedAnswer":{"@type":"Answer","text":"Korea has official loanword spelling rules and most common names have a settled spelling that newspapers and textbooks use. For less common names there can be more than one reasonable spelling. On your Alien Registration Card you choose the Hangul spelling yourself."}},{"@type":"Question","name":"Why does my name sound different in Korean?","acceptedAnswer":{"@type":"Answer","text":"Hangul has no f, v, z or th sounds and every syllable needs a vowel, so consonant clusters get an extra 'eu' sound. Chris becomes keu-ri-seu. It is an approximation, not a mistake."}}]}</script>
+</head>
+<body data-root="/" data-room="love">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/love/">Love</a> › My Name in Hangul</div>
+  <section class="tool-head">
+    <div class="eyebrow">Love · Converter</div>
+    <h1>My Name in Hangul <span class="hangul">이름</span></h1>
+    <p>Type your name and see how a Korean newspaper, a barista, or the immigration office would write it in Hangul.</p>
+  </section>
+
+  <div class="panel">
+    <div class="field"><label for="name">Your name</label><input type="text" id="name" placeholder="e.g. Emily Carter" autocomplete="off" autocapitalize="words"><small>First name, full name, or a nickname. Latin letters only for now.</small></div>
+    <button class="btn" id="go">Write it in Hangul</button>
+    <div class="result" id="res">
+      <div class="stat big" style="margin-top:18px;text-align:center"><div class="k">In Hangul</div><div class="v hangul-big" id="out">—</div><div class="d" id="say"></div></div>
+      <div id="parts" class="result-grid" style="margin-top:12px"></div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+      <p class="note" id="conf"></p>
+    </div>
+  </div>
+
+  <h2>How Koreans write foreign names</h2>
+  <p>Hangul is an alphabet, so your name is written by sound, not by spelling. Korea has an official rulebook for this (the <em>Loanword Orthography</em>), and for common names the spelling has settled over decades. Michael is always 마이클, never anything else, because that is how newspapers have written it since the 1960s.</p>
+  <p>Three things change your name on the way in. <b>Sounds Korean does not have.</b> There is no <i>f</i>, <i>v</i>, <i>z</i> or <i>th</i>, so Fiona becomes 피오나 (pi-o-na) and Zoe becomes 조이 (jo-i). <b>Every syllable needs a vowel.</b> Chris has one vowel but three consonants, so it becomes three syllables: 크리스, keu-ri-seu. <b>No final r.</b> Peter ends in a soft "eo": 피터, pi-teo.</p>
+
+  <h2>What to put on official documents</h2>
+  <p>Your passport name in Latin letters is what matters legally. On the Alien Registration Card you may add a Hangul name, and you choose the spelling. Most people use the standard spelling this tool gives, because banks and delivery drivers will recognise it. Once you pick one, use it everywhere: a bank account under 마이클 and a phone contract under 마이켈 will cause a headache later.</p>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Is there one correct way to write my name in Korean?</summary><p>For common names, effectively yes: the standard spelling in this tool. For rarer names two spellings can both be reasonable. Pick one and stay consistent.</p></details>
+    <details><summary>Should I just take a Korean name instead?</summary><p>Many long-term residents do, and Koreans find it charming rather than strange. Our Korean Name Generator (coming soon) suggests names with a meaning that fits you. You can use both: the Hangul spelling of your real name on documents, a Korean name with friends.</p></details>
+    <details><summary>Why is my name written with an extra "eu" sound?</summary><p>Hangul cannot end a syllable with most consonants or stack two consonants together, so it inserts the neutral vowel ㅡ (eu). Mark is 마크 (ma-keu). It is the same reason Koreans say "keu-ri-seu-ma-seu" for Christmas.</p></details>
+    <details><summary>Can you write Japanese, Chinese or Arabic names?</summary><p>Type them in Latin letters (romanised) and we will do our best. Many common ones are in our dictionary. For Chinese names, note Korea usually writes the Mandarin sound, not the Korean reading of the characters.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2>
+    <div class="grid">
+      <a class="card" data-room="live" href="/tools/korean-age-calculator/"><span class="tag">Live</span><b>Korean Age Calculator</b><span>Your three ages in Korea.</span></a>
+      <a class="card soon" href="/love/"><span class="tag">Love</span><b>Korean Name Generator</b><span>A Korean name with a meaning that fits you.</span></a>
+    </div>
+  </section>
+  <p class="note">Spellings follow the National Institute of Korean Language loanword rules and common media usage. Last checked: September 2026.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script src="/assets/hangul-names.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const CHO=["g","kk","n","d","tt","r","m","b","pp","s","ss","","j","jj","ch","k","t","p","h"], JUNG=["a","ae","ya","yae","eo","e","yeo","ye","o","wa","wae","oe","yo","u","wo","we","wi","yu","eu","ui","i"], JONG=["","k","k","k","n","n","n","t","l","k","m","l","l","l","l","l","m","p","p","t","t","ng","t","t","k","t","p","t"];
+  const roman=s=>[...s].map(ch=>{const c=ch.charCodeAt(0)-0xAC00;if(c<0||c>11171)return ch;const cho=Math.floor(c/588),jung=Math.floor((c%588)/28),jong=c%28;return CHO[cho]+JUNG[jung]+JONG[jong];}).join("-");
+  function run(){
+    const name=$("name").value.trim(); if(!name){$("name").focus();return;}
+    const parts=HANGUL_NAMES.convert(name); if(!parts.length) return;
+    const full=parts.map(p=>p.hangul).join(" ");
+    $("out").textContent=full; $("say").textContent="Said roughly: "+parts.map(p=>roman(p.hangul)).join("  ");
+    $("parts").innerHTML=parts.length>1?parts.map(p=>`<div class="stat"><div class="k">${p.word}</div><div class="v hangul-big" style="font-size:34px">${p.hangul}</div><div class="d">${roman(p.hangul)} · ${[...p.hangul].length} syllable${[...p.hangul].length>1?"s":""}</div></div>`).join(""):"";
+    const n=[...parts[0].hangul].length;
+    const tips=[
+      `Korean given names are almost always two syllables. Yours is ${n}. If a barista shortens it, that is not rudeness, that is nunchi.`,
+      `Koreans will often add 씨 (ssi) after your name: ${parts[0].hangul}씨. It is polite, roughly "Mr" or "Ms", and it means they like you enough to be careful.`,
+      `On a coffee cup your name will be ${parts[0].hangul}. On a delivery box, the same. Pick one spelling and Korea becomes much easier.`
+    ];
+    $("tip").textContent=tips[n%tips.length];
+    const dictCount=parts.filter(p=>p.fromDict).length;
+    $("conf").textContent=dictCount===parts.length?"Standard spelling used in Korean media and textbooks.":dictCount?"Common parts use the standard spelling; the rest follow the official loanword rules and may have alternatives.":"Built from the official loanword rules. Rare names can have more than one accepted spelling.";
+    $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:`${name} in Hangul`,big:full,sub:roman(parts[0].hangul)+(parts[1]?"  "+roman(parts[1].hangul):""),tip:$("tip").textContent,file:"my-name-in-hangul.png"});
+  }
+  $("go").onclick=run; $("name").addEventListener("keydown",e=>{if(e.key==="Enter")run();});
+  const q=new URLSearchParams(location.search).get("n"); if(q){$("name").value=q;run();}
+})();
+</script>
+</body>
+</html>

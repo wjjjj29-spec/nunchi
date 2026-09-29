@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korea Trip Budget Calculator — how much does a trip to Korea cost? (2026)</title>
+<meta name="description" content="Estimate your Korea travel budget in won and dollars: hotels, food, transport, activities and SIM, by travel style and trip length. Realistic 2026 prices for Seoul, Busan and beyond.">
+<link rel="canonical" href="https://hellonunchi.com/tools/korea-trip-budget-calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korea-trip-budget-calculator/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korea Trip Budget Calculator"><meta property="og:description" content="A realistic daily budget for Korea, in won and dollars."><meta property="og:image" content="https://hellonunchi.com/img/trip-budget.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Korea Trip Budget Calculator","applicationCategory":"TravelApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Estimate the cost of a trip to Korea by travel style, length and group size."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a trip to Korea cost per day?","acceptedAnswer":{"@type":"Answer","text":"Excluding flights, a backpacker can manage on roughly 80,000 to 100,000 won a day, a mid-range traveller spends about 150,000 to 200,000 won, and a comfortable trip runs 300,000 won or more per person per day. Accommodation is the biggest variable."}},{"@type":"Question","name":"Is Korea expensive for tourists?","acceptedAnswer":{"@type":"Answer","text":"Korea is cheaper than Japan for transport and street food, similar for hotels in Seoul, and more expensive than most of Southeast Asia. Public transport and convenience-store meals are very cheap; hotels in central Seoul and Western-style restaurants are not."}}]}</script>
+</head>
+<body data-root="/" data-room="visit">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/visit/">Visit</a> › Trip Budget Calculator</div>
+  <section class="tool-head">
+    <div class="eyebrow">Visit · Calculator</div>
+    <h1>Korea Trip Budget Calculator <span class="hangul">여행 경비</span></h1>
+    <p>A realistic number, not a brochure number. Pick how you like to travel and we build a daily budget from what things actually cost in 2026.</p>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label for="nights">Nights in Korea</label><input type="number" id="nights" min="1" max="90" value="7"></div>
+      <div class="field"><label for="ppl">Travellers</label><input type="number" id="ppl" min="1" max="10" value="2"><small>Rooms are shared by two.</small></div>
+    </div>
+    <div class="field"><label>Travel style</label>
+      <div class="chips" id="style">
+        <button class="chip" data-v="budget">Backpacker</button>
+        <button class="chip" data-v="mid" aria-pressed="true">Comfortable</button>
+        <button class="chip" data-v="high">Treat yourself</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field"><label for="shop">Shopping allowance per person <small>(optional, ₩)</small></label><input type="number" id="shop" min="0" step="10000" value="100000"></div>
+      <div class="field"><label for="tours">Day tours or big-ticket activities per person</label><select id="tours"><option value="0">None</option><option value="1" selected>One (DMZ, Nami Island, theme park)</option><option value="2">Two</option><option value="3">Three or more</option></select></div>
+    </div>
+    <button class="btn" id="go">Estimate my budget</button>
+
+    <div class="result" id="res">
+      <div class="result-grid" style="margin-top:18px">
+        <div class="stat big"><div class="k">Total for the trip, excluding flights</div><div class="v" id="total">—</div><div class="d" id="totalusd"></div></div>
+        <div class="stat"><div class="k">Per person</div><div class="v" id="pp">—</div><div class="d" id="ppusd"></div></div>
+        <div class="stat"><div class="k">Per person per day</div><div class="v" id="ppd">—</div><div class="d" id="ppdusd"></div></div>
+      </div>
+      <table id="tbl"><thead><tr><th>Where it goes</th><th class="num">Per person</th><th>Notes</th></tr></thead><tbody></tbody></table>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="partner" id="p-esim"><div><b>Data for the whole trip</b><span>An eSIM set up before you land is cheaper than airport SIM counters and works the moment you turn on your phone.</span></div><a class="btn" href="#" rel="sponsored nofollow noopener" target="_blank" data-partner="esim">Compare Korea eSIMs</a><p class="disc">Partner link. We may earn a commission at no cost to you.</p></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+
+  <h2>What the numbers are based on</h2>
+  <p>We keep three price profiles and check them against current listings and menus. All figures are per person per day unless noted, in Korean won.</p>
+  <table>
+    <thead><tr><th></th><th class="num">Backpacker</th><th class="num">Comfortable</th><th class="num">Treat yourself</th></tr></thead>
+    <tbody>
+      <tr><td>Room per night (shared by two)</td><td class="num">₩45,000</td><td class="num">₩130,000</td><td class="num">₩300,000</td></tr>
+      <tr><td>Food and coffee</td><td class="num">₩32,000</td><td class="num">₩60,000</td><td class="num">₩110,000</td></tr>
+      <tr><td>Getting around</td><td class="num">₩8,000</td><td class="num">₩13,000</td><td class="num">₩30,000</td></tr>
+      <tr><td>Small activities and entry fees</td><td class="num">₩8,000</td><td class="num">₩20,000</td><td class="num">₩45,000</td></tr>
+      <tr><td>One day tour (each)</td><td class="num">₩60,000</td><td class="num">₩90,000</td><td class="num">₩150,000</td></tr>
+    </tbody>
+  </table>
+  <p>Backpacker means hostel dorms or guesthouses, kimbap and convenience-store dinners, the subway everywhere. Comfortable means a clean three-star or a good Airbnb near a station, sit-down Korean meals, a taxi when it rains. Treat yourself means a four-star in Myeongdong or Gangnam, tasting menus and taxis by default.</p>
+
+  <h2>Where people overspend</h2>
+  <p><b>Hotels in central Seoul.</b> Prices jump in April, October and around holidays. Book two months out or stay one subway stop away from the famous area. <b>Western food and cocktails.</b> A pasta in Itaewon costs what a full Korean set meal costs three times over. <b>Airport SIM counters.</b> Buy an eSIM before you fly. <b>Taxis from Incheon.</b> The AREX express train is ₩11,000. A taxi is ₩70,000 or more.</p>
+
+  <h2>Where Korea is cheap</h2>
+  <p>Public transport is excellent and a ride is about ₩1,500. Convenience stores sell real meals. Street food in markets runs ₩3,000 to ₩6,000 a dish. Museums and palaces cost a few thousand won, and Gyeongbokgung is free if you wear a rented hanbok.</p>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Does this include flights?</summary><p>No. Flights vary too much by origin and season. Add your fare on top of the total.</p></details>
+    <details><summary>Is cash still needed in Korea?</summary><p>Rarely. Cards work almost everywhere, including street stalls with a terminal. Carry ₩50,000 to ₩100,000 in cash for markets and small shops, and load a T-money card for transit.</p></details>
+    <details><summary>What exchange rate do you use?</summary><p>A planning rate of roughly ₩1,380 per US dollar. Check the live rate before you travel. Your card will use the rate on the day.</p></details>
+    <details><summary>Are prices different in Busan or Jeju?</summary><p>Hotels are usually 10 to 20 percent cheaper than Seoul outside peak season. Jeju needs a rental car, which adds ₩50,000 to ₩80,000 a day.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2>
+    <div class="grid">
+      <a class="card soon" href="/visit/"><span class="tag">Visit</span><b>eSIM Data Calculator</b><span>How many GB you actually need.</span></a>
+      <a class="card soon" href="/visit/"><span class="tag">Visit</span><b>T-money vs Climate Card</b><span>Which transit card pays off.</span></a>
+    </div>
+  </section>
+  <p class="note">Prices last checked: September 2026. Estimates only; your trip will differ.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const P={budget:{room:45000,food:32000,move:8000,act:8000,tour:60000,label:"backpacker"},mid:{room:130000,food:60000,move:13000,act:20000,tour:90000,label:"comfortable"},high:{room:300000,food:110000,move:30000,act:45000,tour:150000,label:"treat-yourself"}};
+  let style="mid";
+  document.querySelectorAll("#style .chip").forEach(b=>b.onclick=()=>{document.querySelectorAll("#style .chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");style=b.dataset.v;});
+  const esim=n=>n<=5?15000:n<=10?25000:n<=20?35000:48000;
+  function run(){
+    const n=Math.max(1,+$("nights").value||1), ppl=Math.max(1,+$("ppl").value||1), p=P[style];
+    const shop=Math.max(0,+$("shop").value||0), tours=+$("tours").value;
+    const rooms=Math.ceil(ppl/2), roomPP=(p.room*n*rooms)/ppl;
+    const rows=[
+      ["Accommodation",roomPP,`${n} night${n>1?"s":""}, ${rooms} room${rooms>1?"s":""}`],
+      ["Food and coffee",p.food*n,"Three meals plus a café stop"],
+      ["Transport in Korea",p.move*n+4000,"Includes a ₩4,000 T-money card"],
+      ["Sights and small activities",p.act*n,"Palaces, museums, a night view"],
+      ["Day tours",p.tour*tours,tours?`${tours} tour${tours>1?"s":""}`:"None chosen"],
+      ["Mobile data",esim(n),"eSIM for the whole stay"],
+      ["Shopping",shop,"Your allowance"],
+      ["Buffer (8%)",0,"Because there is always one more café"]
+    ];
+    let sub=rows.reduce((s,r)=>s+r[1],0); rows[7][1]=Math.round(sub*0.08); const pp=sub*1.08, total=pp*ppl;
+    const U=NUNCHI.KRW_PER_USD;
+    $("total").textContent=NUNCHI.fmtKRW(total); $("totalusd").textContent=`about ${NUNCHI.fmtUSD(total/U)} for ${ppl} traveller${ppl>1?"s":""}, ${n} night${n>1?"s":""}`;
+    $("pp").textContent=NUNCHI.fmtKRW(pp); $("ppusd").textContent="about "+NUNCHI.fmtUSD(pp/U);
+    $("ppd").textContent=NUNCHI.fmtKRW(pp/n); $("ppdusd").textContent="about "+NUNCHI.fmtUSD(pp/n/U)+" a day";
+    $("tbl").querySelector("tbody").innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td class="num">${NUNCHI.fmtKRW(r[1])}</td><td>${r[2]}</td></tr>`).join("");
+    const tips={budget:"Kimbap Cheonguk and Gimbap Heaven are not the same chain, but both will feed you for ₩5,000. Convenience-store lunchboxes (도시락) are a genuine meal, not a sad one.",mid:"Book a room one subway stop away from Myeongdong or Hongdae. Same nights out, 30 percent cheaper, and you get to see a neighbourhood tourists skip.",high:"Korean fine dining is cheapest at lunch. The same kitchen that charges ₩250,000 at dinner often runs a ₩90,000 lunch course."};
+    $("tip").textContent=tips[style];
+    $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:`My Korea trip budget · ${n} nights, ${p.label}`,big:NUNCHI.fmtKRW(pp)+" pp",sub:`about ${NUNCHI.fmtUSD(pp/U)} per person, flights not included`,tip:tips[style],file:"korea-trip-budget.png"});
+  }
+  $("go").onclick=run;
+  // partner links come from /assets/partners.json when available
+  fetch("/assets/partners.json").then(r=>r.json()).then(p=>{document.querySelectorAll("[data-partner]").forEach(a=>{const k=a.dataset.partner;if(p[k]&&p[k].url)a.href=p[k].url;else a.closest(".partner").style.display="none";});}).catch(()=>{document.querySelectorAll(".partner").forEach(x=>x.style.display="none");});
+})();
+</script>
+</body>
+</html>

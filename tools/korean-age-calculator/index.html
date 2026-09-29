@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korean Age Calculator — international, Korean and year age (2026)</title>
+<meta name="description" content="Find your Korean age instantly. Enter your birthday to get your international age, traditional Korean age and 'year age', plus where each one is still used after the 2023 law change.">
+<link rel="canonical" href="https://hellonunchi.com/tools/korean-age-calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korean-age-calculator/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korean Age Calculator"><meta property="og:description" content="Your international, Korean and year age, side by side."><meta property="og:image" content="https://hellonunchi.com/img/korean-age.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Korean Age Calculator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Calculate your Korean age, international age and year age from your birthday."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Did Korea abolish Korean age?","acceptedAnswer":{"@type":"Answer","text":"Since 28 June 2023, international age (man-nai) is the legal standard for documents, contracts and medical care. Traditional Korean age is no longer used officially, but people still use it in everyday conversation, and year age still applies to drinking, smoking and military service."}},{"@type":"Question","name":"How is Korean age calculated?","acceptedAnswer":{"@type":"Answer","text":"Traditional Korean age is the current year minus your birth year, plus one. You are one at birth and everyone gets a year older on 1 January."}},{"@type":"Question","name":"What is year age (yeon-nai)?","acceptedAnswer":{"@type":"Answer","text":"Year age is the current year minus your birth year, ignoring the birthday. It decides the legal age for alcohol, tobacco and conscription: you qualify from 1 January of the year you turn 19."}}]}</script>
+</head>
+<body data-root="/" data-room="live">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/live/">Live</a> › Korean Age Calculator</div>
+  <section class="tool-head">
+    <div class="eyebrow">Live · Calculator</div>
+    <h1>Korean Age Calculator <span class="hangul">나이 계산기</span></h1>
+    <p>Korea has three ways to count your age, and all three still show up in real life. Enter your birthday and see them side by side.</p>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label for="dob">Your birthday</label><input type="date" id="dob" min="1900-01-01"></div>
+      <div class="field"><label for="asof">As of</label><input type="date" id="asof"><small>Defaults to today, Seoul time.</small></div>
+    </div>
+    <button class="btn" id="go">Show my ages</button>
+    <div class="result" id="res">
+      <div class="result-grid" style="margin-top:18px">
+        <div class="stat big"><div class="k">Korean age <span class="hangul">세는 나이</span></div><div class="v" id="kage">—</div><div class="d">The number a Korean friend means when they ask "how old are you?" One at birth, plus one every 1 January.</div></div>
+        <div class="stat"><div class="k">International age <span class="hangul">만 나이</span></div><div class="v" id="iage">—</div><div class="d">Legal standard since June 2023. Documents, hospitals, contracts.</div></div>
+        <div class="stat"><div class="k">Year age <span class="hangul">연 나이</span></div><div class="v" id="yage">—</div><div class="d">Drinking, smoking, military service. Birthday ignored.</div></div>
+        <div class="stat"><div class="k">Born in</div><div class="v" id="born">—</div><div class="d" id="borndesc">How Koreans label your generation.</div></div>
+        <div class="stat"><div class="k">Zodiac year <span class="hangul">띠</span></div><div class="v" id="zodiac">—</div><div class="d">Still a common ice-breaker.</div></div>
+      </div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions">
+        <button class="btn ghost" id="share">Save as image</button>
+        <button class="btn ghost" id="copy" onclick="NUNCHI.copyLink(this)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Why three ages?</h2>
+  <p>For most of its history Korea counted age the East Asian way: you are <b>one</b> the day you are born, and everyone turns a year older together on New Year's Day. A baby born on 31 December is two years old the next morning. That is the <b>Korean age</b> (세는 나이, "counting age").</p>
+  <p>The law has always used <b>international age</b> (만 나이, "full age") for official matters, and on <b>28 June 2023</b> the government made it the single standard for documents, medical care and contracts. But habits are slower than laws. Ask someone at a bar how old they are and you will still hear the Korean age, because it decides who speaks casually to whom.</p>
+  <p>Then there is <b>year age</b> (연 나이): the current year minus your birth year. It exists so that a whole school year becomes adults together. It still sets the legal age for alcohol, tobacco and conscription. If you were born in 2007, you can drink from 1 January 2026, even if your birthday is in December.</p>
+
+  <h2>Where each age is used</h2>
+  <table>
+    <thead><tr><th>Situation</th><th>Age used</th></tr></thead>
+    <tbody>
+      <tr><td>Passport, ARC, contracts, hospitals, insurance</td><td>International age</td></tr>
+      <tr><td>Buying alcohol or cigarettes, entering a bar</td><td>Year age (19 from 1 January of the year you turn 19)</td></tr>
+      <tr><td>Military conscription, school entry year</td><td>Year age</td></tr>
+      <tr><td>"How old are you?" from a new Korean friend</td><td>Korean age, though younger people increasingly say international age</td></tr>
+      <tr><td>Speech level and who pays for dinner</td><td>Whatever makes someone older. Usually Korean age.</td></tr>
+    </tbody>
+  </table>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Did Korea abolish Korean age?</summary><p>Officially, yes. Since 28 June 2023 international age is the legal standard. Socially, Korean age is fading but still common, especially among people over thirty. Year age was never abolished and still governs drinking and conscription.</p></details>
+    <details><summary>Which age should I say when someone asks?</summary><p>Say your international age and add the year you were born ("I'm 27, born in 1999"). The birth year is what Koreans actually use to work out the relationship, and it removes any confusion.</p></details>
+    <details><summary>Why does a Korean website show me an age I have never been?</summary><p>Older systems and some apps still display Korean age. If a number is one or two years higher than you expect, that is why.</p></details>
+    <details><summary>Does the Korean age change on Lunar New Year?</summary><p>No. Korean age changes on 1 January of the solar calendar. Lunar New Year (Seollal) is a holiday, not an age reset.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2>
+    <div class="grid">
+      <a class="card" data-room="love" href="/tools/my-name-in-hangul/"><span class="tag">Love</span><b>My Name in Hangul</b><span>How Koreans write your name.</span></a>
+      <a class="card soon" href="/live/"><span class="tag">Live</span><b>Visa Stay Days Counter</b><span>Days left before you must extend.</span></a>
+    </div>
+  </section>
+  <p class="note">Last checked: September 2026. Based on the Act on Age Calculation and Indication (effective 28 June 2023) and the Juvenile Protection Act.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const today=new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Seoul"}));
+  const iso=d=>d.toISOString().slice(0,10);
+  $("asof").value=iso(today); $("asof").max=iso(new Date(today.getFullYear()+1,11,31));
+  const animals=["Monkey 원숭이","Rooster 닭","Dog 개","Pig 돼지","Rat 쥐","Ox 소","Tiger 호랑이","Rabbit 토끼","Dragon 용","Snake 뱀","Horse 말","Goat 양"];
+  const gen=y=>y>=2010?"Gen Alpha / 2010s":y>=1997?"Gen Z (MZ 세대)":y>=1981?"Millennial (MZ 세대)":y>=1965?"Gen X":y>=1955?"Baby boomer":"";
+  function run(){
+    const dob=new Date($("dob").value), as=new Date($("asof").value);
+    if(isNaN(dob)||isNaN(as)||dob>as){ $("dob").focus(); return; }
+    const by=dob.getFullYear(), ay=as.getFullYear();
+    let intl=ay-by; if(as.getMonth()<dob.getMonth()||(as.getMonth()===dob.getMonth()&&as.getDate()<dob.getDate())) intl--;
+    const yage=ay-by, kage=ay-by+1;
+    $("kage").textContent=kage; $("iage").textContent=intl; $("yage").textContent=yage;
+    $("born").innerHTML=`${String(by).slice(2)}년생 <small>${by}</small>`; $("borndesc").textContent=(gen(by)?gen(by)+". ":"")+`Koreans say "${String(by).slice(2)}-nyeon-saeng", born in '${String(by).slice(2)}.`;
+    $("zodiac").textContent=animals[by%12];
+    let next=new Date(ay,dob.getMonth(),dob.getDate()); if(next<as) next=new Date(ay+1,dob.getMonth(),dob.getDate());
+    const days=Math.round((next-as)/864e5);
+    const tips=[
+      `Being ${kage} in Korean age means anyone born in ${by-1} is your 형/누나/오빠/언니, and they will probably insist on paying.`,
+      `Korean age gives you ${kage-intl} extra year${kage-intl>1?"s":""} for free. Great at a bar, less great at a job interview. Say your birth year and let people do the maths.`,
+      days===0?`It is your birthday today. Expect seaweed soup (미역국) for breakfast if anyone Korean is looking after you.`:`Your next birthday is in ${days} day${days>1?"s":""}. In Korea you will not get older then. You already did on 1 January.`
+    ];
+    $("tip").textContent=tips[(by+intl)%tips.length];
+    $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:"My Korean age",big:kage+" 세",sub:`International ${intl} · Year age ${yage} · Born ${by}`,tip:$("tip").textContent,file:"my-korean-age.png"});
+  }
+  $("go").onclick=run; $("dob").addEventListener("keydown",e=>{if(e.key==="Enter")run();});
+})();
+</script>
+</body>
+</html>

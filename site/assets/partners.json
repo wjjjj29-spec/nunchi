@@ -1,7 +1,21 @@
 {
   "_note": "Affiliate links. Leave url empty to hide that partner box everywhere. Fill after Airalo / Klook / Trip.com approve the account.",
-  "esim":   { "name": "Airalo",   "url": "" },
-  "hotel":  { "name": "Trip.com", "url": "" },
-  "tours":  { "name": "Klook",    "url": "" },
-  "amazon": { "name": "Amazon",   "url": "" }
+  "esim": {
+    "name": "Airalo",
+    "url": ""
+  },
+  "hotel": {
+    "name": "Trip.com",
+    "url": ""
+  },
+  "tours": {
+    "name": "Klook",
+    "url": "https://www.klook.com/en-US/city/13-seoul-things-to-do/?aid=137144",
+    "aid": "137144",
+    "note": "Klook affiliate ID 137144. Any www.klook.com URL + ?aid=137144 works."
+  },
+  "amazon": {
+    "name": "Amazon",
+    "url": ""
+  }
 }

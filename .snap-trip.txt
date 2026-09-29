@@ -1,0 +1,12 @@
+uid=26_0 RootWebArea "Trip.com Affiliate Program - Join us and start earning up to 7% commission" url="https://www.trip.com/partners/account/profile"
+  uid=26_1 generic
+  uid=26_2 generic "Click-out (redirection)" focusable focused
+    uid=26_3 listbox "Partnership Method *" orientation="vertical"
+      uid=26_4 option "Advertising" value="Advertising"
+      uid=26_5 option "Click-out (redirection)" selectable selected value="Click-out (redirection)"
+      uid=26_6 option "EDM" value="EDM"
+      uid=26_7 option "Featured campaign" value="Featured campaign"
+      uid=26_8 option "Loyalty program" value="Loyalty program"
+      uid=26_9 option "Metasearch" value="Metasearch"
+      uid=26_10 option "Others" value="Others"
+  uid=26_11 generic

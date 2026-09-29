@@ -1,0 +1,7 @@
+{
+  "_note": "Affiliate links. Leave url empty to hide that partner box everywhere. Fill after Airalo / Klook / Trip.com approve the account.",
+  "esim":   { "name": "Airalo",   "url": "" },
+  "hotel":  { "name": "Trip.com", "url": "" },
+  "tours":  { "name": "Klook",    "url": "" },
+  "amazon": { "name": "Amazon",   "url": "" }
+}

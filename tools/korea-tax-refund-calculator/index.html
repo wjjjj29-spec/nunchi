@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korea Tax Refund Calculator — how much VAT you get back as a tourist</title>
+<meta name="description" content="Estimate your tourist tax refund in Korea. Enter what you spent and see the refund, whether you qualify for instant refund at the shop, and the rules at the airport.">
+<link rel="canonical" href="https://hellonunchi.com/tools/korea-tax-refund-calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korea-tax-refund-calculator/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korea Tax Refund Calculator"><meta property="og:description" content="What you get back on shopping in Korea."><meta property="og:image" content="https://hellonunchi.com/img/tax-refund.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the minimum purchase for a tax refund in Korea?","acceptedAnswer":{"@type":"Answer","text":"15,000 won per receipt at a Tax Free shop. Instant refund at the till is available for purchases up to 1,000,000 won each, with a total instant-refund limit of 5,000,000 won per trip. Larger purchases are refunded at the airport."}},{"@type":"Question","name":"How much is the refund?","acceptedAnswer":{"@type":"Answer","text":"Korea's VAT is 10 percent of the pre-tax price, which is about 9.1 percent of the price you pay. Refund operators keep a service fee, so most travellers receive roughly 5 to 8 percent of the ticket price back."}}]}</script>
+</head>
+<body data-root="/" data-room="visit">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/visit/">Visit</a> › Tax Refund Calculator</div>
+  <section class="tool-head">
+    <div class="eyebrow">Visit · Calculator</div>
+    <h1>Korea Tax Refund Calculator <span class="hangul">세금 환급</span></h1>
+    <p>Korea refunds VAT to tourists, but the amount is smaller than the "10% tax" sign suggests and the rules decide whether you get it at the till or at the airport. Put in your receipt and see.</p>
+  </section>
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label for="amt">Amount on one receipt (₩)</label><input type="number" id="amt" min="0" step="1000" value="150000"></div>
+      <div class="field"><label for="total">Instant refunds already used this trip (₩)</label><input type="number" id="total" min="0" step="10000" value="0"><small>Only matters if you refund at the till.</small></div>
+    </div>
+    <button class="btn" id="go">Calculate my refund</button>
+    <div class="result" id="res">
+      <div class="result-grid" style="margin-top:18px">
+        <div class="stat big"><div class="k">You get back about</div><div class="v" id="ref">—</div><div class="d" id="refd"></div></div>
+        <div class="stat"><div class="k">VAT inside the price</div><div class="v" id="vat">—</div><div class="d">10% of the pre-tax price</div></div>
+        <div class="stat"><div class="k">Where to claim</div><div class="v" id="where" style="font-size:22px">—</div><div class="d" id="whered"></div></div>
+      </div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+  <h2>The rules in plain words</h2>
+  <p>You qualify if you are a foreign visitor staying under six months (Korean nationals living abroad for two years or more also qualify) and you take the goods out of Korea within three months of buying them. Only shops with a <b>Tax Free</b> sign take part, which in practice means department stores, Olive Young, big fashion and electronics chains and most tourist-area shops.</p>
+  <p>Each receipt must be at least <b>₩15,000</b>. For receipts up to <b>₩1,000,000</b> you can take the refund straight off the price at the till by showing your passport; the shop-level limit is ₩5,000,000 of instant refunds per person per trip. Above that, or at shops without instant refund, you keep the receipts and claim at the airport.</p>
+  <h2>At the airport</h2>
+  <p>Before check-in, if your refund goods are in checked luggage, go to the Customs desk with the goods, receipts and passport, then drop the bag. After security, the refund kiosks and counters (Global Tax Free, Global Blue, Easy Tax Refund and others) pay out in cash or to your card. Under ₩750,000 per receipt the kiosk usually skips the customs inspection. Give yourself thirty extra minutes; the queue is real in the evening.</p>
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Why is my refund less than 10 percent?</summary><p>VAT is 10 percent of the pre-tax price, which is 9.1 percent of what you paid. Refund companies then keep a handling fee that grows with the amount. Expect 5 to 8 percent back.</p></details>
+    <details><summary>Does food or a hotel count?</summary><p>No. Restaurants and hotels are not refundable. Cosmetics, clothes, electronics, souvenirs and packaged food from a Tax Free shop are.</p></details>
+    <details><summary>Can I use the goods before I leave?</summary><p>Officially they should be unused and sealed for airport claims. Instant refunds at the till are more relaxed in practice, but do not open a phone box you plan to claim at customs.</p></details>
+  </section>
+  <section class="related"><h2>Related tools</h2><div class="grid">
+    <a class="card" href="/tools/korea-trip-budget-calculator/"><span class="tag">Visit</span><b>Korea Trip Budget</b><span>Shopping allowance included.</span></a>
+    <a class="card" data-room="learn" href="/tools/korean-number-converter/"><span class="tag">Learn</span><b>Korean Number Converter</b><span>Read the price out loud.</span></a>
+  </div></section>
+  <p class="note">Rules last checked: September 2026 (Ministry of Economy and Finance, Korea Customs Service). Thresholds change; the refund kiosk has the final word.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  function run(){ const a=Math.max(0,+$("amt").value||0), used=Math.max(0,+$("total").value||0); const vat=a/11; const fee=a<100000?0.32:a<500000?0.28:0.24; const ref=vat*(1-fee);
+    if(a<15000){ $("ref").textContent="₩0"; $("refd").textContent="Receipts under ₩15,000 do not qualify. Combine items on one receipt where you can."; $("vat").textContent=NUNCHI.fmtKRW(vat); $("where").textContent="—"; $("whered").textContent=""; }
+    else { $("ref").textContent=NUNCHI.fmtKRW(ref); $("refd").textContent=`about ${(ref/a*100).toFixed(1)}% of the price, after the operator's fee`; $("vat").textContent=NUNCHI.fmtKRW(vat);
+      const instant=a<=1000000 && used+ref<=5000000; $("where").textContent=instant?"At the till":"At the airport"; $("whered").textContent=instant?"Show your passport when paying. The refund comes off the price on the spot.":a>1000000?"Over ₩1,000,000 on one receipt: keep the receipt and claim at the airport kiosk.":"Your instant-refund total would pass ₩5,000,000. Claim this one at the airport."; }
+    const tips=["Olive Young and department stores do instant refund at the till. Say 텍스 리펀 (tax refund) and hand over your passport before they ring it up, not after.","Split a big purchase over two receipts only if it is genuinely two purchases. Customs has seen the trick and the kiosk flags it.","Refund to card takes 2 to 6 weeks and arrives in your home currency. Cash at the airport is instant but the exchange rate is worse. For small amounts take cash; for big ones, card."];
+    $("tip").textContent=tips[Math.floor(a/100000)%tips.length]; $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:"My Korea tax refund",big:NUNCHI.fmtKRW(ref),sub:`on a ${NUNCHI.fmtKRW(a)} receipt · ${$("where").textContent.toLowerCase()}`,tip:$("tip").textContent,file:"korea-tax-refund.png"}); }
+  $("go").onclick=run;
+})();
+</script>
+</body>
+</html>

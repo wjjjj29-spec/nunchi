@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korea Cherry Blossom Forecast 2027 — bloom dates by city and where to go</title>
+<meta name="description" content="When cherry blossoms bloom in Seoul, Busan, Jeju, Jinhae and more, based on recent years, with peak windows, the big festivals and a fall foliage bonus.">
+<link rel="canonical" href="https://hellonunchi.com/tools/cherry-blossom-forecast/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/cherry-blossom-forecast/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korea Cherry Blossom Forecast"><meta property="og:description" content="Bloom dates by city, peak windows and festivals."><meta property="og:image" content="https://hellonunchi.com/img/blossom.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When do cherry blossoms bloom in Seoul?","acceptedAnswer":{"@type":"Answer","text":"First bloom in Seoul is usually in the first days of April, with peak bloom about a week later, from roughly 5 to 12 April. Warm springs since 2021 have pushed this a few days earlier. Jeju and Busan bloom about ten days before Seoul."}},{"@type":"Question","name":"How long does peak bloom last?","acceptedAnswer":{"@type":"Answer","text":"About a week from full bloom, less if it rains or a strong wind comes through. The best photos are usually two to four days after full bloom, when petals begin to fall."}}]}</script>
+</head>
+<body data-root="/" data-room="visit">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/visit/">Visit</a> › Cherry Blossom Forecast</div>
+  <section class="tool-head">
+    <div class="eyebrow">Visit · Forecast</div>
+    <h1>Korea Cherry Blossom Forecast <span class="hangul">벚꽃 개화</span></h1>
+    <p>Korea blooms from the south up, Jeju first and Seoul about ten days later. Pick your dates and see which cities will be at their best while you are here.</p>
+  </section>
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label for="from">Arriving</label><input type="date" id="from" value="2027-04-01"></div>
+      <div class="field"><label for="to">Leaving</label><input type="date" id="to" value="2027-04-08"></div>
+    </div>
+    <button class="btn" id="go">Where will it be blooming?</button>
+    <div class="result" id="res">
+      <table id="tbl" style="margin-top:16px"><thead><tr><th>City</th><th>First bloom</th><th>Peak</th><th>During your trip</th></tr></thead><tbody></tbody></table>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+  <h2>How to read this</h2>
+  <p>These are typical windows from the last five springs, not a weather forecast. The Korea Meteorological Administration publishes its official prediction in early March; we update this page the same week. A warm March pulls everything four or five days earlier; a cold snap pushes it back. Peak bloom means the week from full bloom, when the trees look like the photos.</p>
+  <h2>Where to go</h2>
+  <table><thead><tr><th>Spot</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Yeouido Yunjung-ro, Seoul</td><td>The famous tunnel of trees by the National Assembly. Festival crowds, worth one evening visit. Yeouinaru or National Assembly Station.</td></tr>
+    <tr><td>Seokchon Lake, Seoul</td><td>A loop around the lake under Lotte Tower. Less crowded before 9 am. Jamsil Station.</td></tr>
+    <tr><td>Gyeongbokgung and Samcheong-dong</td><td>Palace walls plus blossoms. Buy the palace ticket and go early.</td></tr>
+    <tr><td>Jinhae, Changwon</td><td>Korea's biggest blossom festival (Gunhangje), usually the last week of March into early April. Yeojwacheon stream and Gyeonghwa Station. Day trip from Busan.</td></tr>
+    <tr><td>Gyeongju</td><td>Bomun Lake and the historic sites lined with trees. Quieter than Jinhae, more photogenic than Seoul.</td></tr>
+    <tr><td>Jeju</td><td>King cherry trees, the biggest blossoms in Korea. Jeonnong-ro in Jeju City, late March.</td></tr>
+  </tbody></table>
+  <h2>Fall foliage, the other season</h2>
+  <p>If you miss spring, autumn does the same trick in reverse: Seoraksan turns first around the first week of October, Seoul's ginkgo and maples peak in the first half of November, and the south (Naejangsan, Jirisan) follows. Nami Island and Deoksugung's ginkgo road are the Seoul-side classics.</p>
+  <section class="related"><h2>Related tools</h2><div class="grid">
+    <a class="card" href="/tools/korea-trip-budget-calculator/"><span class="tag">Visit</span><b>Korea Trip Budget</b><span>Hotels cost more this week.</span></a>
+    <a class="card" data-room="live" href="/tools/korean-public-holidays/"><span class="tag">Live</span><b>Korean Public Holidays</b><span>Crowds double on holidays.</span></a>
+  </div></section>
+  <p class="note">Windows based on KMA observations 2021–2026. Official 2027 forecast expected early March 2027; this page is updated when it lands.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  // [city, first bloom (month-day), peak start, peak end] typical recent years
+  const C=[["Jeju","제주","03-22","03-28","04-04"],["Busan","부산","03-24","03-30","04-06"],["Jinhae (Changwon)","진해","03-25","03-30","04-06"],["Gyeongju","경주","03-27","04-02","04-09"],["Daegu","대구","03-26","04-01","04-08"],["Gwangju","광주","03-27","04-02","04-09"],["Jeonju","전주","03-29","04-04","04-11"],["Daejeon","대전","03-30","04-05","04-12"],["Seoul","서울","04-02","04-07","04-14"],["Incheon","인천","04-03","04-08","04-15"],["Chuncheon","춘천","04-06","04-11","04-18"],["Gangneung","강릉","04-01","04-06","04-13"]];
+  function run(){ const f=new Date($("from").value), t=new Date($("to").value); if(isNaN(f)||isNaN(t)||t<f){$("from").focus();return;} const y=f.getFullYear();
+    const rows=C.map(c=>{ const fb=new Date(`${y}-${c[2]}`), ps=new Date(`${y}-${c[3]}`), pe=new Date(`${y}-${c[4]}`); const peak=f<=pe&&t>=ps; const early=t<fb; const late=f>pe; const some=!peak&&!early&&!late;
+      const status=peak?"Peak bloom":some?"Blossoms, not peak":early?`Too early by ${Math.round((fb-t)/864e5)} days`:`Petals gone`; const cls=peak?"ok":some?"":"bad";
+      return [c,fb,ps,pe,status,cls]; }).sort((a,b)=>(b[5]==="ok")-(a[5]==="ok"));
+    const fmt=d=>d.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+    $("tbl").querySelector("tbody").innerHTML=rows.map(r=>`<tr><td><b>${r[0][0]}</b> <span class="hangul">${r[0][1]}</span></td><td>${fmt(r[1])}</td><td>${fmt(r[2])} – ${fmt(r[3])}</td><td style="color:${r[5]==="ok"?"var(--nok)":r[5]==="bad"?"var(--ink-3)":"var(--ink)"}"><b>${r[4]}</b></td></tr>`).join("");
+    const peaks=rows.filter(r=>r[5]==="ok").map(r=>r[0][0]);
+    $("tip").textContent=peaks.length?`${peaks.slice(0,3).join(", ")} ${peaks.length>3?"and more ":""}should be at peak. Go at sunrise or after 8 pm; the trees are lit and the crowds are at dinner.`:"Your dates miss peak in every city on the list. Shift by a week if you can, or aim for the later-blooming east coast (Gangneung, Chuncheon).";
+    $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:`Cherry blossoms ${fmt(f)} – ${fmt(t)}`,big:peaks.length?peaks.slice(0,2).join(" · "):"Not this time",sub:peaks.length?"at peak bloom during my trip":"try a week later",tip:$("tip").textContent,file:"korea-cherry-blossom.png"}); }
+  $("go").onclick=run;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korean Spice Level Quiz — which Korean dishes can you actually handle?</title>
+<meta name="description" content="A two-minute quiz that tells you your Korean spice level, which dishes to order, which to approach with milk, and how to ask for less heat in Korean.">
+<link rel="canonical" href="https://hellonunchi.com/tools/korean-spice-level-quiz/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korean-spice-level-quiz/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Korean Spice Level Quiz"><meta property="og:description" content="Find out which Korean menu you can survive."><meta property="og:image" content="https://hellonunchi.com/img/spice.jpg">
+<style>.opts{display:flex;flex-direction:column;gap:8px}.opts button{text-align:left;font:inherit;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--hanji);color:var(--ink);cursor:pointer}.opts button:hover{border-color:var(--accent)}.prog{height:6px;background:var(--hanji-2);border-radius:99px;overflow:hidden;margin-bottom:14px}.prog i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}</style>
+</head>
+<body data-root="/" data-room="love">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/love/">Love</a> › Korean Spice Level Quiz</div>
+  <section class="tool-head">
+    <div class="eyebrow">Love · Quiz</div>
+    <h1>Korean Spice Level Quiz <span class="hangul">맵기 테스트</span></h1>
+    <p>Eight quick questions. At the end you get a level, dishes you will love, dishes to approach with a glass of milk, and the exact Korean words to say at the counter.</p>
+  </section>
+  <div class="panel">
+    <div class="prog"><i id="bar"></i></div>
+    <div id="quiz"></div>
+    <div class="result" id="res">
+      <div class="stat big" style="text-align:center"><div class="k">Your Korean spice level</div><div class="v" id="lvl" style="font-size:38px">—</div><div class="d" id="lvld"></div></div>
+      <div class="result-grid" style="margin-top:12px">
+        <div class="stat"><div class="k">Order with confidence</div><div class="d" id="yes" style="font-size:15px"></div></div>
+        <div class="stat"><div class="k">Approach with milk</div><div class="d" id="no" style="font-size:15px"></div></div>
+      </div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" id="again">Take it again</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
+    </div>
+  </div>
+  <h2>How to ask for less (or more) heat</h2>
+  <table><thead><tr><th>Say</th><th>Means</th></tr></thead><tbody>
+    <tr><td>안 맵게 해 주세요 <span class="hangul">an maepge hae juseyo</span></td><td>Please make it not spicy</td></tr>
+    <tr><td>덜 맵게 해 주세요 <span class="hangul">deol maepge hae juseyo</span></td><td>Please make it less spicy</td></tr>
+    <tr><td>보통으로 주세요 <span class="hangul">botong-euro juseyo</span></td><td>Medium, please</td></tr>
+    <tr><td>더 맵게 해 주세요 <span class="hangul">deo maepge hae juseyo</span></td><td>Make it spicier</td></tr>
+    <tr><td>이거 많이 매워요? <span class="hangul">igeo mani maewoyo?</span></td><td>Is this very spicy?</td></tr>
+  </tbody></table>
+  <p>Not every dish can be adjusted. Kimchi jjigae and tteokbokki come as they come. Dishes cooked to order (jjamppong, dakgalbi, many soups) can usually be toned down if you ask when ordering, not after.</p>
+  <h2>Korean heat is a different heat</h2>
+  <p>Korean spice comes from gochugaru (chilli flakes) and gochujang (fermented chilli paste): warm, slightly sweet, building rather than sharp. It is milder than Thai bird's-eye or Sichuan numbing, but it accumulates. Bite five of tteokbokki is hotter than bite one. Milk, cheese, rice and the free radish that comes with everything are your friends. Water is not.</p>
+  <section class="related"><h2>Related tools</h2><div class="grid">
+    <a class="card" data-room="visit" href="/tools/korea-trip-budget-calculator/"><span class="tag">Visit</span><b>Korea Trip Budget</b><span>Food is where the money goes.</span></a>
+    <a class="card" data-room="learn" href="/tools/korean-number-converter/"><span class="tag">Learn</span><b>Korean Number Converter</b><span>Order two of everything.</span></a>
+  </div></section>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const Q=[["How do you take a jalapeño?",["I pick them out","One is nice","Bring the jar"]],["Sriracha on eggs?",["Never","A drizzle","Half the bottle"]],["You order a curry. What heat?",["Mild","Medium","Vindaloo, and I mean it"]],["Someone hands you a raw chilli. You…",["Politely decline","Nibble the tip","Eat it and ask what kind"]],["Spicy food makes you…",["Sweat and regret","Sweat and smile","Feel alive"]],["Hot sauce collection at home:",["None","One bottle","A shelf with labels"]],["Sichuan mala or Indian phaal?",["I have avoided both","Tried one, survived","Regularly, on purpose"]],["'Extra spicy' on a menu is…",["A warning","An option","A challenge"]]];
+  const L=[["Baby spice 🌱","아기 입맛","You can still eat well in Korea. Half the menu has no chilli at all.",["Bulgogi (marinated beef)","Samgyetang (ginseng chicken soup)","Gimbap","Japchae (glass noodles)","Galbitang (rib soup)","Bibimbap without the red sauce"],["Kimchi jjigae","Tteokbokki","Jjamppong","Anything with 불 (bul, fire) in the name"],"Ask for 안 맵게 (an maepge) with a smile and most cooked-to-order places will help. Mild kimchi exists too: look for 백김치 (white kimchi)."],
+    ["Kimchi ready 🥬","김치 입문","You handle everyday Korean food. Kimchi with every meal, no problem.",["Kimchi jjigae","Sundubu jjigae (soft tofu stew)","Dakgalbi (spicy chicken)","Bibimbap with gochujang","Mild tteokbokki","Jjamppong at 보통"],["Buldak (fire chicken)","Nakji bokkeum (stir-fried octopus)","Yeopgi tteokbokki above level 1"],"Order 보통 (botong, medium) and you will be fine almost everywhere. The trap is 'a little spicy' from a Korean friend, which means quite spicy."],
+    ["Tteokbokki tier 🌶️","떡볶이 고수","You eat like a Seoul office worker at lunch. Most menus hold no fear.",["Tteokbokki, proper heat","Jjamppong","Dakbal (chicken feet) if you dare","Buldak ramyeon (original)","Kimchi jjim","Spicy pork galbi"],["Buldak 2x","Yeopgi tteokbokki 'very spicy'","Cheongyang chilli anything"],"You can say 좀 맵게 (jom maepge, a bit spicy) and mean it. Order 계란찜 (steamed egg) on the side. It is the Korean fire extinguisher."],
+    ["Buldak boss 🔥","불닭 마스터","Korean chilli is a warm bath to you. Order the red things.",["Buldak 2x Spicy","Nakji bokkeum","Dakbal","Yeopgi tteokbokki level 3","Cheongyang-pepper jjamppong","Kimchi from a Jeolla grandmother"],["Yeopgi level 5 and above","Anything labelled 마라 극한 (mala extreme)"],"Tell the counter 아주 맵게 (aju maepge). Watch the eyebrow go up. Then eat every bite in silence; that is how the real ones do it."],
+    ["Korean grandma 👵","할머니 급","You are the reason restaurants keep the extra-hot jar. Respect.",["Everything above, plus whatever the ajumma is eating in the back","Yeopgi tteokbokki level 5","Buldak 3x","Cheongyang chilli raw with ssamjang"],["Nothing. But please still eat the radish."],"At this level the question is not can you, it is should you. Korean grandmothers pace themselves with rice and soup between the fire. Do the same and you will outlast the young ones."]];
+  let i=0,score=0;
+  function render(){ if(i>=Q.length){finish();return;} $("bar").style.width=(i/Q.length*100)+"%"; $("quiz").innerHTML=`<h3 style="margin-top:0">${i+1}. ${Q[i][0]}</h3><div class="opts">${Q[i][1].map((o,k)=>`<button data-k="${k}">${o}</button>`).join("")}</div>`; $("quiz").querySelectorAll("button").forEach(b=>b.onclick=()=>{score+= +b.dataset.k; i++; render();}); }
+  function finish(){ $("bar").style.width="100%"; $("quiz").innerHTML=""; const lv=score<=3?0:score<=7?1:score<=11?2:score<=14?3:4; const r=L[lv];
+    $("lvl").textContent=r[0]; $("lvld").innerHTML=`<span class="hangul" style="font-size:16px">${r[1]}</span> · ${r[2]}`; $("yes").innerHTML=r[3].map(x=>"• "+x).join("<br>"); $("no").innerHTML=r[4].map(x=>"• "+x).join("<br>"); $("tip").textContent=r[5]; $("res").classList.add("show");
+    $("share").onclick=()=>NUNCHI.shareCard({title:"My Korean spice level",big:r[0].replace(/[^\w\s]/g,"").trim(),sub:r[1]+" · "+r[2],tip:r[5],file:"korean-spice-level.png"}); }
+  $("again").onclick=()=>{i=0;score=0;$("res").classList.remove("show");render();};
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-drama Filming Locations — find the café, the bridge, the stairs</title>
+<meta name="description" content="Where your favourite K-dramas were filmed, with the nearest subway station, how to get there and a map link. Goblin, Crash Landing on You, Itaewon Class, Squid Game, Queen of Tears and more.">
+<link rel="canonical" href="https://hellonunchi.com/tools/kdrama-filming-locations/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/kdrama-filming-locations/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="K-drama Filming Locations"><meta property="og:description" content="Find the café, the bridge, the stairs."><meta property="og:image" content="https://hellonunchi.com/img/drama.jpg">
+<style>.loc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:10px 0}.loc b{font-size:17px}.loc .m{color:var(--ink-3);font-size:14px;margin:4px 0 8px}.loc .links a{margin-right:14px;font-size:14px}</style>
+</head>
+<body data-root="/" data-room="love">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/love/">Love</a> › K-drama Filming Locations</div>
+  <section class="tool-head">
+    <div class="eyebrow">Love · Finder</div>
+    <h1>K-drama Filming Locations <span class="hangul">드라마 촬영지</span></h1>
+    <p>Pick a drama and get the real places, the nearest station, and a map you can open in Naver or Google. No entrance fees unless we say so.</p>
+  </section>
+  <div class="panel">
+    <div class="field"><label for="q">Drama</label><input type="text" id="q" placeholder="e.g. Goblin, Squid Game, Crash Landing" autocomplete="off"></div>
+    <div class="chips" id="dramas"></div>
+    <div id="out" style="margin-top:14px"></div>
+    <div class="tip" id="tipbox" style="display:none"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+  </div>
+  <h2>Before you go</h2>
+  <p>Most locations are ordinary streets, cafés and parks where people live and work. Take the photo, buy the coffee, and keep your voice down in residential alleys; Bukchon and Ikseon-dong residents have put up signs for a reason. Cafés that appeared on screen usually have a small "as seen in" card by the till and will not mind you asking which seat it was.</p>
+  <p>Palaces and parks are free or a few thousand won. Nami Island and Petite France (Winter Sonata, Secret Garden) charge admission and are a day trip from Seoul, easiest by the ITX train to Gapyeong plus a shuttle.</p>
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Are these the real filming spots?</summary><p>Yes, cross-checked with production credits and the Korea Tourism Organization's drama location listings. Interiors are often sets; we list the exteriors and public places you can actually visit.</p></details>
+    <details><summary>Which map app should I use?</summary><p>Naver Map or Kakao Map for walking and transit directions in Korea; Google Maps works for finding the pin but not for navigation. Both links are provided.</p></details>
+    <details><summary>My drama is missing.</summary><p>We add locations every few weeks. <a href="/contact/">Tell us</a> which drama and we will prioritise it.</p></details>
+  </section>
+  <section class="related"><h2>Related tools</h2><div class="grid">
+    <a class="card" data-room="visit" href="/tools/tmoney-vs-climate-card/"><span class="tag">Visit</span><b>T-money vs Climate Card</b><span>For all those subway rides.</span></a>
+    <a class="card" href="/tools/kpop-idol-age-calculator/"><span class="tag">Love</span><b>K-pop Idol Age</b><span>The other fandom argument.</span></a>
+  </div></section>
+  <p class="note">Locations checked: September 2026. Businesses change hands; check opening hours before a long trip.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const D={
+    "Goblin (Guardian: The Lonely and Great God)":[["Deoksugung Stone Wall Road","덕수궁 돌담길","The wall where the rain scenes were shot. City Hall Station, exit 2.","City Hall"],["Jumunjin Breakwater","주문진 방파제","Where Ji Eun-tak summons the goblin. Gangneung, 3 hours from Seoul by KTX plus bus. Locals rent the red scarf.","Gangneung"],["Seonjukgyo area, Ikseon-dong","익선동","The hanok alleys used for the dokkaebi's Seoul; now cafés. Jongno 3-ga Station, exit 4.","Jongno 3-ga"]],
+    "Crash Landing on You":[["Seoul Forest","서울숲","Where Se-ri and Jeong-hyeok reunite in the finale. Seoul Forest Station, exit 3.","Seoul Forest"],["Yongin Daejanggeum Park","용인 대장금파크","The North Korean village set is here. Bus from Yongin; admission fee.","Yongin"],["Jeongseon, Gangwon","정선","The mountain scenes. Day trip by train from Cheongnyangni.","Jeongseon"]],
+    "Itaewon Class":[["Itaewon main street","이태원 거리","DanBam's exterior stood on the alley behind the Hamilton Hotel. Itaewon Station, exit 1.","Itaewon"],["Namsan stairs, Haebangchon","해방촌","The long stairs Sae-ro-yi climbs, with Namsan Tower behind. Walk from Noksapyeong Station.","Noksapyeong"]],
+    "Squid Game":[["Ssangmun-dong","쌍문동","Gi-hun's neighbourhood; the corner shop and market. Ssangmun Station, line 4.","Ssangmun"],["Seoul Station underground","서울역","Where the ddakji recruiter waits. Real station, real crowds.","Seoul Station"],["Songdo Central Park","송도 센트럴파크","Season 2 exteriors around the canal. Incheon, Central Park Station.","Incheon"]],
+    "Queen of Tears":[["Sanaa Building, Yongsan","용산","Queens Group HQ exterior. Sinyongsan Station.","Sinyongsan"],["Yongin Everland Rose Garden","에버랜드","The proposal garden. Admission fee; Everland shuttle from Gangnam.","Yongin"],["Gwangju Design Center","광주","Hae-in's hospital scenes shot in Gwangju, Gyeonggi.","Gwangju (Gyeonggi)"]],
+    "Business Proposal":[["Gwanghwamun Square","광화문광장","The archery date. Gwanghwamun Station, exit 9.","Gwanghwamun"],["Yeouido Hangang Park","여의도 한강공원","Picnic scenes by the river. Yeouinaru Station, exit 2.","Yeouinaru"]],
+    "Extraordinary Attorney Woo":[["Woo Young-woo Gimbap, Seoul","우영우 김밥","The gimbap shop set stood in Seongdong-gu; a real shop now trades on the fame. Wangsimni area.","Wangsimni"],["Sodeok-dong tree, Changwon","창원 팽나무","The hackberry tree from the village episode. Changwon, Gyeongnam; now a protected monument.","Changwon"]],
+    "Reply 1988":[["Ssangmun-dong alley","쌍문동","Same neighbourhood as Squid Game; the show's alley was a set but the streets match. Ssangmun Station.","Ssangmun"],["Sungkyunkwan University","성균관대","Campus scenes. Hyehwa Station, exit 4.","Hyehwa"]],
+    "My Love from the Star":[["Petite France, Gapyeong","쁘띠프랑스","Do Min-joon's balcony kiss backdrop. Day trip; admission fee.","Gapyeong"],["N Seoul Tower","남산타워","Love locks and the final scenes. Cable car from Myeongdong.","Myeongdong"]],
+    "Winter Sonata":[["Nami Island","남이섬","The tree-lined path. ITX to Gapyeong, shuttle, ferry; admission fee.","Gapyeong"],["Chuncheon Myeongdong street","춘천","Yu-jin's hometown scenes. ITX from Yongsan, 1 hour.","Chuncheon"]],
+    "Twenty-Five Twenty-One":[["Jeonju Hanok Village","전주 한옥마을","Hee-do and Yi-jin's summer. KTX to Jeonju, 1.5 hours.","Jeonju"],["Hangang Bridge, Seoul","한강대교","The bicycle ride. Walk from Nodeul Island.","Nodeul"]],
+    "Hometown Cha-Cha-Cha":[["Pohang, Gyeongbuk","포항","Gongjin village is Pohang's Cheongha market and the Wolpo beach coast. KTX to Pohang.","Pohang"]],
+    "Vincenzo":[["Dongdaemun area","동대문","Geumga Plaza exterior was a real building near Dongdaemun. Line 1.","Dongdaemun"],["Namsan Botanical Garden","남산야외식물원","Vincenzo's contemplative walks. Bus from Itaewon.","Namsan"]]
+  };
+  const names=Object.keys(D); const norm=s=>s.toLowerCase().replace(/[^a-z0-9]/g,"");
+  const nmap=q=>`https://map.naver.com/p/search/${encodeURIComponent(q)}`, gmap=q=>`https://www.google.com/maps/search/${encodeURIComponent(q+" Korea")}`;
+  function show(name){ const list=D[name]; $("out").innerHTML=`<h3 style="margin:8px 0 4px">${name}</h3>`+list.map(l=>`<div class="loc"><b>${l[0]}</b> <span class="hangul">${l[1]}</span><div class="m">${l[2]}</div><div class="links"><a href="${nmap(l[1])}" target="_blank" rel="noopener">Naver Map</a><a href="${gmap(l[0])}" target="_blank" rel="noopener">Google Maps</a><span class="hangul" style="margin:0">near ${l[3]}</span></div></div>`).join("");
+    const tips=["Go on a weekday morning. Weekend afternoons at the famous spots are a queue for the same photo.","Say the Korean name to a taxi driver; most drivers do not know drama titles but every one of them knows the place.","Order something at the café location. It keeps the place in business and gets you the seat from the scene."];
+    $("tip").textContent=tips[name.length%tips.length]; $("tipbox").style.display=""; history.replaceState(null,"","?d="+encodeURIComponent(name)); }
+  function chips(list){ $("dramas").innerHTML=list.map(n=>`<button class="chip">${n.split(" (")[0]}</button>`).join(""); $("dramas").querySelectorAll(".chip").forEach((b,i)=>b.onclick=()=>{$("q").value=list[i].split(" (")[0];show(list[i]);}); }
+  $("q").addEventListener("input",()=>{const q=norm($("q").value); const hits=q?names.filter(n=>norm(n).includes(q)):names; chips(hits); if(hits.length===1) show(hits[0]);});
+  chips(names); const q=new URLSearchParams(location.search).get("d"); if(q&&D[q]){$("q").value=q.split(" (")[0];show(q);}
+})();
+</script>
+</body>
+</html>

@@ -28,9 +28,13 @@ site/
 cd ~/원준프로젝트/nunchi/site && python3 -m http.server 8787
 ```
 
+## 배포 (GitHub Pages)
+- 저장소 github.com/wjjjj29-spec/nunchi, main 브랜치가 원본, `site/`를 gh-pages 브랜치로 밀어 배포.
+- 고치고 나서 `./deploy.sh "메시지"` 한 번이면 끝. 반영 1~3분.
+- 도메인 hellonunchi.com (카페24, 2027-09-29 만료). 카페24 DNS: A 185.199.108.153(루트, 카페24는 루트 A 1개만 허용), CNAME www → wjjjj29-spec.github.io, TXT google-site-verification.
+- HTTPS: GitHub가 인증서 발급 후 `gh api -X PUT repos/wjjjj29-spec/nunchi/pages -F https_enforced=true`.
+
 ## 남은 것
-- 도메인(카페24) → 구매 후 canonical/og:image 절대주소로 바꾸고 sitemap.xml, robots.txt 추가
-- 배포: 카페24 정적 호스팅 또는 Cloudflare Pages
 - contact 이메일 실제 주소로 교체 (지금 hello@hellonunchi.com 자리표시)
 - 제휴 신청 후 partners.json 채우기 (Airalo, Trip.com, Klook, Amazon)
 - WONZY 애드센스 승인 뒤 사이트 추가 → 광고 코드

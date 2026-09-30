@@ -30,6 +30,7 @@
     return `<footer class="site-footer"><div class="wrap">
       <span>© ${y} Nunchi · Read Korea at a glance.</span>
       <a href="${root}about/">About</a><a href="${root}privacy/">Privacy</a><a href="${root}contact/">Contact</a>
+      <a href="https://www.instagram.com/hellonunchi/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.threads.com/@hellonunchi" rel="me noopener" target="_blank">Threads</a>
       <span class="made">Made in Seoul <span class="hangul">서울에서 만듦</span></span>
     </div></footer>`;
   }

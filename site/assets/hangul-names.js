@@ -3,6 +3,10 @@
    2) Rule-based fallback that follows the main conventions of 외래어 표기법. */
 window.HANGUL_NAMES = (function () {
   const DICT = {
+    // ---- tricky by spelling (Irish, Welsh, Spanish, French, Portuguese) — the ones translation apps get wrong ----
+    siobhan:"셔본", niamh:"니브", saoirse:"서샤", aoife:"이파", caoimhe:"퀴바", sinead:"시네이드", eoin:"오언", oisin:"어신", ciaran:"키어런", tadhg:"타이그", roisin:"로신", padraig:"포리그", aisling:"애슐링",
+    rhys:"리스", sian:"샨", dafydd:"다비드", joaquin:"호아킨", javier:"하비에르", jorge:"호르헤", jose:"호세", guillermo:"기예르모", ximena:"히메나", xavier:"자비에", guillaume:"기욤", jacques:"자크", francois:"프랑수아",
+    hugh:"휴", leigh:"리", geoffrey:"제프리", stephen:"스티븐", graham:"그레이엄", ralph:"랠프", sean:"숀", siobhán:"셔본", joao:"주앙", thiago:"치아구",
     // ---- common first names (male) ----
     james:"제임스", john:"존", robert:"로버트", michael:"마이클", william:"윌리엄", david:"데이비드", richard:"리처드", joseph:"조지프",
     thomas:"토머스", charles:"찰스", christopher:"크리스토퍼", daniel:"대니얼", matthew:"매슈", anthony:"앤서니", mark:"마크", donald:"도널드",

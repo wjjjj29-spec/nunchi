@@ -20,7 +20,7 @@ async function cdp(wsUrl) {
   const [cmd, a, ...rest] = process.argv.slice(2);
   const targets = (await get("http://127.0.0.1:9222/json/list")).filter(t => t.type === "page" || t.type === "iframe");
   const pick = key => /^\d+$/.test(key) ? targets[+key] : /^[0-9A-F]{8,}$/.test(key) ? targets.find(t => t.id.startsWith(key)) : targets.find(t => t.url.includes(key)); // key: 번호 | targetId 앞자리(대문자 hex) | URL 일부
-  if (cmd === "list") { targets.forEach((t, i) => console.log(i, t.type.padEnd(6), (t.title || "").slice(0, 40).padEnd(40), t.url.slice(0, 100))); return; }
+  if (cmd === "list") { targets.forEach((t, i) => console.log(i, t.id.slice(0, 8), t.type.padEnd(6), (t.title || "").slice(0, 40).padEnd(40), t.url.slice(0, 100))); return; }
   if (cmd === "newctx") { // 별도 쿠키 저장소(시크릿 창처럼)로 새 창 열기 — 기존 로그인 세션을 건드리지 않고 다른 계정 로그인용
     const ver = await get("http://127.0.0.1:9222/json/version"); const c = await cdp(ver.webSocketDebuggerUrl);
     const ctx = await c.send("Target.createBrowserContext"); const t = await c.send("Target.createTarget", { url: a, browserContextId: ctx.result.browserContextId, newWindow: true });

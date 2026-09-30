@@ -6,6 +6,17 @@
   const root = document.body.dataset.root || "/";
   const room = document.body.dataset.room || "";
 
+  // Analytics (GA4). Skipped on localhost so dev clicks do not pollute the numbers.
+  const GA_ID = "G-REZQPDXD5C";
+  const tool = location.pathname.replace(/\/$/, "").split("/").pop() || "home";
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  if (!/localhost|127\.0\.0\.1/.test(location.hostname)) {
+    const g = document.createElement("script"); g.async = true; g.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID; document.head.appendChild(g);
+    gtag("js", new Date()); gtag("config", GA_ID, { anonymize_ip: true });
+  }
+  const track = (name, params) => { try { gtag("event", name, Object.assign({ tool, room }, params || {})); } catch (e) {} };
+
   function header() {
     const nav = ROOMS.map(([k, en, ko]) =>
       `<a href="${root}${k}/" data-room="${k}"${room === k ? ' aria-current="page"' : ""}>${en}</a>`).join("");
@@ -25,6 +36,15 @@
   document.addEventListener("DOMContentLoaded", () => {
     document.body.insertAdjacentHTML("afterbegin", header());
     document.body.insertAdjacentHTML("beforeend", footer());
+    // What we actually want to know: did the tool get used, did anyone click a partner.
+    document.addEventListener("click", e => {
+      const a = e.target.closest("a"); if (!a) return;
+      if (a.dataset.partner) track("affiliate_click", { partner: a.dataset.partner, href: a.href });
+      else if (/juseyo\.app/.test(a.href)) track("juseyo_click", { href: a.href });
+      else if (a.closest(".partner")) track("partner_click", { href: a.href });
+    });
+    const res = document.querySelector(".result");
+    if (res) new MutationObserver(() => { if (res.classList.contains("show")) track("tool_result"); }).observe(res, { attributes: true, attributeFilter: ["class"] });
   });
 
   // helpers
@@ -48,7 +68,7 @@
       if (tip) { x.font = "italic 26px Inter, sans-serif"; x.fillStyle = accent; wrap(x, "Nunchi tip: " + tip, 70, 450, 1050, 36); }
       x.fillStyle = "#1b1b1b"; x.font = "700 30px Fraunces, Georgia, serif"; x.fillText("Nunchi", 70, 580);
       x.font = "400 22px Inter, sans-serif"; x.fillStyle = "#8a847b"; x.fillText("Read Korea at a glance · " + location.host, 190, 580);
-      const a = document.createElement("a"); a.download = file || "nunchi.png"; a.href = c.toDataURL("image/png"); a.click();
+      const a = document.createElement("a"); a.download = file || "nunchi.png"; a.href = c.toDataURL("image/png"); a.click(); track("share_card", { file: a.download });
       function wrap(ctx, text, X, Y, maxW, lh) {
         const words = text.split(" "); let line = "";
         for (const w of words) { const t = line + w + " "; if (ctx.measureText(t).width > maxW) { ctx.fillText(line, X, Y); line = w + " "; Y += lh; } else line = t; }
@@ -56,7 +76,7 @@
       }
     },
     copyLink(btn) {
-      navigator.clipboard?.writeText(location.href).then(() => { const t = btn.textContent; btn.textContent = "Link copied"; setTimeout(() => btn.textContent = t, 1600); });
+      track("copy_link"); navigator.clipboard?.writeText(location.href).then(() => { const t = btn.textContent; btn.textContent = "Link copied"; setTimeout(() => btn.textContent = t, 1600); });
     }
   };
 })();

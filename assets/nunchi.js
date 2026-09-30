@@ -21,7 +21,7 @@
     const nav = ROOMS.map(([k, en, ko]) =>
       `<a href="${root}${k}/" data-room="${k}"${room === k ? ' aria-current="page"' : ""}>${en}</a>`).join("");
     return `<header class="site-header"><div class="wrap">
-      <a class="logo" href="${root}"><span class="logo-mark" aria-hidden="true"></span>Nunchi<small>눈치</small></a>
+      <a class="logo" href="${root}"><img class="logo-mark" src="${root}img/logo-mark.png" alt="" width="34" height="34">Nunchi<small>눈치</small></a>
       <nav class="nav" aria-label="Sections">${nav}</nav>
     </div></header>`;
   }

@@ -52,7 +52,9 @@ h1 { font-size: clamp(30px, 5vw, 44px); }
 h2 { font-size: clamp(22px, 3vw, 28px); margin-top: 1.6em; }
 h3 { font-size: 19px; }
 p { margin: 0 0 1em; }
-.hangul { font-family: "Noto Sans KR", var(--sans); color: var(--ink-3); font-weight: 500; font-size: .8em; margin-left: .35em; vertical-align: .08em; }
+.hangul { font-family: "Noto Sans KR", var(--sans); color: var(--ink-3); font-weight: 500; font-size: .8em; margin-left: .35em; vertical-align: .08em; word-break: keep-all; }
+/* in-page anchors (#may-2026, #from-india) land below the sticky header */
+h2[id], h3[id], section[id] { scroll-margin-top: 78px; }
 .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
 .narrow { max-width: 760px; }
 

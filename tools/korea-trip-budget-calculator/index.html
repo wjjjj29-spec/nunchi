@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Korea Trip Budget Calculator — how much does a trip to Korea cost? (2026)</title>
-<meta name="description" content="Estimate your Korea travel budget in won and dollars: hotels, food, transport, activities and SIM, by travel style and trip length. Realistic 2026 prices for Seoul, Busan and beyond.">
+<meta name="description" content="Estimate your Korea travel budget in won and in your currency (USD, PHP, INR, MYR, SGD, IDR, GBP, EUR and more): hotels, food, transport, activities and SIM, by travel style and trip length. Realistic 2026 prices for Seoul, Busan and beyond.">
 <link rel="canonical" href="https://hellonunchi.com/tools/korea-trip-budget-calculator/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/korea-trip-budget-calculator/"><meta property="og:type" content="website">
 <meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<meta property="og:title" content="Korea Trip Budget Calculator"><meta property="og:description" content="A realistic daily budget for Korea, in won and dollars."><meta property="og:image" content="https://hellonunchi.com/img/trip-budget.jpg">
+<meta property="og:title" content="Korea Trip Budget Calculator"><meta property="og:description" content="A realistic daily budget for Korea, in won and your own currency."><meta property="og:image" content="https://hellonunchi.com/img/trip-budget.jpg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Korea Trip Budget Calculator","applicationCategory":"TravelApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Estimate the cost of a trip to Korea by travel style, length and group size."}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a trip to Korea cost per day?","acceptedAnswer":{"@type":"Answer","text":"Excluding flights, a backpacker can manage on roughly 80,000 to 100,000 won a day, a mid-range traveller spends about 150,000 to 200,000 won, and a comfortable trip runs 300,000 won or more per person per day. Accommodation is the biggest variable."}},{"@type":"Question","name":"Is Korea expensive for tourists?","acceptedAnswer":{"@type":"Answer","text":"Korea is cheaper than Japan for transport and street food, similar for hotels in Seoul, and more expensive than most of Southeast Asia. Public transport and convenience-store meals are very cheap; hotels in central Seoul and Western-style restaurants are not."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a trip to Korea cost per day?","acceptedAnswer":{"@type":"Answer","text":"Excluding flights, a backpacker can manage on roughly 80,000 to 100,000 won a day, a mid-range traveller spends about 150,000 to 200,000 won, and a comfortable trip runs 300,000 won or more per person per day. Accommodation is the biggest variable."}},{"@type":"Question","name":"Is Korea expensive for tourists?","acceptedAnswer":{"@type":"Answer","text":"Korea is cheaper than Japan for transport and street food, similar for hotels in Seoul, and more expensive than most of Southeast Asia. Public transport and convenience-store meals are very cheap; hotels in central Seoul and Western-style restaurants are not."}},{"@type":"Question","name":"How much does a Korea trip cost from the Philippines?","acceptedAnswer":{"@type":"Answer","text":"Excluding flights, a comfortable week in Korea for two people sharing a room costs roughly 1.4 million won per person, about ₱60,000 at a planning rate of roughly 24 won per peso. A backpacker week is closer to 750,000 won, about ₱31,000. Return flights from Manila, Cebu or Clark to Seoul on budget carriers run roughly ₱10,000 to ₱25,000, more in peak season."}},{"@type":"Question","name":"How much does a Korea trip cost from India?","acceptedAnswer":{"@type":"Answer","text":"Excluding flights, a comfortable week in Korea costs roughly 1.4 million won per person, about ₹85,000 at a planning rate of roughly 16.5 won per rupee. A backpacker week is about 750,000 won, roughly ₹45,000. Return flights from Delhi or Mumbai to Seoul are roughly ₹35,000 to ₹60,000, cheaper with a connection in Bangkok, Hong Kong or Singapore."}},{"@type":"Question","name":"How much does a Korea trip cost from Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Excluding flights, a comfortable week in Korea costs roughly 1.4 million won per person, about RM4,600 at a planning rate of roughly 310 won per ringgit. A backpacker week is about 750,000 won, roughly RM2,400. Return flights from Kuala Lumpur to Seoul are roughly RM800 to RM1,800 depending on carrier and season."}},{"@type":"Question","name":"How much does a Korea trip cost from Singapore?","acceptedAnswer":{"@type":"Answer","text":"Excluding flights, a comfortable week in Korea costs roughly 1.4 million won per person, about S$1,400 at a planning rate of roughly 1,040 won per Singapore dollar. A backpacker week is about 750,000 won, roughly S$700. Return flights from Singapore to Seoul are roughly S$450 to S$900; Scoot is usually the cheapest, Singapore Airlines and Korean Air the most comfortable."}}]}</script>
 </head>
 <body data-root="/" data-room="visit">
 <main class="wrap narrow">
@@ -38,6 +38,23 @@
       <div class="field"><label for="shop">Shopping allowance per person <small>(optional, ₩)</small></label><input type="number" id="shop" min="0" step="10000" value="100000"></div>
       <div class="field"><label for="tours">Day tours or big-ticket activities per person</label><select id="tours"><option value="0">None</option><option value="1" selected>One (DMZ, Nami Island, theme park)</option><option value="2">Two</option><option value="3">Three or more</option></select></div>
     </div>
+    <div class="row">
+      <div class="field"><label for="cur">Show it in my currency</label><select id="cur">
+        <option value="USD" selected>US dollar ($)</option>
+        <option value="PHP">Philippine peso (₱)</option>
+        <option value="INR">Indian rupee (₹)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="SGD">Singapore dollar (S$)</option>
+        <option value="IDR">Indonesian rupiah (Rp)</option>
+        <option value="VND">Vietnamese dong (₫)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="EUR">Euro (€)</option>
+        <option value="AUD">Australian dollar (A$)</option>
+        <option value="CAD">Canadian dollar (C$)</option>
+        <option value="JPY">Japanese yen (¥)</option>
+      </select><small>Approximate planning rates, not live rates. Won stays the main number.</small></div>
+    </div>
     <button class="btn" id="go">Estimate my budget</button>
 
     <div class="result" id="res">
@@ -47,6 +64,7 @@
         <div class="stat"><div class="k">Per person per day</div><div class="v" id="ppd">—</div><div class="d" id="ppdusd"></div></div>
       </div>
       <table id="tbl"><thead><tr><th>Where it goes</th><th class="num">Per person</th><th>Notes</th></tr></thead><tbody></tbody></table>
+      <p class="note" id="ratenote"></p>
       <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
       <div class="partner" id="p-esim"><div><b>Data for the whole trip</b><span>An eSIM set up before you land is cheaper than airport SIM counters and works the moment you turn on your phone.</span></div><a class="btn" href="#" rel="sponsored nofollow noopener" target="_blank" data-partner="esim">Compare Korea eSIMs</a><p class="disc">Partner link. We may earn a commission at no cost to you.</p></div>
       <div class="actions"><button class="btn ghost" id="share">Save as image</button><button class="btn ghost" onclick="NUNCHI.copyLink(this)">Copy link</button></div>
@@ -73,10 +91,31 @@
   <h2>Where Korea is cheap</h2>
   <p>Public transport is excellent and a ride is about ₩1,500. Convenience stores sell real meals. Street food in markets runs ₩3,000 to ₩6,000 a dish. Museums and palaces cost a few thousand won, and Gyeongbokgung is free if you wear a rented hanbok.</p>
 
+  <section id="from-your-country">
+    <h2>Budgeting from your country</h2>
+    <p>Flights are the one cost we leave out of the calculator, so here is the missing piece for the places most of our readers fly from. Pick your currency above and the numbers in the results change to match. Flight bands are return economy fares, rough and seasonal.</p>
+
+    <h3 id="from-philippines">From the Philippines <span class="hangul">필리핀</span></h3>
+    <p>Manila, Cebu and Clark all have direct flights to Incheon; Cebu Pacific, Jeju Air and Jin Air fares run roughly ₱10,000 to ₱25,000 return, more in Christmas and Holy Week peaks. Most Filipino travellers we hear from land between Backpacker and Comfortable and share a room between three or four friends, which drops the per-person number a lot. One practical note: Philippine passport holders still need a tourist visa, so apply through the Korea Visa Application Center six to eight weeks ahead. GCash now works at some Korean shops through Alipay+, but a Visa or Mastercard debit card is the thing you will actually use every day.</p>
+
+    <h3 id="from-india">From India <span class="hangul">인도</span></h3>
+    <p>Direct flights from Delhi and Mumbai to Seoul are roughly ₹35,000 to ₹60,000 return; a connection in Bangkok, Hong Kong or Singapore is often cheaper and lets you add a stopover. Indian travellers mostly pick Comfortable, partly because hotel rooms are shared and partly because Korean transport is so cheap that the savings go into food and K-pop or drama experiences. UPI does not work in Korea, so bring a zero-forex-markup card or load a Wise or Niyo card before you fly. Vegetarians: look for temple food (사찰음식), bibimbap without meat, and tell staff "고기 빼고" (gogi ppaego, without meat).</p>
+
+    <h3 id="from-malaysia">From Malaysia <span class="hangul">말레이시아</span></h3>
+    <p>Kuala Lumpur to Seoul is roughly RM800 to RM1,800 return on AirAsia X, Batik Air or Malaysia Airlines, with the low end in the shoulder months of May, June and November. Comfortable is the usual pick, and Korea's subway and street food feel cheap next to KL taxis and mall dining. Touch 'n Go eWallet works at Alipay+ merchants in Seoul, but a physical card is still safer. Halal food is easiest around Itaewon and the Seoul Central Mosque; download the Halal Korea app before you arrive.</p>
+
+    <h3 id="from-singapore">From Singapore <span class="hangul">싱가포르</span></h3>
+    <p>Singapore to Seoul is roughly S$450 to S$900 return, Scoot at the low end and Singapore Airlines or Korean Air at the top. Singaporeans usually go Comfortable or Treat yourself, and still find Seoul cheaper than home for food, coffee and getting around. Bring a YouTrip, Trust or Revolut card and skip the airport money changers; cards work almost everywhere. Buy a Korea eSIM before you fly and your phone works the moment you land.</p>
+
+    <h3 id="from-indonesia">From Indonesia <span class="hangul">인도네시아</span></h3>
+    <p>Jakarta to Seoul is roughly Rp5 to Rp10 million return; Garuda and Korean Air fly direct, while AirAsia or Scoot via Kuala Lumpur or Singapore can be cheaper if you have a day to spare. Indonesian travellers mostly land between Backpacker and Comfortable and travel in groups, which spreads the room cost. Indonesian passport holders need a tourist visa, so start early. Do not bring rupiah to exchange in Korea; the rates are poor and many changers refuse it. Carry US dollars or, better, a Jenius, Jago or Wise card.</p>
+  </section>
+
   <section class="faq"><h2>Questions people ask</h2>
     <details><summary>Does this include flights?</summary><p>No. Flights vary too much by origin and season. Add your fare on top of the total.</p></details>
     <details><summary>Is cash still needed in Korea?</summary><p>Rarely. Cards work almost everywhere, including street stalls with a terminal. Carry ₩50,000 to ₩100,000 in cash for markets and small shops, and load a T-money card for transit.</p></details>
-    <details><summary>What exchange rate do you use?</summary><p>A planning rate of roughly ₩1,380 per US dollar. Check the live rate before you travel. Your card will use the rate on the day.</p></details>
+    <details><summary>What exchange rate do you use?</summary><p>A planning rate of roughly ₩1,380 per US dollar, and similar rounded rates for the other currencies in the dropdown (₱, ₹, RM, S$, Rp, ₫, ฿, £, €, A$, C$, ¥). They are there to give you a feel for the number, not to settle a bill. Check the live rate before you travel. Your card will use the rate on the day.</p></details>
+    <details><summary>Can I see the budget in my own currency?</summary><p>Yes. Pick your currency in the "Show it in my currency" dropdown and the totals and each line of the table show it next to the won. We remember your choice on this device, and you can share a link like <code>?cur=PHP</code> that opens the page already set.</p></details>
     <details><summary>Are prices different in Busan or Jeju?</summary><p>Hotels are usually 10 to 20 percent cheaper than Seoul outside peak season. Jeju needs a rental car, which adds ₩50,000 to ₩80,000 a day.</p></details>
   </section>
 
@@ -86,7 +125,7 @@
       <a class="card" href="/tools/tmoney-vs-climate-card/"><span class="tag">Visit</span><b>T-money vs Climate Card</b><span>Which transit card pays off.</span></a>
     </div>
   </section>
-  <p class="note">Prices last checked: September 2026. Estimates only; your trip will differ.</p>
+  <p class="note">Prices last checked: September 2026. Exchange rates are rounded planning rates from the same month. Estimates only; your trip will differ.</p>
 </main>
 <script src="/assets/nunchi.js"></script>
 <script>
@@ -96,6 +135,32 @@
   let style="mid";
   document.querySelectorAll("#style .chip").forEach(b=>b.onclick=()=>{document.querySelectorAll("#style .chip").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");style=b.dataset.v;});
   const esim=n=>n<=5?15000:n<=10?25000:n<=20?35000:48000;
+  // Approximate planning rates, autumn 2026: how many won one unit of each currency buys. Not live rates.
+  // USD comes from the shared helper so every tool on the site agrees.
+  const CUR={
+    USD:{krw:NUNCHI.KRW_PER_USD,sym:"$",name:"US dollars"},
+    PHP:{krw:24,sym:"₱",name:"Philippine pesos"},
+    INR:{krw:16.5,sym:"₹",name:"Indian rupees"},
+    MYR:{krw:310,sym:"RM",name:"Malaysian ringgit"},
+    SGD:{krw:1040,sym:"S$",name:"Singapore dollars"},
+    IDR:{krw:0.085,sym:"Rp",name:"Indonesian rupiah",round:1000},
+    VND:{krw:0.054,sym:"₫",name:"Vietnamese dong",round:1000,after:true},
+    THB:{krw:40,sym:"฿",name:"Thai baht"},
+    GBP:{krw:1780,sym:"£",name:"British pounds"},
+    EUR:{krw:1500,sym:"€",name:"euros"},
+    AUD:{krw:900,sym:"A$",name:"Australian dollars"},
+    CAD:{krw:1000,sym:"C$",name:"Canadian dollars"},
+    JPY:{krw:9.2,sym:"¥",name:"Japanese yen"}
+  };
+  const KEY="nunchi-cur";
+  let cur="USD";
+  const setCur=c=>{ if(!CUR[c])return; cur=c; $("cur").value=c; try{localStorage.setItem(KEY,c);}catch(e){} };
+  // ?cur=PHP in the URL wins, then whatever this device picked last time.
+  const q=(new URLSearchParams(location.search).get("cur")||"").toUpperCase();
+  if(CUR[q]) setCur(q); else { try{ const s=localStorage.getItem(KEY); if(CUR[s]){cur=s;$("cur").value=s;} }catch(e){} }
+  $("cur").onchange=()=>{ setCur($("cur").value); if($("res").classList.contains("show")) run(); };
+  const fmtCur=n=>{ const c=CUR[cur]; const v=n/c.krw; const r=c.round||1; const s=(Math.round(v/r)*r).toLocaleString("en-US"); return c.after?s+" "+c.sym:c.sym+s; };
+  const fmtRate=()=>{ const c=CUR[cur]; if(c.krw>=1) return `₩${c.krw.toLocaleString("en-US")} per ${c.sym}1`; const u=Math.round(1/c.krw); return `₩1 ≈ ${c.after?u+" "+c.sym:c.sym+u}`; };
   function run(){
     const n=Math.max(1,+$("nights").value||1), ppl=Math.max(1,+$("ppl").value||1), p=P[style];
     const shop=Math.max(0,+$("shop").value||0), tours=+$("tours").value;
@@ -111,15 +176,15 @@
       ["Buffer (8%)",0,"Because there is always one more café"]
     ];
     let sub=rows.reduce((s,r)=>s+r[1],0); rows[7][1]=Math.round(sub*0.08); const pp=sub*1.08, total=pp*ppl;
-    const U=NUNCHI.KRW_PER_USD;
-    $("total").textContent=NUNCHI.fmtKRW(total); $("totalusd").textContent=`about ${NUNCHI.fmtUSD(total/U)} for ${ppl} traveller${ppl>1?"s":""}, ${n} night${n>1?"s":""}`;
-    $("pp").textContent=NUNCHI.fmtKRW(pp); $("ppusd").textContent="about "+NUNCHI.fmtUSD(pp/U);
-    $("ppd").textContent=NUNCHI.fmtKRW(pp/n); $("ppdusd").textContent="about "+NUNCHI.fmtUSD(pp/n/U)+" a day";
-    $("tbl").querySelector("tbody").innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td class="num">${NUNCHI.fmtKRW(r[1])}</td><td>${r[2]}</td></tr>`).join("");
+    $("total").textContent=NUNCHI.fmtKRW(total); $("totalusd").textContent=`about ${fmtCur(total)} for ${ppl} traveller${ppl>1?"s":""}, ${n} night${n>1?"s":""}`;
+    $("pp").textContent=NUNCHI.fmtKRW(pp); $("ppusd").textContent="about "+fmtCur(pp);
+    $("ppd").textContent=NUNCHI.fmtKRW(pp/n); $("ppdusd").textContent="about "+fmtCur(pp/n)+" a day";
+    $("tbl").querySelector("tbody").innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td class="num">${NUNCHI.fmtKRW(r[1])}<br><small>≈ ${fmtCur(r[1])}</small></td><td>${r[2]}</td></tr>`).join("");
+    $("ratenote").textContent=`${CUR[cur].name} shown at an approximate planning rate of ${fmtRate()}. Check the live rate before you travel.`;
     const tips={budget:"Kimbap Cheonguk and Gimbap Heaven are not the same chain, but both will feed you for ₩5,000. Convenience-store lunchboxes (도시락) are a genuine meal, not a sad one.",mid:"Book a room one subway stop away from Myeongdong or Hongdae. Same nights out, 30 percent cheaper, and you get to see a neighbourhood tourists skip.",high:"Korean fine dining is cheapest at lunch. The same kitchen that charges ₩250,000 at dinner often runs a ₩90,000 lunch course."};
     $("tip").textContent=tips[style];
     $("res").classList.add("show");
-    $("share").onclick=()=>NUNCHI.shareCard({title:`My Korea trip budget · ${n} nights, ${p.label}`,big:NUNCHI.fmtKRW(pp)+" pp",sub:`about ${NUNCHI.fmtUSD(pp/U)} per person, flights not included`,tip:tips[style],file:"korea-trip-budget.png"});
+    $("share").onclick=()=>NUNCHI.shareCard({title:`My Korea trip budget · ${n} nights, ${p.label}`,big:NUNCHI.fmtKRW(pp)+" pp",sub:`about ${fmtCur(pp)} per person, flights not included`,tip:tips[style],file:"korea-trip-budget.png"});
   }
   $("go").onclick=run;
   // partner links come from /assets/partners.json when available

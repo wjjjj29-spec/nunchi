@@ -75,7 +75,7 @@ window.HANGUL_NAMES = (function () {
     patel:"파텔", brooklyn:"브루클린", wyatt2:"와이엇", kwame:"콰메", gwen:"그웬", alex2:"알렉스", chloe3:"클로이", marta:"마르타", noah2:"노아", singh:"싱", kumar:"쿠마르", sharma:"샤르마", khan:"칸", tran:"쩐", pham:"팜", le:"레"
   };
   // strip numeric suffixes used to keep duplicate keys in the literal above
-  const D = {}; for (const k in DICT) D[k.replace(/\d+$/, "")] = DICT[k];
+  const D = {}; for (const k in DICT) { const b = k.replace(/\d+$/, ""); if (!(b in D)) D[b] = DICT[k]; } // 먼저 나온 표기 우선 (martin2·isabella2 같은 변형이 덮어쓰지 않게)
 
   // ---------- rule engine (follows the main points of 외래어 표기법) ----------
   const CHO = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];

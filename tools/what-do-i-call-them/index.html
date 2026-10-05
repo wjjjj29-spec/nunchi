@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What do I call them? Oppa, Unnie, Hyung, Noona Calculator | Nunchi</title>
+<meta name="description" content="Oppa, unnie, hyung or noona? Enter two birthdays (or pick a K-pop idol) and see exactly what you call each other in Korean, what they call you, the age gap and when to drop honorifics.">
+<link rel="canonical" href="https://hellonunchi.com/tools/what-do-i-call-them/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="https://hellonunchi.com/tools/what-do-i-call-them/"><meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta property="og:title" content="What do I call them? Oppa, Unnie, Hyung, Noona Calculator"><meta property="og:description" content="Two birthdays in, the right Korean word out: oppa, unnie, hyung, noona, sunbae or just their name. Works with K-pop idols too."><meta property="og:image" content="https://hellonunchi.com/img/og-default.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"What do I call them? Oppa, Unnie, Hyung, Noona Calculator","url":"https://hellonunchi.com/tools/what-do-i-call-them/","applicationCategory":"EntertainmentApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"Works out whether you call someone oppa, unnie, hyung, noona, sunbae or by name in Korean, from both birthdays, genders and how you know them."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a man call someone oppa?","acceptedAnswer":{"@type":"Answer","text":"Not in normal use. Oppa is what women and girls call an older man. Men call an older man hyung (형) and an older woman noona (누나). A man saying oppa is a joke or a deliberate bit of aegyo, never the default."}},{"@type":"Question","name":"Is it normal to call my boyfriend oppa?","acceptedAnswer":{"@type":"Answer","text":"Yes. If he is older, oppa is the standard and affectionate way to address a boyfriend in Korean. If he is younger or the same age, couples use each other's names, or pet names such as jagiya (자기야)."}},{"@type":"Question","name":"Should I call someone oppa or unnie the first time we meet?","acceptedAnswer":{"@type":"Answer","text":"Usually not. At a first meeting use polite speech and either no name at all or their name plus ssi (씨). Oppa, unnie, hyung and noona come once you are friendly, often after the older person suggests it."}},{"@type":"Question","name":"What does ppareun nyeonsaeng (빠른년생) mean?","acceptedAnswer":{"@type":"Answer","text":"It means an early birth year. Until the change for children born in 2002 and later, Korean children born in January or February started school with the year above. Many of them still count themselves with that older year, so a person born in February 1998 may expect to be friends with people born in 1997."}},{"@type":"Question","name":"What do I call someone much older, like a friend's parent?","acceptedAnswer":{"@type":"Answer","text":"Oppa, unnie, hyung and noona stretch to roughly one generation. For a friend's parents use eomeonim (어머님) and abeonim (아버님). For an older woman running a restaurant, imo (이모) is warm and common, and sajangnim (사장님) works for any shop owner."}}]}</script>
+<style>
+  .field .lbl { font-weight: 600; font-size: 14px; color: var(--ink-2); }
+  .field .lbl small { font-weight: 400; }
+  .pick { margin-top: 8px; font-size: 14px; color: var(--ink-2); }
+  .pick b { color: var(--accent); }
+  .err { color: var(--jeok); font-size: 14px; margin: 10px 0 0; min-height: 0; }
+  .err:empty { display: none; }
+  .callout .call { font-family: var(--serif); font-size: clamp(25px, 6.2vw, 38px); line-height: 1.25; margin: 6px 0 6px; overflow-wrap: anywhere; }
+  .callout .back { font-size: 17px; margin: 10px 0 4px; overflow-wrap: anywhere; }
+  .ko { font-family: "Noto Sans KR", var(--sans); font-weight: 700; color: var(--accent); white-space: nowrap; }
+  .rr { font-family: var(--sans); font-size: .55em; color: var(--ink-3); font-weight: 500; }
+  .back .rr { font-size: .85em; }
+  .callout .d + .d { margin-top: 6px; }
+  .back .bx { font-size: 14px; color: var(--ink-2); }
+  .pnote { background: var(--hanji); border: 1px dashed var(--line); border-radius: 10px; padding: 12px 14px; font-size: 14.5px; color: var(--ink-2); margin: 14px 0 0; }
+  .pnote b { color: var(--ink); }
+  #res .stat .v { font-size: 28px; }
+  #res .stat.big .v { font-size: inherit; }
+  .cmp td:first-child, .cmp th:first-child { width: 34%; }
+  .cmp .ko { font-size: 18px; }
+</style>
+</head>
+<body data-root="/" data-room="love">
+<main class="wrap narrow">
+  <div class="crumbs"><a href="/">Nunchi</a> › <a href="/love/">Love</a> › What do I call them?</div>
+  <section class="tool-head">
+    <div class="eyebrow">Love · Calculator</div>
+    <h1>What do I call them? <span class="hangul">호칭 계산기</span></h1>
+    <p>Oppa, unnie, hyung, noona, sunbae, or just their name? Add your birthday and theirs (or pick a K-pop idol) and get the word Koreans would actually use, both ways.</p>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label for="me">Your birthday</label><input type="date" id="me" min="1930-01-01"></div>
+      <div class="field"><span class="lbl" id="g-l">You are</span><div class="chips" role="group" aria-labelledby="g-l" data-k="g"><button type="button" class="chip" data-v="f">Woman</button><button type="button" class="chip" data-v="m">Man</button><button type="button" class="chip" data-v="x">Prefer not to say</button></div></div>
+    </div>
+    <div class="field"><span class="lbl" id="mode-l">The other person is</span><div class="chips" role="group" aria-labelledby="mode-l" data-k="mode"><button type="button" class="chip" data-v="idol">A K-pop idol</button><button type="button" class="chip" data-v="person">Someone I know</button></div></div>
+
+    <div id="idolBox">
+      <div class="field"><label for="q">Idol</label><input type="text" id="q" placeholder="e.g. Jungkook, Karina, Felix" autocomplete="off"><small>Over 100 idols from BTS, BLACKPINK, SEVENTEEN, Stray Kids, NewJeans, aespa, IVE and more.</small></div>
+      <div id="sugg" class="chips"></div>
+      <p class="pick" id="picked"></p>
+    </div>
+    <div id="personBox" hidden>
+      <div class="row">
+        <div class="field"><label for="them">Their birthday</label><input type="date" id="them" min="1900-01-01"><small>Only the year really matters. Guess the day if you must.</small></div>
+        <div class="field"><label for="n">Their name <small>(optional)</small></label><input type="text" id="n" maxlength="24" placeholder="e.g. Jiwoo" autocomplete="off"></div>
+      </div>
+      <div class="field"><span class="lbl" id="tg-l">They are</span><div class="chips" role="group" aria-labelledby="tg-l" data-k="tg"><button type="button" class="chip" data-v="m">Man</button><button type="button" class="chip" data-v="f">Woman</button><button type="button" class="chip" data-v="x">Not sure / not saying</button></div></div>
+    </div>
+
+    <div class="field"><span class="lbl" id="ctx-l">How you know them</span><div class="chips" role="group" aria-labelledby="ctx-l" data-k="ctx"><button type="button" class="chip" data-v="friends">Friends</button><button type="button" class="chip" data-v="work">Work or school</button><button type="button" class="chip" data-v="fan">Fan → idol</button></div></div>
+
+    <button class="btn" id="go" type="button">What do I call them?</button>
+    <p class="err" id="err" role="alert"></p>
+
+    <div class="result" id="res" aria-live="polite">
+      <div class="stat big callout" style="margin-top:18px">
+        <div class="k" id="r-ctx"></div>
+        <div class="call" id="r-call"></div>
+        <div class="d" id="r-extra"></div>
+        <div class="back" id="r-back"></div>
+        <div class="d" id="r-say"></div>
+      </div>
+      <div class="result-grid" style="margin-top:12px" id="cards"></div>
+      <div id="r-notes"></div>
+      <div class="tip"><span class="eye" aria-hidden="true"></span><div><b>Nunchi tip</b><p id="tip"></p></div></div>
+      <div class="actions">
+        <button class="btn" id="share" type="button">Share</button>
+        <button class="btn ghost" id="story" type="button">Save for Stories</button>
+        <button class="btn ghost" id="img" type="button">Save as image</button>
+        <button class="btn ghost" type="button" onclick="NUNCHI.copyLink(this)">Copy link</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Oppa, unnie, hyung, noona: who calls whom</h2>
+  <p>Korean has no single word for "older friend". The word depends on <b>who is speaking</b> as much as on who is being spoken to. These four started as sibling words (older brother, older sister) and now cover friends, classmates, partners and idols who are older than you.</p>
+  <table class="cmp">
+    <thead><tr><th>Speaker</th><th>To an older man</th><th>To an older woman</th></tr></thead>
+    <tbody>
+      <tr><td><b>Woman</b></td><td><span class="ko">오빠</span><br>oppa</td><td><span class="ko">언니</span><br>eonni (unnie)</td></tr>
+      <tr><td><b>Man</b></td><td><span class="ko">형</span><br>hyeong (hyung)</td><td><span class="ko">누나</span><br>nuna (noona)</td></tr>
+    </tbody>
+  </table>
+  <p>The younger person uses these words; the older person does not use a matching word back. They call you by your name plus 야 or 아 (지우야, 지민아), or refer to you as their <span class="hangul">동생</span> dongsaeng, a younger sibling or friend. Age is counted by <b>birth year</b>, not birthday: someone born in December 1998 is the 오빠 or 언니 of someone born in January 1999, even though they are only weeks apart.</p>
+
+  <h2>What about same age? 동갑 and 친구</h2>
+  <p>Two people born in the same year are <span class="hangul">동갑</span> donggap, and in Korean only same-age people are strictly <span class="hangul">친구</span> chingu, friends. A 25-year-old and a 27-year-old can be close, but the younger one is still the dongsaeng. Same-age friends call each other by name with 야 or 아 and speak <span class="hangul">반말</span> banmal, casual speech, once one of them suggests it.</p>
+  <p>The wrinkle is <span class="hangul">빠른년생</span> ppareun nyeonsaeng, the "early" birth year. Up to the 2002 births, children born in January or February started school with the year above, so a person born in February 1998 grew up with the class of 1997 and may still count themselves as 1997. If you meet someone born in January or February of one of those years, ask which year they go by. The calculator flags it when it changes the answer.</p>
+
+  <h2>At work or school: 선배 and 후배</h2>
+  <p>In schools, universities, clubs and companies, the ladder is about who arrived first, not who was born first. Someone who joined before you is your <span class="hangul">선배</span> seonbae (senior), and you address them as 선배님 seonbae-nim; you are their <span class="hangul">후배</span> hubae (junior). People who joined in the same year are <span class="hangul">동기</span> donggi. A younger colleague who has been there longer is still your seonbae.</p>
+  <p>Offices add job titles on top: 팀장님 (team leader), 과장님, 대리님, always with 님. Peers use full name plus <span class="hangul">씨</span> ssi. Calling a colleague oppa or unnie at work sounds far too familiar, and between men and women it can read as flirting. Keep those words for after work, and only when you are close.</p>
+
+  <h2>Can I call my idol oppa?</h2>
+  <p>Yes, and almost everyone does. Fans use the same words they would use for an older friend: female fans call older male idols 오빠 and older female idols 언니, male fans shout 형 and 누나. These are fan-chant staples, and idols use them about each other on camera all the time. If your favourite is younger than you, fans switch to the name with 아 or 야, and an idol who learns a fan is older will happily call them 누나 or 언니.</p>
+  <p>At a fansign or meet-and-greet, start politely with -요 endings. Comments and fan letters are often in warm, casual speech, and idols are used to it.</p>
+
+  <section class="faq"><h2>Questions people ask</h2>
+    <details><summary>Can a man call someone oppa?</summary><p>Not in normal use. Oppa is what women and girls call an older man. Men call an older man hyung (형) and an older woman noona (누나). A man saying oppa is a joke or a deliberate bit of aegyo, never the default.</p></details>
+    <details><summary>Is it normal to call my boyfriend oppa?</summary><p>Yes. If he is older, oppa is the standard and affectionate way to address a boyfriend in Korean. If he is younger or the same age, couples use each other's names, or pet names such as jagiya (자기야).</p></details>
+    <details><summary>Should I call someone oppa or unnie the first time we meet?</summary><p>Usually not. At a first meeting use polite speech and either no name at all or their name plus ssi (씨). Oppa, unnie, hyung and noona come once you are friendly, often after the older person suggests it.</p></details>
+    <details><summary>What does ppareun nyeonsaeng (빠른년생) mean?</summary><p>It means an early birth year. Until the change for children born in 2002 and later, Korean children born in January or February started school with the year above. Many of them still count themselves with that older year, so a person born in February 1998 may expect to be friends with people born in 1997.</p></details>
+    <details><summary>What do I call someone much older, like a friend's parent?</summary><p>Oppa, unnie, hyung and noona stretch to roughly one generation. For a friend's parents use eomeonim (어머님) and abeonim (아버님). For an older woman running a restaurant, imo (이모) is warm and common, and sajangnim (사장님) works for any shop owner.</p></details>
+  </section>
+
+  <section class="related"><h2>Related tools</h2><div class="grid">
+    <a class="card" data-room="live" href="/tools/korean-age-calculator/"><span class="tag">Live</span><b>Korean Age Calculator</b><span>Your international, Korean and year age.</span></a>
+    <a class="card" href="/tools/kpop-idol-age-calculator/"><span class="tag">Love</span><b>K-pop Idol Age</b><span>How old your bias is today, and debut years.</span></a>
+    <a class="card" href="/tools/korean-name-generator/"><span class="tag">Love</span><b>Korean Name Generator</b><span>A Korean name with a meaning that fits you.</span></a>
+  </div></section>
+  <p class="note">Last checked: October 2026. Idol birthdays as on our K-pop Idol Age Calculator. Ages use Seoul time.</p>
+</main>
+<script src="/assets/nunchi.js"></script>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  /* Idol data copied from /tools/kpop-idol-age-calculator/ (checked September 2026); third field = gender of the group */
+  const G={"BTS":["m",[["RM","1994-09-12"],["Jin","1992-12-04"],["Suga","1993-03-09"],["J-Hope","1994-02-18"],["Jimin","1995-10-13"],["V","1995-12-30"],["Jungkook","1997-09-01"]]],
+    "BLACKPINK":["f",[["Jisoo","1995-01-03"],["Jennie","1996-01-16"],["Rosé","1997-02-11"],["Lisa","1997-03-27"]]],
+    "NewJeans":["f",[["Minji","2004-05-07"],["Hanni","2004-10-06"],["Danielle","2005-04-11"],["Haerin","2006-05-15"],["Hyein","2008-04-21"]]],
+    "aespa":["f",[["Karina","2000-04-11"],["Giselle","2000-10-30"],["Winter","2001-01-01"],["Ningning","2002-10-23"]]],
+    "Stray Kids":["m",[["Bang Chan","1997-10-03"],["Lee Know","1998-10-25"],["Changbin","1999-08-11"],["Hyunjin","2000-03-20"],["Han","2000-09-14"],["Felix","2000-09-15"],["Seungmin","2000-09-22"],["I.N","2001-02-08"]]],
+    "TWICE":["f",[["Nayeon","1995-09-22"],["Jeongyeon","1996-11-01"],["Momo","1996-11-09"],["Sana","1996-12-29"],["Jihyo","1997-02-01"],["Mina","1997-03-24"],["Dahyun","1998-05-28"],["Chaeyoung","1999-04-23"],["Tzuyu","1999-06-14"]]],
+    "IVE":["f",[["Gaeul","2002-09-24"],["Yujin","2003-09-01"],["Rei","2004-02-03"],["Wonyoung","2004-08-31"],["Liz","2004-11-21"],["Leeseo","2007-02-21"]]],
+    "LE SSERAFIM":["f",[["Sakura","1998-03-19"],["Chaewon","2000-08-01"],["Yunjin","2001-10-08"],["Kazuha","2003-08-09"],["Eunchae","2006-11-10"]]],
+    "ENHYPEN":["m",[["Heeseung","2001-10-15"],["Jay","2002-04-20"],["Jake","2002-11-15"],["Sunghoon","2002-12-08"],["Sunoo","2003-06-24"],["Jungwon","2004-02-09"],["Ni-ki","2005-12-09"]]],
+    "TXT":["m",[["Yeonjun","1999-09-13"],["Soobin","2000-12-05"],["Beomgyu","2001-03-13"],["Taehyun","2002-02-05"],["Huening Kai","2002-08-14"]]],
+    "(G)I-DLE":["f",[["Miyeon","1997-01-31"],["Minnie","1997-10-23"],["Soyeon","1998-08-26"],["Yuqi","1999-09-23"],["Shuhua","2000-01-06"]]],
+    "SEVENTEEN":["m",[["S.Coups","1995-08-08"],["Jeonghan","1995-10-04"],["Joshua","1995-12-30"],["Jun","1996-06-10"],["Hoshi","1996-06-15"],["Wonwoo","1996-07-17"],["Woozi","1996-11-22"],["DK","1997-02-18"],["Mingyu","1997-04-06"],["The8","1997-11-07"],["Seungkwan","1998-01-16"],["Vernon","1998-02-18"],["Dino","1999-02-11"]]],
+    "ITZY":["f",[["Yeji","2000-05-26"],["Lia","2000-07-21"],["Ryujin","2001-04-17"],["Chaeryeong","2001-06-05"],["Yuna","2003-12-09"]]],
+    "ILLIT":["f",[["Yunah","2004-01-15"],["Minju","2004-05-11"],["Moka","2004-10-08"],["Wonhee","2007-06-26"],["Iroha","2008-02-04"]]],
+    "BABYMONSTER":["f",[["Ruka","2002-03-20"],["Pharita","2005-08-26"],["Asa","2006-04-18"],["Ahyeon","2007-04-11"],["Rami","2007-10-17"],["Rora","2008-08-14"],["Chiquita","2009-02-17"]]],
+    "Solo":["",[["IU","1993-05-16","f"],["G-Dragon","1988-08-18","m"],["Taeyeon","1989-03-09","f"],["Sunmi","1992-05-02","f"],["Zico","1992-09-14","m"]]]};
+  const slug=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]/g,"");
+  const IDOLS=[]; for(const g in G){ for(const m of G[g][1]) IDOLS.push({id:slug(m[0]),name:m[0],dob:m[1],group:g,g:m[2]||G[g][0]}); }
+
+/*CALC-START*/
+  const T={oppa:["오빠","oppa"],eonni:["언니","eonni · unnie"],hyeong:["형","hyeong · hyung"],nuna:["누나","nuna · noona"],
+    seonbae:["선배님","seonbae-nim · sunbae"],ssi:["이름 + 씨","name + ssi"],name:["이름 + 야/아","name + ya/a"],chingu:["친구","chingu"],dongsaeng:["동생","dongsaeng"]};
+  const SAY={oppa:"오빠 is oh-PPAH, with a tight doubled p (not \"opa\").",eonni:"언니 is UHN-nee; fans usually spell it unnie.",hyeong:"형 is one syllable, hyung, ending in a soft ng.",nuna:"누나 is NOO-nah; often spelled noona.",
+    seonbae:"선배님 is sun-bae-NEEM. Drop the 님 (-nim) only when they tell you to.",ssi:"씨 is a crisp \"shee\" after the full name: 김지우 씨. Polite, never with your own name.",
+    name:"Add 야 (ya) after a name ending in a vowel and 아 (a) after a consonant: 지우야 Jiwoo-ya, 지민아 Jimin-a.",chingu:"친구 is CHIN-goo.",dongsaeng:"동생 is dong-SAENG."};
+  const GEN={f:"a woman",m:"a man"};
+  const MON=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  function olderKey(sp,tg){ return sp==="f"?(tg==="m"?"oppa":"eonni"):(tg==="m"?"hyeong":"nuna"); }
+  /* terms a speaker uses for an older target; "x" (not saying) expands to both, with a condition line */
+  function olderOpts(sp,tg,spWho,tgWho){
+    const S=sp==="x"?["f","m"]:[sp], Tg=tg==="x"?["m","f"]:[tg], out=[];
+    for(const s of S) for(const t of Tg){ const k=olderKey(s,t); if(!out.some(o=>o.k===k)) out.push({k,s,t}); }
+    const many=out.length>1;
+    const cond=many?out.map(o=>{const c=[]; if(sp==="x")c.push(spWho+" "+GEN[o.s]); if(tg==="x")c.push(tgWho+" "+GEN[o.t]); return T[o.k][0]+" if "+c.join(" and ");}).join("; ")+".":"";
+    return {keys:out.map(o=>o.k),ko:out.map(o=>T[o.k][0]).join(" / "),rr:many?out.map(o=>T[o.k][1].split(" ")[0]).join(" / "):T[out[0].k][1],cond};
+  }
+  const pparun=p=>p.y<=2002&&p.m<=2;
+  /* i = {me:{y,m,d,g}, them:{y,m,d,g,name}, ctx:"friends"|"work"|"fan", today:{y,m,d}} ; g = "f" | "m" | "x" */
+  function calc(i){
+    const me=i.me, th=i.them, ctx=i.ctx, td=i.today;
+    const d=me.y-th.y, rel=d>0?"older":d<0?"younger":"same";
+    const nm=th.name||"", N=nm||"them";
+    const pr=th.g==="m"?"He":th.g==="f"?"She":"They";
+    const callLead="You call "+N, isYour=nm?nm+" is your":"They're your", backLead=pr+" would call you";
+    const intl=p=>{let a=td.y-p.y; if(td.m<p.m||(td.m===p.m&&td.d<p.d))a--; return a;};
+    const kor=p=>td.y-p.y+1;
+    const days=Math.abs(Date.UTC(me.y,me.m-1,me.d)-Date.UTC(th.y,th.m-1,th.d))/864e5;
+    const ey=Math.floor(days/365.2425), em=Math.floor((days-ey*365.2425)/30.44);
+    let you, back, say, speech, tip; const notes=[];
+    const youCall=(sp,tg)=>olderOpts(sp,tg,"you're","they're"), theyCall=(sp,tg)=>olderOpts(sp,tg,"they're","you're");
+    if(ctx==="work"){
+      if(rel==="older"){ you={lead:callLead,ko:T.seonbae[0],rr:T.seonbae[1],keys:["seonbae"],extra:"In an office, their job title + 님 (팀장님 timjang-nim, 대리님 daeri-nim) is just as common. 오빠, 언니, 형 or 누나 at work is too casual."};
+        back={lead:backLead,ko:T.ssi[0],rr:"your name + ssi",extra:"or 후배 (hubae, junior) when talking about you. At school, your name + 야/아 once you're close."}; }
+      else if(rel==="same"){ you={lead:callLead,ko:T.ssi[0],rr:T.ssi[1],keys:["ssi"],extra:"You're 동갑 (donggap, same age). If you also joined the same year you're 동기 (donggi), and close 동기 go casual in private."};
+        back={lead:backLead,ko:T.ssi[0],rr:"your name + ssi",extra:"At school or in a club, name + 야/아 once you're close."}; }
+      else { you={lead:callLead,ko:T.ssi[0],rr:T.ssi[1],keys:["ssi"],extra:"They're your 후배 (hubae, junior), but still get polite speech at work. At school or in a club, name + 야/아 is fine once you're close."};
+        back={lead:backLead,ko:T.seonbae[0],rr:T.seonbae[1],extra:"if they joined after you. At an office, your title + 님 if you have one."}; }
+      say=you.keys.map(k=>SAY[k]).join(" ");
+      speech={v:"존댓말",d:"Polite -요 or -습니다, always. Even younger colleagues get 존댓말 at work."};
+      tip=rel==="older"?"Never call a colleague 오빠 or 언니 at work, even a friendly one; it reads as flirty or unprofessional. Title + 님 is the safe default."
+        :rel==="same"?"Same age does not mean 반말 at work: if they joined earlier or rank higher, rank wins."
+        :"Being older does not let you drop honorifics at work; a younger colleague who joined before you is still your 선배.";
+      notes.push("<b>선배 and 후배 go by who joined first, not by birth year.</b> This assumes you both started at the usual time.");
+    } else if(ctx==="fan"){
+      if(rel==="older"){ const o=youCall(me.g,th.g);
+        const FAN={oppa:"Most female fans call older male idols 오빠, in chants, comments and letters.",eonni:"Female fans call older female idols 언니 all the time.",hyeong:"Male fans shout 형! at concerts and write it in comments; idols love it.",nuna:"Male fans of older female idols say 누나; in fan culture it is affectionate, not flirty."};
+        you={lead:callLead,ko:o.ko,rr:o.rr,keys:o.keys,cond:o.cond,extra:o.keys.map(k=>FAN[k]).join(" ")};
+        back={lead:backLead,ko:T.name[0],rr:"your name + ya/a",extra:"at a fansign. On stage it is 여러분 (yeoreobun, everyone) or the fandom name."};
+        tip=o.keys.length>1?`Shouting ${o.ko.replace(/ \/ /g,"! or ")}! at a concert is normal, and so is opening a fan letter with it.`:`Shouting ${o.ko}! at a concert is normal. In a fan letter, open with "${N} ${o.ko}에게" (to ${N} ${o.rr.split(" ")[0]}).`; }
+      else if(rel==="same"){ you={lead:isYour,ko:T.chingu[0],rr:"chingu, a same-age friend",keys:["chingu","name"],extra:"Same-year fans are 동갑 (donggap) fans and call their idol by name + 아/야."};
+        back={lead:backLead,ko:T.chingu[0],rr:"chingu",extra:"Same year, same status."};
+        tip="At a fansign, 동갑이에요! (donggap-ieyo, we're the same age!) is a classic opener that usually gets a reaction."; }
+      else { const o=theyCall(th.g,me.g);
+        you={lead:isYour,ko:T.dongsaeng[0],rr:"dongsaeng, younger than you",keys:["dongsaeng","name"],extra:"Older fans call younger idols by name + 아/야, or 우리 애기 (uri aegi, our baby) online."};
+        back={lead:backLead,ko:o.ko,rr:o.rr,cond:o.cond,extra:"Plenty of idols ham it up when they find out a fan is older."};
+        tip=o.keys.length>1?"Telling a younger idol that you're older is a classic fansign move; expect a reaction.":`At a fansign, telling a younger idol "${o.ko}${o.keys[0]==="hyeong"?"이에요":"예요"}" (I'm your ${o.rr.split(" ")[0]}) is a classic move.`; }
+      say=you.keys.map(k=>SAY[k]).join(" ");
+      speech={v:"존댓말",d:rel==="younger"?"Polite -요 at a fansign is still the safe start, even though you're older. Comments and letters are often in friendly 반말.":"Polite -요 at a fansign or meet-and-greet. Comments and letters are often in friendly 반말, and idols are used to it."};
+    } else { /* friends */
+      if(rel==="older"){ const o=youCall(me.g,th.g);
+        you={lead:callLead,ko:o.ko,rr:o.rr,keys:o.keys,cond:o.cond,extra:"Once you've been introduced and they're friendly. Until then, skip the name and keep it polite."};
+        back={lead:backLead,ko:"이름 + 야/아 · 동생",rr:"your name + ya/a, or dongsaeng",extra:"동생 (younger sibling) is how they'd describe you to others."};
+        speech={v:"존댓말",d:"Polite -요 first. Switch to 반말 only when they say 말 놓아 (mal noa, go casual)."};
+        tip="Let the older one offer to go casual and pick up the bill; you return it by paying for coffee or the second round (2차)."; }
+      else if(rel==="same"){ you={lead:isYour,ko:T.chingu[0],rr:"chingu, a same-age friend",keys:["chingu","name"],extra:"You're 동갑 (donggap, same age). Call them by name + 야/아 once you're close."};
+        back={lead:backLead,ko:T.name[0],rr:"your name + ya/a",extra:"Same year, same status."};
+        speech={v:"존댓말",d:"At hello, then 반말 soon after: one of you asks 말 놓을까? (mal noeulkka, shall we go casual?)."};
+        tip="Ask \"몇 년생이에요?\" (myeot nyeonsaeng-ieyo, what year were you born?) instead of their age; the birth year settles 친구 status instantly."; }
+      else { const o=theyCall(th.g,me.g);
+        you={lead:isYour,ko:T.dongsaeng[0],rr:"dongsaeng, a younger friend",keys:["dongsaeng","name"],extra:"Call them by name + 야/아 once you're close."};
+        back={lead:backLead,ko:o.ko,rr:o.rr,cond:o.cond,extra:""};
+        speech={v:"존댓말",d:"Polite -요 at hello. As the older one, you offer 말 편하게 해 (mal pyeonhage hae, talk comfortably); they won't."};
+        tip=`Being their ${o.keys.length>1?"older friend":o.ko} means you're expected to pay for the first meal, and they pour the drinks.`; }
+      say=you.keys.map(k=>SAY[k]).join(" ");
+    }
+    if(me.g==="x") notes.push("<b>Prefer not to say?</b> These words follow the speaker's gender, so pick the one that fits you. Name + 씨 (ssi) with polite speech works for everyone until you're close.");
+    /* 빠른년생: born Jan–Feb up to 2002 used to start school with the year above */
+    const yy=y=>String(y).slice(2), pM=pparun(me), pT=pparun(th);
+    if(pM&&pT&&d===0) notes.push(`<b>Both of you are 빠른년생</b> (born in January or February ${me.y}). If you both count with ${me.y-1}, you are still the same year.`);
+    else {
+      if(pT&&(th.y-me.y===0||th.y-me.y===1)) notes.push(`<b>빠른 ${yy(th.y)}년생 alert.</b> ${nm||"They"} ${nm?"was":"were"} born in ${MON[th.m-1]} ${th.y}. Until the 2002 births, Korean kids born in January or February started school with the year above, so some count themselves as ${th.y-1}. If ${nm||"they"} ${nm?"does":"do"}, ${th.y-1===me.y?"you're 친구 (same year)":"they're the older one"}. Ask which year they go by.`);
+      if(pM&&(me.y-th.y===0||me.y-th.y===1)) notes.push(`<b>You're 빠른 ${yy(me.y)}년생.</b> You were born in ${MON[me.m-1]} ${me.y}, and Korean kids born in January or February started school with the year above until the 2002 births. If you go by ${me.y-1}, ${me.y-1===th.y?(nm?"you and "+nm+" are":"you're")+" 친구 (same year)":"you're the older one"}.`);
+    }
+    return {rel,yearsApart:Math.abs(d),exact:{y:ey,m:em},kor:{me:kor(me),them:kor(th)},intl:{me:intl(me),them:intl(th)},you,back,say,speech,tip,notes,pr,N};
+  }
+/*CALC-END*/
+
+  /* ---------- UI ---------- */
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const st={g:"",mode:"idol",tg:"",ctx:"fan",idol:null,ctxTouched:false};
+  const seoul=new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Seoul"}));
+  const TODAY={y:seoul.getFullYear(),m:seoul.getMonth()+1,d:seoul.getDate()};
+  const iso=p=>`${p.y}-${String(p.m).padStart(2,"0")}-${String(p.d).padStart(2,"0")}`;
+  function parse(s){ const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s||""); if(!m) return null; const p={y:+m[1],m:+m[2],d:+m[3]}; const t=new Date(Date.UTC(p.y,p.m-1,p.d)); if(t.getUTCMonth()!==p.m-1||p.y<1900) return null; if(iso(p)>iso(TODAY)) return null; return p; }
+  const fmt=p=>`${p.d} ${MON[p.m-1]} ${p.y}`;
+  $("me").max=iso(TODAY); $("them").max=iso(TODAY);
+
+  function setChip(k,v){ st[k]=v; document.querySelectorAll(`[data-k="${k}"] .chip`).forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.v===v))); if(k==="mode"){ $("idolBox").hidden=v!=="idol"; $("personBox").hidden=v!=="person"; } }
+  document.querySelectorAll("[data-k] .chip").forEach(b=>b.addEventListener("click",()=>{ const k=b.parentElement.dataset.k; setChip(k,b.dataset.v);
+    if(k==="ctx") st.ctxTouched=true;
+    if(k==="mode"&&!st.ctxTouched) setChip("ctx",b.dataset.v==="idol"?"fan":"friends");
+    if($("res").classList.contains("show")) run(true); }));
+
+  function pickIdol(m){ st.idol=m; $("q").value=m.name; $("picked").innerHTML=`Picked: <b>${esc(m.name)}</b> · ${esc(m.group==="Solo"?"solo":m.group)} · born ${fmt(parse(m.dob))}`; chips([]); if($("res").classList.contains("show")||$("me").value) run(true); }
+  function chips(list){ $("sugg").innerHTML=list.map(m=>`<button type="button" class="chip" data-id="${m.id}">${esc(m.name)}${list.length>6?` <span class="hangul">${esc(m.group)}</span>`:""}</button>`).join("");
+    $("sugg").querySelectorAll(".chip").forEach(b=>b.onclick=()=>pickIdol(IDOLS.find(m=>m.id===b.dataset.id))); }
+  function suggest(){ const q=slug($("q").value); if(st.idol&&slug(st.idol.name)===q){ chips([]); return; } st.idol=null; $("picked").textContent="";
+    if(!q){ chips(["Jungkook","Jimin","Jennie","Karina","Felix","Wonyoung","Hyunjin","Minji","Mingyu","Lisa"].map(n=>IDOLS.find(m=>m.name===n))); return; }
+    const hits=IDOLS.filter(m=>m.id.includes(q)||slug(m.group).includes(q)).slice(0,12); chips(hits); if(hits.length===1) pickIdol(hits[0]); }
+  $("q").addEventListener("input",suggest);
+  $("q").addEventListener("keydown",e=>{ if(e.key==="Enter"){ const q=slug($("q").value); const h=IDOLS.find(m=>m.id===q)||IDOLS.find(m=>m.id.includes(q)); if(h) pickIdol(h); }});
+
+  function fail(msg,el){ $("err").textContent=msg; if(el) el.focus(); }
+  function run(quiet){
+    $("err").textContent="";
+    const me=parse($("me").value);
+    if(!me) return quiet||fail("Add your birthday first.",$("me"));
+    if(!st.g) return quiet||fail("Pick woman, man or prefer not to say, so we know which word you would use.");
+    let them;
+    if(st.mode==="idol"){ if(!st.idol) return quiet||fail("Pick an idol from the list.",$("q")); const p=parse(st.idol.dob); them={...p,g:st.idol.g,name:st.idol.name}; }
+    else { const p=parse($("them").value); if(!p) return quiet||fail("Add their birthday (the year is what counts).",$("them")); if(!st.tg) return quiet||fail("Pick whether they are a man or a woman, or not sure."); them={...p,g:st.tg,name:$("n").value.trim().slice(0,24)}; }
+    me.g=st.g; const ctx=st.ctx||"friends";
+    const r=calc({me,them,ctx,today:TODAY}), N=esc(r.N), they=r.pr==="They"?"them":r.pr==="He"?"him":"her";
+    $("r-ctx").textContent={friends:"Between friends",work:"At work or school",fan:"Fan to idol"}[ctx];
+    $("r-call").innerHTML=`${esc(r.you.lead)} <span class="ko">${esc(r.you.ko)}</span> <span class="rr">(${esc(r.you.rr)})</span>`;
+    $("r-extra").innerHTML=(r.you.cond?`<b>${esc(r.you.cond)}</b> `:"")+esc(r.you.extra||"");
+    const bx=r.back.extra||"";
+    $("r-back").innerHTML=`${esc(r.back.lead)}: <span class="ko">${esc(r.back.ko)}</span> <span class="rr">(${esc(r.back.rr)})</span>`+(bx?`<span class="bx">${/^[a-z]/.test(bx)?" ":". "}${esc(bx)}</span>`:"");
+    $("r-say").innerHTML=(r.back.cond?`<b>${esc(r.back.cond)}</b><br>`:"")+`<b>How to say it:</b> ${esc(r.say)}`;
+    const gapV=r.yearsApart?`${r.yearsApart} <small>year${r.yearsApart>1?"s":""}</small>`:"Same year";
+    const who=r.rel==="older"?`${N} is older`:r.rel==="younger"?`You are older`:"동갑, same birth year";
+    $("cards").innerHTML=`<div class="stat"><div class="k">Years apart</div><div class="v">${gapV}</div><div class="d">${who}. Born ${me.y} vs ${them.y}; ${r.exact.y} yr ${r.exact.m} mo by birthday.</div></div>
+      <div class="stat"><div class="k">Korean age <span class="hangul">세는 나이</span></div><div class="v">${r.kor.me} · ${r.kor.them}</div><div class="d">You · ${N}</div></div>
+      <div class="stat"><div class="k">International age <span class="hangul">만 나이</span></div><div class="v">${r.intl.me} · ${r.intl.them}</div><div class="d">You · ${N}</div></div>
+      <div class="stat"><div class="k">Speech level</div><div class="v">${r.speech.v}</div><div class="d">Always at a first meeting. ${esc(r.speech.d)}</div></div>`;
+    $("r-notes").innerHTML=r.notes.map(n=>`<p class="pnote">${n}</p>`).join("");
+    $("tip").textContent=r.tip;
+    const wasShown=$("res").classList.contains("show");
+    $("res").classList.add("show");
+    const q=new URLSearchParams({me:iso(me),g:st.g});
+    if(st.mode==="idol") q.set("idol",st.idol.id); else { q.set("them",iso(them)); q.set("tg",st.tg); if(them.name) q.set("n",them.name); }
+    q.set("ctx",ctx); history.replaceState(null,"","?"+q.toString());
+    if(!wasShown||!quiet){ try{gtag('event','honorific_result',{tool:'what-do-i-call-them',ctx})}catch(e){} }
+    const plainCall=`${r.you.lead} ${r.you.ko} (${r.you.rr})`;
+    $("share").onclick=function(){ NUNCHI.share(this,{text:`${plainCall.replace(/^You call/,"I call").replace(/^(.*) is your/,"$1 is my").replace(/^They're your/,"They're my")}. ${r.yearsApart?r.yearsApart+" year"+(r.yearsApart>1?"s":"")+" apart.":"Same year."} What do you call yours?`,url:location.href}); };
+    const capLead=r.you.lead.replace(/^You call/,"What I call").replace(/ is your$/," is my").replace(/^They're your/,"They're my");
+    const lines=[`${r.pr} would call me: ${r.back.ko}`,r.yearsApart?`${r.yearsApart} year${r.yearsApart>1?"s":""} apart (born ${me.y} vs ${them.y})`:`Same birth year: ${me.y}`,`Korean age: me ${r.kor.me} · ${r.N} ${r.kor.them}`,`Speech: 존댓말 first`];
+    const rr0=r.you.rr.split(",")[0], subLead=capLead.startsWith("What")?`${capLead} (${rr0})`:`${capLead} ${rr0}`;
+    $("story").onclick=()=>NUNCHI.shareCard({story:true,title:"What do I call them?",big:r.you.ko,sub:subLead.length>34?capLead:subLead,lines,tip:r.tip,file:"what-do-i-call-them-story.png"});
+    $("img").onclick=()=>NUNCHI.shareCard({title:"What do I call them?",big:r.you.ko,sub:`${subLead} · ${r.yearsApart?r.yearsApart+" yr apart":"same year"}`,tip:r.tip,file:"what-do-i-call-them.png"});
+  }
+  $("go").onclick=()=>run(false);
+  ["me","them","n"].forEach(id=>$(id).addEventListener("change",()=>{ if($("res").classList.contains("show")) run(true); }));
+
+  /* restore from URL: ?me=1999-03-02&g=f&idol=jungkook&ctx=fan  or  &them=1997-05-01&tg=m&n=Jiwoo&ctx=friends */
+  const P=new URLSearchParams(location.search);
+  if(P.get("me")&&parse(P.get("me"))) $("me").value=P.get("me");
+  if(/^[fmx]$/.test(P.get("g")||"")) setChip("g",P.get("g"));
+  const idol=P.get("idol")&&IDOLS.find(m=>m.id===slug(P.get("idol")));
+  if(P.get("them")){ setChip("mode","person"); if(parse(P.get("them"))) $("them").value=P.get("them"); if(/^[fmx]$/.test(P.get("tg")||"")) setChip("tg",P.get("tg")); $("n").value=(P.get("n")||"").slice(0,24); setChip("ctx","friends"); }
+  else setChip("mode","idol");
+  if(/^(friends|work|fan)$/.test(P.get("ctx")||"")){ setChip("ctx",P.get("ctx")); st.ctxTouched=true; } else if(!P.get("them")) setChip("ctx","fan");
+  if(idol){ st.idol=idol; $("q").value=idol.name; $("picked").innerHTML=`Picked: <b>${esc(idol.name)}</b> · ${esc(idol.group==="Solo"?"solo":idol.group)} · born ${fmt(parse(idol.dob))}`; } else suggest();
+  if($("me").value&&st.g&&(idol||(P.get("them")&&st.tg))) run(false);
+})();
+</script>
+</body>
+</html>

@@ -286,7 +286,7 @@ function head({ title, desc, url, ogTitle, ogDesc, ld }) {
 <meta property="og:title" content="${esc(ogTitle)}"><meta property="og:description" content="${esc(ogDesc)}"><meta property="og:image" content="${ORIGIN}/img/name-hangul.jpg">
 ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`).join("\n")}
 ${STYLE}
-</head>
+<meta name="google-adsense-account" content="ca-pub-8862930962343176"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8862930962343176" crossorigin="anonymous"></script></head>
 <body data-root="/" data-room="love">
 <main class="wrap narrow">
 `;

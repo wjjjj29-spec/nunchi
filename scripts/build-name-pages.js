@@ -11,7 +11,7 @@ const fs = require("fs"), path = require("path"), vm = require("vm");
 const SITE = path.join(__dirname, "..", "site");
 const ORIGIN = "https://hellonunchi.com";
 const LASTMOD = "2026-10-05";
-const VER = "20261005";
+const VER = "20261009";
 const CHECKED = "October 2026";
 
 // ---------------------------------------------------------------- data
@@ -286,7 +286,8 @@ function head({ title, desc, url, ogTitle, ogDesc, ld }) {
 <meta property="og:title" content="${esc(ogTitle)}"><meta property="og:description" content="${esc(ogDesc)}"><meta property="og:image" content="${ORIGIN}/img/name-hangul.jpg">
 ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`).join("\n")}
 ${STYLE}
-<meta name="google-adsense-account" content="ca-pub-8862930962343176"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8862930962343176" crossorigin="anonymous"></script></head>
+<meta name="google-adsense-account" content="ca-pub-8862930962343176"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8862930962343176" crossorigin="anonymous"></script>
+<meta name="apple-itunes-app" content="app-id=6816771391"></head>
 <body data-root="/" data-room="love">
 <main class="wrap narrow">
 `;
@@ -399,6 +400,8 @@ function page(n) {
 
   <h2>Write any name in Hangul</h2>
   ${CONVERTER}
+
+  <section class="juseyo"><img src="/img/juseyo-icon.png" alt="Juseyo app icon" width="56" height="56" loading="lazy"><div><b>Now say it: ${K("제 이름은 " + H + (fin ? "이에요" : "예요"))}</b><span>"My name is ${N}." Juseyo is our survival-Korean app with the next sentences you'll need in the café, taxi and pharmacy, with native audio. Free to start, works offline.</span></div><a class="btn" href="https://apps.apple.com/app/juseyo/id6816771391" target="_blank" rel="noopener">Get Juseyo on iPhone</a></section>
 
   <section class="related">
     <div class="grid">

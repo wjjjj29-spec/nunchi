@@ -46,7 +46,7 @@
     document.addEventListener("click", e => {
       const a = e.target.closest("a"); if (!a) return;
       if (a.dataset.partner) track("affiliate_click", { partner: a.dataset.partner, href: a.href });
-      else if (/juseyo\.app/.test(a.href)) track("juseyo_click", { href: a.href });
+      else if (/juseyo\.app|id6816771391/.test(a.href)) track("juseyo_click", { href: a.href, page: location.pathname });
       else if (a.closest(".partner")) track("partner_click", { href: a.href });
     });
     const res = document.querySelector(".result");

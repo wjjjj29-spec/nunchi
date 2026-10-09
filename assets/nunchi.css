@@ -193,3 +193,13 @@ body[data-embed] .panel { margin: 0; box-shadow: none; }
 .embed-credit { font-size: 12px; color: var(--ink-3); margin: 8px 0 0; text-align: right; }
 .embed-credit a { font-weight: 600; }
 @media (max-width: 520px) { .compare { grid-template-columns: 1fr; } }
+
+/* Juseyo (our own app) cross-promo card */
+.juseyo { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; background: #FFD233; color: #111; border-radius: var(--radius); padding: 16px 18px; margin: 26px 0; }
+.juseyo img { width: 56px; height: 56px; border-radius: 13px; flex: none; }
+.juseyo div { flex: 1 1 220px; }
+.juseyo b { display: block; font-size: 16px; }
+.juseyo div > span { font-size: 14px; color: #333; }
+.juseyo .ko { font-weight: 700; color: #111; }
+.juseyo .btn { background: #111; color: #FFD233; padding: 11px 20px; font-size: 15px; white-space: nowrap; }
+@media (max-width: 560px) { .juseyo .btn { width: 100%; text-align: center; } }

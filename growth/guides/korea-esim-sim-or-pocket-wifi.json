@@ -1,0 +1,43 @@
+{
+ "order": 3,
+ "slug": "korea-esim-sim-or-pocket-wifi",
+ "room": "visit",
+ "kicker": "Getting online",
+ "short": "eSIM, SIM or pocket Wi-Fi?",
+ "card": "Three ways to get online in Korea, what each costs, and the one question that decides it.",
+ "title": "Korea eSIM vs SIM card vs Pocket Wi-Fi (2026 prices) | Nunchi",
+ "h1": "eSIM, SIM card or pocket Wi-Fi in Korea: which one to get",
+ "dek": "Three ways to get online, what each one costs in 2026, and the one question that decides it for you.",
+ "desc": "eSIM app, Korean carrier SIM or pocket Wi-Fi for a Korea trip? 2026 prices from Airalo, SKT, KT and LG U+, when you need a Korean phone number, and how to check your phone first.",
+ "published": "2026-10-11",
+ "heroSrc": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/photos/esim-hero.png",
+ "heroAlt": "A hand holding a phone with a map open on a Seoul side street at dusk",
+ "thumbTitle": "eSIM, SIM or pocket Wi-Fi?",
+ "cards": [
+  { "type": "cover", "photo": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/photos/esim-cover.png", "title": "eSIM, SIM or pocket Wi-Fi?", "sub": "Getting online in Korea, decided in one minute." },
+  { "type": "point", "big": "$12–35", "bigSub": "eSIM app, unlimited for 3–10 days", "title": "eSIM app: the easy one", "points": ["Install at home, it works the moment you land", "Data only. No Korean phone number", "\"Unlimited\" usually slows down after 3&nbsp;GB a day"] },
+  { "type": "point", "big": "₩27,500", "bigSub": "Korean carrier, 5 days unlimited", "title": "Carrier SIM: the one with a number", "points": ["SKT, KT and LG U+ counters at Incheon arrivals", "Bring your passport", "Add a calling plan to get a Korean number"] },
+  { "type": "point", "big": "₩3–9k", "bigSub": "per day to rent", "title": "Pocket Wi-Fi: for groups", "points": ["One small router, several phones", "Pick up and return at the airport", "One more thing to charge every night"] },
+  { "type": "point", "title": "So which one is yours?", "size": 70, "points": ["<b>Solo, short trip</b> → eSIM app", "<b>Need a Korean number</b> → carrier SIM", "<b>Three or more sharing</b> → pocket Wi-Fi", "<b>Phone locked to your carrier</b> → pocket Wi-Fi"] },
+  { "type": "end", "kicker": "Before you buy anything", "title": "Check your phone first.", "text": "Dial *#06#. If you see an EID, it takes eSIMs. Then make sure it isn't locked to your home carrier." }
+ ],
+ "tldr": [
+  "<strong>Most travellers:</strong> an eSIM app (Airalo, Holafly, Ubigi and others). Unlimited data runs about $12 for 3 days to $35 for 10 days. Data only, no Korean number.",
+  "<strong>Want a Korean phone number:</strong> buy a Korean carrier SIM or eSIM at the Incheon arrivals counter. About ₩27,500 for 5 days. Bring your passport.",
+  "<strong>Travelling as a group of three or more:</strong> rent a pocket Wi-Fi for about ₩3,000–9,000 a day and share it.",
+  "<strong>Check first:</strong> your phone must be unlocked. For an eSIM it must also support eSIM (dial *#06# and look for an EID)."
+ ],
+ "body": "<h2>The question that decides it: do you need a Korean number?</h2>\n<p>Every option gets you fast data. Korean mobile networks are among the quickest anywhere, so speed is not the deciding factor. The real difference is the <strong>phone number</strong>.</p>\n<p>A Korean number matters if you want to book a taxi with card payment in Kakao T, join a restaurant waiting list that texts you when your table is ready, or sign up for apps that verify by text. If you will mostly use Naver Map, Papago, KakaoTalk and Instagram, you do not need one.</p>\n\n<h2>Option 1: an eSIM app</h2>\n<p>You buy a plan in an app before the trip, scan or tap to install it, and switch it on when you land. No queue at the airport and nothing to lose.</p>\n<table><thead><tr><th>Airalo Korea, unlimited</th><th>Price</th></tr></thead><tbody>\n<tr><td>3 days</td><td class=\"num\">$12</td></tr>\n<tr><td>5 days</td><td class=\"num\">$20</td></tr>\n<tr><td>10 days</td><td class=\"num\">$35</td></tr>\n<tr><td>30 days</td><td class=\"num\">$69</td></tr>\n</tbody></table>\n<p>Fixed plans are cheaper if you don't stream much: 5&nbsp;GB for about $10 and 10&nbsp;GB for about $18 (7 days). Holafly's unlimited plans cost more ($20.50 for 5 days) but run on SK Telecom and LG U+ and slow down less.</p>\n<ul>\n<li><strong>Good:</strong> cheapest, ready on arrival, keeps your home SIM active for bank texts.</li>\n<li><strong>Not so good:</strong> data only. Most \"unlimited\" plans drop to about 1&nbsp;Mbps after 3&nbsp;GB in a day.</li>\n</ul>\n\n<h2>Option 2: a Korean carrier SIM or eSIM</h2>\n<p>SK Telecom, KT and LG U+ all sell tourist plans from counters in the Incheon arrivals hall, and online in advance. At the counter, unlimited data costs about <span class=\"g-num\">₩27,500</span> for 5 days, <span class=\"g-num\">₩38,500</span> for 10 days and <span class=\"g-num\">₩71,500</span> for 30 days. Booking online is usually 10% cheaper.</p>\n<p>The number is the catch. A data-only plan gives you, at most, a number that can <em>receive</em> calls and texts. To call or text out, add a voice option at the airport counter. Even then, a tourist number won't pass Korean bank or government identity checks. That is normal and nothing to fix.</p>\n<ul>\n<li><strong>Good:</strong> real Korean network, no daily slowdown, a local number if you add calling.</li>\n<li><strong>Not so good:</strong> costs more, airport queue, and you need your passport. LG U+ limits it to three per passport.</li>\n</ul>\n\n<h2>Option 3: pocket Wi-Fi</h2>\n<p>A small battery router (Koreans call it an \"egg\") that you rent by the day, usually <span class=\"g-num\">₩3,000–9,000</span>. Pick it up at an Incheon roaming counter and drop it back on the way home.</p>\n<ul>\n<li><strong>Good:</strong> one device for the whole group. It also works with phones locked to a home carrier.</li>\n<li><strong>Not so good:</strong> everyone has to stay together, and it needs charging every night. If it's in someone else's bag, you're offline.</li>\n</ul>\n\n<h2>Check your phone before you pay</h2>\n<ol>\n<li><strong>eSIM support:</strong> dial <span class=\"g-num\">*#06#</span>. If an EID appears, your phone takes eSIMs.</li>\n<li><strong>Unlocked:</strong> on iPhone, go to Settings › General › About and look for <em>Carrier Lock: No SIM restrictions</em>. On Android, ask your carrier. An EID alone does not mean the phone is unlocked.</li>\n<li><strong>Phone locked to your carrier?</strong> Neither an eSIM nor a Korean SIM will work. Rent a pocket Wi-Fi.</li>\n</ol>\n\n<h2>You'll find free Wi-Fi almost everywhere</h2>\n<p>Seoul runs more than 35,000 public Wi-Fi points on streets, in parks, at markets and on city buses. Look for <span class=\"ko\">SEOUL_Secure</span> (ID and password: seoul). Subway trains, cafés and most restaurants have Wi-Fi too. So if your hotel has good Wi-Fi, a smaller plan is usually enough.</p>\n<div class=\"tip\"><span class=\"eye\" aria-hidden=\"true\"></span><div><b>Nunchi tip</b><p>Set up KakaoTalk with your home number before you fly. Korean friends, guesthouses and tour guides will message you there, so you won't need a Korean number for that.</p></div></div>",
+ "tool": { "href": "/tools/korea-esim-data-calculator/", "title": "How many GB do you actually need?", "text": "Pick your trip length and habits, and get the plan size to buy." },
+ "faq": [
+  ["Do I need a Korean phone number as a tourist?", "Usually not. You need one mainly for card payment in the Kakao T taxi app, restaurant waiting lists that text you, and some sign-ups. Maps, translation and messaging apps all work on data alone."],
+  ["Can I buy a SIM card at Incheon Airport?", "Yes. SK Telecom, KT and LG U+ have counters in the arrivals halls of both terminals. Bring your passport. Unlimited data is about ₩27,500 for 5 days."],
+  ["Is unlimited data really unlimited?", "On most eSIM apps, no. Speed usually drops to about 1 Mbps after 3 GB in a day, which is enough for maps and messages but not video. Korean carrier plans and some providers slow down less."]
+ ],
+ "sources": [
+  ["Airalo: South Korea eSIM plans", "https://www.airalo.com/south-korea-esim"],
+  ["Holafly: South Korea eSIM", "https://esim.holafly.com/esim-south-korea/"],
+  ["LG U+ Korea SIM: tourist eSIM (official)", "https://www.lguplus.com/korea-sim/eng/pc/product/esim?tab=data"],
+  ["Korea Herald: Seoul public Wi-Fi expansion (March 2026)", "https://www.koreaherald.com/article/10704935"]
+ ]
+}

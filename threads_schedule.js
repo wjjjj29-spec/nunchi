@@ -1,5 +1,5 @@
 // Threads 예약 게시: node threads_schedule.js <targetId앞자리> <posts.json> [startIndex] [endIndex]
-// posts.json: [{date:"2026-10-01", time:"21:00", text, image, reply}]  reply는 같은 스레드의 두 번째 글(링크용)로 붙는다.
+// posts.json: [{date:"2026-10-01", time:"21:00", text, image | images:[...], reply}]  reply는 같은 스레드의 두 번째 글(링크용)로 붙는다.
 const http = require("http"); const fs = require("fs");
 const get = u => new Promise((res, rej) => http.get(u, r => { let d = ""; r.on("data", c => d += c); r.on("end", () => res(JSON.parse(d))); }).on("error", rej));
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -26,7 +26,7 @@ async function cdp(wsUrl) { const ws = new WebSocket(wsUrl); let id = 0; const p
     await clickText("새로운 스레드"); await sleep(2000);
     if (!await ev(`(()=>{const ce=${D}.querySelector('[contenteditable=true]'); if(!ce) return false; ce.focus(); return true})()`)) throw new Error("no editor");
     await typeText(post.text);
-    if (post.image) { await c.send("DOM.enable"); const doc = await c.send("DOM.getDocument", { depth: 0 }); const q = await c.send("DOM.querySelector", { nodeId: doc.result.root.nodeId, selector: "[role=dialog] input[type=file]" }); await c.send("DOM.setFileInputFiles", { nodeId: q.result.nodeId, files: [post.image] }); await sleep(3500); }
+    if (post.image || post.images) { await c.send("DOM.enable"); const doc = await c.send("DOM.getDocument", { depth: 0 }); const q = await c.send("DOM.querySelector", { nodeId: doc.result.root.nodeId, selector: "[role=dialog] input[type=file]" }); await c.send("DOM.setFileInputFiles", { nodeId: q.result.nodeId, files: post.images || [post.image] }); await sleep(post.images ? 2500 + 1500 * post.images.length : 3500); }
     if (post.reply) { await clickText("스레드에 추가", D); await sleep(1200);
       const ok = await ev(`(()=>{const ces=[...${D}.querySelectorAll('[contenteditable=true]')]; const ce=ces[ces.length-1]; if(ces.length<2) return false; ce.focus(); return true})()`); if (!ok) throw new Error("no second editor"); await c.send("Input.insertText", { text: post.reply }); await sleep(500); }
     // 예약

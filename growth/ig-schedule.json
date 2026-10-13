@@ -1,0 +1,44 @@
+[
+ {
+  "date": "2026-10-21",
+  "hour": 9,
+  "pm": true,
+  "minute": 0,
+  "images": [
+   "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/01.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/02.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/03.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/04.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/05.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/06.jpg"
+  ],
+  "text": "eSIM, Korean SIM or pocket Wi-Fi?\n\nIt really comes down to one question: do you need a Korean phone number?\n\nNo → an eSIM app, about $12–35\nYes → a carrier SIM at Incheon, ₩27,500 for 5 days\n3+ people → share a pocket Wi-Fi\n\nCheck your phone first: dial *#06#. If you see an EID, it takes eSIMs.\n\nSave this for your trip 📌\nPrices from Airalo, SKT, KT and LG U+: hellonunchi.com/guide\n",
+  "tags": "#koreatravel #seoultravel #koreaesim #koreatrip #traveltips #visitkorea"
+ },
+ {
+  "date": "2026-10-13",
+  "hour": 9,
+  "pm": true,
+  "minute": 0,
+  "images": [
+   "/Users/wonjoon/원준프로젝트/nunchi/growth/cards/d1-korean-age.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/growth/cards/d2-name-hangul.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/growth/cards/d6-numbers.jpg"
+  ],
+  "text": "Three things Korea does differently, and the free tools that sort them out:\n\n1. Your age. Korea has three of them, and all three still show up.\n2. Your name. Koreans spell it by sound, not by letters.\n3. Numbers. Two counting systems, and you need both at the till.\n\nTry them on your own birthday and name: hellonunchi.com\n",
+  "tags": "#learnkorean #koreanlanguage #hangul #koreanculture #koreatravel #kdrama"
+ },
+ {
+  "date": "2026-10-15",
+  "hour": 9,
+  "pm": true,
+  "minute": 0,
+  "images": [
+   "/Users/wonjoon/원준프로젝트/nunchi/growth/cards/d4-tmoney.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/growth/cards/d5-budget.jpg",
+   "/Users/wonjoon/원준프로젝트/nunchi/growth/cards/d7-blossom.jpg"
+  ],
+  "text": "Planning a Korea trip? Three questions people always ask us:\n\n🚇 T-money or the Climate Card?\n💸 How much will two weeks in Seoul really cost?\n🌸 When do the cherry blossoms open in each city?\n\nFree calculators for all three, no sign-up: hellonunchi.com\n",
+  "tags": "#koreatravel #seoultravel #koreatrip #cherryblossom #traveltips #visitkorea"
+ }
+]

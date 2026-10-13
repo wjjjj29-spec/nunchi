@@ -1,5 +1,47 @@
 [
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-travel-apps-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-travel-apps/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-travel-apps-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-travel-apps/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-travel-apps-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-travel-apps/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-travel-apps-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-travel-apps/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-travel-apps-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-travel-apps/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-travel-apps-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-travel-apps/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-travel-apps-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-travel-apps/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/see-a-doctor-in-korea-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/see-a-doctor-in-korea/cards/01.jpg",
   "w": 1080,

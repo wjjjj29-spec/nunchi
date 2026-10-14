@@ -265,3 +265,18 @@ body[data-embed] .panel { margin: 0; box-shadow: none; }
 
 /* Live(노랑) 버튼은 흰 글씨 대비가 부족해서 진한 글씨 */
 [data-room="live"] .btn:not(.ghost), .btn[data-room="live"]:not(.ghost) { color: #1b1b1b; }
+
+/* Home hero: try-it card */
+.home-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 34px; align-items: center; padding: 48px 0 18px; }
+@media (max-width: 820px) { .home-hero { grid-template-columns: 1fr; gap: 20px; padding-top: 30px; } }
+.hh-try { background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 18px 20px 20px; }
+.hh-tabs { display: flex; gap: 6px; margin-bottom: 16px; background: var(--hanji-2); border-radius: 999px; padding: 4px; }
+.hh-tabs button { flex: 1; border: 0; background: transparent; font: inherit; font-size: 14px; font-weight: 600; color: var(--ink-3); padding: 9px 10px; border-radius: 999px; cursor: pointer; }
+.hh-tabs button[aria-selected="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.hh-panel label { display: block; font-size: 13px; font-weight: 600; color: var(--ink-2); margin-bottom: 6px; }
+.hh-panel input { width: 100%; font: inherit; font-size: 18px; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--hanji); color: var(--ink); }
+.hh-panel input:focus { outline: none; border-color: var(--accent); }
+.hh-out { min-height: 104px; display: flex; flex-direction: column; justify-content: center; padding: 14px 2px 8px; }
+.hh-big { font-family: "Noto Sans KR", var(--sans); font-weight: 700; font-size: clamp(40px, 7vw, 54px); line-height: 1.1; color: var(--accent); word-break: keep-all; }
+.hh-sub { color: var(--ink-3); font-size: 14px; margin-top: 4px; }
+.hh-more { font-size: 14.5px; font-weight: 600; }

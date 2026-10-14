@@ -43,6 +43,7 @@ body {
   font-family: var(--sans); font-size: 17px; line-height: 1.65;
   background-image: radial-gradient(rgba(27,27,27,.035) 1px, transparent 1px);
   background-size: 22px 22px;
+  padding-top: 63px; /* 고정 헤더 자리 미리 확보 (JS로 헤더를 넣을 때 화면이 밀리는 CLS 방지) */
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -59,7 +60,7 @@ h2[id], h3[id], section[id] { scroll-margin-top: 78px; }
 .narrow { max-width: 760px; }
 
 /* Header */
-.site-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--hanji) 88%, transparent); backdrop-filter: saturate(1.2) blur(10px); border-bottom: 1px solid var(--line); }
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; background: color-mix(in srgb, var(--hanji) 88%, transparent); backdrop-filter: saturate(1.2) blur(10px); border-bottom: 1px solid var(--line); }
 .site-header .wrap { display: flex; align-items: center; gap: 18px; height: 62px; }
 .logo { display: flex; align-items: center; gap: 10px; color: var(--ink); font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: .02em; }
 .logo:hover { text-decoration: none; }
@@ -261,3 +262,6 @@ body[data-embed] .panel { margin: 0; box-shadow: none; }
 .g-home-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-top: 1.6em; }
 .g-home-head h2 { margin: 0; }
 .g-home-head a { font-size: 14px; font-weight: 600; }
+
+/* Live(노랑) 버튼은 흰 글씨 대비가 부족해서 진한 글씨 */
+[data-room="live"] .btn:not(.ghost), .btn[data-room="live"]:not(.ghost) { color: #1b1b1b; }

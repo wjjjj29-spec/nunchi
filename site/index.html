@@ -19,11 +19,30 @@
 </head>
 <body data-root="/">
 <main class="wrap">
-  <section class="hero">
-    <div class="eyebrow">눈치 · noon-chi · the art of reading the room</div>
-    <h1>Read Korea at a glance.</h1>
-    <p class="lead">Small, fast tools for the questions Korea keeps asking you. How old am I here? How do you write my name? How much will two weeks cost? No sign-up, no fluff. Just answers, plus one tip a Korean friend would whisper to you.</p>
-    <div class="hero-photo"><img src="/img/home.jpg" alt="Morning light on a quiet Seoul side street" width="1600" height="700"></div>
+  <section class="hero home-hero">
+    <div class="hh-text">
+      <div class="eyebrow">눈치 · noon-chi · the art of reading the room</div>
+      <h1>Read Korea at a glance.</h1>
+      <p class="lead">Small, fast tools and short guides for the questions Korea keeps asking you. No sign-up, no fluff, plus one tip a Korean friend would give you.</p>
+    </div>
+    <div class="hh-try" data-room="love">
+      <div class="hh-tabs" role="tablist">
+        <button type="button" role="tab" aria-selected="true" data-t="name">Name in Korean</button>
+        <button type="button" role="tab" aria-selected="false" data-t="age">Korean age</button>
+      </div>
+      <div class="hh-panel" data-p="name">
+        <label for="hh-name">Type your first name</label>
+        <input id="hh-name" type="text" placeholder="e.g. Olivia" autocomplete="off" autocapitalize="words" maxlength="40">
+        <div class="hh-out" aria-live="polite"><span class="hh-big" id="hh-hangul" lang="ko">이름</span><span class="hh-sub" id="hh-say">Your name, the way Koreans would write it.</span></div>
+        <a class="hh-more" id="hh-name-more" href="/tools/my-name-in-hangul/">See how to say it, and what friends would call you →</a>
+      </div>
+      <div class="hh-panel" data-p="age" hidden>
+        <label for="hh-year">Year you were born</label>
+        <input id="hh-year" type="number" inputmode="numeric" placeholder="e.g. 2001" min="1930" max="2026">
+        <div class="hh-out" aria-live="polite"><span class="hh-big" id="hh-age">–</span><span class="hh-sub" id="hh-agesub">Your Korean age this year.</span></div>
+        <a class="hh-more" id="hh-age-more" href="/korean-age/">Your zodiac, 년생 and school year →</a>
+      </div>
+    </div>
   </section>
 
   <section class="rooms" aria-label="Sections">
@@ -40,6 +59,7 @@
 
   <h2>Start here</h2>
   <div class="grid">
+    <a class="card" data-room="love" href="/idols/"><span class="tag">Love</span><b>K-pop Idol Ages <span class="hangul">아이돌</span></b><span>100 idols, eldest to maknae, with Korean age and birthday countdowns.</span></a>
     <a class="card" data-room="live" href="/tools/korean-age-calculator/"><span class="tag">Live</span><b>Korean Age Calculator <span class="hangul">나이</span></b><span>Your international, Korean and "year" age, and why all three still matter.</span></a>
     <a class="card" data-room="love" href="/tools/what-do-i-call-them/"><span class="tag">Love</span><b>What Do I Call Them? <span class="hangul">오빠·언니</span></b><span>Oppa, unnie, hyung or noona: the right word for anyone, idols included.</span></a>
     <a class="card" data-room="love" href="/tools/my-name-in-hangul/"><span class="tag">Love</span><b>My Name in Hangul <span class="hangul">이름</span></b><span>See how Koreans would write and say your name.</span></a>
@@ -59,5 +79,35 @@
   <section class="juseyo"><img src="/img/juseyo-icon.png" alt="Juseyo app icon" width="56" height="56" loading="lazy"><div><b>New: Juseyo, Korean you'll actually say</b><span>Made by the team behind Nunchi. The exact sentences for the café, taxi, pharmacy and phone shop, with native audio and the answer you'll hear back. Free to start, works offline.</span></div><a class="btn" href="https://apps.apple.com/app/juseyo/id6816771391" target="_blank" rel="noopener">Get Juseyo on iPhone</a></section>
 </main>
 <script src="/assets/nunchi.js"></script>
+<script src="/assets/hangul-names.js?v=20261005"></script>
+<script>
+(function(){
+  const NAMES=new Set(["aaron", "abigail", "adam", "aditya", "ahmed", "aiden", "aisha", "aisling", "alan", "albert", "alessandro", "alex", "alexander", "alfie", "ali", "alice", "allen", "amanda", "amelia", "amy", "ana", "ananya", "anastasia", "andrea", "andrew", "andy", "angela", "anh", "ann", "anna", "anne", "anthony", "antoine", "aoi", "aoife", "archie", "arjun", "arlo", "arthur", "ashley", "audrey", "aurora", "austin", "ava", "bailey", "barbara", "ben", "benjamin", "bennett", "betty", "bill", "billy", "bob", "bobby", "bradley", "brandon", "brenda", "brian", "brooklyn", "brooks", "bruce", "bryan", "caleb", "callum", "cameron", "camila", "camille", "caoimhe", "carl", "carlos", "carol", "caroline", "carolyn", "carter", "catherine", "charles", "charlie", "charlotte", "chase", "cheryl", "chloe", "chris", "christian", "christina", "christine", "christopher", "ciaran", "claire", "colton", "connor", "cooper", "craig", "cynthia", "dafydd", "daisy", "dan", "daniel", "dave", "david", "deborah", "debra", "declan", "dennis", "diane", "diego", "dmitri", "donald", "donna", "douglas", "dylan", "ed", "edward", "eleanor", "eli", "elijah", "elizabeth", "ella", "ellie", "emily", "emma", "eoin", "eric", "erin", "esme", "ethan", "eugene", "eva", "evan", "evelyn", "evie", "ewan", "fatima", "felix", "finn", "fiona", "florence", "francesca", "francois", "frank", "freddie", "freya", "gabriel", "gary", "gemma", "geoffrey", "george", "georgia", "gerald", "giovanni", "giulia", "gloria", "grace", "graham", "grayson", "gregory", "greta", "guillaume", "guillermo", "gwen", "hannah", "hans", "harold", "harper", "harry", "haruto", "hassan", "hazel", "heather", "helen", "henry", "hina", "holly", "howard", "hugh", "hugo", "hunter", "huong", "ian", "isaac", "isabel", "isabella", "isabelle", "ivan", "ivy", "jack", "jackson", "jacob", "jacqueline", "jacques", "jake", "james", "jamie", "jane", "janet", "jasmine", "jason", "javier", "jayden", "jean", "jeffrey", "jennifer", "jeremy", "jerry", "jesse", "jessica", "jim", "joan", "joao", "joaquin", "joe", "john", "jonas", "jonathan", "jordan", "jorge", "jose", "joseph", "josh", "joshua", "joyce", "juan", "judith", "julia", "julian", "julie", "justin", "karen", "kate", "katherine", "kathleen", "katie", "keith", "kelly", "kenji", "kenneth", "kevin", "kimberly", "klaus", "kwame", "kyle", "landon", "larry", "laura", "lauren", "lawrence", "layla", "leah", "leigh", "lena", "leo", "leon", "levi", "lewis", "liam", "lily", "linda", "linh", "lisa", "logan", "louis", "louise", "luca", "lucas", "lucia", "lucy", "luis", "lukas", "luke", "madison", "manon", "marco", "marcus", "margaret", "maria", "mark", "marta", "martha", "martin", "mary", "mason", "mateo", "matt", "matteo", "matthew", "max", "maya", "megan", "melissa", "mia", "michael", "michelle", "miguel", "mike", "mila", "millie", "ming", "minh", "mitchell", "mohammed", "molly", "morgan", "muhammad", "nancy", "naoki", "naomi", "natalie", "natasha", "nathan", "neha", "neil", "nelson", "niamh", "nicholas", "nick", "nicolas", "nicole", "noah", "nora", "oisin", "olga", "oliver", "olivia", "ollie", "omar", "oscar", "owen", "pablo", "padraig", "pamela", "parker", "patricia", "patrick", "paul", "perry", "peter", "philip", "phoebe", "pierre", "poppy", "priya", "rachel", "rahul", "raj", "ralph", "randy", "raymond", "rebecca", "reed", "ren", "rhys", "richard", "riley", "rob", "robert", "roger", "roisin", "ronald", "rory", "rose", "ross", "roy", "ruby", "russell", "ruth", "ryan", "sakura", "sam", "samantha", "samuel", "sandra", "santiago", "saoirse", "sara", "sarah", "scarlett", "scott", "sean", "sergei", "sergio", "sharon", "shirley", "sian", "simon", "sinead", "siobhan", "sofia", "sophia", "sophie", "stella", "stephanie", "stephen", "steve", "steven", "stuart", "susan", "tadhg", "taylor", "teddy", "teresa", "terry", "thao", "theo", "thiago", "thomas", "tim", "timothy", "tom", "tony", "tyler", "valentina", "victoria", "vikram", "vincent", "violet", "virginia", "walter", "wayne", "wei", "will", "william", "willie", "wyatt", "xavier", "ximena", "yuki", "zachary", "zara", "zoe", "zoey"]), IDOLS=new Set(["ahyeon", "asa", "bang-chan", "beomgyu", "chaeryeong", "chaewon", "chaeyoung", "changbin", "chiquita", "dahyun", "danielle", "dino", "dk", "eunchae", "felix", "g-dragon", "gaeul", "giselle", "haerin", "han", "hanni", "heeseung", "hoshi", "huening-kai", "hyein", "hyunjin", "i-n", "iroha", "iu", "j-hope", "jake", "jay", "jennie", "jeonghan", "jeongyeon", "jihyo", "jimin", "jin", "jisoo", "joshua", "jun", "jungkook", "jungwon", "karina", "kazuha", "lee-know", "leeseo", "lia", "lisa", "liz", "mina", "mingyu", "minji", "minju", "minnie", "miyeon", "moka", "momo", "nayeon", "ni-ki", "ningning", "pharita", "rami", "rei", "rm", "rora", "ros", "ruka", "ryujin", "s-coups", "sakura", "sana", "seungkwan", "seungmin", "shuhua", "soobin", "soyeon", "suga", "sunghoon", "sunmi", "sunoo", "taehyun", "taeyeon", "the8", "tzuyu", "v", "vernon", "winter", "wonhee", "wonwoo", "wonyoung", "woozi", "yeji", "yeonjun", "yujin", "yuna", "yunah", "yunjin", "yuqi", "zico"]);
+  const $=id=>document.getElementById(id), Y=new Date().getFullYear();
+  document.querySelectorAll(".hh-tabs button").forEach(b=>b.onclick=()=>{
+    document.querySelectorAll(".hh-tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
+    document.querySelectorAll(".hh-panel").forEach(p=>p.hidden=p.dataset.p!==b.dataset.t);
+    document.querySelector(".hh-try").dataset.room=b.dataset.t==="name"?"love":"live";
+    (b.dataset.t==="name"?$("hh-name"):$("hh-year")).focus();
+  });
+  let sent=false; const ping=k=>{ if(!sent&&window.gtag){ gtag("event","home_try",{type:k}); sent=true; } };
+  $("hh-name").addEventListener("input",()=>{
+    const v=$("hh-name").value.trim(); if(!v){$("hh-hangul").textContent="이름";$("hh-say").textContent="Your name, the way Koreans would write it.";$("hh-name-more").href="/tools/my-name-in-hangul/";return;}
+    const parts=HANGUL_NAMES.convert(v); if(!parts.length) return;
+    $("hh-hangul").textContent=parts.map(p=>p.hangul).join(" ");
+    const s=parts[0].word.toLowerCase().replace(/[^a-z]/g,"");
+    $("hh-say").textContent=parts.length===1&&NAMES.has(s)?"A common name: we have a full page on it.":"Tap below for the full breakdown.";
+    $("hh-name-more").href=parts.length===1&&NAMES.has(s)?"/names/"+s+"/":"/tools/my-name-in-hangul/?n="+encodeURIComponent(v);
+    ping("name");
+  });
+  $("hh-year").addEventListener("input",()=>{
+    const y=+$("hh-year").value; if(y<1930||y>Y){$("hh-age").textContent="–";$("hh-agesub").textContent="Your Korean age this year.";$("hh-age-more").href="/korean-age/";return;}
+    $("hh-age").textContent=Y-y+1; $("hh-agesub").textContent="Korean age in "+Y+" · international "+(Y-y-1)+" or "+(Y-y)+" · you're a "+String(y).slice(2)+"년생";
+    $("hh-age-more").href=(y>=1950&&y<=2025)?"/korean-age/born-"+y+"/":"/tools/korean-age-calculator/";
+    ping("age");
+  });
+})();
+</script>
+
 </body>
 </html>

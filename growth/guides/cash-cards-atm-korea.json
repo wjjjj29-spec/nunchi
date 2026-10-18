@@ -1,0 +1,45 @@
+{
+ "order": 3.5,
+ "slug": "cash-cards-atm-korea",
+ "room": "visit",
+ "kicker": "Money",
+ "short": "Cash or card in Korea?",
+ "card": "Where foreign cards work, where you still need won, which ATMs to use and the prepaid cards that make it easy.",
+ "title": "Cash, Cards and ATMs in Korea for Tourists (2026) | Nunchi",
+ "h1": "Cash, cards and ATMs in Korea: what tourists need in 2026",
+ "dek": "Your card works almost everywhere, until it doesn't. Where you still need won, which ATMs take foreign cards, and the prepaid cards that skip the hassle.",
+ "desc": "Do you need cash in Korea? Where foreign Visa and Mastercard work, where cash is still needed (markets, T-money top-ups), Global ATMs and fees, WOWPASS and NAMANE prepaid cards, Apple Pay, tipping and tax refunds.",
+ "published": "2026-10-18",
+ "heroSrc": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/photos/cash-hero.png",
+ "heroAlt": "A traveller tapping a card on a payment terminal at a Seoul street food stall at night",
+ "thumbTitle": "Cash or card in Korea?",
+ "cards": [
+  { "type": "cover", "photo": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/photos/cash-cover.png", "title": "Cash or card in Korea?", "sub": "What works with a foreign card in 2026, and where you still need won." },
+  { "type": "point", "title": "Cards work almost everywhere", "size": 70, "points": ["Shops, cafés, restaurants and taxis take Visa and Mastercard", "When asked, always pay in KRW, not your currency", "Carry the physical card: few terminals take Apple Pay"] },
+  { "type": "point", "title": "Keep some cash for", "size": 72, "points": ["Traditional markets and street food", "Topping up T-money at station machines", "Small old-school restaurants"] },
+  { "type": "point", "big": "Global ATM", "bigSize": 116, "bigSub": "look for this sign", "title": "Getting won out", "points": ["Bank ATMs charge about ₩3,500–5,000 a withdrawal", "Convenience-store ATMs usually cost more", "Choose KRW when the screen offers conversion"] },
+  { "type": "point", "title": "Or skip the exchange counter", "size": 68, "points": ["<b>WOWPASS</b> or <b>NAMANE</b>: prepaid cards with T-money built in", "<b>Wise</b> or <b>Revolut</b>: good rates, some free withdrawals", "Myeongdong money changers beat airport rates"] },
+  { "type": "end", "kicker": "One more thing", "title": "No tipping.", "text": "Prices include tax and nobody expects a tip. Spend ₩15,000 or more at a Tax Free shop and ask for the refund." }
+ ],
+ "tldr": [
+  "<strong>Card first:</strong> foreign Visa and Mastercard work in most shops, cafés, restaurants and taxis. Always choose to pay in KRW.",
+  "<strong>Some cash:</strong> for traditional markets, street food and topping up T-money, which is mostly cash only.",
+  "<strong>ATMs:</strong> use machines marked \"Global ATM\" and expect about ₩3,500–5,000 per withdrawal, plus your bank's fee.",
+  "<strong>Easiest:</strong> a prepaid tourist card (WOWPASS, NAMANE) or Wise/Revolut. No tipping anywhere."
+ ],
+ "body": "<h2>Cards: yes, almost everywhere</h2>\n<p>Korea is one of the most card-friendly countries in the world. Foreign Visa and Mastercard work in convenience stores, chains, cafés, most restaurants and taxis. Problems show up at the edges: a small shop's reader fails, or a merchant doesn't accept foreign cards because of the fees. Online sites that need Korean identity verification won't take them either.</p>\n<ul>\n<li><strong>Pay in KRW.</strong> If the terminal offers to charge you in your home currency, say no. That \"convenience\" usually adds 3–8%.</li>\n<li><strong>Apple Pay:</strong> only a small share of terminals are NFC, so it works at some chains, convenience stores and department stores but not reliably. Carry your physical card.</li>\n<li><strong>Taxis</strong> all have card readers. Book through k.ride or Uber to pay by foreign card in the app.</li>\n</ul>\n\n<h2>Where you still need cash</h2>\n<ul>\n<li><strong>Traditional markets and street food:</strong> Gwangjang, Namdaemun and most stalls prefer cash.</li>\n<li><strong>T-money top-ups:</strong> station machines and convenience-store counters mostly take cash only. Since March 2026, the new kiosks at Seoul subway Lines 1–8 accept foreign cards, but for buying Climate Card passes, with a fee of about 3.7%.</li>\n<li><strong>Buses:</strong> many Seoul buses no longer take cash at all, so tap a T-money card instead.</li>\n</ul>\n<p>A few ₩10,000 and ₩5,000 notes for market days are plenty for most trips.</p>\n\n<h2>ATMs: look for \"Global ATM\"</h2>\n<p>Not every Korean ATM takes foreign cards. Look for a <strong>Global ATM</strong> sign. Most major banks (Woori, Hana, KB, Shinhan) have them, and so do airports. Expect a local fee of roughly <span class=\"g-num\">₩3,500–5,000</span> per withdrawal, plus whatever your home bank charges. Convenience-store ATMs are open late but usually cost more. If the screen asks whether to convert, choose KRW.</p>\n\n<h2>Exchanging money</h2>\n<p>Change only a little at the airport. Rates there are noticeably worse. In Seoul, the licensed money changers in <strong>Myeongdong</strong> usually give the best rates for cash, and banks are fine too. Or skip exchange altogether with one of the cards below.</p>\n\n<h2>Prepaid tourist cards</h2>\n<table><thead><tr><th>Card</th><th>What it does</th></tr></thead><tbody>\n<tr><td><strong>WOWPASS</strong></td><td>Exchange cash at its kiosks into a prepaid payment card with T-money built in. Pause it in the app if lost.</td></tr>\n<tr><td><strong>NAMANE</strong></td><td>Prepaid payment and transit card sold at airport and station kiosks. Leftover balance can be refunded when you leave.</td></tr>\n<tr><td><strong>Wise / Revolut</strong></td><td>Your own multi-currency card from home. Good rates, and Revolut gives some fee-free ATM withdrawals each month (the ATM's own fee can still apply).</td></tr>\n</tbody></table>\n<div class=\"tip\"><span class=\"eye\" aria-hidden=\"true\"></span><div><b>Nunchi tip</b><p>iPhone users can now add T-money to Apple Wallet: open the Tmoney app, tap \"Foreigner\" and top up with Mastercard or Amex (not Visa). Then just tap your phone at the gate.</p></div></div>\n\n<h2>Tipping and tax</h2>\n<p>There's <strong>no tipping in Korea</strong>, and staff may hand it back. Some upscale hotels and restaurants add a 10% service charge, shown on the bill as <span class=\"ko\">봉사료</span> (bongsaryo). Prices on tags already include tax.</p>\n<p>Shopping? At stores marked <strong>Tax Free</strong>, purchases of ₩15,000 or more can get part of the VAT back, often instantly at the till with your passport.</p>",
+ "tool": { "href": "/tools/korea-tax-refund-calculator/", "title": "How much VAT will you get back?", "text": "Work out your tax refund before you shop." },
+ "faq": [
+  ["Do I need cash in Korea?", "A little. Cards work in most places, but traditional markets, street food and T-money top-ups at machines mostly need cash. A few ₩10,000 notes cover most trips."],
+  ["Which ATMs accept foreign cards in Korea?", "Look for ATMs marked Global ATM, found at major banks such as Woori, Hana, KB and Shinhan, and at airports. Expect about ₩3,500–5,000 per withdrawal plus your bank's fee."],
+  ["Does Apple Pay work in Korea for tourists?", "Only at NFC terminals, which are a minority. It works at some chains and convenience stores. Carry a physical card. iPhone users can add T-money to Apple Wallet through the Tmoney app."],
+  ["Do you tip in Korea?", "No. Tipping isn't customary and prices include tax. Some upscale hotels add a 10% service charge, labelled 봉사료 on the bill."]
+ ],
+ "sources": [
+  ["Korea Times: why Korea's payment systems frustrate tourists (Apr 2025)", "https://www.koreatimes.co.kr/amp/economy/others/20250423/why-koreas-payment-systems-leave-tourists-frustrated"],
+  ["Korea Herald: foreign cards at Seoul subway kiosks (Mar 2026)", "https://www.koreaherald.com/article/10694586"],
+  ["Korea JoongAng Daily: Tmoney in Apple Wallet for foreigners (Mar 2026)", "https://www.koreajoongangdaily.com/business/apple-pay-tmoney-allows-foreigners-tourists-to-ride-using-iphones/12617490"],
+  ["Korea Times: Apple Pay's foothold in Korea (Mar 2025)", "https://www.koreatimes.co.kr/amp/business/banking-finance/20250314/two-years-in-apple-pay-struggles-to-gain-foothold-in-korea"],
+  ["Korea Herald: immediate tax refund limits", "https://www.koreaherald.com/article/3266216"]
+ ]
+}

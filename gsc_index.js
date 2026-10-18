@@ -12,6 +12,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
   const key = async (k, code, vk, mods = 0, extra = {}) => { await send("Input.dispatchKeyEvent", { type: "keyDown", key: k, code, windowsVirtualKeyCode: vk, modifiers: mods, ...extra }); await send("Input.dispatchKeyEvent", { type: "keyUp", key: k, code, windowsVirtualKeyCode: vk, modifiers: mods }); };
   const leafPos = txt => ev(`(()=>{const l=[...document.querySelectorAll('*')].find(e=>e.offsetParent&&e.children.length===0&&e.textContent.trim()===${JSON.stringify(txt)}); if(!l) return null; const b=l.closest('[role=button],button')||l; b.scrollIntoView({block:'center'}); const r=b.getBoundingClientRect(); return [r.x+r.width/2,r.y+r.height/2]})()`);
   const waitFor = async (fn, ms) => { const t0 = Date.now(); while (Date.now() - t0 < ms) { const v = await fn(); if (v) return v; await sleep(2000); } return null; };
+  await send("Page.bringToFront"); await send("Emulation.setFocusEmulationEnabled", { enabled: true });
   await send("Emulation.setDeviceMetricsOverride", { width: 1400, height: 900, deviceScaleFactor: 1, mobile: false }); // 좁은 창이면 검색창이 숨겨짐
   for (const url of urls) {
     // 열린 다이얼로그 닫기

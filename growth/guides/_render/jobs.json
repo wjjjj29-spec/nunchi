@@ -210,6 +210,48 @@
   "h": 630
  },
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/luggage-storage-seoul-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/luggage-storage-seoul/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/luggage-storage-seoul-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/luggage-storage-seoul/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/luggage-storage-seoul-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/luggage-storage-seoul/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/luggage-storage-seoul-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/luggage-storage-seoul/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/luggage-storage-seoul-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/luggage-storage-seoul/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/luggage-storage-seoul-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/luggage-storage-seoul/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/luggage-storage-seoul-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/luggage-storage-seoul/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-esim-sim-or-pocket-wifi-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/01.jpg",
   "w": 1080,
@@ -248,6 +290,48 @@
  {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-esim-sim-or-pocket-wifi-thumb.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/cash-cards-atm-korea-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/cash-cards-atm-korea/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/cash-cards-atm-korea-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/cash-cards-atm-korea/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/cash-cards-atm-korea-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/cash-cards-atm-korea/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/cash-cards-atm-korea-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/cash-cards-atm-korea/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/cash-cards-atm-korea-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/cash-cards-atm-korea/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/cash-cards-atm-korea-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/cash-cards-atm-korea/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/cash-cards-atm-korea-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/cash-cards-atm-korea/thumb.jpg",
   "w": 1200,
   "h": 630
  }

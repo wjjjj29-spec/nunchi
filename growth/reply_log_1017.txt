@@ -1,0 +1,23 @@
+## 10/17 hellonunchi reply session (3h, user request)
+batch 1 (~22:20 KST)
+- _missgm (3 ppl, affordable Myeongdong hotel/Airbnb) -> like + serviced residences 레지던스, Euljiro 3-ga/Chungmuro cheaper
+- sung.eli (ID, 10 people 5 nights Seoul, apt vs hotel) -> like + ID reply: 2–3 residence units same building, near subway, hanok stay Bukchon
+- quocbao5533 (first solo trip, Seoul 11/4–7, Busan 11/7–10) -> like + leaves peak, Deoksugung/Namsan/Ikseon-dong/Gwangjang 빈대떡, Blue Line Park, Gamcheon, 밀면, KTX 2.5h
+skipped: promos, hookah lounge, burnout vent
+batch 2 (~23:00 KST)
+- sung.eli replied "Oke kak, mksh yaa infonya" (thanks)
+- corryos (BTOB Melody, Yook Sungjae fanmeeting Dec 11–12 from overseas) -> like + passport at ticket pickup, early for merch, T-money
+- _moonbi (in Korea 23/11, café hopping) -> like + Seongsu / Yeonnam-dong / Ikseon-dong, cafés open ~11–12
+skipped: bae.gas (budget dilemma), kwanystory (content acct), non-Korea posts
+batch 3 (~23:40 KST)
+- bln.budan followed (from idol-age post) -> follow back
+- doctor guide post: hyun.sein + 7 likes, amymomo92
+- glow.withkristen (daughter moving to Korea in Dec) -> ARC within 90 days, Korean number, Naver Map + Coupang (newlines lost in inline editor)
+- afiq_nasir13 (MY, Yonsei by metro?) -> MS reply: Line 2 Sinchon exit 2/3, 10 min walk, Ewha nearby
+- piyaaurora (left Korea, still watching Korea videos) -> 정 (jeong), plan next trip
+fix: threads_reply.js needs Page.bringToFront + focus emulation, else send click ignored; inline editor drops Shift+Enter newlines -> write single-paragraph replies
+batch 4 (~00:20 KST 10/18)
+- doctor guide post: saaahmat + 11 likes; beckylim31 followed -> follow back
+- estephaniesegundo (first solo female trip, Seoul mid-Nov, introvert, wants private space) -> like + guesthouse private rooms, Jongno/Euljiro, BBQ 2-portion minimum vs 혼밥 spots, 112
+skipped: visa questions (christellaisaura, cacacaheyhey: visa advice too risky), promos, non-Korea
+session total: 9 replies, 9 likes, 2 follow-backs

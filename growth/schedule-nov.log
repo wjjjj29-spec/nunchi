@@ -1,0 +1,85 @@
+
+== 2026-11-03 21:00 Learning to type Korean is faster than y
+time set: 21:00
+dialog buttons: 11월 3일 (화) 오후 9:00 GMT+9에 게시 예정,예약,게시물 옵션
+scheduled label: 11월 3일 (화) 오후 9:00 GMT+9에 게시 예정
+state: {"dialog":false,"toast":["11월 3일 (화) 오후 9:00 GMT+9에 게시 예정","11월 3일 (화) 오후 9:00 GMT+9에 게시 예정"]}
+
+== 2026-11-04 21:00 Google Maps works in Korea now, right?
+
+
+time set: 21:00
+dialog buttons: 11월 4일 (수) 오후 9:00 GMT+9에 게시 예정,예약,게시물 옵션
+scheduled label: 11월 4일 (수) 오후 9:00 GMT+9에 게시 예정
+state: {"dialog":false,"toast":["11월 4일 (수) 오후 9:00 GMT+9에 게시 예정","11월 4일 (수) 오후 9:00 GMT+9에 게시 예정"]}
+
+== 2026-11-05 21:00 Korean spice levels are not your spice l
+time set: 21:00
+dialog buttons: 11월 5일 (목) 오후 9:00 GMT+9에 게시 예정,예약,게시물 옵션
+scheduled label: 11월 5일 (목) 오후 9:00 GMT+9에 게시 예정
+state: {"dialog":false,"toast":[]}
+
+== 2026-11-06 21:00 You have three ages in Korea, and all th
+time set: 21:00
+dialog buttons: 11월 6일 (금) 오후 9:00 GMT+9에 게시 예정,예약,게시물 옵션
+scheduled label: 11월 6일 (금) 오후 9:00 GMT+9에 게시 예정
+state: {"dialog":false,"toast":[]}
+
+== 2026-11-07 21:00 🎂 The8 (SEVENTEEN) turns 29 today.
+
+In 
+time set: 21:00
+dialog buttons: 11월 7일 (토) 오후 9:00 GMT+9에 게시 예정,예약,게시물 옵션
+scheduled label: 11월 7일 (토) 오후 9:00 GMT+9에 게시 예정
+state: {"dialog":false,"toast":["11월 7일 (토) 오후 9:00 GMT+9에 게시 예정","11월 7일 (토) 오후 9:00 GMT+9에 게시 예정"]}
+
+done
+
+== 2026-11-08 21:00 Planning a winter or spring trip? Long w
+time set: 21:00
+dialog buttons: 11월 8일 (일) 오후 9:00 GMT+9에 게시 예정,예약,게시물 옵션
+scheduled label: 11월 8일 (일) 오후 9:00 GMT+9에 게시 예정
+state: {"dialog":false,"toast":["11월 8일 (일) 오후 9:00 GMT+9에 게시 예정","11월 8일 (일) 오후 9:00 GMT+9에 게시 예정"]}
+
+== 2026-11-09 21:00 🎂 Momo (TWICE) turns 30 today.
+
+In Kore
+time set: 21:00
+dialog buttons: 11월 9일 (월) 오후 9:00 GMT+9에 게시 예정,예약,게시물 옵션
+scheduled label: 11월 9일 (월) 오후 9:00 GMT+9에 게시 예정
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+
+== 2026-11-10 21:00 🎂 Eunchae (LE SSERAFIM) turns 20 today.
+cleared old dialog: true
+time set: 21:00
+dialog buttons: 11월 10일 (화) 오후 9:00 GMT+9에 게시 예정,예약,게시물 옵션
+scheduled label: 11월 10일 (화) 오후 9:00 GMT+9에 게시 예정
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+state: {"dialog":true,"toast":[]}
+
+== 2026-11-11 21:00 Today is 빼빼로 데이, Pepero Day 🍫
+
+11/11 lo
+cleared old dialog: true
+ERR no 예약 menu

@@ -36,7 +36,13 @@ async function cdp(wsUrl) { const ws = new WebSocket(wsUrl); let id = 0; const p
     const day = String(+post.date.split("-")[2]);
     if (!await ev(`document.body.innerText.includes(${JSON.stringify(post.date.slice(0,4)+"년 "+(+post.date.slice(5,7))+"월")})`)) throw new Error("calendar month mismatch");
     const dayLabel = `${post.date.slice(0,4)}년 ${+post.date.slice(5,7)}월 ${day}일`;
-    p = await center(`[...document.querySelectorAll('[role=gridcell]')].filter(e=>e.offsetParent&&e.innerText.startsWith(${JSON.stringify(dayLabel)}))[0]`); if (!p) throw new Error("no day cell " + day); await tap(p[0], p[1]); await sleep(600);
+    const cellSel = `[...document.querySelectorAll('[role=gridcell]')].filter(e=>e.offsetParent&&e.innerText.startsWith(${JSON.stringify(dayLabel)}))[0]`;
+    p = await center(cellSel);
+    for (let k = 0; !p && k < 3; k++) { // 다음 달로 넘기기
+      const nb = await center(`[...document.querySelectorAll('[role=button],button,svg[aria-label]')].map(e=>e.closest('[role=button],button')||e).find(e=>e&&e.offsetParent&&/다음 달|다음|Next/i.test(e.getAttribute('aria-label')||e.querySelector('svg[aria-label]')?.getAttribute('aria-label')||''))`);
+      if (!nb) break; await tap(nb[0], nb[1]); await sleep(800); p = await center(cellSel);
+    }
+    if (!p) throw new Error("no day cell " + day); await tap(p[0], p[1]); await sleep(600);
     const [hh, mm] = post.time.split(":");
     const ins = await ev(`[...document.querySelectorAll('input[type=text]')].filter(e=>e.offsetParent&&/^\\d{2}$/.test(e.value)).map(e=>{const r=e.getBoundingClientRect(); return [r.x+r.width/2,r.y+r.height/2]})`); if (ins.length < 2) throw new Error("no time inputs");
     for (const [i, v] of [[0, hh], [1, mm]]) { await tap(ins[i][0], ins[i][1]); await ev(`(()=>{const e=document.activeElement; if(e&&e.select) e.select();})()`); await c.send("Input.insertText", { text: v }); await sleep(300); }

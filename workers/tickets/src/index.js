@@ -9,7 +9,6 @@ const ALIAS = { straykids: ["스트레이키즈"], newjeans: ["뉴진스"], day6
 const keys = a => { const k = norm(a); return [k, ...(ALIAS[k] || []).map(norm)].filter(x => x.length >= 2); };
 const token = () => [...crypto.getRandomValues(new Uint8Array(16))].map(b => b.toString(16).padStart(2, "0")).join("");
 const unsubUrl = (env, s) => `${env.API}/api/tickets/unsub?e=${encodeURIComponent(s.email)}&t=${s.token}`;
-const SRC = { melon: "Melon Ticket", nol: "NOL (Interpark Global)", yes24: "Yes24 Global" };
 
 async function send(env, s, subject, html, text) {
   const r = await fetch("https://api.resend.com/emails", {
@@ -42,22 +41,68 @@ async function signup(req, env) {
   return done;
 }
 
+// 구독자가 적은 도시 → 시간대 (아시아를 먼저 검사: "manila" 안의 "la" 오매칭 방지)
+const TZ = [
+  [/manila|philippines|singapore|malaysia|kuala|hong ?kong|taiwan|taipei|china|beijing|shanghai|perth|macau/i, "Asia/Singapore"],
+  [/jakarta|indonesia|bangkok|thailand|vietnam|hanoi|ho chi minh|saigon|cambodia|laos/i, "Asia/Bangkok"],
+  [/tokyo|japan|osaka/i, "Asia/Tokyo"], [/india|delhi|mumbai|bangalore|chennai/i, "Asia/Kolkata"], [/dubai|uae|abu dhabi/i, "Asia/Dubai"],
+  [/sydney|melbourne|brisbane|canberra|australia/i, "Australia/Sydney"], [/auckland|wellington|new zealand/i, "Pacific/Auckland"],
+  [/london|\buk\b|england|ireland|dublin|scotland|wales|portugal|lisbon/i, "Europe/London"],
+  [/istanbul|turkey|greece|athens|finland|helsinki|romania|ukraine|kyiv/i, "Europe/Istanbul"],
+  [/paris|france|berlin|germany|spain|madrid|barcelona|italy|rome|milan|amsterdam|netherlands|brussels|belgium|vienna|austria|sweden|stockholm|norway|oslo|denmark|copenhagen|poland|warsaw|prague|czech|switzerland|zurich|hungary|budapest/i, "Europe/Paris"],
+  [/sao paulo|brazil|rio/i, "America/Sao_Paulo"], [/buenos aires|argentina/i, "America/Argentina/Buenos_Aires"], [/santiago|chile/i, "America/Santiago"],
+  [/lima|peru|bogota|colombia|ecuador|quito/i, "America/Bogota"], [/mexico/i, "America/Mexico_City"],
+  [/los angeles|\bla\b|san francisco|seattle|vancouver|california|portland|las vegas|san diego/i, "America/Los_Angeles"],
+  [/denver|phoenix|calgary|edmonton|utah|arizona/i, "America/Denver"],
+  [/chicago|texas|dallas|houston|austin|minneapolis|winnipeg/i, "America/Chicago"],
+  [/new york|nyc|boston|toronto|montreal|miami|washington|atlanta|philadelphia|ottawa|florida|new jersey|usa|united states|canada/i, "America/New_York"],
+];
+const tzFor = c => (TZ.find(([re]) => re.test(c || "")) || [])[1];
+const fmt = (iso, timeZone) => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleString("en-US", { timeZone, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); };
+const VERDICT = { easy: ["#1f7a3a", "Yes, sold to overseas fans"], possible: ["#b26a00", "Possible, with some steps"], hard: ["#b3261e", "Hard from abroad"], unknown: ["#666", "Not stated yet"] };
+const SRC = { "melon-open": "Melon Ticket", melon: "Melon Ticket", nol: "NOL World (Interpark Global)", yes24: "Yes24 Global" };
+const TRIP = "https://www.trip.com/hotels/seoul-hotels-list-274/?Allianceid=10984688&SID=333206686&trip_sub1=ticket_alert";
+
+function card(x, s) {
+  const i = x.info || {}, tz = tzFor(s.country);
+  const opens = (i.opens || []).filter(o => o.kst_iso).map(o => `<li style="margin:4px 0"><b>${esc(o.label_en)}</b>: ${esc(fmt(o.kst_iso, "Asia/Seoul"))} KST${tz ? ` <span style="color:#666">(${esc(fmt(o.kst_iso, tz))} your time)</span>` : ""}${o.who_en ? `<br><span style="color:#555">${esc(o.who_en)}</span>` : ""}</li>`).join("");
+  const [vc, vt] = VERDICT[i.foreigners?.verdict] || VERDICT.unknown;
+  const facts = [i.venue_en && `📍 ${esc(i.venue_en)}${i.city_en ? `, ${esc(i.city_en)}` : ""}`, i.show_dates_en && `🗓 ${esc(i.show_dates_en)}`, i.price_en && `💰 ${esc(i.price_en)}`].filter(Boolean).join("<br>") || esc([x.place, x.period].filter(Boolean).join(" · "));
+  const notes = (i.need_to_know_en || []).map(n => `<li>${esc(n)}</li>`).join("");
+  const melonTip = x.source.startsWith("melon") ? `<p style="margin:8px 0 0;color:#555;font-size:13px">Tip: some Melon shows also sell on <a href="https://tkglobal.melon.com/main/index.htm?langCd=EN">Melon Ticket Global</a> (English, no Korean phone needed). Search the artist there first.</p>` : "";
+  const seoulish = /seoul|incheon|goyang|ilsan|^$/i.test(i.city_en || "");
+  return `<div style="border:1px solid #e6e0d4;border-radius:14px;padding:18px 20px;margin:0 0 18px;background:#fffdf8">
+  <div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8a7f6a">${esc((i.artists || []).join(" · ") || i.event_type || "New listing")}</div>
+  <h2 style="margin:4px 0 10px;font-size:20px;line-height:1.3">${esc(i.title_en || x.title)}</h2>
+  <p style="margin:0 0 12px">${facts}</p>
+  ${opens ? `<p style="margin:0 0 4px;font-weight:600">When tickets open</p><ul style="margin:0 0 12px;padding-left:18px">${opens}</ul>` : ""}
+  <p style="margin:0 0 4px;font-weight:600">Can overseas fans buy? <span style="color:${vc}">${vt}</span></p>
+  ${i.foreigners?.note_en ? `<p style="margin:0 0 12px;color:#333">${esc(i.foreigners.note_en)}</p>` : ""}
+  ${notes ? `<p style="margin:0 0 4px;font-weight:600">Good to know</p><ul style="margin:0 0 12px;padding-left:18px">${notes}</ul>` : ""}
+  <p style="margin:0"><a href="${esc(x.url)}">Official page on ${SRC[x.source] || x.source}</a>${x.source.startsWith("melon") ? " (Korean)" : ""}${seoulish ? ` · <a href="${TRIP}">Hotels in Seoul</a>` : ""} · <a href="${env_SITE}/guide/incheon-airport-to-seoul/">Airport to Seoul</a></p>${melonTip}
+</div>`;
+}
+let env_SITE = "https://hellonunchi.com";
+const firstOpen = x => (x.info?.opens || []).map(o => o.kst_iso).filter(Boolean).sort()[0];
+
 async function push(req, env) {
   if (!env.PUSH_SECRET || req.headers.get("authorization") !== `Bearer ${env.PUSH_SECRET}`) return new Response("unauthorized", { status: 401 });
+  env_SITE = env.SITE;
   const items = await req.json(); let mails = 0, cursor;
+  const hay = x => norm([x.title, x.info?.title_en, ...(x.info?.artists || [])].join(" "));
   do {
     const page = await env.SUBS.list({ cursor }); cursor = page.list_complete ? null : page.cursor;
     for (const k of page.keys) {
       const s = await env.SUBS.get(k.name, "json"); if (!s) continue;
       const hits = items.filter(x => !s.sent.includes(x.id)
         && (x.type !== "fanmeeting" || s.types.includes("fanmeeting"))
-        && s.artists.some(a => keys(a).some(q => norm(x.title).includes(q))));
+        && s.artists.some(a => keys(a).some(q => hay(x).includes(q))));
       if (!hits.length) continue;
-      const rows = hits.map(x => `<li style="margin-bottom:12px"><b>${esc(x.title)}</b><br>${esc([x.place, x.period].filter(Boolean).join(" · "))}<br><a href="${esc(x.url)}">Open on ${SRC[x.source] || x.source}</a></li>`).join("");
+      const h = hits[0], fo = firstOpen(h);
+      const subject = `🎫 ${h.info?.title_en || h.title}${fo ? `: tickets open ${fmt(fo, "Asia/Seoul")} KST` : ""}${hits.length > 1 ? ` (+${hits.length - 1} more)` : ""}`;
+      const text = hits.map(x => [x.info?.title_en || x.title, x.info?.venue_en, x.info?.show_dates_en, ...(x.info?.opens || []).map(o => `${o.label_en}: ${fmt(o.kst_iso, "Asia/Seoul")} KST (${o.who_en})`), x.info?.foreigners?.note_en, x.url].filter(Boolean).join("\n")).join("\n\n");
       try {
-        await send(env, s, `Just listed in Korea: ${hits[0].title}${hits.length > 1 ? ` (+${hits.length - 1} more)` : ""}`,
-          `<p>New shows for the artists you follow:</p><ul style="padding-left:18px">${rows}</ul><p>Before the sale opens: make your account on the global site, save your card, and check the exact sale time on the listing page (it's in KST).</p>`,
-          hits.map(x => `${x.title} | ${x.place} | ${x.period} | ${x.url}`).join("\n") + `\n\nUnsubscribe: ${unsubUrl(env, s)}`);
+        await send(env, s, subject, `<p>New in Korea for the artists you follow:</p>${hits.map(x => card(x, s)).join("")}<p style="color:#555">Times are Korea time (KST)${tzFor(s.country) ? ", with your local time in brackets" : ""}. Reply to this email if anything is unclear and a Korean on our team will answer.</p>`, text + `\n\nUnsubscribe: ${unsubUrl(env, s)}`);
         s.sent = [...s.sent, ...hits.map(x => x.id)].slice(-500); await env.SUBS.put(s.email, JSON.stringify(s)); mails++;
       } catch (e) { console.log(e.message); }
     }

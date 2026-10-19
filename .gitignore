@@ -5,3 +5,4 @@ node_modules/
 growth/tickets/.push_secret
 workers/tickets/.resend_key
 workers/tickets/.wrangler/
+growth/tickets/.gemini_key

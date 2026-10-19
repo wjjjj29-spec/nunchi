@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// 한국 공연 티켓 신규 공지 수집기 (브라우저 불필요). Melon Ticket(JSON) + NOL World(Next.js RSC) + Yes24 English(HTML)
+// 한국 공연 티켓 신규 공지 수집기 (브라우저 불필요). Melon 티켓오픈 안내(HTML) + Melon 목록(JSON) + NOL World(RSC) + Yes24 English(HTML)
+// 새 공지는 Gemini로 영어 요약(오픈 시간·대상·외국인 구매 가능 여부) 후 Worker(/api/tickets/push)로 보내 구독자에게 메일
 //  node scripts/ticket-watch.js            → growth/tickets/seen.json 과 비교해 새 공연만 growth/tickets/new-YYYYMMDD.json 에 저장
 //  node scripts/ticket-watch.js --init     → 현재 목록을 seen 으로 저장만 (첫 실행)
 //  node scripts/ticket-watch.js --print    → 수집 결과 전체 출력
@@ -44,23 +45,82 @@ async function yes24() {
   return out;
 }
 
+// 멜론 "티켓 오픈 안내": 정확한 예매 오픈 시간이 있는 공지 (콘서트·팬미팅)
+async function melonOpen() {
+  const out = [], ids = new Set();
+  for (const g of ["GENRE_CON_ALL", "GENRE_FAN_ALL"]) for (let p = 1; p <= 3; p++) {
+    const html = await get(`https://ticket.melon.com/csoon/ajax/listTicketOpen.htm?orderType=2&pageIndex=${p}&schGcode=${g}&schText=&schDt=`, { Referer: "https://ticket.melon.com/csoon/index.htm" });
+    for (const m of html.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/g)) {
+      const id = (m[1].match(/csoonId=(\d+)/) || [])[1]; if (!id || ids.has(id)) continue; ids.add(id);
+      const parts = m[1].replace(/<[^>]+>/g, "|").split("|").map(clean).filter(Boolean);
+      const title = (parts.find(s => /티켓\s*오픈\s*안내/.test(s)) || "").replace(/\s*티켓\s*오픈\s*안내\s*$/, "");
+      const open = (parts.find(s => /^\d{4}\.\d{2}\.\d{2}/.test(s)) || "");
+      out.push({ source: "melon-open", type: g === "GENRE_FAN_ALL" ? "fanmeeting" : "concert", id: `melonopen:${id}`, title, place: "", region: "", period: open, url: `https://ticket.melon.com/csoon/detail.htm?csoonId=${id}`, poster: "" });
+    }
+  }
+  return out;
+}
+const pageText = html => clean(html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, "").replace(/<br\s*\/?>|<\/p>|<\/li>|<\/tr>|<\/dd>|<\/dt>/g, "\n").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&#39;/g, "'").replace(/&amp;/g, "&"));
+async function noticeText(x) {
+  if (x.source === "melon-open") { const s = pageText(await get(x.url)); const i = s.indexOf("티켓오픈일정"), j = s.indexOf("기획사 정보"); return s.slice(i < 0 ? 0 : i, j > i ? j : i + 3000).slice(0, 3500); }
+  if (x.source === "nol" || x.source === "yes24") { try { const s = pageText(await get(x.url)); return s.slice(0, 3000); } catch { return ""; } }
+  return "";
+}
+// Gemini 영어 요약 (키: growth/tickets/.gemini_key)
+const GEMINI = path.join(DIR, ".gemini_key");
+const PROMPT = `You write ticket alerts in English for overseas K-pop fans who cannot read Korean.
+From the ticket listing below, return ONLY JSON with this shape:
+{"kpop": true|false (K-pop, K-indie, Korean artist fan event or Korean music award; false for classical, kids, musicals, foreign jazz),
+ "artists": ["English names of the performers, romanized if no English name"],
+ "title_en": "short English title",
+ "event_type": "concert|fan meeting|festival|award show|other",
+ "venue_en": "venue in English (e.g. KSPO DOME, Gocheok Sky Dome, Olympic Hall)", "city_en": "Seoul|Busan|...",
+ "show_dates_en": "e.g. Nov 14–15, 2026 · 6 PM",
+ "price_en": "e.g. ₩65,000 (about $47) reserved seats",
+ "opens": [{"label_en": "e.g. Fan club pre-sale", "kst_iso": "2026-10-19T20:00:00+09:00", "who_en": "who can buy in this round"}],
+ "foreigners": {"verdict": "easy|possible|hard|unknown", "note_en": "1–2 sentences: can someone abroad without a Korean phone number buy? Mention global sale site if stated. If a round needs Korean ID, Melon subscription or Korean phone verification, say so."},
+ "need_to_know_en": ["max 4 short bullets: ticket limits, ID check, membership needed, age rating"]}
+Use only facts in the text. Unknown fields: empty string or empty list. Source site: `;
+async function summarize(x, text) {
+  if (!fs.existsSync(GEMINI)) return null;
+  const body = { contents: [{ parts: [{ text: `${PROMPT}${x.source}\nListing title: ${x.title}\nPlace: ${x.place}\nPeriod/open: ${x.period}\n\n${text}` }] }], generationConfig: { responseMimeType: "application/json", temperature: 0.2 } };
+  for (let i = 0; i < 2; i++) {
+    const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent", { method: "POST", headers: { "x-goog-api-key": fs.readFileSync(GEMINI, "utf8").trim(), "content-type": "application/json" }, body: JSON.stringify(body) });
+    if (r.ok) { const d = await r.json(); try { return JSON.parse(d.candidates[0].content.parts[0].text); } catch { return null; } }
+    await new Promise(s => setTimeout(s, 5000));
+  }
+  return null;
+}
+
 (async () => {
-  const results = await Promise.allSettled([melon(), nol(), yes24()]);
+  const names = ["melon", "melon-open", "nol", "yes24"];
+  const results = await Promise.allSettled([melon(), melonOpen(), nol(), yes24()]);
   const all = results.flatMap(r => r.status === "fulfilled" ? r.value : []);
-  results.forEach((r, i) => { if (r.status === "rejected") console.error(["melon", "nol", "yes24"][i], "FAILED:", r.reason.message); });
+  results.forEach((r, i) => { if (r.status === "rejected") console.error(names[i], "FAILED:", r.reason.message); });
   const seen = fs.existsSync(SEEN) ? JSON.parse(fs.readFileSync(SEEN, "utf8")) : {};
   const fresh = all.filter(x => !seen[x.id]);
   const now = new Date().toISOString();
   if (process.argv.includes("--print")) console.log(JSON.stringify(all, null, 1));
+  const DRY = process.argv.includes("--dry"); // --dry: 기록·발송 없이 최근 공지 3개만 요약해서 출력
+  const ONLY = (process.argv.find(a => a.startsWith("--only=")) || "").slice(7); // --only=<csoonId>: 그 공지만 요약
+  if (DRY) { for (const x of all.filter(x => x.source === "melon-open" && (!ONLY || x.id === `melonopen:${ONLY}`)).slice(0, 3)) { x.info = await summarize(x, await noticeText(x)); console.log(JSON.stringify(x, null, 1)); } return; }
   for (const x of all) seen[x.id] = seen[x.id] || { first: now, title: x.title };
   fs.writeFileSync(SEEN, JSON.stringify(seen, null, 1));
-  if (process.argv.includes("--init")) { console.log(`init: ${all.length} items (melon ${all.filter(x=>x.source==="melon").length}, nol ${all.filter(x=>x.source==="nol").length}, yes24 ${all.filter(x=>x.source==="yes24").length})`); return; }
-  if (fresh.length) { const f = path.join(DIR, `new-${now.slice(0, 10).replace(/-/g, "")}.json`); fs.writeFileSync(f, JSON.stringify(fresh, null, 1)); console.log(`${fresh.length} new → ${f}`); fresh.slice(0, 20).forEach(x => console.log(`- [${x.source}] ${x.title} | ${x.place} | ${x.period} | ${x.url}`)); }
-  else console.log("no new listings");
-  // 구독자 메일: Worker(/api/tickets/push)로 신규 공연 전송. 토큰은 growth/tickets/.push_secret (없으면 생략)
+  if (process.argv.includes("--init")) { console.log(`init: ${all.length} items`, names.map(n => `${n} ${all.filter(x => x.source === n).length}`).join(", ")); return; }
+  if (!fresh.length) { console.log("no new listings"); return; }
+  // 메일 대상: 멜론 오픈 공지 + 글로벌 사이트(NOL·Yes24). 멜론 목록(JSON)은 이미 판매 중인 상품이라 기록만
+  const send = fresh.filter(x => x.source !== "melon");
+  for (const x of send) { try { x.info = await summarize(x, await noticeText(x)); } catch (e) { console.error("summarize", x.id, e.message); } await new Promise(s => setTimeout(s, 1500)); }
+  const f = path.join(DIR, `new-${now.slice(0, 10).replace(/-/g, "")}.json`);
+  const prev = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : [];
+  fs.writeFileSync(f, JSON.stringify([...prev, ...fresh], null, 1));
+  console.log(`${fresh.length} new (${send.length} to alert) → ${f}`);
+  send.forEach(x => console.log(`- [${x.source}] ${x.info?.title_en || x.title} | kpop=${x.info?.kpop} | ${x.info?.artists?.join(", ") || ""} | ${x.url}`));
+  // 구독자 메일: 토큰은 growth/tickets/.push_secret (없으면 생략)
   const SECRET = path.join(DIR, ".push_secret");
-  if (fresh.length && fs.existsSync(SECRET)) {
-    const r = await fetch("https://api.hellonunchi.com/api/tickets/push", { method: "POST", headers: { authorization: `Bearer ${fs.readFileSync(SECRET, "utf8").trim()}`, "content-type": "application/json" }, body: JSON.stringify(fresh) });
+  const items = send.filter(x => !x.info || x.info.kpop !== false);
+  if (items.length && fs.existsSync(SECRET)) {
+    const r = await fetch("https://api.hellonunchi.com/api/tickets/push", { method: "POST", headers: { authorization: `Bearer ${fs.readFileSync(SECRET, "utf8").trim()}`, "content-type": "application/json" }, body: JSON.stringify(items) });
     console.log("push:", r.status, await r.text());
   }
 })().catch(e => { console.error("ERR", e.message); process.exit(1); });

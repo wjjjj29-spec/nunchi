@@ -57,4 +57,10 @@ async function yes24() {
   if (process.argv.includes("--init")) { console.log(`init: ${all.length} items (melon ${all.filter(x=>x.source==="melon").length}, nol ${all.filter(x=>x.source==="nol").length}, yes24 ${all.filter(x=>x.source==="yes24").length})`); return; }
   if (fresh.length) { const f = path.join(DIR, `new-${now.slice(0, 10).replace(/-/g, "")}.json`); fs.writeFileSync(f, JSON.stringify(fresh, null, 1)); console.log(`${fresh.length} new → ${f}`); fresh.slice(0, 20).forEach(x => console.log(`- [${x.source}] ${x.title} | ${x.place} | ${x.period} | ${x.url}`)); }
   else console.log("no new listings");
+  // 구독자 메일: Worker(/api/tickets/push)로 신규 공연 전송. 토큰은 growth/tickets/.push_secret (없으면 생략)
+  const SECRET = path.join(DIR, ".push_secret");
+  if (fresh.length && fs.existsSync(SECRET)) {
+    const r = await fetch("https://api.hellonunchi.com/api/tickets/push", { method: "POST", headers: { authorization: `Bearer ${fs.readFileSync(SECRET, "utf8").trim()}`, "content-type": "application/json" }, body: JSON.stringify(fresh) });
+    console.log("push:", r.status, await r.text());
+  }
 })().catch(e => { console.error("ERR", e.message); process.exit(1); });

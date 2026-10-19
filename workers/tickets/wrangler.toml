@@ -1,0 +1,20 @@
+name = "nunchi-tickets"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# 루트 도메인은 GitHub Pages(DNS only)라 Worker 라우트가 안 붙음 → api.hellonunchi.com 커스텀 도메인 (Workers 무료 플랜)
+routes = [{ pattern = "api.hellonunchi.com", custom_domain = true }]
+
+# 구독자 저장소: `npx wrangler kv namespace create SUBS` 결과 id 기입
+[[kv_namespaces]]
+binding = "SUBS"
+id = "9d54059a5c0c4a4b917dea15b151b8f7"
+
+[vars]
+FROM = "Nunchi Tickets <alerts@hellonunchi.com>"
+REPLY_TO = "hello@hellonunchi.com"
+SITE = "https://hellonunchi.com"
+API = "https://api.hellonunchi.com"
+# 비밀값은 `npx wrangler secret put <NAME>`:
+#  RESEND_KEY  — Resend API 키 (발송 전용 권한)
+#  PUSH_SECRET — 맥의 ticket-watch.js 와 공유하는 토큰

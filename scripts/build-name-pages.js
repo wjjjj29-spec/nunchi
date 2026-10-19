@@ -10,7 +10,7 @@ const fs = require("fs"), path = require("path"), vm = require("vm");
 
 const SITE = path.join(__dirname, "..", "site");
 const ORIGIN = "https://hellonunchi.com";
-const LASTMOD = "2026-10-05";
+const LASTMOD = "2026-10-19";
 const VER = "20261009";
 const CHECKED = "October 2026";
 
@@ -327,6 +327,7 @@ function page(n) {
   const faq = [
     [`How do you write ${n.name} in Korean?`, `${n.name} is written ${H} in Hangul (Revised Romanization: ${n.roman}). It is the standard spelling Korean media use for the name${n.lang !== "English" ? ` and follows the ${n.lang} pronunciation` : ""}. In Hangul it has ${sylWord}: ${S.map(y => y.s).join(" + ")}.`],
     [`How do you pronounce ${n.name} in Korean?`, `Say it ${n.say}, with ${S.length > 1 ? "even weight on every syllable" : "one short beat"}. ${plainTip}`],
+    [`What does ${n.name} mean in Korean?`, `On its own, nothing: ${H} spells the sound of ${n.name}, so the syllables are not Korean words and Koreans read it simply as a foreign name. If you want a Korean name with a real meaning, Korean names are built from hanja (Chinese characters), each chosen for what it means. Our free Korean name generator picks hanja that match the meaning of ${n.name} or anything you describe.`],
   ];
   const ld = [
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },

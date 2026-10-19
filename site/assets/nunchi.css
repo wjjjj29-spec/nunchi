@@ -280,3 +280,25 @@ body[data-embed] .panel { margin: 0; box-shadow: none; }
 .hh-big { font-family: "Noto Sans KR", var(--sans); font-weight: 700; font-size: clamp(40px, 7vw, 54px); line-height: 1.1; color: var(--accent); word-break: keep-all; }
 .hh-sub { color: var(--ink-3); font-size: 14px; margin-top: 4px; }
 .hh-more { font-size: 14.5px; font-weight: 600; }
+
+/* Services: concierge / tickets */
+.svc .tool-head p { max-width: 680px; }
+.svc-stats { margin: 6px 0 10px; }
+.svc-grid { margin-top: 12px; }
+.svc-form .btn { margin-top: 4px; }
+.svc-form textarea { font: inherit; padding: 11px 13px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--hanji); color: var(--ink); resize: vertical; }
+.svc-form textarea:focus, .svc-form input:focus { outline: none; border-color: var(--accent); }
+.svc-form input[type=text], .svc-form input[type=email], .svc-form input[type=number] { font: inherit; padding: 11px 13px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--hanji); color: var(--ink); }
+.svc-sent { background: color-mix(in srgb, var(--accent) 10%, var(--card)); border-left: 4px solid var(--accent); border-radius: 10px; padding: 14px 16px; margin-top: 8px; }
+.svc-steps { padding-left: 20px; }
+.svc-steps li { margin-bottom: 10px; color: var(--ink-2); }
+.svc-steps li b { color: var(--ink); }
+.svc-checks { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.svc-checks label { font-weight: 500; color: var(--ink-2); font-size: 15px; display: flex; align-items: center; gap: 6px; }
+.svc-home { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 26px 0 6px; }
+@media (max-width: 620px) { .svc-home { grid-template-columns: 1fr; } }
+.svc-home .card { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.svc-soon { border-style: dashed; }
+.svc-soon .tag { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; display: block; margin-bottom: 4px; }
+.svc-soon b { font-family: var(--serif); font-size: 22px; display: block; margin-bottom: 6px; }
+.svc-soon p { margin: 0; color: var(--ink-2); }

@@ -14,12 +14,60 @@
  "heroAlt": "A row of smart luggage lockers in a clean Seoul subway station with a suitcase inside one",
  "thumbTitle": "Luggage storage in Seoul",
  "cards": [
-  { "type": "cover", "photo": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/photos/luggage-cover.png", "title": "Where to leave your bags in Seoul", "sub": "Lockers, staffed counters and same-day delivery to the airport." },
-  { "type": "point", "big": "₩2,200", "bigSub": "small subway locker, 4 hours, weekdays", "title": "Subway lockers", "points": ["T-Locker banks in 273 stations, 5am to midnight", "Large locker fits a suitcase: ₩4,400 for 4 hours", "Pay by card at the locker or in the app"] },
-  { "type": "point", "title": "Staffed counters", "size": 76, "points": ["<b>T-Luggage</b> at Seoul Station, Myeongdong, Hongik Univ. and more", "9am–10pm, from ₩3,000 for 4 hours", "Book ahead at tluggage.co.kr"] },
-  { "type": "point", "big": "₩20,000", "bigSub": "small or medium bag, Seoul station to Incheon", "title": "Send it to the airport", "points": ["Drop it in the morning, pick it up at the airport", "Hotel pickup services from about ₩25,000", "Book at least a day ahead"] },
-  { "type": "point", "title": "Check in at Seoul Station", "size": 72, "points": ["Drop bags and clear immigration in the city", "Needs a same-day AREX Express ticket", "Korean Air, Asiana, Jeju Air, T'way and more"] },
-  { "type": "end", "kicker": "Riding the KTX?", "title": "Two bags each.", "text": "Racks fit carry-ons. Bigger cases go at the end of the car, and that fills up on busy trains, so board early." }
+  {
+   "type": "cover",
+   "photo": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/photos/luggage-cover.png",
+   "title": "Where to leave your bags in Seoul",
+   "sub": "Lockers, staffed counters and same-day delivery to the airport."
+  },
+  {
+   "type": "point",
+   "big": "₩2,200",
+   "bigSub": "small subway locker, 4 hours, weekdays",
+   "title": "Subway lockers",
+   "points": [
+    "T-Locker banks in 273 stations, 5am to midnight",
+    "Large locker fits a suitcase: ₩4,400 for 4 hours",
+    "Pay by card at the locker or in the app"
+   ]
+  },
+  {
+   "type": "point",
+   "title": "Staffed counters",
+   "size": 76,
+   "points": [
+    "<b>T-Luggage</b> at Seoul Station, Myeongdong, Hongik Univ. and more",
+    "9am–10pm, from ₩3,000 for 4 hours",
+    "Book ahead at tluggage.co.kr"
+   ]
+  },
+  {
+   "type": "point",
+   "big": "₩20,000",
+   "bigSub": "small or medium bag, Seoul station to Incheon",
+   "title": "Send it to the airport",
+   "points": [
+    "Drop it in the morning, pick it up at the airport",
+    "Hotel pickup services from about ₩25,000",
+    "Book at least a day ahead"
+   ]
+  },
+  {
+   "type": "point",
+   "title": "Check in at Seoul Station",
+   "size": 72,
+   "points": [
+    "Drop bags and clear immigration in the city",
+    "Needs a same-day AREX Express ticket",
+    "Korean Air, Asiana, Jeju Air, T'way and more"
+   ]
+  },
+  {
+   "type": "end",
+   "kicker": "Riding the KTX?",
+   "title": "Two bags each.",
+   "text": "Racks fit carry-ons. Bigger cases go at the end of the car, and that fills up on busy trains, so board early."
+  }
  ],
  "tldr": [
   "<strong>Quick stop:</strong> T-Locker subway lockers in 273 stations, from ₩2,200 for 4 hours (small, weekday). A large one fits a suitcase.",
@@ -27,18 +75,46 @@
   "<strong>Flying out later:</strong> send bags from a station or your hotel to Incheon from about ₩20,000–30,000. Book a day ahead.",
   "<strong>Flying Korean airlines:</strong> check in and drop bags at Seoul Station's City Airport Terminal with a same-day AREX Express ticket."
  ],
- "body": "<h2>Subway lockers (T-Locker)</h2>\n<p>Seoul Metro runs smart lockers in 273 stations, open 5am to midnight. They come in three sizes:</p>\n<table><thead><tr><th>Size</th><th>Fits</th><th>First 4 hours (weekday / weekend)</th><th>Each extra hour</th></tr></thead><tbody>\n<tr><td>Small</td><td>Backpack, shopping bags</td><td class=\"num\">₩2,200 / ₩3,100</td><td class=\"num\">+₩500</td></tr>\n<tr><td>Medium</td><td>Carry-on</td><td class=\"num\">₩3,300 / ₩4,600</td><td class=\"num\">+₩800</td></tr>\n<tr><td>Large</td><td>Big suitcase</td><td class=\"num\">₩4,400 / ₩6,100</td><td class=\"num\">+₩1,000</td></tr>\n</tbody></table>\n<p>Pay by credit card at the locker or in the T-Locker app (<span class=\"ko\">또타라커</span>), which also shows which lockers are free before you get there. Some foreign cards get rejected, so have a backup card. Older guides quote ₩2,000–4,000; those prices are out of date. Don't leave things for days: long-stay items are moved and eventually disposed of.</p>\n\n<h2>Staffed counters (T-Luggage)</h2>\n<p>For bigger or more bags, or if the lockers are full, Seoul Metro's staffed <strong>T-Luggage</strong> counters keep them for you from 9am to 10pm. Find them at Seoul Station (B1, Exit 1), Myeongdong (B1, Exits 9–10), Hongik Univ. (B1, Exits 3–4), Jamsil, Suseo, Jongno 3-ga and Gimpo Airport Station. Prices start at <span class=\"g-num\">₩3,000</span> for 4 hours for a small bag on weekdays. Book at <a href=\"https://www.tluggage.co.kr/\" rel=\"noopener\" target=\"_blank\">tluggage.co.kr</a> (English) or call 1877-1265.</p>\n<p>Apps like Bounce, Stasher and Radical Storage also partner with shops around Seoul, usually from about ₩5,000–8,000 a day per bag.</p>\n\n<h2>Send your bags to the airport</h2>\n<p>The best trick for a late flight: check out, hand over your bags, spend the day hands-free and collect them at Incheon.</p>\n<ul>\n<li><strong>From a station:</strong> T-Luggage delivers to Incheon from <span class=\"g-num\">₩20,000</span> for a small or medium bag on weekdays. Drop off in the morning.</li>\n<li><strong>From your hotel:</strong> services like Seoul PASS, Trazy or Klook's T-Delivery collect from hotels with a staffed front desk, from about <span class=\"g-num\">₩25,000–30,000</span> a bag. Pickup cut-offs are usually 10–11am, and you need to book at least a day ahead.</li>\n</ul>\n<p>Arriving? The same works in reverse. Counters at Incheon (Hanjin, in both terminals) can send your bags to your hotel while you head into town light.</p>\n\n<h2>Check in at Seoul Station</h2>\n<p>The <strong>City Airport Terminal</strong> on B2 of Seoul Station lets you check in, drop bags and clear immigration before you even get to the airport. It was renovated in August 2026. Check-in runs 5:20am–7pm and closes 3 hours before departure (3h20m for Terminal 2). You need a same-day <strong>AREX Express</strong> ticket, not the all-stop train. Airlines include Korean Air, Asiana, Jeju Air, T'way, Air Seoul, Air Busan, Jin Air and Eastar Jet. Some flights to the Americas are excluded, so check with your airline.</p>\n<div class=\"tip\"><span class=\"eye\" aria-hidden=\"true\"></span><div><b>Nunchi tip</b><p>Staying in Hongdae, Myeongdong or near COEX and flying Korean Air, Asiana, Jeju Air or T'way? Look up Incheon Airport's \"Easy Drop\" counters: bag drop in the city, plus a fast-track lane at airport security.</p></div></div>\n\n<h2>Busan and the KTX</h2>\n<p><strong>Busan Station</strong> added 150 extra-large lockers in July 2026, on top of hundreds of regular ones. Busan subway stations, including Haeundae, have lockers too. On the <strong>KTX</strong>, the rule is two bags per person that don't block the aisle or take a seat. Overhead racks fit carry-ons; big suitcases go in the space at the end of the car, which fills up fast on busy trains.</p>",
- "tool": { "href": "/guide/incheon-airport-to-seoul/", "title": "Getting to and from Incheon", "text": "AREX, limousine bus or taxi: 2026 fares and which fits your hotel." },
+ "body": "<h2>Subway lockers (T-Locker)</h2>\n<p>Seoul Metro runs smart lockers in 273 stations, open 5am to midnight. They come in three sizes:</p>\n<table><thead><tr><th>Size</th><th>Fits</th><th>First 4 hours (weekday / weekend)</th><th>Each extra hour</th></tr></thead><tbody>\n<tr><td>Small</td><td>Backpack, shopping bags</td><td class=\"num\">₩2,200 / ₩3,100</td><td class=\"num\">+₩500</td></tr>\n<tr><td>Medium</td><td>Carry-on</td><td class=\"num\">₩3,300 / ₩4,600</td><td class=\"num\">+₩800</td></tr>\n<tr><td>Large</td><td>Big suitcase</td><td class=\"num\">₩4,400 / ₩6,100</td><td class=\"num\">+₩1,000</td></tr>\n</tbody></table>\n<p>Pay by credit card at the locker or in the T-Locker app (<span class=\"ko\">또타라커</span>), which also shows which lockers are free before you get there. Some foreign cards get rejected, so have a backup card. Older guides quote ₩2,000–4,000; those prices are out of date. Don't leave things for days: long-stay items are moved and eventually disposed of.</p>\n\n<h2>Staffed counters (T-Luggage)</h2>\n<p>For bigger or more bags, or if the lockers are full, Seoul Metro's staffed <strong>T-Luggage</strong> counters keep them for you from 9am to 10pm. Find them at Seoul Station (B1, Exit 1), Myeongdong (B1, Exits 9–10), Hongik Univ. (B1, Exits 3–4), Jamsil, Suseo, Jongno 3-ga and Gimpo Airport Station. Prices start at <span class=\"g-num\">₩3,000</span> for 4 hours for a small bag on weekdays. Book at <a href=\"https://www.tluggage.co.kr/\" rel=\"noopener\" target=\"_blank\">tluggage.co.kr</a> (English) or call 1877-1265.</p>\n<p>Apps like Bounce, Stasher and Radical Storage also partner with shops around Seoul, usually from about ₩5,000–8,000 a day per bag.</p>\n\n<h2>Send your bags to the airport</h2>\n<p>The best trick for a late flight: check out, hand over your bags, spend the day hands-free and collect them at Incheon.</p>\n<ul>\n<li><strong>From a station:</strong> T-Luggage delivers to Incheon from <span class=\"g-num\">₩20,000</span> for a small or medium bag on weekdays. Drop off in the morning.</li>\n<li><strong>From your hotel:</strong> services like Seoul PASS, Trazy or Klook's T-Delivery collect from hotels with a staffed front desk, from about <span class=\"g-num\">₩25,000–30,000</span> a bag. Pickup cut-offs are usually 10–11am, and you need to book at least a day ahead.</li>\n</ul>\n<p>Arriving? The same works in reverse. Counters at Incheon (Hanjin, in both terminals) can send your bags to your hotel while you head into town light.</p>\n\n<h2>Check in at Seoul Station</h2>\n<p>The <strong>City Airport Terminal</strong> on B2 of Seoul Station lets you check in, drop bags and clear immigration before you even get to the airport. It was renovated in August 2026. Check-in runs 5:20am–7pm and closes 3 hours before departure (3h20m for Terminal 2). You need a same-day <strong>AREX Express</strong> ticket, not the all-stop train. Airlines include Korean Air, Asiana, Jeju Air, T'way, Air Seoul, Air Busan, Jin Air and Eastar Jet. Some flights to the Americas are excluded, so check with your airline.</p>\n<div class=\"tip\"><span class=\"eye\" aria-hidden=\"true\"></span><div><b>Nunchi tip</b><p>Staying in Hongdae, Myeongdong or near COEX and flying Korean Air, Asiana, Jeju Air or T'way? Look up Incheon Airport's \"Easy Drop\" counters: bag drop in the city, plus a fast-track lane at airport security.</p></div></div>\n\n  <a class=\"g-tool\" href=\"https://www.trip.com/hotels/seoul-hotels-list-274/?Allianceid=10984688&SID=333206686&trip_sub1=luggage_guide\" data-partner=\"tripcom\" rel=\"sponsored noopener\" target=\"_blank\"><span class=\"tag\">Partner · Hotels</span><b>Hotels with a staffed front desk</b><span>Needed for luggage pickup services. Browse Seoul hotels on Trip.com, prices in your currency.</span><i aria-hidden=\"true\">→</i></a>\n\n<h2>Busan and the KTX</h2>\n<p><strong>Busan Station</strong> added 150 extra-large lockers in July 2026, on top of hundreds of regular ones. Busan subway stations, including Haeundae, have lockers too. On the <strong>KTX</strong>, the rule is two bags per person that don't block the aisle or take a seat. Overhead racks fit carry-ons; big suitcases go in the space at the end of the car, which fills up fast on busy trains.</p>",
+ "tool": {
+  "href": "/guide/incheon-airport-to-seoul/",
+  "title": "Getting to and from Incheon",
+  "text": "AREX, limousine bus or taxi: 2026 fares and which fits your hotel."
+ },
  "faq": [
-  ["How much are subway lockers in Seoul?", "T-Locker prices start at ₩2,200 for 4 hours for a small locker on weekdays (₩3,100 at weekends). A large locker that fits a suitcase is ₩4,400 for 4 hours on weekdays."],
-  ["Where can I store luggage at Seoul Station, Myeongdong or Hongdae?", "Seoul Metro's staffed T-Luggage counters are at Seoul Station, Myeongdong and Hongik Univ. stations, open 9am–10pm, from ₩3,000 for 4 hours. All three stations also have lockers."],
-  ["Can I send my luggage to Incheon Airport?", "Yes. T-Luggage sends bags from stations from about ₩20,000, and hotel pickup services charge about ₩25,000–30,000 a bag. Drop off in the morning and book a day ahead."],
-  ["Can I check in for my flight in central Seoul?", "Yes, at the City Airport Terminal at Seoul Station, with a same-day AREX Express ticket, for Korean Air, Asiana, Jeju Air, T'way and several other airlines."]
+  [
+   "How much are subway lockers in Seoul?",
+   "T-Locker prices start at ₩2,200 for 4 hours for a small locker on weekdays (₩3,100 at weekends). A large locker that fits a suitcase is ₩4,400 for 4 hours on weekdays."
+  ],
+  [
+   "Where can I store luggage at Seoul Station, Myeongdong or Hongdae?",
+   "Seoul Metro's staffed T-Luggage counters are at Seoul Station, Myeongdong and Hongik Univ. stations, open 9am–10pm, from ₩3,000 for 4 hours. All three stations also have lockers."
+  ],
+  [
+   "Can I send my luggage to Incheon Airport?",
+   "Yes. T-Luggage sends bags from stations from about ₩20,000, and hotel pickup services charge about ₩25,000–30,000 a bag. Drop off in the morning and book a day ahead."
+  ],
+  [
+   "Can I check in for my flight in central Seoul?",
+   "Yes, at the City Airport Terminal at Seoul Station, with a same-day AREX Express ticket, for Korean Air, Asiana, Jeju Air, T'way and several other airlines."
+  ]
  ],
  "sources": [
-  ["Seoul Metropolitan Government: subway storage facilities", "https://english.seoul.go.kr/service/movement/public-transportation/subway-storage-facilities/"],
-  ["T-Luggage (Seoul Metro): storage and delivery", "https://www.tluggage.co.kr/"],
-  ["Incheon Airport: Seoul Station City Airport Terminal", "https://airport.kr/ap_lp/en/dep/process/cityseoul/cityseoul.do"],
-  ["Nocut News: new lockers at Busan Station (July 2026)", "https://en.nocutnews.co.kr/news/6553409"]
+  [
+   "Seoul Metropolitan Government: subway storage facilities",
+   "https://english.seoul.go.kr/service/movement/public-transportation/subway-storage-facilities/"
+  ],
+  [
+   "T-Luggage (Seoul Metro): storage and delivery",
+   "https://www.tluggage.co.kr/"
+  ],
+  [
+   "Incheon Airport: Seoul Station City Airport Terminal",
+   "https://airport.kr/ap_lp/en/dep/process/cityseoul/cityseoul.do"
+  ],
+  [
+   "Nocut News: new lockers at Busan Station (July 2026)",
+   "https://en.nocutnews.co.kr/news/6553409"
+  ]
  ]
 }

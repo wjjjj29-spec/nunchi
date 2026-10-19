@@ -10,7 +10,7 @@ async function cdp(wsUrl) { const ws = new WebSocket(wsUrl); let id = 0; const p
   const [ctxPrefix, img, ...rest] = process.argv.slice(2); const text = rest.join(" ").replace(/\\n/g, "\n");
   const ver = await get("http://127.0.0.1:9222/json/version"); const b = await cdp(ver.webSocketDebuggerUrl);
   const tg = await b.send("Target.getTargets"); const ctx = [...new Set(tg.result.targetInfos.map(t => t.browserContextId))].find(c => c.startsWith(ctxPrefix));
-  if (!ctx) throw new Error("context not found"); const nt = await b.send("Target.createTarget", { url: "https://www.threads.com/", browserContextId: ctx }); b.close();
+  if (!ctx) throw new Error("context not found"); const nt = await b.send("Target.createTarget", { url: "https://www.threads.com/", browserContextId: ctx, newWindow: true }); b.close();
   await sleep(6000); const list = await get("http://127.0.0.1:9222/json/list"); const t = list.find(x => x.id === nt.result.targetId); const c = await cdp(t.webSocketDebuggerUrl);
   const ev = async expr => { const r = await c.send("Runtime.evaluate", { expression: expr, returnByValue: true, awaitPromise: true }); return r.result ? r.result.result.value : r; };
   const tap = async (x, y) => { for (const type of ["mouseMoved", "mousePressed", "mouseReleased"]) await c.send("Input.dispatchMouseEvent", { type, x, y, button: "left", clickCount: 1 }); };

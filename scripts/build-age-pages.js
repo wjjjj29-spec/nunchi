@@ -2,7 +2,7 @@
 // 롱테일 나이 페이지: /idols/<slug>/ (K-pop 아이돌 100명) + /korean-age/born-<year>/ (1950–2025) + 허브 2개
 // 데이터: tools/kpop-idol-age-calculator 의 G 객체(단일 출처). 실행: node scripts/build-age-pages.js
 const fs = require("fs"), path = require("path");
-const SITE = path.join(__dirname, "..", "site"), ORIGIN = "https://hellonunchi.com", VER = "20261015";
+const SITE = path.join(__dirname, "..", "site"), ORIGIN = "https://hellonunchi.com", VER = "20261019b";
 const NOW = new Date("2026-10-15T00:00:00Z"), Y = NOW.getUTCFullYear(), CHECKED = "15 October 2026";
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const slug = s => s.toLowerCase().replace(/[()]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -62,6 +62,17 @@ const LIVE = `\n<script>(function(){var t=new Date();document.querySelectorAll("
 const write = (rel, html) => { const d = path.join(SITE, rel); fs.mkdirSync(d, { recursive: true }); fs.writeFileSync(path.join(d, "index.html"), html); };
 const urls = [];
 
+// 티켓 알림 가입 박스 (아이돌 페이지 → api.hellonunchi.com Worker)
+const alertBox = m => { const solo = m.group === "Solo", who = solo ? m.name : m.group, artists = solo ? m.name : `${m.group}, ${m.name}`;
+  return `<form class="panel tk-box" method="POST" action="https://api.hellonunchi.com/api/tickets/signup" onsubmit="if(window.gtag)gtag('event','tickets_signup_start',{src:'idol'})">
+    <input type="hidden" name="artists" value="${esc(artists)}"><input type="hidden" name="types" value="fanmeeting"><input type="hidden" name="src" value="idol:${m.slug}">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <span class="tag">Free · Ticket alerts</span>
+    <b>Know the moment ${esc(who)} tickets open in Korea</b>
+    <span class="tk-sub">Concerts and fan meetings, summed up in English: the open time in your time zone, who can buy in each round, and whether overseas fans can get in.</span>
+    <div class="tk-row"><input type="email" name="email" required placeholder="you@example.com" aria-label="Email"><input type="text" name="country" placeholder="Your city" aria-label="City"><button class="btn" type="submit">Alert me</button></div>
+    <span class="disc">Free, one-click unsubscribe. <a href="/tickets/">How it works</a></span>
+  </form>`; };
 // ---------------------------------------------------------------- idol pages
 const byGroup = g => IDOLS.filter(m => m.group === g).sort((a, b) => a.dob.localeCompare(b.dob));
 for (const m of IDOLS) {
@@ -103,6 +114,8 @@ ${!solo ? `
 ${members.map(x => `    <tr${x === m ? ' class="hl"' : ""}><td>${x === m ? `<b>${esc(x.name)}</b>` : `<a href="/idols/${x.slug}/">${esc(x.name)}</a>`}</td><td>${fmt(x.dob)}</td><td class="num"><span data-dob="${x.dob}" data-k="intl">${intlAge(x.dob)}</span></td><td class="num"><span data-dob="${x.dob}" data-k="kor">${Y - +x.dob.slice(0, 4) + 1}</span></td></tr>`).join("\n")}
   </tbody></table>
   <p>${esc(m.name)} is ${role}. In Korean groups, age order matters: the eldest often looks after everyone, and the maknae gets teased and spoiled in equal measure.</p>` : ""}
+
+  ${alertBox(m)}
 
   <h2>What would you call ${esc(m.name)}?</h2>
   <p>In Korean you don't use the name alone for someone older. If you are younger than ${esc(m.name)}, a woman would say <b>${callF}</b> and a man would say <b>${callM}</b>. If you are older, ${esc(m.name)} would be calling <i>you</i> that. Born the same year? You're 동갑 (dong-gap), and first names are fine.</p>

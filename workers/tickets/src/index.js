@@ -31,13 +31,15 @@ async function signup(req, env) {
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return new Response("Please go back and check your email address.", { status: 400 });
   const artists = String(f.get("artists") || "").split(/[,/\n;]+/).map(s => s.trim()).filter(Boolean).slice(0, 10);
   const old = await env.SUBS.get(email, "json");
-  const s = { email, artists, country: String(f.get("country") || "").slice(0, 60), types: f.getAll("types").map(String), token: old?.token || token(), created: old?.created || new Date().toISOString(), sent: old?.sent || [] };
+  // 다른 아이돌 페이지에서 또 가입하면 아티스트를 합침 (기존 구독 유지)
+  const merged = [...new Set([...(old?.artists || []), ...artists].map(a => a.trim()).filter(Boolean))].slice(0, 20);
+  const s = { email, artists: merged, country: String(f.get("country") || old?.country || "").slice(0, 60), types: [...new Set([...(old?.types || []), ...f.getAll("types").map(String)])], src: old?.src || String(f.get("src") || "tickets").slice(0, 60), token: old?.token || token(), created: old?.created || new Date().toISOString(), sent: old?.sent || [] };
   await env.SUBS.put(email, JSON.stringify(s));
   await send(env, s, "You're on the Nunchi Tickets list",
-    `<p>Hi! You'll get an email when a show by <b>${esc(artists.join(", "))}</b> is listed on Melon Ticket, NOL (Interpark) or Yes24.</p><p>Want to change your artists? Just reply to this email.</p>`,
-    `You'll get an email when a show by ${artists.join(", ")} is listed. Reply to change your artists.\nUnsubscribe: ${unsubUrl(env, s)}`).catch(e => console.log(e.message));
+    `<p>Hi! You'll get an email when a show by <b>${esc(merged.join(", "))}</b> is listed on Melon Ticket, NOL (Interpark) or Yes24.</p><p>Want to change your artists? Just reply to this email.</p>`,
+    `You'll get an email when a show by ${merged.join(", ")} is listed. Reply to change your artists.\nUnsubscribe: ${unsubUrl(env, s)}`).catch(e => console.log(e.message));
   // 운영자 알림 (hello@ → Gmail)
-  if (!old) await send(env, { ...s, email: env.REPLY_TO }, `Nunchi Tickets signup: ${email}`, `<p>${esc(email)} · ${esc(s.country)}<br>${esc(artists.join(", "))}<br>${esc(s.types.join(", "))}</p>`, `${email} | ${s.country} | ${artists.join(", ")}`).catch(e => console.log(e.message));
+  if (!old) await send(env, { ...s, email: env.REPLY_TO }, `Nunchi Tickets signup: ${email}`, `<p>${esc(email)} · ${esc(s.country)} · from ${esc(s.src)}<br>${esc(merged.join(", "))}<br>${esc(s.types.join(", "))}</p>`, `${email} | ${s.country} | ${artists.join(", ")}`).catch(e => console.log(e.message));
   return done;
 }
 

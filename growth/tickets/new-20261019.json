@@ -20,5 +20,40 @@
   "period": "2026-11-21 - 2026-11-22",
   "url": "https://world.nol.com/en/ticket/goods/26014350",
   "poster": ""
+ },
+ {
+  "source": "yes24",
+  "type": "concert",
+  "id": "yes24:60713",
+  "title": "YOUN SUN NAH & BOJAN Z CHRISTMAS IN LIGHT JAZZ RETURNS: at Theatre des Lumieres",
+  "place": "",
+  "region": "",
+  "period": "",
+  "url": "https://ticket.yes24.com/English/Perf/60713",
+  "poster": "",
+  "info": {
+   "kpop": false,
+   "artists": [
+    "Youn Sun Nah",
+    "Bojan Z"
+   ],
+   "title_en": "YOUN SUN NAH & BOJAN Z CHRISTMAS IN LIGHT JAZZ RETURNS: at Theatre des Lumieres",
+   "event_type": "concert",
+   "venue_en": "Theatre des Lumieres",
+   "city_en": "",
+   "show_dates_en": "Dec 21–22, 2026",
+   "price_en": "₩200,000 (VIP), ₩150,000 (R), ₩120,000 (S)",
+   "opens": [],
+   "foreigners": {
+    "verdict": "possible",
+    "note_en": "Foreigners can purchase tickets, but passport identity verification is required to be eligible."
+   },
+   "need_to_know_en": [
+    "Age limit: 8 years and over.",
+    "Passport identity verification is required for purchase.",
+    "Please make sure you are signed up and logged in prior to the purchase.",
+    "Some payment methods may not be available."
+   ]
+  }
  }
 ]

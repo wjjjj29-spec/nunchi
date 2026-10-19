@@ -15,7 +15,7 @@ async function cdp(wsUrl) { const ws = new WebSocket(wsUrl); let id = 0; const p
   const ev = async expr => { const r = await c.send("Runtime.evaluate", { expression: expr, returnByValue: true, awaitPromise: true }); return r.result ? r.result.result.value : r; };
   const tap = async (x, y) => { for (const type of ["mouseMoved", "mousePressed", "mouseReleased"]) await c.send("Input.dispatchMouseEvent", { type, x, y, button: "left", clickCount: 1 }); };
   console.log("me:", await ev(`[...document.querySelectorAll('a[href^="/@"]')].map(a=>a.getAttribute('href'))[0]`));
-  const pos = await ev(`(()=>{window.scrollTo(0,0);const e=[...document.querySelectorAll('div[tabindex],[role=button]')].find(e=>e.offsetParent&&e.innerText.trim()==='새로운 스레드');const r=e.getBoundingClientRect();return [r.x+r.width/2,r.y+r.height/2]})()`);
+  const pos = await ev(`(()=>{window.scrollTo(0,0);const e=[...document.querySelectorAll('div[tabindex],[role=button]')].find(e=>e.offsetParent&&/^(새로운 스레드|새로운 소식을 공유해보세요\.?)$/.test(e.innerText.trim()));const r=e.getBoundingClientRect();return [r.x+r.width/2,r.y+r.height/2]})()`);
   await tap(pos[0], pos[1]); await sleep(2000);
   console.log("editor:", await ev(`(()=>{const ce=document.querySelector('[role=dialog] [contenteditable=true]'); if(!ce) return false; ce.focus(); return true})()`));
   const lines = text.split("\n"); for (let i = 0; i < lines.length; i++) { if (lines[i]) await c.send("Input.insertText", { text: lines[i] }); if (i < lines.length - 1) { await c.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13, text: "\r" }); await c.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13 }); } }

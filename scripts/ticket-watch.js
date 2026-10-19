@@ -66,6 +66,27 @@ async function noticeText(x) {
   if (x.source === "nol" || x.source === "yes24") { try { const s = pageText(await get(x.url)); return s.slice(0, 3000); } catch { return ""; } }
   return "";
 }
+
+// SNS 큐: 유명 그룹(아이돌 나이 도구에 있는 그룹)·시상식·페스티벌 공지 → Threads 글 초안 (growth/tickets/social-queue.json)
+// 게시는 밤 9시 답글 세션(예약 작업)이 큐에서 꺼내 올림
+const QUEUE = path.join(DIR, "social-queue.json");
+const EXTRA_BIG = ["DAY6", "NCT", "EXO", "SHINee", "ATEEZ", "RIIZE", "ZEROBASEONE", "BOYNEXTDOOR", "TREASURE", "MONSTA X", "BTOB", "MAMAMOO", "Red Velvet", "KISS OF LIFE", "QWER", "N.Flying", "THE BOYZ", "P1Harmony", "TWS", "NMIXX", "fromis_9", "Kep1er", "Taeyeon", "Big Bang", "WINNER", "iKON", "CNBLUE", "FTISLAND", "Super Junior", "Girls' Generation", "2NE1", "WayV", "Hearts2Hearts", "KiiiKiii", "CORTIS", "ALLDAY PROJECT"];
+const BIG = (() => { try { const src = fs.readFileSync(path.join(__dirname, "..", "site", "tools", "kpop-idol-age-calculator", "index.html"), "utf8"); const G = eval("(" + src.match(/const G=(\{[\s\S]*?\});\n/)[1] + ")"); return Object.keys(G).filter(g => g !== "Solo").concat((G.Solo?.[1] || []).map(m => m[0] || m.name).filter(Boolean)).concat(EXTRA_BIG); } catch { return EXTRA_BIG; } })();
+const nk = s => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+const kst = iso => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleString("en-US", { timeZone: "Asia/Seoul", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); };
+const VERD = { easy: "Yes, it sells to overseas fans", possible: "Possible, with some steps", hard: "Not easily", unknown: "Not stated yet" };
+function socialPost(x) {
+  const i = x.info || {}; if (i.kpop === false) return null;
+  const hay = nk([x.title, i.title_en, ...(i.artists || [])].join(" "));
+  const big = BIG.some(g => nk(g).length >= 3 && hay.includes(nk(g))) || /award|festival/i.test(i.event_type || "");
+  if (!big) return null;
+  const opens = (i.opens || []).filter(o => o.kst_iso).slice(0, 2).map(o => `• ${o.label_en}: ${kst(o.kst_iso)} KST${o.who_en ? ` (${o.who_en})` : ""}`);
+  const lines = [`🎫 ${i.title_en || x.title}`, [i.venue_en, i.city_en].filter(Boolean).join(", ") + (i.show_dates_en ? ` · ${i.show_dates_en}` : ""), "", ...(opens.length ? ["Tickets open:", ...opens, ""] : []),
+    `Can overseas fans buy? ${VERD[i.foreigners?.verdict] || VERD.unknown}.${i.foreigners?.note_en ? " " + i.foreigners.note_en : ""}`, "", "Free English alerts for your artists: hellonunchi.com/tickets"];
+  let text = lines.filter((l, k, a) => !(l === "" && a[k - 1] === "")).join("\n");
+  if (text.length > 490) text = text.replace(/Can overseas fans buy\? ([^.]*\.)[^\n]*/, "Can overseas fans buy? $1");
+  return text.slice(0, 495);
+}
 // Gemini 영어 요약 (키: growth/tickets/.gemini_key)
 const GEMINI = path.join(DIR, ".gemini_key");
 const PROMPT = `You write ticket alerts in English for overseas K-pop fans who cannot read Korean.
@@ -103,7 +124,7 @@ async function summarize(x, text) {
   if (process.argv.includes("--print")) console.log(JSON.stringify(all, null, 1));
   const DRY = process.argv.includes("--dry"); // --dry: 기록·발송 없이 최근 공지 3개만 요약해서 출력
   const ONLY = (process.argv.find(a => a.startsWith("--only=")) || "").slice(7); // --only=<csoonId>: 그 공지만 요약
-  if (DRY) { for (const x of all.filter(x => x.source === "melon-open" && (!ONLY || x.id === `melonopen:${ONLY}`)).slice(0, 3)) { x.info = await summarize(x, await noticeText(x)); console.log(JSON.stringify(x, null, 1)); } return; }
+  if (DRY) { for (const x of all.filter(x => x.source === "melon-open" && (!ONLY || x.id === `melonopen:${ONLY}`)).slice(0, 3)) { x.info = await summarize(x, await noticeText(x)); console.log(JSON.stringify(x, null, 1)); console.log("--- social:\n" + (socialPost(x) || "(not big)")); } return; }
   for (const x of all) seen[x.id] = seen[x.id] || { first: now, title: x.title };
   fs.writeFileSync(SEEN, JSON.stringify(seen, null, 1));
   if (process.argv.includes("--init")) { console.log(`init: ${all.length} items`, names.map(n => `${n} ${all.filter(x => x.source === n).length}`).join(", ")); return; }
@@ -116,6 +137,10 @@ async function summarize(x, text) {
   fs.writeFileSync(f, JSON.stringify([...prev, ...fresh], null, 1));
   console.log(`${fresh.length} new (${send.length} to alert) → ${f}`);
   send.forEach(x => console.log(`- [${x.source}] ${x.info?.title_en || x.title} | kpop=${x.info?.kpop} | ${x.info?.artists?.join(", ") || ""} | ${x.url}`));
+  // SNS 큐에 쌓기
+  const q = fs.existsSync(QUEUE) ? JSON.parse(fs.readFileSync(QUEUE, "utf8")) : [];
+  for (const x of send) { const text = socialPost(x); if (text && !q.some(e => e.id === x.id)) { q.push({ id: x.id, created: now, firstOpen: (x.info?.opens || []).map(o => o.kst_iso).filter(Boolean).sort()[0] || "", text, posted: false }); console.log("social queued:", x.id); } }
+  fs.writeFileSync(QUEUE, JSON.stringify(q, null, 1));
   // 구독자 메일: 토큰은 growth/tickets/.push_secret (없으면 생략)
   const SECRET = path.join(DIR, ".push_secret");
   const items = send.filter(x => !x.info || x.info.kpop !== false);

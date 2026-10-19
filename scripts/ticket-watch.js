@@ -87,6 +87,21 @@ function socialPost(x) {
   if (text.length > 490) text = text.replace(/Can overseas fans buy\? ([^.]*\.)[^\n]*/, "Can overseas fans buy? $1");
   return text.slice(0, 495);
 }
+
+// hellonunchi-social 저장소의 queue/threads.json 에 추가하고 push (봇이 상태를 커밋하므로 pull --rebase 먼저)
+function apiQueue(entries) {
+  const { execFileSync } = require("child_process");
+  const REPO = path.join(__dirname, "..", "..", "hellonunchi-social"), F = path.join(REPO, "queue", "threads.json");
+  if (!fs.existsSync(F)) return;
+  const git = (...a) => execFileSync("git", ["-C", REPO, ...a], { stdio: "pipe" }).toString();
+  git("pull", "--rebase", "-q");
+  const cur = JSON.parse(fs.readFileSync(F, "utf8"));
+  const kst = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 19) + "+09:00";
+  for (const e of entries) if (!cur.some(c => c.id === "tk_" + e.id)) cur.push({ id: "tk_" + e.id, when: kst, topic: "K-pop", parts: [{ text: e.text, image: "https://hellonunchi.com/social/tickets-alert.jpg" }], status: "pending" });
+  fs.writeFileSync(F, JSON.stringify(cur, null, 1) + "\n");
+  git("add", "queue/threads.json"); git("-c", "user.name=hellonunchi-watch", "-c", "user.email=wjjjj29@gmail.com", "commit", "-qm", `queue: ${entries.length} ticket post(s)`); git("push", "-q");
+  console.log("api queued:", entries.map(e => e.id).join(", "));
+}
 // Gemini 영어 요약 (키: growth/tickets/.gemini_key)
 const GEMINI = path.join(DIR, ".gemini_key");
 const PROMPT = `You write ticket alerts in English for overseas K-pop fans who cannot read Korean.
@@ -141,6 +156,9 @@ async function summarize(x, text) {
   const q = fs.existsSync(QUEUE) ? JSON.parse(fs.readFileSync(QUEUE, "utf8")) : [];
   for (const x of send) { const text = socialPost(x); if (text && !q.some(e => e.id === x.id)) { q.push({ id: x.id, created: now, firstOpen: (x.info?.opens || []).map(o => o.kst_iso).filter(Boolean).sort()[0] || "", text, posted: false }); console.log("social queued:", x.id); } }
   fs.writeFileSync(QUEUE, JSON.stringify(q, null, 1));
+  // 공식 API 큐(~/원준프로젝트/hellonunchi-social)로 바로 넘김 → GitHub Actions가 30분 안에 Threads 게시
+  const fresh4api = q.filter(e => !e.posted && !e.apiQueued && e.created === now);
+  if (fresh4api.length) { try { apiQueue(fresh4api); fresh4api.forEach(e => { e.apiQueued = now; }); fs.writeFileSync(QUEUE, JSON.stringify(q, null, 1)); } catch (e) { console.error("api queue", e.message); } }
   // 구독자 메일: 토큰은 growth/tickets/.push_secret (없으면 생략)
   const SECRET = path.join(DIR, ".push_secret");
   const items = send.filter(x => !x.info || x.info.kpop !== false);

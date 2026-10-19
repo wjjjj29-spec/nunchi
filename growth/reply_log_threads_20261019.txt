@@ -1,0 +1,10 @@
+## 2026-10-19 night hellonunchi Threads session (scheduled)
+ticket queue: MMA 2026 (melonopen:13005) posted -> https://www.threads.com/@hellonunchi/post/DerOvAdCdA1
+replies (like + reply, single paragraph, no links):
+- astriedkartika (ID, what to prep for Korea early-mid Nov) -> 5–15°C layers, T-money, Naver/KakaoMap, foliage | /@hellonunchi/post/DerSReUCRlz
+- benjocriste (7 days to go, first meal?) -> gukbap/seolleongtang, samgyeopsal first night | /@hellonunchi/post/DerSa7RCR8s
+- misscshin23 (kdrama/kpop fan planning visit) -> Bukchon/Namsan, Seongsu/Hongdae pop-ups | /@hellonunchi/post/DerSkX_CU2p
+- biesang (ID, short Busan trip, wants to go back) -> Blue Line Park, Huinnyeoul, dwaeji gukbap, 3–4 days | /@hellonunchi/post/DerS0IWCZxh
+- syahiraisyah22 (MS, Busan day trip) -> KTX ~2.5h, focus Haeundae/Gamcheon | /@hellonunchi/post/DerS9jDCff2
+skipped: g4dis13 (no reply button), promos (artists.rocks, kwanystory, mf_tour_korea, personalguidekorea, jastip), non-travel posts
+note: original isolated tab 9A18BA98 hung after threads_post.js; new hellonunchi tab FCEA3221 opened in same context (keep open).

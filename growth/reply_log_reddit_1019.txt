@@ -6,3 +6,11 @@
 - r/seoul 1x98qjz English hairdressers → https://www.reddit.com/r/seoul/comments/1x98qjz/englishspeaking_hairdressers_in_seoul_how_do_i/phn9j31/
 - r/KoreaTravelAdvice 1x9a0mj KF94 bulk → https://www.reddit.com/r/KoreaTravelAdvice/comments/1x9a0mj/kf94_masks/phn9rar/
 rule: info only, 'Korean here' voice, no links (profile only). Skipped posts already well answered (late Incheon arrival, pocket wifi, Gimpo timing).
+
+# Night session 2026-10-19 21:xx KST
+- r/koreatravel 1x9rhqr ICN T1 overnight before 7:30 flight → https://www.reddit.com/r/koreatravel/comments/1x9rhqr/icn_terminal_1_accommodation/phol6uj/
+- r/KoreaTravelAdvice 1x9ry86 February trip / Seollal → https://www.reddit.com/r/KoreaTravelAdvice/comments/1x9ry86/february_in_korea/pholj4l/
+- r/KoreaTravelAdvice 1x9rnkh China→Jeju flights → https://www.reddit.com/r/KoreaTravelAdvice/comments/1x9rnkh/cheapest_way_to_travel_to_jeju_from_china/pholvck/
+- r/koreatravel 1x9p8xo Daegu food & autumn → https://www.reddit.com/r/koreatravel/comments/1x9p8xo/need_recommendations_for_daegu_8_to_10_nov/phonb3n/
+- r/koreatravel 1x9sksh Seoul/Daejeon with kids → https://www.reddit.com/r/koreatravel/comments/1x9sksh/looking_for_recommendations_in_seoul/phongly/
+note: reddit_comment.js 의 좌표 탭이 포커스를 못 잡아 마지막 2개는 aside MCP click/type_text 로 게시.

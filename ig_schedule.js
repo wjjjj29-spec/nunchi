@@ -41,14 +41,24 @@ const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
     await ev(`(()=>{const e=${editor}; e.focus(); const r=document.createRange(); r.selectNodeContents(e); r.collapse(false); const s=getSelection(); s.removeAllRanges(); s.addRange(r);})()`);
     for (const ch of p.tags + " ✨") { await send("Input.insertText", { text: ch }); await sleep(45); }
     await sleep(700); await key("Escape", 27);
-    const cap = await ev(`${editor}.innerText`);
-    if (!cap.includes(p.tags.split(" ").at(-1))) throw new Error("caption tags broken: " + cap.slice(-120));
+    // 캡션 검증: 첫 줄로 시작하고 태그가 전부 있어야 함 (자동완성 팝업이 커서를 옮겨 앞에 끼워 넣는 일이 있었음)
+    const norm = s => s.replace(/\s+/g, " ").trim();
+    const capOk = async () => { const c = norm(await ev(`${editor}.innerText`)); return c.startsWith(norm(p.text.split("\n")[0]).slice(0, 30)) && p.tags.split(" ").every(tg => c.includes(tg)) ? c : null; };
+    if (!(await capOk())) {
+      console.log("caption broken, retyping");
+      await tap(editor); await send("Input.dispatchKeyEvent", { type: "keyDown", key: "a", code: "KeyA", modifiers: 4, commands: ["selectAll"] }); await send("Input.dispatchKeyEvent", { type: "keyUp", key: "a", code: "KeyA", modifiers: 4 }); await key("Backspace", 8);
+      for (const line of p.text.split("\n")) { if (line) await send("Input.insertText", { text: line }); await key("Enter", 13, "\r"); }
+      await send("Input.insertText", { text: p.tags + " ✨" }); await sleep(700); await key("Escape", 27);
+      if (!(await capOk())) throw new Error("caption still broken: " + (await ev(`${editor}.innerText`)).slice(0, 160));
+    }
     // 3) 예약 스위치 + 날짜(FB, IG 두 칸) + 시간
     await tap(`document.querySelector('input[aria-label="날짜 및 시간 설정"]')||[...document.querySelectorAll('[role=switch]')].find(e=>(e.getAttribute('aria-label')||'')==='날짜 및 시간 설정')`);
     await waitFor(`[...document.querySelectorAll('input')].filter(e=>/2026/.test(e.value)).length===2`);
     const d = new Date(p.date + "T00:00:00Z"); const label = `${DAYS[d.getUTCDay()]}, ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
     for (const k of [0, 1]) {
       await tap(`[...document.querySelectorAll('input')].filter(e=>/2026/.test(e.value))[${k}]`);
+      // 달력이 다른 달을 보여주면 '다음 달'을 눌러 넘김 (최대 3번)
+      for (let m = 0; m < 4; m++) { if (await ev(`!!document.querySelector('[aria-label="${label}"]')`)) break; await sleep(800); if (m < 3 && !(await ev(`!!document.querySelector('[aria-label="${label}"]')`))) await tap(`[...document.querySelectorAll('[role=button],div')].filter(e=>e.offsetParent&&e.innerText.trim().startsWith('다음 달')).pop()`); await sleep(500); }
       await waitFor(`!!document.querySelector('[aria-label="${label}"]')`, 5000);
       await tap(`document.querySelector('[aria-label="${label}"]')`);
     }

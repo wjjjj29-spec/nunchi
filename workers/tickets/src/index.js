@@ -117,6 +117,24 @@ export default {
     const url = new URL(req.url), p = url.pathname;
     if (p === "/api/tickets/signup" && req.method === "POST") return signup(req, env);
     if (p === "/api/tickets/push" && req.method === "POST") return push(req, env);
+    // 멜론은 GitHub 러너 IP를 막아서(423) 수집기가 이 중계를 통해 가져감. 멜론 티켓 도메인만, 토큰 필요
+    if (p === "/api/tickets/proxy") {
+      if (!env.PUSH_SECRET || req.headers.get("authorization") !== `Bearer ${env.PUSH_SECRET}`) return new Response("unauthorized", { status: 401 });
+      let u; try { u = new URL(url.searchParams.get("u") || ""); } catch { return new Response("bad url", { status: 400 }); }
+      if (u.protocol !== "https:" || u.hostname !== "ticket.melon.com") return new Response("host not allowed", { status: 403 });
+      // 멜론이 일부 Cloudflare 출구 IP만 막아서(423) 몇 번 재시도하면 대부분 통과
+      let status = 0, body = "", ctype = "text/plain", lastErr = "";
+      for (let i = 0; i < 6; i++) {
+        try {
+          const r = await fetch(u.toString(), { headers: { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/130 Safari/537.36", "Accept-Language": "ko-KR,ko;q=0.9", Referer: req.headers.get("x-referer") || "https://ticket.melon.com/" } });
+          status = r.status; ctype = r.headers.get("content-type") || ctype; body = await r.text();
+          if (status !== 423) break;
+        } catch (e) { lastErr = String(e); }
+        await new Promise(s => setTimeout(s, 500));
+      }
+      if (!status) return new Response("upstream error: " + lastErr, { status: 502 });
+      return new Response(body, { status, headers: { "content-type": ctype } });
+    }
     if (p === "/api/tickets/unsub") {
       const e = (url.searchParams.get("e") || "").toLowerCase(), s = await env.SUBS.get(e, "json");
       if (s && s.token === url.searchParams.get("t")) await env.SUBS.delete(e);

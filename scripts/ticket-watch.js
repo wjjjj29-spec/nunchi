@@ -129,8 +129,10 @@ async function summarize(x, text) {
 }
 
 (async () => {
-  const names = ["melon", "melon-open", "nol", "yes24"];
-  const results = await Promise.allSettled([melon(), melonOpen(), nol(), yes24()]);
+  // SOURCES=melon,melon-open (맥: 멜론은 한국 IP만 허용) / SOURCES=nol,yes24 (GitHub). 비우면 전부
+  const ALL = { melon, "melon-open": melonOpen, nol, yes24 };
+  const names = (process.env.SOURCES || Object.keys(ALL).join(",")).split(",").map(s => s.trim()).filter(s => ALL[s]);
+  const results = await Promise.allSettled(names.map(n => ALL[n]()));
   const all = results.flatMap(r => r.status === "fulfilled" ? r.value : []);
   results.forEach((r, i) => { if (r.status === "rejected") console.error(names[i], "FAILED:", r.reason.message); });
   const seen = fs.existsSync(SEEN) ? JSON.parse(fs.readFileSync(SEEN, "utf8")) : {};

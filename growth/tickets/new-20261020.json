@@ -1,0 +1,143 @@
+[
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214139",
+  "title": "TUNEUP STAGE : 블루터틀랜드 10주년 기념 단독 콘서트 “청호춘가”",
+  "place": "CJ아지트 광흥창",
+  "region": "서울",
+  "period": "2026.11.14 - 2026.11.14",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214139",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610200913169d15c27c-bf67-4c34-befa-4431a7ce83de.png"
+ },
+ {
+  "source": "melon",
+  "type": "fanmeeting",
+  "id": "melon:214117",
+  "title": "Billlie 5th Anniversary Fan Concert 〈The Heist Squad〉",
+  "place": "서강대학교 메리홀",
+  "region": "서울",
+  "period": "2026.11.15 - 2026.11.15",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214117",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261019094310fa866a62-dcea-4688-9302-9cad964ea00b.jpg"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13100",
+  "title": "TUNEUP STAGE : 블루터틀랜드 10주년 기념 단독 콘서트 “청호춘가”",
+  "place": "",
+  "region": "",
+  "period": "2026.10.20(화) 11:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13100",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Blue Turtle Land"
+   ],
+   "title_en": "TUNEUP STAGE: Blue Turtle Land 10th Anniversary Solo Concert 'Cheonghochunga'",
+   "event_type": "concert",
+   "venue_en": "CJ Azit Gwangheungchang",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 14, 2026 · 7 PM",
+   "price_en": "₩44,000",
+   "opens": [
+    {
+     "label_en": "General Sale",
+     "kst_iso": "2026-10-20T11:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information provided regarding global sales or specific requirements for foreign purchasers. It's unknown if a Korean phone number or ID is needed."
+   },
+   "need_to_know_en": [
+    "Ages 12+ (children under 12 may enter with a parent)"
+   ]
+  }
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214142",
+  "title": "김은미 정규 2집 앨범 음악회 & 토크",
+  "place": "인피니티뮤직",
+  "region": "서울",
+  "period": "2026.11.29 - 2026.11.29",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214142",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610191704070a79432e-b2c7-4b32-a201-5af92af17cc3.png"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214146",
+  "title": "로맨틱펀치 단독공연 116번째 로맨틱파티-서울",
+  "place": "스페이스 브릭",
+  "region": "서울",
+  "period": "2026.11.08 - 2026.11.08",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214146",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610191946119f4a8af6-a915-4d91-9a02-c939a100ddd6.png"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13103",
+  "title": "로맨틱펀치 단독공연 116번째 로맨틱파티-서울",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21(수) 19:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13103",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Romantic Punch"
+   ],
+   "title_en": "Romantic Punch 116th Romantic Party - Seoul",
+   "event_type": "concert",
+   "venue_en": "Space Brick",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 8, 2026 · 5 PM",
+   "price_en": "₩55,000",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-21T19:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "There is no information provided regarding global sales or specific requirements for foreign purchasers (e.g., Korean phone number, ID verification)."
+   },
+   "need_to_know_en": [
+    "Age rating: 12 years and older",
+    "Running time: 180 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214134",
+  "title": "나상현 단독 콘서트 『보통의 나날』",
+  "place": "서보아트스페이스 보이드홀",
+  "region": "서울",
+  "period": "2026.11.14 - 2026.11.15",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214134",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261019110054af31f6ee-33dc-40bc-838a-38910f88039a.png"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214152",
+  "title": "Leaveourtears LIVE 2026 SEOUL(서울)",
+  "place": "CJ아지트",
+  "region": "서울",
+  "period": "2026.11.15 - 2026.11.15",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214152",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261020144819b6e48802-982f-4bb9-b1a7-eb94693ce800.jpg"
+ }
+]

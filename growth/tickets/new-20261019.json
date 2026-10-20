@@ -158,5 +158,411 @@
   "period": "2026.11.21 - 2026.11.21",
   "url": "https://ticket.melon.com/performance/index.htm?prodId=214137",
   "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/2026101914282680560cdb-9409-47c3-973a-e5339ce71778.jpg"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13090",
+  "title": "최인경 단독 콘서트 〈오늘도 너에게〉",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21(수) 19:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13090",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Choi Inkyung"
+   ],
+   "title_en": "Choi Inkyung Solo Concert",
+   "event_type": "concert",
+   "venue_en": "SPACE SODA2002",
+   "city_en": "",
+   "show_dates_en": "Nov 21, 2026 · 7 PM",
+   "price_en": "₩66,000 reserved seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-21T19:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "No specific global sale site mentioned. Purchasing tickets on Melon usually requires a Korean phone number for verification."
+   },
+   "need_to_know_en": [
+    "Age rating: 8 years and older",
+    "Running time: 90 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13051",
+  "title": "신해경 단독 콘서트 나의 가역반응 사가 - 서울",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21(수) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13051",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Shin Hae Gyeong"
+   ],
+   "title_en": "Shin Hae Gyeong Solo Concert: My Reversible Reaction Saga - Seoul",
+   "event_type": "concert",
+   "venue_en": "KT&G Sangsangmadang Hongdae Live Hall",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 15, 2026 · 5 PM",
+   "price_en": "₩77,000 (about $57) pre-sale, ₩80,000 at door",
+   "opens": [
+    {
+     "label_en": "General Sale",
+     "kst_iso": "2026-10-21T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No specific information regarding international ticket sales or restrictions for foreign buyers is provided."
+   },
+   "need_to_know_en": [
+    "Age rating: 7 years and older",
+    "Running time: 90 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13050",
+  "title": "신해경 단독 콘서트 나의 가역반응 사가 - 부산",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21(수) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13050",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Shin Hae Gyeong"
+   ],
+   "title_en": "Shin Hae Gyeong Solo Concert: My Reversible Reaction Saga - Busan",
+   "event_type": "concert",
+   "venue_en": "KT&G Sangsangmadang Busan Live Hall",
+   "city_en": "Busan",
+   "show_dates_en": "Nov 21, 2026 · 6 PM",
+   "price_en": "₩66,000 (pre-sale) / ₩70,000 (at door)",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-21T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information provided regarding ticket purchase for foreigners or global sale sites. It's unknown if a Korean phone number or ID is required."
+   },
+   "need_to_know_en": [
+    "Age rating: 7 years and older",
+    "Running time: 100 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13049",
+  "title": "먼데이프로젝트 시즌9 [구구 단독 콘서트 ‘THE LAST 1%’] with 미러볼뮤직",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21(수) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13049",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "GuGu"
+   ],
+   "title_en": "Monday Project Season 9 [GuGu Solo Concert 'THE LAST 1%'] with Mirrorball Music",
+   "event_type": "concert",
+   "venue_en": "Umuji",
+   "city_en": "",
+   "show_dates_en": "Nov 11, 2026 · 8 PM",
+   "price_en": "₩33,000 standing seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-21T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Likely requires a Korean phone number or ID for verification, as no global sale site is mentioned."
+   },
+   "need_to_know_en": [
+    "All ages admitted",
+    "Running time: 90 minutes",
+    "All seats are standing"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13016",
+  "title": "유령서점 할로윈 단독공연 GHOBOOKJE Gothic Horror Night",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21(수) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13016",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Ghost Bookstore"
+   ],
+   "title_en": "Ghost Bookstore Halloween Solo Concert GHOBOOKJE Gothic Horror Night",
+   "event_type": "concert",
+   "venue_en": "Strange Fruit",
+   "city_en": "Seoul",
+   "show_dates_en": "Oct 31, 2026 · 8 PM",
+   "price_en": "₩44,000",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-21T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "The listing does not specify if a global sale site is available or if a Korean phone number/ID is required for purchase."
+   },
+   "need_to_know_en": [
+    "Age rating: 8+",
+    "Running time: 90 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13055",
+  "title": "2026 AND2BLE FAN-CON 〈W!nter inside〉 In Seoul",
+  "place": "",
+  "region": "",
+  "period": "2026.10.13",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13055",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "AND2BLE"
+   ],
+   "title_en": "2026 AND2BLE FAN-CON 〈W!nter inside〉 In Seoul",
+   "event_type": "fan meeting",
+   "venue_en": "Korea University Hwajeong Gymnasium (Tiger Dome)",
+   "city_en": "Seoul",
+   "show_dates_en": "Dec 5, 2026 · 5 PM & Dec 6, 2026 · 4 PM",
+   "price_en": "₩143,000 (about $106) all seats",
+   "opens": [
+    {
+     "label_en": "Global Fan club pre-sale",
+     "kst_iso": "2026-10-22T20:00:00+09:00",
+     "who_en": "Weverse AND2BLE official fan club 'N:DCLO' Membership (GL) members who completed pre-verification on the global page"
+    },
+    {
+     "label_en": "General Sale",
+     "kst_iso": "2026-10-23T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "easy",
+    "note_en": "Yes, foreigners can buy tickets via the Melon Ticket global page. Passport verification is required in advance."
+   },
+   "need_to_know_en": [
+    "Fan club pre-sale: 1 ticket per person per show. General sale: 2 tickets per person per show (including pre-sale tickets).",
+    "Age restriction: 7 years and older.",
+    "Fan club pre-sale requires Weverse 'N:DCLO' Membership (GL) and pre-verification on Melon Ticket global page.",
+    "Names on Weverse membership, Melon Ticket, and actual viewer must match for fan club pre-sale."
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13089",
+  "title": "#1 EXEX BEGINS",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21(수) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13089",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "ZIN CHOI",
+    "Hitchhiker",
+    "Song Namhyun",
+    "Jin Sooyoung",
+    "Chawool",
+    "Yoon Dukwon",
+    "xiwoong",
+    "Seollebal",
+    "STEREO SERVICE",
+    "Seo Hyunjeong",
+    "maalib",
+    "GooseBumps",
+    "APRO",
+    "Sax Kim",
+    "Jo Kyungyoung",
+    "Baek Haeyong"
+   ],
+   "title_en": "#1 EXEX BEGINS",
+   "event_type": "festival",
+   "venue_en": "LDK Hannam",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 7, 2026 · 2 PM – 10 PM",
+   "price_en": "₩55,000 (about $41) unreserved seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-21T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Tickets are sold exclusively on Melon Ticket. Melon Ticket requires Korean phone verification for registration, making it difficult for those without a Korean phone number to purchase tickets."
+   },
+   "need_to_know_en": [
+    "Age rating: 8 years and older",
+    "Running time: approx. 510 minutes (free entry/exit during event hours)",
+    "Tickets sold exclusively on Melon Ticket",
+    "Unreserved seating"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13080",
+  "title": "2026 부기 조롱잔치",
+  "place": "",
+  "region": "",
+  "period": "2026.10.22(목) 12:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13080",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Boogi"
+   ],
+   "title_en": "2026 Boogi Jorong Janchi",
+   "event_type": "concert",
+   "venue_en": "KT&G Sangsangmadang Busan 1F Lounge",
+   "city_en": "Busan",
+   "show_dates_en": "Nov 8, 2026 · 4 PM",
+   "price_en": "₩10,000 (about $7)",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-22T12:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Tickets are sold via Melon Ticket, which typically requires a Korean phone number or ID for verification."
+   },
+   "need_to_know_en": [
+    "Age rating: 7 years and older",
+    "Running time: 120 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13087",
+  "title": "TONE Studio Stay-easy 〈Namul〉",
+  "place": "",
+  "region": "",
+  "period": "2026.10.22(목) 19:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13087",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Namul"
+   ],
+   "title_en": "TONE Studio Stay-easy 〈Namul〉",
+   "event_type": "concert",
+   "venue_en": "TONE Studio Seoul",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 14, 2026 · 4 PM",
+   "price_en": "₩33,000 reserved seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-22T19:00:00+09:00",
+     "who_en": "Anyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Buying tickets on Melon often requires a Korean phone number for verification, making it difficult for those abroad."
+   },
+   "need_to_know_en": [
+    "Age rating: 8 years and older",
+    "Running time: 50 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13021",
+  "title": "I AM KORESAWA vol.1",
+  "place": "",
+  "region": "",
+  "period": "2026.10.22(목) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13021",
+  "poster": "",
+  "info": {
+   "kpop": false,
+   "artists": [
+    "Koresawa"
+   ],
+   "title_en": "I AM KORESAWA vol.1",
+   "event_type": "concert",
+   "venue_en": "YES24 Wonderlock Hall",
+   "city_en": "",
+   "show_dates_en": "Feb 27, 2027 · 6 PM",
+   "price_en": "₩110,000 (VIP), ₩99,000 (1F standing), ₩99,000 (2F reserved)",
+   "opens": [
+    {
+     "label_en": "Ticket open",
+     "kst_iso": "2026-10-22T20:00:00+09:00",
+     "who_en": ""
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information provided regarding ticket purchase for foreigners or global sale sites."
+   },
+   "need_to_know_en": [
+    "Age rating: 8 years and older",
+    "Seating: 1F standing, 2F reserved seats",
+    "Running time: 90 minutes"
+   ]
+  }
  }
 ]

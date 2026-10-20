@@ -30,13 +30,13 @@ const intlAge = (dob, at = NOW) => { const b = new Date(dob + "T00:00:00Z"); let
 const K = h => `<span lang="ko" class="ko">${h}</span>`;
 
 // ---------------------------------------------------------------- shared shell
-const head = ({ title, desc, url, ld, room, img }) => `<!doctype html>
+const head = ({ title, desc, url, ld, room, img, noindex }) => `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<link rel="canonical" href="${url}">
+<link rel="canonical" href="${url}">${noindex ? '\n<meta name="robots" content="noindex,follow">' : ""}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/nunchi.css?v=${VER}"><meta property="og:url" content="${url}"><meta property="og:type" content="website">
@@ -207,8 +207,8 @@ ${idols.length ? `
   ${faqHtml(faq)}
   <p class="note">Other years: ${near.map(y => `<a href="/korean-age/born-${y}/">${y}</a>`).join(" · ")} · <a href="/korean-age/">all years</a></p>
 `;
-  write(`korean-age/born-${by}`, head({ title: `Born in ${by}: Korean Age in ${Y} (and International Age) | Nunchi`, desc, url, ld, room: "live", img: "korean-age.jpg" }) + body + FOOT());
-  urls.push(`korean-age/born-${by}/`);
+  write(`korean-age/born-${by}`, head({ title: `Born in ${by}: Korean Age in ${Y} (and International Age) | Nunchi`, desc, url, ld, room: "live", img: "korean-age.jpg", noindex: true }) + body + FOOT());
+  // noindex: 사이트맵 제외
 }
 {
   const url = ORIGIN + "/korean-age/";

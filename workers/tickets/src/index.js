@@ -5,8 +5,11 @@
 const norm = s => String(s || "").toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
 const esc = s => String(s || "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 // 멜론 제목은 한글이 많아서 영문 → 한글 이름 보강 (필요할 때 추가)
-const ALIAS = { straykids: ["스트레이키즈"], newjeans: ["뉴진스"], day6: ["데이식스"], seventeen: ["세븐틴"], bts: ["방탄소년단"], aespa: ["에스파"], ive: ["아이브"], lesserafim: ["르세라핌"], txt: ["투모로우바이투게더"], enhypen: ["엔하이픈"], nct: ["엔시티"], blackpink: ["블랙핑크"], twice: ["트와이스"], ateez: ["에이티즈"], riize: ["라이즈"], illit: ["아일릿"], zerobaseone: ["제로베이스원"], boynextdoor: ["보이넥스트도어"], btob: ["비투비"], iu: ["아이유"], taeyeon: ["태연"], itzy: ["있지"], monstax: ["몬스타엑스"], shinee: ["샤이니"], exo: ["엑소"], nflying: ["엔플라잉"], qwer: ["큐더블유이알"] };
-const keys = a => { const k = norm(a); return [k, ...(ALIAS[k] || []).map(norm)].filter(x => x.length >= 2); };
+const ALIAS = { straykids: ["스트레이키즈"], newjeans: ["뉴진스"], day6: ["데이식스"], seventeen: ["세븐틴"], bts: ["방탄소년단"], aespa: ["에스파"], ive: ["아이브"], lesserafim: ["르세라핌"], txt: ["투모로우바이투게더"], enhypen: ["엔하이픈"], nct: ["엔시티"], blackpink: ["블랙핑크"], twice: ["트와이스"], ateez: ["에이티즈"], riize: ["라이즈"], illit: ["아일릿"], zerobaseone: ["제로베이스원", "ZB1"], zb1: ["ZEROBASEONE", "제로베이스원"], boynextdoor: ["보이넥스트도어"], btob: ["비투비"], iu: ["아이유"], taeyeon: ["태연"], itzy: ["있지"], monstax: ["몬스타엑스"], shinee: ["샤이니"], exo: ["엑소"], nflying: ["엔플라잉"], qwer: ["큐더블유이알"] };
+// 매칭은 단어 단위 (" ive "가 " live "에 걸리지 않게). 한글 이름은 붙여 쓰는 경우가 많아 그대로 포함 검사
+const words = s => " " + String(s || "").toLowerCase().replace(/[^a-z0-9가-힣]+/g, " ").trim() + " ";
+const keys = a => { const k = norm(a); return [words(a), ...(ALIAS[k] || []).map(h => /[가-힣]/.test(h) ? h : words(h))].filter(x => x.trim().length >= 2); };
+const hits1 = (hayWords, hayRaw, key) => /[가-힣]/.test(key) ? hayRaw.includes(norm(key)) : hayWords.includes(key);
 const token = () => [...crypto.getRandomValues(new Uint8Array(16))].map(b => b.toString(16).padStart(2, "0")).join("");
 const unsubUrl = (env, s) => `${env.API}/api/tickets/unsub?e=${encodeURIComponent(s.email)}&t=${s.token}`;
 
@@ -91,14 +94,15 @@ async function push(req, env) {
   if (!env.PUSH_SECRET || req.headers.get("authorization") !== `Bearer ${env.PUSH_SECRET}`) return new Response("unauthorized", { status: 401 });
   env_SITE = env.SITE;
   const items = await req.json(); let mails = 0, cursor;
-  const hay = x => norm([x.title, x.info?.title_en, ...(x.info?.artists || [])].join(" "));
+  const hayW = x => words([x.title, x.info?.title_en, ...(x.info?.artists || [])].join(" "));
+  const hayR = x => norm([x.title, x.info?.title_en, ...(x.info?.artists || [])].join(" "));
   do {
     const page = await env.SUBS.list({ cursor }); cursor = page.list_complete ? null : page.cursor;
     for (const k of page.keys) {
       const s = await env.SUBS.get(k.name, "json"); if (!s) continue;
       const hits = items.filter(x => !s.sent.includes(x.id)
         && (x.type !== "fanmeeting" || s.types.includes("fanmeeting"))
-        && s.artists.some(a => keys(a).some(q => hay(x).includes(q))));
+        && s.artists.some(a => keys(a).some(q => hits1(hayW(x), hayR(x), q))));
       if (!hits.length) continue;
       const h = hits[0], fo = firstOpen(h);
       const subject = `🎫 ${h.info?.title_en || h.title}${fo ? `: tickets open ${fmt(fo, "Asia/Seoul")} KST` : ""}${hits.length > 1 ? ` (+${hits.length - 1} more)` : ""}`;

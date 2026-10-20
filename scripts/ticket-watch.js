@@ -77,8 +77,10 @@ const kst = iso => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleS
 const VERD = { easy: "Yes, it sells to overseas fans", possible: "Possible, with some steps", hard: "Not easily", unknown: "Not stated yet" };
 function socialPost(x) {
   const i = x.info || {}; if (i.kpop === false) return null;
-  const hay = nk([x.title, i.title_en, ...(i.artists || [])].join(" "));
-  const big = BIG.some(g => nk(g).length >= 3 && hay.includes(nk(g))) || /award|festival/i.test(i.event_type || "");
+  // 단어 단위로만 매칭 (짧은 이름 IVE·TXT·EXO가 LIVE·anniversary 같은 단어 안에서 걸리던 문제)
+  const words = s => " " + String(s || "").toLowerCase().replace(/[^a-z0-9가-힣]+/g, " ").trim() + " ";
+  const hay = words([x.title, i.title_en, ...(i.artists || [])].join(" "));
+  const big = BIG.some(g => words(g).trim().length >= 2 && hay.includes(words(g))) || /award|festival/i.test(i.event_type || "");
   if (!big) return null;
   const opens = (i.opens || []).filter(o => o.kst_iso).slice(0, 2).map(o => `• ${o.label_en}: ${kst(o.kst_iso)} KST${o.who_en ? ` (${o.who_en})` : ""}`);
   const lines = [`🎫 ${i.title_en || x.title}`, [i.venue_en, i.city_en].filter(Boolean).join(", ") + (i.show_dates_en ? ` · ${i.show_dates_en}` : ""), "", ...(opens.length ? ["Tickets open:", ...opens, ""] : []),

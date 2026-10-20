@@ -51,7 +51,32 @@
     });
     const res = document.querySelector(".result");
     if (res) new MutationObserver(() => { if (res.classList.contains("show")) track("tool_result"); }).observe(res, { attributes: true, attributeFilter: ["class"] });
+    // 도구 → 다음에 읽을 가이드 (결과 바로 아래, 페이지 하단 "Related tools" 전에 한 번 더 이어지게)
+    const next = NEXT[location.pathname];
+    if (next && document.body.dataset.embed === undefined) {
+      const card = `<a class="g-tool g-next" href="${next[0]}"><span class="tag">Next</span><b>${next[1]}</b><span>${next[2]}</span><i aria-hidden="true">→</i></a>`;
+      const anchor = res || document.querySelector(".tool-head");
+      if (anchor) { anchor.insertAdjacentHTML("afterend", card); document.querySelector(".g-next").addEventListener("click", () => track("next_click", { from: location.pathname, to: next[0] })); }
+    }
   });
+  const NEXT = {
+    "/tools/korea-trip-budget-calculator/": ["/guide/cash-cards-atm-korea/", "Cash, cards and ATMs in Korea", "What works with a foreign card, and where you still need won."],
+    "/tools/korea-tax-refund-calculator/": ["/guide/korea-tax-refund-guide/", "How the tax refund actually works", "At the till, at the airport kiosk, and the limits for 2026."],
+    "/tools/tmoney-vs-climate-card/": ["/guide/incheon-airport-to-seoul/", "Incheon Airport to Seoul", "AREX, limousine bus or taxi: 2026 fares and which fits your hotel."],
+    "/tools/korea-esim-data-calculator/": ["/guide/korea-esim-sim-or-pocket-wifi/", "eSIM, SIM or pocket Wi-Fi?", "When you actually need a Korean number."],
+    "/tools/korean-public-holidays/": ["/guide/ktx-booking-for-foreigners/", "Booking the KTX as a foreigner", "When tickets open, the Korail Pass, and the holiday rush."],
+    "/tools/korean-spice-level-quiz/": ["/guide/ordering-at-korean-restaurants/", "Ordering at a Korean restaurant", "The call bell, free side dishes, and how to ask for less spice."],
+    "/tools/korean-number-converter/": ["/guide/korean-convenience-store-guide/", "Korean convenience stores", "What to buy, the 1+1 deals, and topping up T-money."],
+    "/tools/visa-stay-days-counter/": ["/guide/korea-travel-apps/", "Korea travel apps 2026", "What works with a foreign number, app by app."],
+    "/tools/cherry-blossom-forecast/": ["/guide/ktx-booking-for-foreigners/", "Booking the KTX as a foreigner", "Seoul to Busan or Gyeongju for the blossoms, booked from abroad."],
+    "/tools/kdrama-filming-locations/": ["/guide/taxis-in-korea/", "Taking taxis in Korea", "Apps that take foreign cards, fares and the International Taxi."],
+    "/tools/kpop-idol-age-calculator/": ["/tickets/", "Free K-pop ticket alerts", "Know when your artist's Korean shows open, in English."],
+    "/tools/korean-age-calculator/": ["/guide/seoul-weather-november-december/", "Seoul in November and December", "Temperatures, first snow and what to pack."],
+    "/tools/my-name-in-hangul/": ["/tools/korean-name-generator/", "Get a Korean name with meaning", "Hanja picked for what you want your name to say."],
+    "/tools/korean-name-generator/": ["/tools/what-do-i-call-them/", "Oppa, unnie, hyung or noona?", "What your Korean friends should call you."],
+    "/tools/what-do-i-call-them/": ["/idols/", "K-pop idol ages", "100 idols, eldest to maknae, with birthday countdowns."],
+    "/tools/hangul-typing-test/": ["/tools/my-name-in-hangul/", "Your name in Hangul", "Type your name and see how Koreans would write it."],
+  };
 
   // helpers
   window.NUNCHI = {

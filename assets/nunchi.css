@@ -313,3 +313,6 @@ body[data-embed] .panel { margin: 0; box-shadow: none; }
 .tk-row input:focus { outline: none; border-color: var(--accent); }
 .tk-row .btn { flex: 0 0 auto; }
 .tk-box .disc { font-size: 12px; color: var(--muted, #6b645a); }
+
+/* 도구 결과 아래 "Next" 가이드 카드 */
+.g-next { margin: 22px 0 8px; }

@@ -42,6 +42,48 @@
   "h": 630
  },
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-weather-november-december-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-weather-november-december/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-weather-november-december-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-weather-november-december/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-weather-november-december-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-weather-november-december/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-weather-november-december-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-weather-november-december/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-weather-november-december-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-weather-november-december/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-weather-november-december-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-weather-november-december/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-weather-november-december-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-weather-november-december/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/see-a-doctor-in-korea-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/see-a-doctor-in-korea/cards/01.jpg",
   "w": 1080,
@@ -168,6 +210,90 @@
   "h": 630
  },
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-convenience-store-guide-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-convenience-store-guide/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-convenience-store-guide-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-convenience-store-guide/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-convenience-store-guide-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-convenience-store-guide/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-convenience-store-guide-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-convenience-store-guide/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-convenience-store-guide-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-convenience-store-guide/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-convenience-store-guide-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-convenience-store-guide/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-convenience-store-guide-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-convenience-store-guide/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ordering-at-korean-restaurants-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ordering-at-korean-restaurants/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ordering-at-korean-restaurants-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ordering-at-korean-restaurants/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ordering-at-korean-restaurants-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ordering-at-korean-restaurants/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ordering-at-korean-restaurants-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ordering-at-korean-restaurants/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ordering-at-korean-restaurants-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ordering-at-korean-restaurants/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ordering-at-korean-restaurants-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ordering-at-korean-restaurants/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ordering-at-korean-restaurants-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ordering-at-korean-restaurants/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/incheon-airport-to-seoul-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/incheon-airport-to-seoul/cards/01.jpg",
   "w": 1080,
@@ -252,6 +378,90 @@
   "h": 630
  },
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ktx-booking-for-foreigners-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ktx-booking-for-foreigners/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ktx-booking-for-foreigners-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ktx-booking-for-foreigners/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ktx-booking-for-foreigners-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ktx-booking-for-foreigners/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ktx-booking-for-foreigners-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ktx-booking-for-foreigners/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ktx-booking-for-foreigners-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ktx-booking-for-foreigners/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ktx-booking-for-foreigners-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ktx-booking-for-foreigners/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ktx-booking-for-foreigners-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ktx-booking-for-foreigners/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/taxis-in-korea-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/taxis-in-korea/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/taxis-in-korea-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/taxis-in-korea/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/taxis-in-korea-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/taxis-in-korea/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/taxis-in-korea-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/taxis-in-korea/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/taxis-in-korea-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/taxis-in-korea/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/taxis-in-korea-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/taxis-in-korea/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/taxis-in-korea-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/taxis-in-korea/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-esim-sim-or-pocket-wifi-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/01.jpg",
   "w": 1080,
@@ -332,6 +542,90 @@
  {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/cash-cards-atm-korea-thumb.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/cash-cards-atm-korea/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-tax-refund-guide-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-tax-refund-guide/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-tax-refund-guide-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-tax-refund-guide/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-tax-refund-guide-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-tax-refund-guide/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-tax-refund-guide-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-tax-refund-guide/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-tax-refund-guide-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-tax-refund-guide/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-tax-refund-guide-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-tax-refund-guide/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-tax-refund-guide-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-tax-refund-guide/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/jjimjilbang-guide-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/jjimjilbang-guide/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/jjimjilbang-guide-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/jjimjilbang-guide/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/jjimjilbang-guide-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/jjimjilbang-guide/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/jjimjilbang-guide-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/jjimjilbang-guide/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/jjimjilbang-guide-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/jjimjilbang-guide/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/jjimjilbang-guide-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/jjimjilbang-guide/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/jjimjilbang-guide-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/jjimjilbang-guide/thumb.jpg",
   "w": 1200,
   "h": 630
  }

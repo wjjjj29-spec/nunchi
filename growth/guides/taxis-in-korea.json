@@ -1,0 +1,128 @@
+{
+ "order": 2.8,
+ "slug": "taxis-in-korea",
+ "room": "visit",
+ "kicker": "Getting around",
+ "short": "Taxis in Korea",
+ "card": "Seoul taxi fares and night surcharges, which app takes your card, airport fares and how to report a rip-off.",
+ "title": "Taxis in Korea for Tourists (2026): Fares, Apps & Scams | Nunchi",
+ "h1": "Taking taxis in Korea: fares, apps and what to say",
+ "dek": "₩4,800 to start, 40% more after 11pm, and an app that takes your card. How to ride Seoul's taxis without overpaying.",
+ "desc": "Taxis in Seoul and Korea in 2026: ₩4,800 base fare and late-night surcharges, regular vs deluxe vs International Taxi, k.ride, Uber and Kakao T, paying by card or T-money, airport fares, Korean phrases and reporting overcharging.",
+ "published": "2026-10-20",
+ "heroSrc": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/photos/taxi-hero.png",
+ "heroAlt": "An orange Seoul taxi waiting at a kerb on a busy street lit by shop signs at night",
+ "thumbTitle": "Taxis in Korea",
+ "cards": [
+  {
+   "type": "cover",
+   "photo": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/photos/taxi-cover.png",
+   "title": "Taking taxis in Korea",
+   "sub": "Fares, the apps that take your card, and how to avoid a rip-off."
+  },
+  {
+   "type": "point",
+   "big": "₩4,800",
+   "bigSub": "Seoul base fare, first 1.6 km",
+   "title": "Regular taxis",
+   "points": [
+    "+20% from 10pm, +40% from 11pm to 2am",
+    "Red <b class=\"ko\">빈차</b>&nbsp; light means it's free",
+    "No tipping, meter fare only"
+   ]
+  },
+  {
+   "type": "point",
+   "title": "Which taxi?",
+   "size": 76,
+   "points": [
+    "<b>Regular</b>: cheapest, metered",
+    "<b>Deluxe</b> (black): ₩7,000 base, no 40% tier",
+    "<b>International</b>: English, book 24h ahead"
+   ]
+  },
+  {
+   "type": "point",
+   "title": "Apps that take your card",
+   "size": 70,
+   "points": [
+    "<b>k.ride</b>: Kakao's app for visitors, in English",
+    "<b>Uber</b>: your own account, licensed taxis",
+    "<b>Kakao T</b>: most cars, foreign cards hit and miss"
+   ]
+  },
+  {
+   "type": "point",
+   "big": "₩85,000",
+   "bigSub": "International Taxi, Incheon to Myeongdong, fixed",
+   "title": "From the airport",
+   "points": [
+    "Regular meter: about ₩70,000–90,000",
+    "Official taxi rank outside arrivals only",
+    "Gangnam fixed fare: ₩90,000"
+   ]
+  },
+  {
+   "type": "end",
+   "kicker": "Overcharged?",
+   "title": "Get the receipt.",
+   "text": "Ask for 영수증 (yeongsujeung), then scan the QR code inside the taxi or call 120 to report it."
+  }
+ ],
+ "tldr": [
+  "<strong>Fare:</strong> Seoul taxis start at ₩4,800 for 1.6 km. Add 20% from 10pm and 40% from 11pm to 2am. No tipping.",
+  "<strong>Apps:</strong> k.ride (Kakao's visitor app) and Uber work with a foreign phone and card. Kakao T has the most cars but often rejects foreign cards.",
+  "<strong>Airport:</strong> about ₩70,000–90,000 by meter to central Seoul. International Taxi charges a fixed ₩85,000 to Myeongdong, ₩90,000 to Gangnam.",
+  "<strong>Problems:</strong> show the address in Korean, keep the receipt, and report overcharging via the QR code in the taxi or by calling 120."
+ ],
+ "body": "<h2>What a Seoul taxi costs</h2>\n<p>A regular Seoul taxi starts at <span class=\"g-num\">₩4,800</span> for the first 1.6 km, then ₩100 for every 131 m, or every 30 seconds when you're crawling in traffic. The fare is rounded to the nearest ₩10. That rate dates from February 2023 and is still current in 2026; older guides quoting ₩3,800 and 2 km are out of date.</p>\n<table><thead><tr><th>Time</th><th>Surcharge</th><th>Base fare</th></tr></thead><tbody>\n<tr><td>4am–10pm</td><td class=\"num\">none</td><td class=\"num\">₩4,800</td></tr>\n<tr><td>10pm–11pm</td><td class=\"num\">+20%</td><td class=\"num\">₩5,800</td></tr>\n<tr><td>11pm–2am</td><td class=\"num\">+40%</td><td class=\"num\">₩6,700</td></tr>\n<tr><td>2am–4am</td><td class=\"num\">+20%</td><td class=\"num\">₩5,800</td></tr>\n</tbody></table>\n<p>Leaving Seoul adds 20% for the part outside the city, and night and out-of-city surcharges together are capped at 60%. Other cities set their own fares. There's no tipping, and the driver can only charge what the meter shows.</p>\n<p>To flag one down, look for a red <span class=\"ko\">빈차</span> (bincha, empty car) light in the windscreen.</p>\n\n<h2>Regular, deluxe or International Taxi</h2>\n<table><thead><tr><th>Type</th><th>Fare</th><th>Good for</th></tr></thead><tbody>\n<tr><td>Regular (<span class=\"ko\">중형택시</span> jung-hyeong taxi)</td><td class=\"num\">₩4,800 for 1.6 km</td><td>Everyday rides</td></tr>\n<tr><td>Deluxe, black (<span class=\"ko\">모범택시</span> mobeom taxi)</td><td class=\"num\">₩7,000 for 3 km</td><td>More comfort, flat 20% night surcharge</td></tr>\n<tr><td>Large van (<span class=\"ko\">대형택시</span> daehyeong taxi)</td><td class=\"num\">₩7,000 for 3 km</td><td>Groups and lots of luggage</td></tr>\n<tr><td>International Taxi</td><td class=\"num\">meter +20%, or fixed fares</td><td>English, Chinese or Japanese-speaking drivers</td></tr>\n</tbody></table>\n<p>Deluxe and large taxis cost more per kilometre (₩200 for every 151 m) but have no 40% late-night tier.</p>\n<p><strong>International Taxi</strong> is Seoul's service for visitors, with drivers who speak English, Chinese or Japanese. Book at least 24 hours ahead at <a href=\"https://www.intltaxi.co.kr/\" rel=\"noopener\" target=\"_blank\">intltaxi.co.kr</a> or on 1644-2255, or ask at the information booth in either Incheon terminal on the day. Besides airport runs, it does hourly hire from <span class=\"g-num\">₩70,000</span> for 3 hours, tolls extra. Drivers take cash or Visa, Mastercard and Amex.</p>\n\n<h2>Apps that work with a foreign phone and card</h2>\n<ul>\n<li><strong>k.ride</strong> is Kakao Mobility's app for visitors. It runs in English, Chinese and Japanese, you sign in with email, Google or Apple, and you pay with a foreign card you register first. It translates your chat with the driver. It doesn't offer Kakao T's cheapest option, and adds a service fee.</li>\n<li><strong>Uber</strong> works with your home account and sends licensed taxis, not private cars. It's the former UT, rebranded in 2024. Most cars are in Seoul.</li>\n<li><strong>Kakao T</strong> is what Koreans use and has the most cars. It's built around Korean accounts and foreign cards are often declined. If you use it, pick the option to pay the driver directly.</li>\n</ul>\n<p>More on these in our <a href=\"/guide/korea-travel-apps/\">Korea travel apps</a> guide.</p>\n<div class=\"tip\"><span class=\"eye\" aria-hidden=\"true\"></span><div><b>Nunchi tip</b><p>Booked in an app and want to go somewhere else? Change the destination in the app, not just with the driver. In May 2026 a tourist who switched destination mid-ride on an Uber was asked to pay again on the card terminal and charged ₩690,800 for a ride of about ₩70,000.</p></div></div>\n\n<h2>Paying</h2>\n<p>Taxis have a card terminal by the front seats. Most take credit cards and T-money: tap or insert when you arrive. Some foreign cards get rejected, so carry a topped-up T-money card or a few ₩10,000 notes as backup. If you're choosing a transit card, our <a href=\"/tools/tmoney-vs-climate-card/\">T-money vs Climate Card</a> tool helps. Seoul has been adding English to taxi receipts since early 2026, showing the fare, times and any surcharge.</p>\n\n<h2>Show the address in Korean</h2>\n<p>Drivers set the satnav from Korean. An English hotel name or romanised street often won't work. Copy your destination's Korean name or address from Naver Map and show the screen, or save your hotel's Korean address before you go out.</p>\n<table><thead><tr><th>Korean</th><th>Say it</th><th>Means</th></tr></thead><tbody>\n<tr><td><span class=\"ko\">여기로 가 주세요</span></td><td>yeogiro ga juseyo</td><td>Please go here (show the screen)</td></tr>\n<tr><td><span class=\"ko\">카드 돼요?</span></td><td>kadeu dwaeyo?</td><td>Can I pay by card?</td></tr>\n<tr><td><span class=\"ko\">미터기 켜 주세요</span></td><td>miteogi kyeo juseyo</td><td>Please turn on the meter</td></tr>\n<tr><td><span class=\"ko\">트렁크 열어 주세요</span></td><td>teureongkeu yeoreo juseyo</td><td>Please open the boot</td></tr>\n<tr><td><span class=\"ko\">여기서 세워 주세요</span></td><td>yeogiseo sewo juseyo</td><td>Please stop here</td></tr>\n<tr><td><span class=\"ko\">영수증 주세요</span></td><td>yeongsujeung juseyo</td><td>Receipt, please</td></tr>\n</tbody></table>\n\n<h2>From the airport</h2>\n<p>At Incheon, use only the official taxi ranks outside arrivals, never someone who approaches you inside. A regular metered taxi to central Seoul comes to about <span class=\"g-num\">₩70,000–90,000</span> with tolls, more at night. International Taxi charges fixed fares from Incheon, tolls included:</p>\n<table><thead><tr><th>Area of Seoul</th><th>Regular car</th><th>Deluxe or van</th></tr></thead><tbody>\n<tr><td>Gangseo</td><td class=\"num\">₩70,000</td><td class=\"num\">₩100,000</td></tr>\n<tr><td>Mapo (Hongdae), Yeongdeungpo, Seodaemun</td><td class=\"num\">₩75,000</td><td class=\"num\">₩110,000</td></tr>\n<tr><td>Jung-gu (Myeongdong), Jongno, Yongsan</td><td class=\"num\">₩85,000</td><td class=\"num\">₩120,000</td></tr>\n<tr><td>Gangnam, Seocho, Seongdong</td><td class=\"num\">₩90,000</td><td class=\"num\">₩130,000</td></tr>\n<tr><td>Songpa (Jamsil), Gangdong, Gwangjin</td><td class=\"num\">₩95,000</td><td class=\"num\">₩140,000</td></tr>\n</tbody></table>\n<p>Compare the train and bus in our <a href=\"/guide/incheon-airport-to-seoul/\">Incheon Airport to Seoul</a> guide.</p>\n\n<h2>Scams and how to report them</h2>\n<p>Most rides are fine. The problems Seoul city reports are drivers not switching on the meter, adding an out-of-city surcharge inside Seoul, charging more than the meter shows, demanding tips and refusing short trips. Make sure the meter is running when you set off, and check the amount on the terminal before you tap.</p>\n<p>If something goes wrong, ask for the receipt, which shows the taxi's details, and photograph the driver's licence card on the dashboard. Then report it:</p>\n<ul>\n<li><strong>QR code:</strong> scan the code posted inside Seoul taxis to file a report in your language. Confirmed overcharging leads to fines.</li>\n<li><strong>120 Dasan Call Centre:</strong> Seoul's city helpline, which handles taxi complaints. Dial 120.</li>\n<li><strong>1330:</strong> the Korea Travel Hotline, for interpretation if you need help talking to the driver.</li>\n</ul>",
+ "tool": {
+  "href": "/guide/korea-travel-apps/",
+  "title": "Apps to download before you fly",
+  "text": "k.ride, Naver Map, Papago and more, and which ones work without a Korean number."
+ },
+ "faq": [
+  [
+   "How much is a taxi in Seoul?",
+   "A regular taxi starts at ₩4,800 for the first 1.6 km, then ₩100 for every 131 m or 30 seconds in traffic. It costs 20% more from 10pm to 4am and 40% more from 11pm to 2am."
+  ],
+  [
+   "Can tourists use Kakao T in Korea?",
+   "You can, but it's built around Korean accounts and many foreign cards are declined. Kakao Mobility's k.ride app is made for visitors, and Uber also books licensed taxis in Korea."
+  ],
+  [
+   "Can I pay for a taxi in Korea by card?",
+   "Usually. Taxis have a card terminal and most take credit cards and T-money. Some foreign cards fail, so keep T-money or a little cash as backup."
+  ],
+  [
+   "How much is a taxi from Incheon Airport to Seoul?",
+   "About ₩70,000–90,000 by meter including tolls, more at night. International Taxi has fixed fares: ₩85,000 to Myeongdong or Jongno and ₩90,000 to Gangnam."
+  ],
+  [
+   "How do I report a taxi driver in Seoul?",
+   "Keep the receipt, then scan the QR code inside the taxi to report in your language, or call the 120 Dasan Call Centre. Confirmed overcharging leads to fines."
+  ]
+ ],
+ "sources": [
+  [
+   "Seoul Metropolitan Government: taxi fares and International Taxi fixed fares",
+   "https://news.seoul.go.kr/traffic/archives/1659"
+  ],
+  [
+   "International Taxi (Seoul): booking and fares",
+   "https://www.intltaxi.co.kr/"
+  ],
+  [
+   "Kyunghyang Shinmun: English taxi receipts and QR reporting (Jan 2026)",
+   "https://www.khan.co.kr/en/article/202601201433577"
+  ],
+  [
+   "The Star: ₩690,800 taxi fare and tourist complaints (July 2026)",
+   "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/03/a-us450-taxi-fare-sparks-fresh-concerns-over-tourist-scams-in-south-korea"
+  ],
+  [
+   "Korea JoongAng Daily: Kakao Mobility's k.ride for foreign travellers",
+   "https://www.koreajoongangdaily.com/business/kakao-mobilitys-kride-taxi-app-offers-live-translation-for-foreign-travelers/12251248"
+  ]
+ ]
+}

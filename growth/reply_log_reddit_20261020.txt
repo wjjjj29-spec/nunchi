@@ -1,0 +1,7 @@
+# Reddit night session 2026-10-20 21:xx KST (u/hellonunchi = Wonz · Seoul)
+- r/koreatravel 1xa8vtj Myeongdong kitchenware/home store → https://www.reddit.com/r/koreatravel/comments/1xa8vtj/searching_for_a_home_store_in_myeongdong/phvmcql/
+- r/KoreaTravelAdvice 1xan2ki anniversary dinner restaurants → https://www.reddit.com/r/KoreaTravelAdvice/comments/1xan2ki/romantic_restaurant_recommendations_to_celebrate/phvocvo/
+- r/KoreaTravelAdvice 1x9yq8e solo trip late November → https://www.reddit.com/r/KoreaTravelAdvice/comments/1x9yq8e/traveling_solo_by_the_end_of_november_any_tips/phvshq3/
+- r/koreatravel 1xahija 12h layover 8am-8pm → https://www.reddit.com/r/koreatravel/comments/1xahija/i_have_a_12_hour_layover_in_seoul_what_can_i_do/phvv4ml/
+- r/KoreaTravelAdvice 1xag7jo hotel alternatives to Travelodge Euljiro → https://www.reddit.com/r/KoreaTravelAdvice/comments/1xag7jo/seoul_hotel_recommendations/phvx5sj/
+note: 계정이 속도 제한(RATELIMIT) 걸림 → 댓글 간 7분 이상 필요. UI 게시가 실패하면 Reddit 초안이 남아 다음 게시 때 문장이 두 번 들어감(1xan2ki 중복 → editusertext로 수정). 이후 /api/comment(modhash) 직접 호출로 게시 — 더 안정적.

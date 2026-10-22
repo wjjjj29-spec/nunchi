@@ -271,7 +271,7 @@ function similar(n) {
 
 // ---------------------------------------------------------------- shell
 const STYLE = `<style>.nm-syl{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin:14px 0}.nm-syl .stat{text-align:center}.nm-syl .v,.nm-ko{font-family:"Noto Sans KR",var(--sans);font-weight:700}.nm-j{font-size:15px;color:var(--ink-2)}.stat .v.nm-ko{font-size:22px;overflow-wrap:anywhere}.hangul-big{overflow-wrap:anywhere}a.chip{text-decoration:none;display:inline-block}.nm-list{list-style:none;padding:0;margin:10px 0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px 14px}.nm-ul{padding-left:20px}.nm-ul li{margin:6px 0}</style>`;
-function head({ title, desc, url, ogTitle, ogDesc, ld }) {
+function head({ title, desc, url, ogTitle, ogDesc, ld, noindex }) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -279,15 +279,14 @@ function head({ title, desc, url, ogTitle, ogDesc, ld }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+${noindex ? '<meta name="robots" content="noindex,follow">\n' : ""}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/nunchi.css"><meta property="og:url" content="${url}"><meta property="og:type" content="website">
 <meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <meta property="og:title" content="${esc(ogTitle)}"><meta property="og:description" content="${esc(ogDesc)}"><meta property="og:image" content="${ORIGIN}/img/name-hangul.jpg">
 ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`).join("\n")}
 ${STYLE}
-<meta name="google-adsense-account" content="ca-pub-8862930962343176"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8862930962343176" crossorigin="anonymous"></script>
-<meta name="apple-itunes-app" content="app-id=6816771391"></head>
+${noindex ? "" : `<meta name="google-adsense-account" content="ca-pub-8862930962343176"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8862930962343176" crossorigin="anonymous"></script>\n`}<meta name="apple-itunes-app" content="app-id=6816771391"></head>
 <body data-root="/" data-room="love">
 <main class="wrap narrow">
 `;
@@ -417,7 +416,7 @@ ${faq.map(([q, a]) => `    <details><summary>${esc(q)}</summary><p>${esc(a)}</p>
   <p class="note">Spellings follow the National Institute of Korean Language loanword rules and common Korean media usage. Last checked: ${CHECKED}.</p>
 `;
   return head({ title: `${n.name} in Korean: ${H} — how to write and say it | Nunchi`, desc, url,
-    ogTitle: `${n.name} in Korean: ${H}`, ogDesc: `${n.name} is ${H} (${n.say}) in Korean. Letter by letter, how to say it, and what friends would call you.`, ld }) + body + FOOT;
+    ogTitle: `${n.name} in Korean: ${H}`, ogDesc: `${n.name} is ${H} (${n.say}) in Korean. Letter by letter, how to say it, and what friends would call you.`, ld, noindex: true }) + body + FOOT;
 }
 
 // ---------------------------------------------------------------- hub
@@ -480,8 +479,8 @@ fs.writeFileSync(path.join(OUT, "index.html"), hub());
 // sitemap: drop old /names/ entries, append fresh ones
 const smPath = path.join(SITE, "sitemap.xml");
 let sm = fs.readFileSync(smPath, "utf8").split("\n").filter(l => !l.includes(`${ORIGIN}/names/`)).join("\n");
-const urls = [`  <url><loc>${ORIGIN}/names/</loc><lastmod>${LASTMOD}</lastmod><priority>0.8</priority></url>`,
-  ...NAMES.map(n => `  <url><loc>${ORIGIN}/names/${n.slug}/</loc><lastmod>${LASTMOD}</lastmod><priority>0.6</priority></url>`)];
+// 이름별 페이지는 noindex(같은 틀 575개 → 애드센스 저가치 위험), 사이트맵엔 허브만
+const urls = [`  <url><loc>${ORIGIN}/names/</loc><lastmod>${LASTMOD}</lastmod><priority>0.8</priority></url>`];
 sm = sm.replace("</urlset>", urls.join("\n") + "\n</urlset>");
 fs.writeFileSync(smPath, sm);
 

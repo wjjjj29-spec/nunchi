@@ -43,7 +43,7 @@ const head = ({ title, desc, url, ld, room, img, noindex }) => `<!doctype html>
 <meta name="theme-color" content="#f6f1e7"><link rel="icon" href="/img/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <meta property="og:title" content="${esc(title.replace(/ \| Nunchi$/, ""))}"><meta property="og:description" content="${esc(desc)}"><meta property="og:image" content="${ORIGIN}/img/${img}">
 ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`).join("\n")}
-<meta name="google-adsense-account" content="ca-pub-8862930962343176"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8862930962343176" crossorigin="anonymous"></script>
+${noindex ? "" : `<meta name="google-adsense-account" content="ca-pub-8862930962343176"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8862930962343176" crossorigin="anonymous"></script>`}
 <meta name="apple-itunes-app" content="app-id=6816771391">
 </head>
 <body data-root="/" data-room="${room}">
@@ -132,8 +132,8 @@ ${sameYear.length ? `
     <a class="card" href="/idols/"><span class="tag">Love</span><b>All K-pop idol ages</b><span>${IDOLS.length} idols by group, eldest to maknae.</span></a>
   </div></section>
 `;
-  write(`idols/${m.slug}`, head({ title: `${m.name} Age ${Y}: Korean Age, Birthday & Zodiac${solo ? "" : ` (${m.group})`} | Nunchi`, desc, url, ld, room: "love", img: "idol-age.jpg" }) + body + FOOT(LIVE));
-  urls.push(`idols/${m.slug}/`);
+  write(`idols/${m.slug}`, head({ title: `${m.name} Age ${Y}: Korean Age, Birthday & Zodiac${solo ? "" : ` (${m.group})`} | Nunchi`, desc, url, ld, room: "love", img: "idol-age.jpg", noindex: true }) + body + FOOT(LIVE));
+  // noindex: 같은 틀로 만든 페이지라 애드센스 저가치 위험, 사이트맵엔 허브만
 }
 // hub
 {

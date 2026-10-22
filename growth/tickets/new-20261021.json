@@ -1,0 +1,423 @@
+[
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214127",
+  "title": "#1 EXEX BEGINS",
+  "place": "LDK 한남",
+  "region": "서울",
+  "period": "2026.11.07 - 2026.11.07",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214127",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610210842311d6f40ba-3fd3-477b-9812-61135f0e13af.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214153",
+  "title": "현성 소극장 콘서트 ‘눈이 부시게’",
+  "place": "퍼플노이즈 라이브홀",
+  "region": "서울",
+  "period": "2026.11.08 - 2026.11.08",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214153",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261020153806a0020555-fe33-4222-8e18-267170bbd10b.jpg"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13106",
+  "title": "현성 소극장 콘서트 ‘눈이 부시게’",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21(수) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13106",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Hyunseong"
+   ],
+   "title_en": "Hyunseong Small Theater Concert 'Donghaeng'",
+   "event_type": "concert",
+   "venue_en": "Purple Noise Live Hall",
+   "city_en": "",
+   "show_dates_en": "Nov 8, 2026",
+   "price_en": "₩88,000",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-21T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information provided regarding ticket purchase for foreigners, global sale sites, or specific verification requirements (e.g., Korean ID, phone number, Melon subscription)."
+   },
+   "need_to_know_en": [
+    "All ages admitted",
+    "Running time: 110 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214138",
+  "title": "불나방스타쏘세지클럽 콘서트 〈모여봐요 괴물의 농장〉",
+  "place": "세종문화회관",
+  "region": "서울",
+  "period": "2026.12.23 - 2026.12.23",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214138",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610211145389a5daffb-44fb-4970-ac6a-5a1e9f5be73c.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214144",
+  "title": "〈Biuret 4 Seasons : Winter〉",
+  "place": "롤링홀",
+  "region": "서울",
+  "period": "2026.11.27 - 2026.11.27",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214144",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610191629300db19818-4c2c-42f4-b3d5-b70db5c2a4a5.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214151",
+  "title": "백현진 연말 콘서트 〈건강!〉",
+  "place": "세종문화회관",
+  "region": "서울",
+  "period": "2026.12.26 - 2026.12.27",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214151",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261021112823c1cd382e-c30d-4a58-b67b-1fc4a7fa5ed6.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214040",
+  "title": "RUNIDRE 1st OneMan Tour 「Let’s Live Like RUNIDRE! IN SEOUL」",
+  "place": "큐브컨벤션센터",
+  "region": "서울",
+  "period": "2027.01.16 - 2027.01.16",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214040",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261020103925944b62a2-15bf-4b7a-88c7-eee19106b082.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214150",
+  "title": "FEELDOG SOLO LIVE — THE TRACE",
+  "place": "서보아트스페이스 보이드홀",
+  "region": "서울",
+  "period": "2026.11.21 - 2026.11.21",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214150",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610201349524ca4ebf4-e4a9-40c5-9209-15fbdbfe1a80.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214145",
+  "title": "김뮤지엄 단독 콘서트 2026, Dear Yesterday",
+  "place": "KT&G 상상마당 홍대 라이브홀",
+  "region": "서울",
+  "period": "2026.11.21 - 2026.11.21",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214145",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261019172736eebb793c-a9d9-4e3e-ba7b-25be5a0475b1.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214148",
+  "title": "경이로운 금요일 GROOVE WEEK: BEYOND THE GROOVE",
+  "place": "우무지",
+  "region": "서울",
+  "period": "2026.11.13 - 2026.11.13",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214148",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/2026102013193910315708-a1bd-4ea9-8637-7a387b7396f4.png"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214149",
+  "title": "2026 ONE HOUR 11월",
+  "place": "KT&G 상상마당 부산",
+  "region": "부산",
+  "period": "2026.11.06 - 2026.11.27",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214149",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610211637225c0178a6-e68b-4aa3-b3cc-6c1c88c2ca84.png"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13112",
+  "title": "경이로운 금요일 GROOVE WEEK: BEYOND THE GROOVE",
+  "place": "",
+  "region": "",
+  "period": "2026.10.22(목) 18:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13112",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Nawoo",
+    "she dept.",
+    "wakeupfinn"
+   ],
+   "title_en": "Groove Week: Beyond the Groove",
+   "event_type": "concert",
+   "venue_en": "Umuji",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 13, 2026 · 7 PM",
+   "price_en": "₩30,000 (about $22) pre-sale, ₩35,000 (about $26) at door",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-22T18:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Buying tickets on Melon-open often requires a Korean phone number for verification, making it difficult for those abroad without one. No global sale site is mentioned."
+   },
+   "need_to_know_en": [
+    "All ages welcome.",
+    "Running time: 140 minutes.",
+    "Youth discount (40%) for elementary, middle, high school students (limit 4 tickets per person)."
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13111",
+  "title": "FEELDOG SOLO LIVE — THE TRACE",
+  "place": "",
+  "region": "",
+  "period": "2026.10.22(목) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13111",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "FEELDOG"
+   ],
+   "title_en": "FEELDOG SOLO LIVE — THE TRACE",
+   "event_type": "concert",
+   "venue_en": "Seobo Art Space Void Hall",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 21, 2026 · 7 PM",
+   "price_en": "₩66,000 (about $48) standing",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-22T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information about global sales or specific foreigner restrictions is provided. Korean phone verification might be required for general sale."
+   },
+   "need_to_know_en": [
+    "Age rating: 12+",
+    "Running time: 90 minutes",
+    "Standing tickets only"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13081",
+  "title": "먼데이프로젝트 시즌9 [김소연 단독 콘서트 ‘After winter’] with 미러볼뮤직",
+  "place": "",
+  "region": "",
+  "period": "2026.10.23(금) 18:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13081",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Kim Soyeon"
+   ],
+   "title_en": "Monday Project Season 9 [Kim Soyeon Solo Concert ‘After winter’]",
+   "event_type": "concert",
+   "venue_en": "Salon Moonbow",
+   "city_en": "",
+   "show_dates_en": "Nov 12, 2026 · 8 PM",
+   "price_en": "₩55,000 reserved seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-23T18:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information provided regarding global sale sites or restrictions for international buyers without a Korean phone number or ID."
+   },
+   "need_to_know_en": [
+    "All ages admitted",
+    "Running time: 90 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13110",
+  "title": "RUNIDRE 1st OneMan Tour 「Let’s Live Like RUNIDRE! IN SEOUL」",
+  "place": "",
+  "region": "",
+  "period": "2026.10.23(금) 18:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13110",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "RUNIDRE"
+   ],
+   "title_en": "RUNIDRE 1st OneMan Tour 「Let’s Live Like RUNIDRE! IN SEOUL」",
+   "event_type": "concert",
+   "venue_en": "Cube Convention Center",
+   "city_en": "Seoul",
+   "show_dates_en": "Jan 16, 2027 · 3 PM",
+   "price_en": "₩254,000 (Happy Clover), ₩176,000 (Smile Clover), ₩66,000 (Enjoy Clover)",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-23T18:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "The listing does not specify if a Korean phone number or ID is required for purchase, nor does it mention a global sale site."
+   },
+   "need_to_know_en": [
+    "Age rating: 36 months and older",
+    "Running time: 80 minutes",
+    "Special event with members after the concert"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13086",
+  "title": "sui sui duck(스이스이덕) Live in Seoul",
+  "place": "",
+  "region": "",
+  "period": "2026.10.23(금) 18:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13086",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "sui sui duck"
+   ],
+   "title_en": "sui sui duck Live in Seoul",
+   "event_type": "concert",
+   "venue_en": "Hongdae Belle (formerly Veloso)",
+   "city_en": "Seoul",
+   "show_dates_en": "Dec 20, 2026 · 7 PM (90 min)",
+   "price_en": "₩44,000",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-23T18:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No specific information provided regarding ticket purchase for foreigners or global sale sites. Standard Korean ticketing sites often require Korean phone verification or ID."
+   },
+   "need_to_know_en": [
+    "All ages admitted"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13114",
+  "title": "2026 ONE HOUR 11월",
+  "place": "",
+  "region": "",
+  "period": "2026.10.23(금) 18:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13114",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Gil Gi-pan",
+    "Who Cares",
+    "Yajasu",
+    "Yebit"
+   ],
+   "title_en": "2026 ONE HOUR November",
+   "event_type": "concert",
+   "venue_en": "KT&G Sangsangmadang Busan, Live Hall",
+   "city_en": "Busan",
+   "show_dates_en": "Nov 6, 2026 · 7–8 PM; Nov 20, 2026 · 7–9 PM; Nov 27, 2026 · 7–8 PM",
+   "price_en": "₩10,000 (about $7) general admission",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-23T18:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No specific information about global sales or foreign purchase restrictions is provided. It is unknown if a Korean phone number or ID is required."
+   },
+   "need_to_know_en": [
+    "Age rating: 15+",
+    "Running time: 60–120 minutes (varies by show)"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13054",
+  "title": "모브닝 10주년 콘서트 〈10번의 사계〉",
+  "place": "",
+  "region": "",
+  "period": "2026.10.23(금) 19:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13054",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "MOVNING"
+   ],
+   "title_en": "MOVNING 10th Anniversary Concert <Ten Seasons>",
+   "event_type": "concert",
+   "venue_en": "Gureumare Small Theater",
+   "city_en": "",
+   "show_dates_en": "Nov 28, 2026 · 7 PM",
+   "price_en": "₩88,000 reserved seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-23T19:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information provided regarding ticket purchase for foreigners or global sale sites."
+   },
+   "need_to_know_en": [
+    "Age rating: 8 years and older",
+    "Running time: approx. 120 minutes"
+   ]
+  }
+ }
+]

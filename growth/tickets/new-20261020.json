@@ -139,5 +139,81 @@
   "period": "2026.11.15 - 2026.11.15",
   "url": "https://ticket.melon.com/performance/index.htm?prodId=214152",
   "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261020144819b6e48802-982f-4bb9-b1a7-eb94693ce800.jpg"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13104",
+  "title": "나상현 단독 콘서트 『보통의 나날』",
+  "place": "",
+  "region": "",
+  "period": "2026.10.22(목) 19:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13104",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Na Sang-hyun"
+   ],
+   "title_en": "Na Sang-hyun Solo Concert 『Ordinary Days』",
+   "event_type": "concert",
+   "venue_en": "Seobo Art Space Void Hall",
+   "city_en": "",
+   "show_dates_en": "Nov 14, 2026 · 7 PM, Nov 15, 2026 · 6 PM",
+   "price_en": "₩88,000 reserved seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-22T19:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information available regarding international purchasing options or requirements for Korean ID/phone verification."
+   },
+   "need_to_know_en": [
+    "Age rating: 8 years and older"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13074",
+  "title": "Vel.R 기획공연:지베뉴xNOBACK ‘RUN!’",
+  "place": "",
+  "region": "",
+  "period": "2026.10.22(목) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13074",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Zivenew",
+    "NOBACK"
+   ],
+   "title_en": "Vel.R Project: Zivenew x NOBACK 'RUN!'",
+   "event_type": "concert",
+   "venue_en": "Vel.R",
+   "city_en": "",
+   "show_dates_en": "Nov 19, 2026",
+   "price_en": "₩33,000 (pre-sale), ₩44,000 (at door)",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-22T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Buying tickets on Melon usually requires a Korean phone number for verification. No global sale site is mentioned."
+   },
+   "need_to_know_en": [
+    "All ages admitted",
+    "Running time: 120 minutes"
+   ]
+  }
  }
 ]

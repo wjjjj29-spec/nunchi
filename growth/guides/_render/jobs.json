@@ -336,6 +336,48 @@
   "h": 630
  },
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-subway-guide-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-subway-guide/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-subway-guide-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-subway-guide/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-subway-guide-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-subway-guide/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-subway-guide-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-subway-guide/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-subway-guide-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-subway-guide/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-subway-guide-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-subway-guide/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-subway-guide-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-subway-guide/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/luggage-storage-seoul-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/luggage-storage-seoul/cards/01.jpg",
   "w": 1080,

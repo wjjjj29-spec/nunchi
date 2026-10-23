@@ -9,5 +9,314 @@
   "period": "2026.11.28 - 2026.11.29",
   "url": "https://ticket.melon.com/performance/index.htm?prodId=214159",
   "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261021170339eee1ce02-e340-4e73-826e-b5d05fb899d7.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214160",
+  "title": "김동완의 뮤지컬 콘서트",
+  "place": "웨스트브릿지",
+  "region": "서울",
+  "period": "2026.10.30 - 2026.12.11",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214160",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610221405000faf3cb3-1fa8-4647-8503-0710dfaedbaf.png"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13088",
+  "title": "TONE STUDIO LIVE 〈이태훈〉 (Guest. omm.. &amp; 김예찬)",
+  "place": "",
+  "region": "",
+  "period": "2026.10.23(금) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13088",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Taehun",
+    "omm..",
+    "Kim Yechan"
+   ],
+   "title_en": "TONE STUDIO LIVE <Taehun> (Guest. omm.. & Kim Yechan)",
+   "event_type": "concert",
+   "venue_en": "Tone Studio Seoul",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 14, 2026 · 7 PM",
+   "price_en": "₩44,000 (about $32) free seating",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-23T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Buying tickets on Melon usually requires a Korean phone number for verification, making it difficult for foreigners without one."
+   },
+   "need_to_know_en": [
+    "Age rating: 8 years and older",
+    "Free seating, entry by reservation number order",
+    "Running time: 90 minutes"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13119",
+  "title": "김동완의 뮤지컬 콘서트",
+  "place": "",
+  "region": "",
+  "period": "2026.10.21",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13119",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Kim Dong-wan"
+   ],
+   "title_en": "Kim Dong-wan's Musical Concert",
+   "event_type": "concert",
+   "venue_en": "Hongdae West Bridge Live Hall",
+   "city_en": "Seoul",
+   "show_dates_en": "Oct 30, Nov 6, 13, 27, Dec 11, 2026 · 7 PM (Fridays)",
+   "price_en": "R ₩160,000 (about $118), S ₩120,000 (about $89). Early bird discount available: R ₩130,000 (about $96), S ₩100,000 (about $74).",
+   "opens": [
+    {
+     "label_en": "General sale for Oct 30 show (Early bird discount available until Oct 25 8:59 PM KST)",
+     "kst_iso": "2026-10-23T21:00:00+09:00",
+     "who_en": "Everyone"
+    },
+    {
+     "label_en": "General sale for Nov 6 show (Early bird discount available until Nov 2 2:59 PM KST)",
+     "kst_iso": "2026-10-30T15:00:00+09:00",
+     "who_en": "Everyone"
+    },
+    {
+     "label_en": "General sale for Nov 13 show (Early bird discount available until Nov 9 2:59 PM KST)",
+     "kst_iso": "2026-11-06T15:00:00+09:00",
+     "who_en": "Everyone"
+    },
+    {
+     "label_en": "General sale for Nov 27 show (Early bird discount available until Nov 23 2:59 PM KST)",
+     "kst_iso": "2026-11-20T15:00:00+09:00",
+     "who_en": "Everyone"
+    },
+    {
+     "label_en": "General sale for Dec 11 show (Early bird discount available until Dec 7 2:59 PM KST)",
+     "kst_iso": "2026-12-04T15:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Melon Ticket usually requires Korean phone verification or i-PIN, making it difficult for foreigners without a Korean phone number to purchase tickets. No global sale site is mentioned."
+   },
+   "need_to_know_en": [
+    "Ages 8+ only (preschool children not allowed).",
+    "Ticket limit: 4 tickets per person per show (max 20 tickets total across all 5 shows).",
+    "Early bird discount is not stackable with other discounts."
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13101",
+  "title": "김은미 정규 2집 앨범 음악회 &amp; 토크",
+  "place": "",
+  "region": "",
+  "period": "2026.10.26(월) 12:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13101",
+  "poster": "",
+  "info": {
+   "kpop": false,
+   "artists": [
+    "Eunmi Kim"
+   ],
+   "title_en": "Eunmi Kim 2nd Album Concert & Talk",
+   "event_type": "concert",
+   "venue_en": "Infinity Music",
+   "city_en": "",
+   "show_dates_en": "Nov 29, 2026 · 5 PM",
+   "price_en": "₩33,000 (about $24) reserved seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-26T12:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Buying tickets on Melon usually requires a Korean phone number for verification. No global sale site is mentioned."
+   },
+   "need_to_know_en": [
+    "All ages admitted.",
+    "Running time: 80 minutes."
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13075",
+  "title": "Break The Loop",
+  "place": "",
+  "region": "",
+  "period": "2026.10.26(월) 19:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13075",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Vincentblue"
+   ],
+   "title_en": "Break The Loop",
+   "event_type": "concert",
+   "venue_en": "Vel.R",
+   "city_en": "",
+   "show_dates_en": "Nov 22, 2026 · 5 PM",
+   "price_en": "₩77,000 (mobile ticket)",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-26T19:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "No global sale site mentioned. Standard Korean ticketing platforms often require Korean phone verification, which may make purchasing difficult for those without a Korean phone number. Mobile tickets are required."
+   },
+   "need_to_know_en": [
+    "All ages admitted",
+    "Running time: 100 minutes",
+    "Mobile tickets only"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13113",
+  "title": "김뮤지엄 단독 콘서트 2026 〈FROM ZERO.〉",
+  "place": "",
+  "region": "",
+  "period": "2026.10.26(월) 19:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13113",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "KIMMUSEUM"
+   ],
+   "title_en": "KIMMUSEUM Solo Concert 2026 <FROM ZERO.>",
+   "event_type": "concert",
+   "venue_en": "KT&G Sangsangmadang Hongdae Live Hall",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 21, 2026 · 7 PM",
+   "price_en": "₩66,000",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-26T19:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "Tickets are sold via Melon Ticket, which typically requires a Korean phone number for verification."
+   },
+   "need_to_know_en": [
+    "All ages admitted"
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13091",
+  "title": "크르르 단독 콘서트 - 지나는 마음에게",
+  "place": "",
+  "region": "",
+  "period": "2026.10.26(월) 20:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13091",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Keureureu"
+   ],
+   "title_en": "Keureureu Solo Concert - To the Passing Heart",
+   "event_type": "concert",
+   "venue_en": "Gureumarae Small Theater",
+   "city_en": "",
+   "show_dates_en": "Nov 21, 2026 · 7 PM",
+   "price_en": "₩88,000 reserved seats",
+   "opens": [
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-26T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "unknown",
+    "note_en": "No information provided regarding global sale or purchase restrictions for foreigners."
+   },
+   "need_to_know_en": [
+    "Age rating: 12+",
+    "Running time: 120 minutes",
+    "All seats are reserved."
+   ]
+  }
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13084",
+  "title": "Billlie 5th Anniversary Fan Concert 〈The Heist Squad〉",
+  "place": "",
+  "region": "",
+  "period": "2026.10.16",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13084",
+  "poster": "",
+  "info": {
+   "kpop": true,
+   "artists": [
+    "Billlie"
+   ],
+   "title_en": "Billlie 5th Anniversary Fan Concert 〈The Heist Squad〉",
+   "event_type": "fan meeting",
+   "venue_en": "Sogang University Mary Hall Grand Theater",
+   "city_en": "Seoul",
+   "show_dates_en": "Nov 15, 2026 · 7 PM",
+   "price_en": "₩121,000 reserved seats",
+   "opens": [
+    {
+     "label_en": "Fan club pre-sale",
+     "kst_iso": "2026-10-26T20:00:00+09:00",
+     "who_en": "Fan club members who completed authentication by Oct 27, 2026"
+    },
+    {
+     "label_en": "General sale",
+     "kst_iso": "2026-10-29T20:00:00+09:00",
+     "who_en": "Everyone"
+    }
+   ],
+   "foreigners": {
+    "verdict": "hard",
+    "note_en": "No global sale site is mentioned. Fan club pre-sale requires prior authentication, which often involves a Korean phone number or specific fan club membership. General sale via the local ticketing site typically requires Korean phone verification for account creation."
+   },
+   "need_to_know_en": [
+    "Age rating: 8 years and older (preschool children not allowed).",
+    "Ticket limit: 2 tickets per person (including 1 ticket for fan club pre-sale).",
+    "Exceeding the ticket limit may result in cancellation without prior notice, and such tickets cannot be picked up or used for entry.",
+    "Fan club pre-sale requires prior authentication during the specified period."
+   ]
+  }
  }
 ]

@@ -8,8 +8,11 @@ const TMP = path.join(SRC, "_render"), ORIGIN = "https://hellonunchi.com", VER =
 const ROOM = { visit: ["Visit", "#2c5f8a", "#6aa3d6"], live: ["Live", "#c98f1c", "#e0b04a"], love: ["Love", "#c03a2b", "#e26a5a"], learn: ["Learn", "#3e7c59", "#6fb08a"] };
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const strip = s => String(s).replace(/<[^>]+>/g, "");
-const guides = fs.readdirSync(SRC).filter(f => f.endsWith(".json")).map(f => JSON.parse(fs.readFileSync(path.join(SRC, f), "utf8")))
-  .sort((a, b) => (a.order || 0) - (b.order || 0));
+// published 날짜(KST)가 아직 안 된 가이드는 빌드에서 뺀다 → 매일 빌드·배포하면 날짜대로 하나씩 공개
+const TODAY = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+const all = fs.readdirSync(SRC).filter(f => f.endsWith(".json")).map(f => JSON.parse(fs.readFileSync(path.join(SRC, f), "utf8")));
+const guides = all.filter(g => !g.published || g.published <= TODAY).sort((a, b) => (a.order || 0) - (b.order || 0));
+const waiting = all.filter(g => g.published > TODAY).map(g => `${g.slug} (${g.published})`);
 
 // ---------------------------------------------------------------- card news (1080x1350)
 const FONTS = `<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">`;
@@ -213,5 +216,13 @@ fs.writeFileSync(HOME, home.replace(/<!--guides-->[\s\S]*?<!--\/guides-->/, `<!-
   <div class="g-grid">${guides.slice(0, 3).map(tile).join("")}</div>
   <!--/guides-->`));
 fs.writeFileSync(path.join(TMP, "jobs.json"), JSON.stringify(jobs, null, 1));
+// 사이트맵: 공개된 가이드가 빠져 있으면 추가
+{
+  const smPath = path.join(SITE, "sitemap.xml"); let sm = fs.readFileSync(smPath, "utf8");
+  const add = guides.filter(g => !sm.includes(`${ORIGIN}/guide/${g.slug}/<`))
+    .map(g => `  <url><loc>${ORIGIN}/guide/${g.slug}/</loc><lastmod>${g.updated || g.published}</lastmod><priority>0.8</priority></url>`);
+  if (add.length) fs.writeFileSync(smPath, sm.replace("</urlset>", add.join("\n") + "\n</urlset>"));
+  console.log(`guides: ${guides.length} built, sitemap +${add.length}${waiting.length ? `, waiting: ${waiting.join(", ")}` : ""}`);
+}
 console.log(`guides: ${guides.length} pages + hub`);
 if (process.argv.includes("--render")) execFileSync("node", [path.join(ROOT, "render.js"), path.join(TMP, "jobs.json")], { stdio: "inherit" });

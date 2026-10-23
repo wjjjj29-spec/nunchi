@@ -1,0 +1,115 @@
+[
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214162",
+  "title": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다 (대구)",
+  "place": "대덕문화전당 드림홀",
+  "region": "대구",
+  "period": "2026.12.25 - 2026.12.25",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214162",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/202610221022496e91dfdc-2904-4930-826e-1fc263e28411.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214164",
+  "title": "친구가 되자 시즌3 피날레 : 베스트 프렌즈 포에버 페스티벌(BFF) 2026",
+  "place": "KT&G 상상마당 홍대 라이브홀",
+  "region": "서울",
+  "period": "2026.11.29 - 2026.11.29",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214164",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261023115559e9f127b2-c875-4b74-be94-02511e6810d4.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214166",
+  "title": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다 (부산)",
+  "place": "금정문화회관",
+  "region": "부산",
+  "period": "2026.12.26 - 2026.12.26",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214166",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261022145700099c664d-c0d0-4d58-9bff-d6417f2f80a8.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214168",
+  "title": "2026 liveworkspace 양림인디 ‘이제’ vol.08 gwangju",
+  "place": "의담재",
+  "region": "전남",
+  "period": "2026.11.07 - 2026.11.07",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214168",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/2026102217344521ac38e3-9522-4dc6-82d3-7bf982dd7642.jpg"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13121",
+  "title": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다 (대구)",
+  "place": "",
+  "region": "",
+  "period": "2026.10.26(월) 12:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13121",
+  "poster": "",
+  "info": null
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13122",
+  "title": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다 (부산)",
+  "place": "",
+  "region": "",
+  "period": "2026.10.26(월) 12:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13122",
+  "poster": "",
+  "info": null
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214161",
+  "title": "2026 hrtz.wav 1st CONNECT!ON 〈TUNE IN〉",
+  "place": "장충체육관",
+  "region": "서울",
+  "period": "2026.11.28 - 2026.11.28",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214161",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261021135600ca2970e3-a3be-4e01-b679-729ccd4623cc.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214163",
+  "title": "숲세권 라이브 : 스티 단독 공연 〈프레스티지 포레스티 1단지〉",
+  "place": "숲세권 라이브 카인드스퀘어점",
+  "region": "서울",
+  "period": "2026.11.21 - 2026.11.21",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214163",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261022141216afe33c3a-0f0f-4f8e-9fce-e7955f95305d.jpg"
+ },
+ {
+  "source": "melon",
+  "type": "concert",
+  "id": "melon:214169",
+  "title": "프라이빗컬렉션 : 시인을 위하여 단독 콘서트",
+  "place": "우무지",
+  "region": "서울",
+  "period": "2026.12.06 - 2026.12.06",
+  "url": "https://ticket.melon.com/performance/index.htm?prodId=214169",
+  "poster": "https://ticket.melon.com/resource/image/upload/product/2026/10/20261022181334e2dd73cf-8d87-40e9-9036-36ebdb0c87f0.png"
+ },
+ {
+  "source": "melon-open",
+  "type": "concert",
+  "id": "melonopen:13128",
+  "title": "Merry Coucou-mas&#039; by Madame Coucou",
+  "place": "",
+  "region": "",
+  "period": "2026.10.26(월) 11:00",
+  "url": "https://ticket.melon.com/csoon/detail.htm?csoonId=13128",
+  "poster": "",
+  "info": null
+ }
+]

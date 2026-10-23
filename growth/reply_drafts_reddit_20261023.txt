@@ -1,0 +1,17 @@
+# Reddit 답글 초안 2026-10-23 (미게시: 자동 실행에서 게시 권한 거부됨)
+# 게시: node reddit_comment.js <reddit탭id> <postId> "<text>"  (간격 넉넉히, 지난번 레이트리밋 주의)
+
+[r/koreatravel 1xcm9x6 KakaoTalk 인증 실패]
+Korean here. That screen is most likely the SMS verification step, where KakaoTalk wants you to send a text from the phone number on your account, so it fails whenever the line in your phone can't send SMS. Data-only eSIMs and a lot of tourist SIM/eSIM plans can't send texts, and your home SIM can also fail if roaming SMS is off on the carrier side. If you have a line that can text (home SIM with roaming SMS on, or a Korean SIM with a real number), switch to it just for this step and try again. If it still won't go through, the Kakao customer center contact form on their website is the only way I know to get the account unstuck.
+
+[r/seoul 1xd44h2 급하게 싼 캐리어]
+Korean here. If you want it fast and cheap, big hypermarkets like Emart, Homeplus or Lotte Mart have a luggage section with basic hard-shell suitcases, usually much cheaper than department stores. In Korean a suitcase is just called 캐리어 (kae-ri-eo), so you can ask staff "캐리어 어디 있어요?" and they'll point you there. Namdaemun Market also has bag shops where you can bargain a bit, but check the wheels and zipper before paying since that's what usually breaks first. If you're near Seoul Station, the Lotte Mart there is open late and easy to reach.
+
+[r/koreatravel 1xcvv6r 부산 주말 폭우]
+Korean here. Since you're at Ananti Cove in Gijang, a rainy weekend there isn't the worst, the resort has its own spa plus an indoor bookstore and shops, and Lotte Mall Dongbusan is a short taxi away. In the city, Shinsegae Centum City with Spaland inside is the classic rainy-day combo, and the Busan Museum of Art and Busan Cinema Center are right next to it. If the rain comes with strong typhoon wind, skip the coastal spots like Haedong Yonggungsa and the cliff walkways until it calms down, they can close for safety anyway.
+
+[r/seoul 1xceagc 작은 목공예품 구매처]
+Korean here. For small wooden things like boxes, trays or carved pieces, the easiest stop from Myeongdong is Insadong, walk the main street and go into Ssamziegil, which is a building full of small craft shops. Searching 목공예 (woodcraft) or 공예품 (crafts) on Naver Map will also show workshops and craft shops around wherever you are. The museum shops at the National Folk Museum (inside Gyeongbokgung) and the National Museum of Korea carry nice wooden items too and are easy by subway. Handmade and factory pieces can look similar, so look for a maker's tag if you want the handmade ones.
+
+[r/seoul 1xcfx68 중고 맥북 당근]
+Korean here. On 당근, check the seller's manner temperature (매너온도) and trade history, and meet somewhere public like a subway station or cafe. Before paying, have them sign out of iCloud and erase the Mac in front of you, then check the battery cycle count and condition in System Information and test the keyboard, ports, speakers and screen. You can also ask for the serial number beforehand and check it on Apple's coverage page to confirm the model and year match the listing. If anything feels rushed or they refuse the iCloud check, just walk away, there are always more listings.

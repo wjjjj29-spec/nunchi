@@ -1,0 +1,8 @@
+# 2026-10-24 Reddit (u/hellonunchi) — posted via /api/comment from logged-in tab (UI editor wouldn't focus: tab hidden)
+- r/koreatravel 1xe3q04 November hiking in Seoul (fall trail closures, crampons) → https://www.reddit.com/r/koreatravel/comments/1xe3q04/november_hiking_in_seoul/19rkyy8aoqhgg/
+- r/koreatravel 1xe0i1s lost hat on 5005 express bus → https://www.reddit.com/r/koreatravel/comments/1xe0i1s/lost_hat_in_express_bus/19rkzeve01b0l/
+- r/seoul 1xdy0hl affordable men's haircuts → https://www.reddit.com/r/seoul/comments/1xdy0hl/cool_affordable_mens_haircuts_in_seoul/19rl0669g80ip/
+- r/seoul 1xdxt7r lost backpack on line 9 → https://www.reddit.com/r/seoul/comments/1xdxt7r/lost_backpack/19rl0nuyypmhx/
+- r/koreatravel 1xe6g6w first trip Busan→Seoul in late Dec → https://www.reddit.com/r/koreatravel/comments/1xe6g6w/going_to_korea_blind/19rl15jow7qao/
+- r/Living_in_Korea 1xdzdu9 first NHIS bill not arrived → https://www.reddit.com/r/Living_in_Korea/comments/1xdzdu9/first_nhis_bill_hasnt_arrived_yet_payment/19rl1n8er7eo2/
+# note: ratelimit at ~90s gaps (karma 11); ~11min gaps worked. API path rejects cleanly, no doubled drafts.

@@ -1,0 +1,7 @@
+# 2026-10-25 Reddit (u/hellonunchi) — /api/comment from logged-in tab (UI editor not focusing)
+- r/KoreaTravelAdvice 1xedlrt Seoul at New Year (Bosingak bell, sunrise, Jan 1 holiday) → https://www.reddit.com/r/KoreaTravelAdvice/comments/1xedlrt/traveling_for_new_year/19rmr550e9ztu/
+- r/Living_in_Korea 1xeqi0w drain flies in officetel (hidden drains, tape test, traps) → https://www.reddit.com/r/Living_in_Korea/comments/1xeqi0w/moth_fliesdrain_flies/19rmro0w8cbnp/
+- r/KoreaTravelAdvice 1xewnlr Hanwoo BBQ near Myeongdong/Seoul Station (origin label, cuts, lunch specials) → https://www.reddit.com/r/KoreaTravelAdvice/comments/1xewnlr/hanwoo_korean_bbq_recommendations_in_seoul/19rms5q7f7khu/
+- r/Living_in_Korea 1xe4dhs Coupang without ARC (Korean number SMS, road-name address, building entrance code) → https://www.reddit.com/r/Living_in_Korea/comments/1xe4dhs/foreigners_without_an_arc_yet_how_did_you_order/19rmsnfkyzvlv/
+- r/KoreaTravelAdvice 1xeoisf Eobi Ice Valley + Alpaca World tours (freeze timing, Myrealtrip/KKday, private tour) → https://www.reddit.com/r/KoreaTravelAdvice/comments/1xeoisf/eobi_ice_valley_alpaca_world/19rmt54t2qbpe/
+# note: the /api/comment response and the comments.json check right after posting both reported failure even though the comments went through (cached). Always re-check with a cache buster (?x=timestamp) before retrying.

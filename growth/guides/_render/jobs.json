@@ -712,5 +712,47 @@
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/jjimjilbang-guide/thumb.jpg",
   "w": 1200,
   "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-trash-separation-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-trash-separation/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-trash-separation-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-trash-separation/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-trash-separation-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-trash-separation/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-trash-separation-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-trash-separation/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-trash-separation-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-trash-separation/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-trash-separation-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-trash-separation/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-trash-separation-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-trash-separation/thumb.jpg",
+  "w": 1200,
+  "h": 630
  }
 ]

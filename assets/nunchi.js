@@ -60,9 +60,9 @@
     }
   });
   const NEXT = {
-    "/tools/korea-trip-budget-calculator/": ["/guide/cash-cards-atm-korea/", "Cash, cards and ATMs in Korea", "What works with a foreign card, and where you still need won."],
+    "/tools/korea-trip-budget-calculator/": ["/guide/where-to-stay-in-seoul/", "Where to stay in Seoul", "Myeongdong, Hongdae, Seongsu or Gangnam: which suits your trip."],
     "/tools/korea-tax-refund-calculator/": ["/guide/korea-tax-refund-guide/", "How the tax refund actually works", "At the till, at the airport kiosk, and the limits for 2026."],
-    "/tools/tmoney-vs-climate-card/": ["/guide/incheon-airport-to-seoul/", "Incheon Airport to Seoul", "AREX, limousine bus or taxi: 2026 fares and which fits your hotel."],
+    "/tools/tmoney-vs-climate-card/": ["/guide/seoul-subway-guide/", "How to ride the Seoul subway", "Fares, transfers, exit numbers and the last train."],
     "/tools/korea-esim-data-calculator/": ["/guide/korea-esim-sim-or-pocket-wifi/", "eSIM, SIM or pocket Wi-Fi?", "When you actually need a Korean number."],
     "/tools/korean-public-holidays/": ["/guide/ktx-booking-for-foreigners/", "Booking the KTX as a foreigner", "When tickets open, the Korail Pass, and the holiday rush."],
     "/tools/korean-spice-level-quiz/": ["/guide/ordering-at-korean-restaurants/", "Ordering at a Korean restaurant", "The call bell, free side dishes, and how to ask for less spice."],

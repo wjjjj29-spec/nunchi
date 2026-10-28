@@ -1,0 +1,7 @@
+# 2026-10-26 21:01 KST 시작 세션 (중복 실행) — 게시 0건
+# 같은 작업의 다른 실행(20:32 시작, local_a617ed78)이 이미 Reddit 탭을 쓰며 20:50 / 21:00 / 21:11에 댓글 3개(1xfsa4a, 1xfn5up, 1xfjj90)를 올리는 중이어서
+# 이 세션은 충돌·속도 제한("서버 오류입니다. 나중에 다시 시도하세요")을 피하려고 Reddit 게시를 중단함.
+# 준비했던 미게시 초안 6개(글 id): 1xfugyw EV 충전 외국카드 / 1xfmj4s KBO 한국시리즈 티켓 / 1xfs96z 서울 식재료·식품 편집숍 / 1xfpjn7 홍대 헬스장 일일권 / 1xf4o93 서울 탈춤 공연 / 1xfr52t 분당 피부과 전문의 찾기
+# 초안 본문: /private/tmp/claude-501/-Users-wonjoon-------/53c7bd4a-35c5-4c78-babe-9d25e2f5133f/scratchpad/comments.json (세션 임시 폴더)
+# reddit_comment.js 수정: 탭이 백그라운드(visibilityState hidden)이면 마우스 클릭이 처리되지 않아 Emulation.setFocusEmulationEnabled + JS focus/click 대체 경로 추가 (백업 reddit_comment.js.bak_20261026)
+# Threads @hellonunchi: isolated 컨텍스트 탭 없음(threads.com 탭 2개 모두 기본 컨텍스트 @juseyo.app) → 재로그인 필요

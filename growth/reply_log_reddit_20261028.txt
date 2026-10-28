@@ -1,0 +1,9 @@
+# 2026-10-27/28 reddit (u/hellonunchi) — night session (started 21:05 KST, machine slept/paused repeatedly; posts spaced >=10 min)
+- r/koreatravel 1xgpcnu Solo 2 weeks in December (Jeju winter wind, Seoul/Gyeongju/Busan split, hostels+jjimjilbang) → https://www.reddit.com/r/koreatravel/comments/1xgpcnu/solo_travel_korea_2_weeks_in_december/19rqisovhrau9/
+- r/KoreaTravelAdvice 1xgl2ip Men's head spa for bald bf (두피 마사지 search term, Thai/Chinese massage shops, phrase to say) → https://www.reddit.com/r/KoreaTravelAdvice/comments/1xgl2ip/mens_head_spa/19rqm0m20t58l/
+- r/seoul 1xgkc3g End-Nov Seoul off-path + coffee + Suwon (Huam/HBC, Buam-dong, Haenggung-dong, fortress wall, Jidong market) → https://www.reddit.com/r/seoul/comments/1xgkc3g/travelling_to_seoul_what_else_can_i_do/19rqmxb3blick/
+- r/seoul 1xgicnl All-ages punk venues with toddler (venue licensing 일반음식점, Club SHARP/FF, DM phrase, spring outdoor stages) → https://www.reddit.com/r/seoul/comments/1xgicnl/all_ages_punk_venues/19rqw98pqjyhs/
+- r/seoul 1xgp33n Halloween outfit ASAP (Dongdaemun 문구완구거리 exit 4, Daiso Halloween corner, 파티용품 search, Itaewon) → https://www.reddit.com/r/seoul/comments/1xgp33n/halloween_in_seoul/19rr2as28kbz7/
+- r/Living_in_Korea 1xgnand H-1 ARC with temporary accommodation (operator letter, 3-6 wks, 체류지 변경 신고 15일, registered mail) → https://www.reddit.com/r/Living_in_Korea/comments/1xgnand/h1_visa_can_i_use_temporary_accommodation_to/19rr42xp472kl/
+# skipped: Threads @hellonunchi — no isolated-context tab in Aside (both threads.com tabs are @juseyo.app default context); re-login needed. Ticket queue: nothing to post (all posted/apiQueued). hellonunchi-social inbox: 0 new.
+# note: background `sleep` and node runs were stretched by hours (machine idle/paused) — session ran 21:05 → 07:57. Dedicated reddit tab 064DB7A5 closed at end.

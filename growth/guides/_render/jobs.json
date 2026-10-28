@@ -378,6 +378,48 @@
   "h": 630
  },
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-airport-bus-and-night-bus-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-airport-bus-and-night-bus/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-airport-bus-and-night-bus-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-airport-bus-and-night-bus/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-airport-bus-and-night-bus-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-airport-bus-and-night-bus/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-airport-bus-and-night-bus-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-airport-bus-and-night-bus/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-airport-bus-and-night-bus-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-airport-bus-and-night-bus/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-airport-bus-and-night-bus-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-airport-bus-and-night-bus/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-airport-bus-and-night-bus-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-airport-bus-and-night-bus/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/where-to-stay-in-seoul-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/where-to-stay-in-seoul/cards/01.jpg",
   "w": 1080,

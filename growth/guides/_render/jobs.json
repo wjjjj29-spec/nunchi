@@ -84,6 +84,90 @@
   "h": 630
  },
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-winter-trip-guide-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-winter-trip-guide/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-winter-trip-guide-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-winter-trip-guide/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-winter-trip-guide-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-winter-trip-guide/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-winter-trip-guide-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-winter-trip-guide/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-winter-trip-guide-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-winter-trip-guide/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-winter-trip-guide-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-winter-trip-guide/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/seoul-winter-trip-guide-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/seoul-winter-trip-guide/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/kpop-concert-tickets-korea-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/kpop-concert-tickets-korea/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/kpop-concert-tickets-korea-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/kpop-concert-tickets-korea/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/kpop-concert-tickets-korea-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/kpop-concert-tickets-korea/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/kpop-concert-tickets-korea-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/kpop-concert-tickets-korea/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/kpop-concert-tickets-korea-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/kpop-concert-tickets-korea/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/kpop-concert-tickets-korea-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/kpop-concert-tickets-korea/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/kpop-concert-tickets-korea-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/kpop-concert-tickets-korea/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/see-a-doctor-in-korea-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/see-a-doctor-in-korea/cards/01.jpg",
   "w": 1080,
@@ -122,6 +206,48 @@
  {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/see-a-doctor-in-korea-thumb.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/see-a-doctor-in-korea/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/emergency-numbers-korea-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/emergency-numbers-korea/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/emergency-numbers-korea-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/emergency-numbers-korea/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/emergency-numbers-korea-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/emergency-numbers-korea/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/emergency-numbers-korea-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/emergency-numbers-korea/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/emergency-numbers-korea-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/emergency-numbers-korea/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/emergency-numbers-korea-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/emergency-numbers-korea/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/emergency-numbers-korea-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/emergency-numbers-korea/thumb.jpg",
   "w": 1200,
   "h": 630
  },
@@ -290,6 +416,48 @@
  {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/ordering-at-korean-restaurants-thumb.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/ordering-at-korean-restaurants/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-hair-salon-guide-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-hair-salon-guide/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-hair-salon-guide-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-hair-salon-guide/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-hair-salon-guide-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-hair-salon-guide/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-hair-salon-guide-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-hair-salon-guide/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-hair-salon-guide-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-hair-salon-guide/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-hair-salon-guide-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-hair-salon-guide/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korean-hair-salon-guide-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korean-hair-salon-guide/thumb.jpg",
   "w": 1200,
   "h": 630
  },
@@ -588,6 +756,48 @@
   "h": 630
  },
  {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/busan-first-trip-guide-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/busan-first-trip-guide/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/busan-first-trip-guide-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/busan-first-trip-guide/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/busan-first-trip-guide-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/busan-first-trip-guide/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/busan-first-trip-guide-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/busan-first-trip-guide/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/busan-first-trip-guide-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/busan-first-trip-guide/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/busan-first-trip-guide-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/busan-first-trip-guide/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/busan-first-trip-guide-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/busan-first-trip-guide/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-esim-sim-or-pocket-wifi-1.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-esim-sim-or-pocket-wifi/cards/01.jpg",
   "w": 1080,
@@ -794,6 +1004,48 @@
  {
   "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/korea-trash-separation-thumb.html",
   "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/korea-trash-separation/thumb.jpg",
+  "w": 1200,
+  "h": 630
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/food-delivery-apps-korea-1.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/food-delivery-apps-korea/cards/01.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/food-delivery-apps-korea-2.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/food-delivery-apps-korea/cards/02.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/food-delivery-apps-korea-3.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/food-delivery-apps-korea/cards/03.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/food-delivery-apps-korea-4.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/food-delivery-apps-korea/cards/04.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/food-delivery-apps-korea-5.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/food-delivery-apps-korea/cards/05.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/food-delivery-apps-korea-6.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/food-delivery-apps-korea/cards/06.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ {
+  "html": "/Users/wonjoon/원준프로젝트/nunchi/growth/guides/_render/food-delivery-apps-korea-thumb.html",
+  "out": "/Users/wonjoon/원준프로젝트/nunchi/site/guide/food-delivery-apps-korea/thumb.jpg",
   "w": 1200,
   "h": 630
  }
